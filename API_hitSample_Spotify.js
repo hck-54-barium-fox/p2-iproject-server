@@ -1,6 +1,7 @@
 const axios = require('axios');
-let client_id = '278fd491722742bd9364bfe1a093ae2a'
-let client_secret = '682251e32d6443b98f3f12184425bda5'
+require('dotenv').config()
+let client_id = process.env.SPOTIFY_CLIENT_ID
+let client_secret = process.env.SPOTIFY_CLIENT_SECRET
 
 
 let token
