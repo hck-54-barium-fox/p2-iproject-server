@@ -14,10 +14,12 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
+  
   User.init({
     username: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: {msg: 'Username was taken'},
       validate: {
         notNull: {msg: 'Username is required'},
         notEmpty: {msg: 'Username is required'},
@@ -28,9 +30,11 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
+
     email: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: {msg: 'Email was taken'},
       validate: {
         notNull: {msg: 'Email is required'},
         notEmpty: {msg: 'Email is required'},
