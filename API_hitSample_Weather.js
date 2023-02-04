@@ -1,5 +1,6 @@
 const axios = require('axios');
-let api_key = 'c1cdb284fb2dbce8e9eb0b608ce8119e'
+require('dotenv').config();
+let api_key = process.env.OPEN_WEATHER_API_KEY
 let lat = '35.6762'
 let lon = '139.6503'
 
