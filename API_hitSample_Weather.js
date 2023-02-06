@@ -1,8 +1,8 @@
 const axios = require('axios');
 require('dotenv').config();
 let api_key = process.env.OPEN_WEATHER_API_KEY
-let lat = '35.6762'
-let lon = '139.6503'
+let lat = '-6.266750'
+let lon = '106.738586'
 
 async function getCurrentWeather() {
   try {
