@@ -1,7 +1,7 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-const JWT_KEY = 'sementara' // TODO - Store this in the .env file later
+const JWT_KEY = process.env.JWT_KEY // TODO - Store this in the .env file later
 
 module.exports = {
   hashPassword(password) {

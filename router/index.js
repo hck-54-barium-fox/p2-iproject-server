@@ -6,11 +6,4 @@ const mainRouter = require('./main');
 router.use('/users', usersRouter)
 router.use('/main', mainRouter)
 
-
-
-
-
-
-
-
 module.exports = router
