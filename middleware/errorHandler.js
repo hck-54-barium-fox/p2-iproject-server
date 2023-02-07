@@ -10,6 +10,7 @@ function errorHandler(err, req, res, next) {
     } else if (err.status) {
         res.status(err.status).json({ message: err.msg })
     } else {
+        console.log(err)
         res.status(500).json({ message: 'Internal server error' })
     }
 }
