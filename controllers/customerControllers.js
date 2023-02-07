@@ -12,7 +12,9 @@ class UserController {
       const { email, name, password } = req.body;
       const user = await User.create({ email, name, password });
       await sendVerificationEmail(user);
-      res.status(201).send('User created. Verification email sent.');
+      res
+        .status(201)
+        .send({ message: 'User created. Verification email sent.' });
     } catch (err) {
       res.json(err);
     }
@@ -25,7 +27,7 @@ class UserController {
       user.verified = true;
       user.verificationToken = null;
       await user.save();
-      res.send('User verified.');
+      res.send({ message: 'User verified.' });
     } catch (err) {
       res.json(err);
     }

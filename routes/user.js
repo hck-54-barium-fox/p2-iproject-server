@@ -3,7 +3,7 @@ const routes = express.Router();
 const UserController = require('../controllers/customerControllers');
 
 // Create user
-routes.post('/create', UserController.createUser);
+routes.post('/register', UserController.createUser);
 
 // Verify user
 routes.get('/verify', UserController.verifyUser);
@@ -12,7 +12,7 @@ routes.get('/verify', UserController.verifyUser);
 // Forgot password route
 routes.post('/forgot-password', UserController.forgetPassword);
 // Reset password route
-routes.post('/reset-password/:token', UserController.postUpdatedPassword);
+routes.patch('/reset-password/:token', UserController.postUpdatedPassword);
 
 // github login
 const axios = require('axios');

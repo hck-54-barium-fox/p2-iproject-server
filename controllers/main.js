@@ -69,32 +69,36 @@ class Controller {
         },
       };
       const { data } = await axios(options);
-      // const allHotels = data?.result?.map((el) => {
-      //   return {
-      //     mainImgUrl: el.main_photo_url,
-      //     timezone: el.timezone,
-      //     score: el.review_score_word,
-      //     city: el.city,
-      //     address: el.address,
-      //     checkIn: el.checkIn,
-      //     url: el.url,
-      //     id: el.id,
-      //     currencyCode: el.currency_code,
-      //     latitude: el.latitude,
-      //     longitude: el.longitude,
-      //     district: el.district,
-      //     hotelFacilities: el.hotel_facilities,
-      //     hotelId: el.hotel_id,
-      //     hotelName: el.hotel_name,
-      //   };
-      // });
-      // res.status(200).json({
-      //   count: data.count,
-      //   searchMetaData: data.search_meta_data,
-      //   unfilteredCount: data.unfiltered_count,
-      //   hotels: allHotels,
-      //   searchId: data.search_id,
-      // });
+      const allHotels = data?.result?.map((el) => {
+        return {
+          mainImgUrl: el.main_photo_url,
+          timezone: el.timezone,
+          score: el.review_score_word,
+          city: el.city,
+          address: el.address,
+          checkIn: el.checkIn,
+          url: el.url,
+          id: el.id,
+          currencyCode: el.currency_code,
+          latitude: el.latitude,
+          longitude: el.longitude,
+          district: el.district,
+          hotelFacilities: el.hotel_facilities,
+          hotelId: el.hotel_id,
+          hotelName: el.hotel_name,
+          price: el.price_breakdown,
+          district: el.district,
+          country: el.country_trans,
+          score: el.review_score,
+        };
+      });
+      res.status(200).json({
+        count: data.count,
+        searchMetaData: data.search_meta_data,
+        unfilteredCount: data.unfiltered_count,
+        hotels: allHotels,
+        searchId: data.search_id,
+      });
     } catch (err) {
       console.log(err);
       res.json(err);
