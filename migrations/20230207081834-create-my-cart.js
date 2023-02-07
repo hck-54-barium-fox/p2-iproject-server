@@ -23,7 +23,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       product_api_url: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       status:{
         type: Sequelize.STRING
