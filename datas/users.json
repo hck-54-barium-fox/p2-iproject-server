@@ -1,0 +1,18 @@
+[
+  {
+    "firstName": "Dudung",
+    "lastName": "Citaman",
+    "email": "dudung@mail.com",
+    "password": "password",
+    "phoneNumber": "082249861409",
+    "address": "Jl. Pantura Desa Melati RT 07 RW 07"
+  },
+  {
+    "firstName": "Maman",
+    "lastName": "Citaman",
+    "email": "maman@mail.com",
+    "password": "password",
+    "phoneNumber": "082249861490",
+    "address": "Jl. Pamatri Desa Mawar RT 09 RW 09"
+  }
+]
