@@ -45,6 +45,25 @@ class UserController {
       next(error);
     }
   }
+
+  static async register(req, res, next) {
+    try {
+      const { firstName, lastName, email, password, phoneNumber, address } =
+        req.body;
+      const user = await User.create({
+        firstName,
+        lastName,
+        email,
+        password,
+        phoneNumber,
+        address,
+      });
+      res.status(201).json(user);
+    } catch (error) {
+      console.log(error);
+      next(error);
+    }
+  }
 }
 
 module.exports = UserController;
