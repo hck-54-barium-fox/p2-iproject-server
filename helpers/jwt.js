@@ -1,8 +1,8 @@
-const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken');
 const secret = process.env.JWT_SECRET
 
 const sign = (payload) => {
+    console.log(payload, '>>>>>>>>>>>>>>>>>>>');
     return jwt.sign(payload, secret)
 }
 
