@@ -77,7 +77,14 @@ static async login(req, response) {
   static async addProduct(req,response){
     try {
         const {name,price,stock,image,description,CategoryId}=req.body
-        
+        const data = await product.create({
+            name,
+            price,
+            stock,
+            image,
+            description,
+            CategoryId
+        })
     } catch (error) {
         
     }
