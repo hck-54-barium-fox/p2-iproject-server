@@ -3,6 +3,7 @@ const { emptyQuery } = require('pg-protocol/dist/messages');
 const {
   Model
 } = require('sequelize');
+const { hashPassword } = require('../helpers/jwt');
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     /**
@@ -51,5 +52,8 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'User',
   });
+  User.beforeCreate((item) => {
+    return item.password = hashPassword(item.password)
+  })
   return User;
 };
