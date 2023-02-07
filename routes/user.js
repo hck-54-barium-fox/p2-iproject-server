@@ -19,7 +19,7 @@ routes.post('/login', UserController.login);
 // Forgot password route
 routes.post('/forgot-password', UserController.forgetPassword);
 // Reset password route
-routes.patch('/reset-password/:token', UserController.postUpdatedPassword);
+routes.patch('/reset-password', UserController.postUpdatedPassword);
 
 // github login
 

@@ -6,7 +6,7 @@ const {
   signTokenLogin,
 } = require('../helpers/jwt');
 const router = express.Router();
-const { User } = require('../models');
+const { User } = require('../models/index');
 const { sendForgotPassword } = require('../helpers/forgotPassword');
 const { hashPassword, comparePassword } = require('../helpers/bcryptjs');
 
@@ -33,7 +33,13 @@ class UserController {
       if (!password) {
         throw { name: 'bad password' };
       }
-      const user = await User.finOne({ where: { email } });
+      // const user = await User.finOne({ where: { email } });
+      const user = await User.findOne({
+        where: {
+          email,
+        },
+      });
+
       if (!user) {
         throw { name: 'unauth user' };
       }
@@ -44,6 +50,7 @@ class UserController {
       const generateToken = signTokenLogin({ id: user.id, email: user.email });
       res.status(200).json({ access_token: generateToken });
     } catch (err) {
+      console.log(err);
       res.status(500).json(err);
     }
   }
@@ -64,6 +71,9 @@ class UserController {
   static async forgetPassword(req, res) {
     try {
       const { email } = req.body;
+      if (!email) {
+        throw { name: 'bad email' };
+      }
       const user = await User.findOne({ where: { email } });
 
       if (!user) {
@@ -81,43 +91,15 @@ class UserController {
 
       return res.json({ msg: 'Email sent' });
     } catch (err) {
-      console.error(err.message);
+      console.log(err.message);
       return res.status(500).send('Server error');
     }
   }
-
-  static async getResetPasswordForm(req, res) {
-    try {
-      // Find the user by the reset password token
-      const user = await User.findOne({
-        where: {
-          resetPasswordToken: req.params.token,
-        },
-      });
-
-      // Check if the reset token is valid
-      if (!user) {
-        return res.status(400).json({ errors: [{ msg: 'Invalid token' }] });
-      }
-
-      // Return the reset password form
-      res.status(200).json({
-        user: {
-          id: user.id,
-          name: user.name,
-        },
-      });
-    } catch (err) {
-      console.error(err.message);
-      res.status(500).send('Server error');
-    }
-  }
-
   static async postUpdatedPassword(req, res) {
     try {
-      const { token } = req.params;
+      const { token } = req.query;
       const { password } = req.body;
-
+      console.log(token, '===', password);
       // Verify reset token
       const decoded = verifyToken(token);
       const user = await User.findByPk(decoded.id);
@@ -137,7 +119,7 @@ class UserController {
 
       return res.json({ msg: 'Password reset successfully' });
     } catch (err) {
-      console.error(err.message);
+      console.log(err);
       return res.status(500).send('Server error');
     }
   }
