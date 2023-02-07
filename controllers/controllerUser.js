@@ -1,3 +1,4 @@
+
 const { default: axios } = require("axios");
 const { compare } = require("../helpers/bcryptjs");
 const { createToken } = require("../helpers/jwt");
@@ -80,6 +81,7 @@ class ControllerUser {
         .status(200)
         .json({ access_token, id: user.id, username: user.email });
         res.status(201).json(user)
+
       }
     } catch (error) {
       console.log(error)
