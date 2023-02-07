@@ -2,7 +2,7 @@ const { default: axios } = require("axios");
 const { YTVideo } = require("../models/index");
 
 class ControllerYoutube {
-    static async fetchYoutubeVideo(req, res){
+    static async fetchYoutubeVideo(req, res, next){
         try {
             let { data } = await axios({
                 method: 'get',
@@ -11,10 +11,7 @@ class ControllerYoutube {
             let videoData = data.items.map(el => el.id.videoId)
             res.status(200).json(videoData)
         } catch (error) {
-            console.log(error)
-            res.status(500).json({
-                message: 'Internal server error'
-            })
+            next(error)
         }
     }
 }

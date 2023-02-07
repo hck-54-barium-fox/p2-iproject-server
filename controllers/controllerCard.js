@@ -2,7 +2,7 @@ const axios = require("axios");
 const { Card } = require("../models/index");
 
 class ControllerCard {
-  static async fetchCard(req, res) {
+  static async fetchCard(req, res, next) {
     try {
       let cardData = await Card.findAll();
       if (cardData.length) {
@@ -25,7 +25,7 @@ class ControllerCard {
         res.status(200).json(dataCard);
       }
     } catch (error) {
-      console.log(error);
+      next(error)
     }
   }
 }
