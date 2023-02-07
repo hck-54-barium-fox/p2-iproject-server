@@ -25,6 +25,9 @@ module.exports = {
       product_api_url: {
         type: Sequelize.INTEGER
       },
+      status:{
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

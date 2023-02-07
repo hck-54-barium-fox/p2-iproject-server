@@ -69,7 +69,7 @@ class Controller {
         try{
             const UserId = req.user.id
             const { data } = await MyCart.create({
-                
+                  
             })
         }
         catch{

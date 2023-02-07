@@ -7,8 +7,8 @@ const authentication = require("../middlewares/authentication")
 
 router.post("/register", Controller.register)
 router.post("/login", Controller.login)
-router.use(authentication)
 router.get('/products', Controller.fetchProducts)
+// router.use(authentication)
 
 
 
