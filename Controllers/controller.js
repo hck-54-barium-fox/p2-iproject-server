@@ -69,9 +69,27 @@ class Controller {
 
     static async getBodyPart(req, res) {
         try {
-            const {data} = await axios({
+            const { data } = await axios({
                 method: 'GET',
                 url: 'https://exercisedb.p.rapidapi.com/exercises/bodyPartList',
+                headers: {
+                    'X-RapidAPI-Key': '6f99339649mshabefed9036baf74p11ebddjsnb7b1e29afef6',
+                    'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+                }
+            })
+            res.status(200).json(data)
+        } catch (error) {
+            res.status(500).json(error)
+        }
+    }
+
+    static async getExerciseByBodyPart(req, res) {
+        try {
+            const {bodyPart} = req.query
+            const words = bodyPart.split(' ').join('%20')
+            const { data } = await axios({
+                method: 'GET',
+                url: `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${words}`,
                 headers: {
                     'X-RapidAPI-Key': '6f99339649mshabefed9036baf74p11ebddjsnb7b1e29afef6',
                     'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
