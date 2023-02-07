@@ -38,7 +38,7 @@ class MemeController {
 
   static async postGenerateMeme(req, res, next) {
     try {
-      const { template_id, title, text0, text1, text2, text3, text4, text5 } = req.body;
+      const { template_id, text0, text1, text2, text3, text4, text5 } = req.body;
       const USERNAME = process.env.API_USERNAME;
       const PASSWORD = process.env.API_PASSWORD;
       const arrText = [];

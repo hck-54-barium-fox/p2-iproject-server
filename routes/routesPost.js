@@ -5,6 +5,7 @@ const router = express();
 
 router.use(authentication);
 router.get("/", PostController.getAllPost);
+router.get("/postMeme", PostController.postMemeToDb);
 router.get("/:id", PostController.getPostById);
 router.post("/:id/like", PostController.postLike);
 

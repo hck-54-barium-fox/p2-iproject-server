@@ -77,6 +77,22 @@ class PostController {
       next(err);
     }
   }
+
+  static async postMemeToDb(req, res, next) {
+    try {
+      const { title, imgUrl } = req.body;
+      const postData = await Post.create({
+        title,
+        imgUrl,
+        UserId: req.user.id,
+      });
+
+      res.status(201).json(postData);
+    } catch (err) {
+      console.log(err);
+      next(err);
+    }
+  }
 }
 
 module.exports = PostController;
