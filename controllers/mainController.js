@@ -31,25 +31,29 @@ class mainController {
   }
 
   //? OpenAI query suggestion
-  static async generateAnswer() {
+  static async generateAIAnswer(req, res, next) {
     try {
+      let searchQuery = req.body.searchQuery
       const configuration = new Configuration({
         apiKey: process.env.OPENAI_API_KEY,
       });
       const openai = new OpenAIApi(configuration);
+      console.log(`suggest one music search query for ${searchQuery}`, 'thiss')
       
       const response = await openai.createCompletion({
         model: "text-davinci-003",
-        prompt: `suggest one music search query for cloudy weather`,
+        prompt: `suggest one music search query for ${searchQuery}`,
         temperature: 0.9,
         max_tokens: 150,
         top_p: 1,
         frequency_penalty: 2,
         presence_penalty: 2,
       });
-      console.log(response.data.choices[0].text)
+
+      res.status(200).json({response: response.data.choices[0].text.trim().replaceAll('"', '') })
     } catch (err) {
       console.log(err);
+      next(err)
     }
   }
 
