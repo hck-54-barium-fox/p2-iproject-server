@@ -3,6 +3,7 @@ const { compare } = require("../helpers/bcrypt")
 const { sign } = require("../helpers/jwt")
 const axios = require('axios')
 const url = 'https://makeup-api.herokuapp.com/api/v1/products.json'
+const nodemailer = require('../helpers/nodemailer')
 // const { OAuth2Client } = require('google-auth-library');
 
 class Controller {
@@ -14,6 +15,7 @@ class Controller {
                 email: req.body.email,
                 password: req.body.password,
             })
+            nodemailer(user.email)
             res.status(201).json({
                 message: "Input data User succeed",
                 id: user.id,
@@ -60,6 +62,9 @@ class Controller {
             console.log(err)
         }
     }
+
+
+
     // static async googleOAuth(req, res, next) {
         
     //     try {
