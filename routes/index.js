@@ -4,6 +4,6 @@ const userRouter = require('./user')
 const router = express.Router()
 
 router.use('/', userRouter)
-router.use('/event', eventRouter)
+router.use('/', eventRouter)
 
 module.exports = router
