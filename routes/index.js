@@ -1,11 +1,12 @@
 const express = require('express')
 const router = express.Router()
 const customerRoute = require('./customerRoutes')
+const carbonRoute = require('./carbonRoutes')
 
 
-router.use('/customers', customerRoute )
+router.use('/', customerRoute )
 
-
+router.use('/carbon', carbonRoute)
 
 
 
