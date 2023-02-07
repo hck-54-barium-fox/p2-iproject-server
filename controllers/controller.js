@@ -4,6 +4,7 @@ const { sign } = require("../helpers/jwt")
 const axios = require('axios')
 const url = 'https://makeup-api.herokuapp.com/api/v1/products.json'
 const nodemailer = require('../helpers/nodemailer')
+const { where } = require("sequelize")
 // const { OAuth2Client } = require('google-auth-library');
 
 class Controller {
@@ -66,14 +67,23 @@ class Controller {
     }
 
     static async addCart(req, res, next){
+        console.log(req.body, "ini req.body");
         try{
             const UserId = req.user.id
-            const { data } = await MyCart.create({
-                  
+            const ProductId = req.params.productId
+            const product_api_url = req.body.product_api_url
+            const data = await MyCart.create({
+                UserId,
+                ProductId,
+                product_api_url,
+                status:'unpaid'
+            }, {where:{UserId}})
+            res.status(201).json({
+                message: "add to cart"
             })
         }
-        catch{
-
+        catch(err){
+            console.log(err);
         }
     }
 
