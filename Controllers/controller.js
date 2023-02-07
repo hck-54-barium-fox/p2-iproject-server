@@ -44,7 +44,29 @@ class Controller {
         }
     }
 
-    
+    static async getBmi(req, res) {
+        try {
+            const id = req.user.id
+            const user = await User.findByPk(id)
+            console.log(user.weight, user.height)
+            const {data} = await axios({
+                method: 'GET',
+                url: 'https://mega-fitness-calculator1.p.rapidapi.com/bmi',
+                params: { weight: user.weight, height: user.height },
+                headers: {
+                    'X-RapidAPI-Key': '6f99339649mshabefed9036baf74p11ebddjsnb7b1e29afef6',
+                    'X-RapidAPI-Host': 'mega-fitness-calculator1.p.rapidapi.com'
+                }
+            })
+            res.status(200).json({
+                name: user.name,
+                info: data.info
+            })
+        } catch (error) {
+            res.status(500).json(error)
+        }
+    }
+
 }
 
 
