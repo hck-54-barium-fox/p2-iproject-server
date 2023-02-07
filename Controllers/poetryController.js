@@ -1,7 +1,7 @@
 const { User, Letter } = require("../models");
 const nodemailer = require("nodemailer");
-stripe = require("stripe")(process.env.STRIPE_KEY);
-
+const cloudinary = require("../helpers/cloudinary");
+const fs = require("fs");
 const axios = require("axios");
 
 class PoetryController {
@@ -17,40 +17,62 @@ class PoetryController {
       }
       const choose = Math.ceil(Math.random() * data.length - 1);
       const result = data[choose].lines.join(" ");
-
+      
       await Letter.create({
-        content : result,
+        content: result,
         UserId: req.user.id,
-        status : "unpaid"
-      })
+        status: "unpaid",
+      });
 
       res.status(200).json(result);
-      console.log("Message sent: %s", info.messageId);
-      // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-
-      // Preview only available when sending through an Ethereal account
     } catch (err) {
       console.log(err);
       next(err);
     }
   }
 
-
-
-  static async getMyLetter(req, res, next){
+  static async getMyLetter(req, res, next) {
     try {
-        const getMyLetter = await Letter.findAll({
-            where: {
-                UserId : req.user.id,
-                status: "paid"
-            }
-        })
-        res.status(200).json(getMyLetter)
+      const getMyLetter = await Letter.findAll({
+        where: {
+          UserId: req.user.id,
+          status: "paid",
+        },
+      });
+      res.status(200).json(getMyLetter);
     } catch (err) {
-        next(err)
+      next(err);
     }
   }
-
+  static async uploadImage(req, res, next) {
+    try {
+      const uploader = async (path) => await cloudinary.uploads(path, "Images");
+      const { letterId } = req.params;
+      const { path } = req.file;
+      const newPath = await uploader(path);
+      const letter = await Letter.findByPk(letterId);
+      if (!letter) {
+        throw { name: "notFound" };
+      }
+      await Letter.update(
+        {
+          imageUrl: newPath.url,
+        },
+        {
+          where: {
+            id: letterId,
+          },
+        }
+      );
+      res.status(201).json({
+        message: "Upload image is successful",
+        data: newPath,
+      });
+    } catch (err) {
+      console.log(err);
+      next(err);
+    }
+  }
 }
 
 module.exports = PoetryController;
