@@ -6,6 +6,6 @@ const router = express();
 router.use(authentication);
 router.get("/", PostController.getAllPost);
 router.get("/:id", PostController.getPostById);
-// router.post("/:id/like", PostController.postLike);
+router.post("/:id/like", PostController.postLike);
 
 module.exports = router;
