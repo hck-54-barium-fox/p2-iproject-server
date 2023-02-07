@@ -1,0 +1,1076 @@
+{
+  "extended_count": 0,
+  "filter": [
+    {
+      "type": "multiple_union",
+      "id": "price_category",
+      "categories": [
+        {
+          "from": 0,
+          "style_for_count": 0,
+          "to": 50,
+          "id": "price_category::50",
+          "count": 209,
+          "selected": 0,
+          "display_format": "%LOWER% - %UPPER%",
+          "name": "US$0 - US$100 "
+        },
+        {
+          "to": 100,
+          "from": 50,
+          "style_for_count": 0,
+          "count": 60,
+          "selected": 0,
+          "display_format": "%LOWER% - %UPPER%",
+          "name": "US$100 - US$200 ",
+          "id": "price_category::100"
+        },
+        {
+          "to": 150,
+          "from": 100,
+          "style_for_count": 0,
+          "display_format": "%LOWER% - %UPPER%",
+          "selected": 0,
+          "name": "US$200 - US$300 ",
+          "count": 16,
+          "id": "price_category::150"
+        },
+        {
+          "style_for_count": 0,
+          "from": 150,
+          "to": 200,
+          "id": "price_category::200",
+          "name": "US$300 - US$400 ",
+          "display_format": "%LOWER% - %UPPER%",
+          "selected": 0,
+          "count": 8
+        },
+        {
+          "style_for_count": 0,
+          "from": 200,
+          "to": 0,
+          "id": "price_category::250",
+          "name": "US$400 + ",
+          "display_format": "%LOWER% + ",
+          "selected": 0,
+          "count": 24
+        }
+      ],
+      "irene_resp_id": "pri",
+      "title": "Your budget (for 2 nights)",
+      "layout": {
+        "collapsed_count": 5,
+        "is_collapsed": 0,
+        "is_collapsable": 0
+      },
+      "is_group": 1,
+      "iconfont": "pricetag",
+      "any_text": "No price range selected"
+    },
+    {
+      "title": "Popular Filters",
+      "irene_resp_id": "popular",
+      "any_text": "No rating selected",
+      "layout": {
+        "is_collapsed": 0,
+        "collapsed_count": 5,
+        "is_collapsable": 0
+      },
+      "is_group": 1,
+      "iconfont": "aconfirmation",
+      "type": "multiple_intersection",
+      "categories": [
+        {
+          "popular_rank": 1,
+          "popular": 1,
+          "style_for_count": 0,
+          "name": "My Khe Beach",
+          "selected": 0,
+          "count": 148,
+          "id": "district::5342"
+        },
+        {
+          "name": "Breakfast Included",
+          "selected": 0,
+          "count": 22,
+          "id": "mealplan::breakfast_included",
+          "popular_rank": 4,
+          "popular": 1,
+          "style_for_count": 0
+        },
+        {
+          "popular_rank": 6,
+          "popular": 1,
+          "style_for_count": 0,
+          "selected": 0,
+          "name": "Very Good: 8+",
+          "count": 124,
+          "id": "reviewscorebuckets::80"
+        },
+        {
+          "id": "property_type::206",
+          "name": "Resorts",
+          "selected": 0,
+          "count": 3,
+          "style_for_count": 0,
+          "popular": 1,
+          "popular_rank": 7
+        },
+        {
+          "style_for_count": 0,
+          "popular": 1,
+          "popular_rank": 8,
+          "id": "facility::28",
+          "count": 190,
+          "name": "Family rooms",
+          "experiment_tracking_data": {
+            "track_on_select": [
+              {
+                "type": 1,
+                "experiment_tag": "families_app_family_rooms_blackout",
+                "value": 1
+              }
+            ]
+          },
+          "selected": 0
+        },
+        {
+          "style_for_count": 0,
+          "popular": 1,
+          "popular_rank": 10,
+          "id": "district::5454",
+          "name": "Da Nang City Center",
+          "selected": 0,
+          "count": 36
+        },
+        {
+          "id": "property_type::204",
+          "count": 142,
+          "selected": 0,
+          "name": "Hotels",
+          "style_for_count": 0,
+          "popular": 1,
+          "popular_rank": 12
+        },
+        {
+          "id": "facility::17",
+          "selected": 0,
+          "name": "Airport shuttle",
+          "count": 134,
+          "popular": 1,
+          "style_for_count": 0,
+          "popular_rank": 14
+        }
+      ],
+      "id": "popular"
+    },
+    {
+      "irene_resp_id": "fc",
+      "title": "Free cancellation ",
+      "is_group": 1,
+      "layout": {
+        "is_collapsable": 0,
+        "is_collapsed": 0,
+        "collapsed_count": 5
+      },
+      "iconfont": "aconfirmation",
+      "any_text": null,
+      "type": "single_option",
+      "id": "free_cancellation",
+      "categories": [
+        {
+          "name": "Free cancellation",
+          "selected": 1,
+          "count": 266,
+          "style_for_count": 0,
+          "id": "free_cancellation::1"
+        }
+      ]
+    },
+    {
+      "type": "single_option",
+      "id": "health_and_hygiene",
+      "categories": [
+        {
+          "style_for_count": 0,
+          "id": "health_and_hygiene::1",
+          "selected": 0,
+          "name": "Properties that take health & safety measures",
+          "count": 155
+        }
+      ],
+      "irene_resp_id": "health_and_hygiene",
+      "title": "Properties with additional health & safety measures",
+      "layout": {
+        "is_collapsable": 0,
+        "is_collapsed": 0,
+        "collapsed_count": 5
+      },
+      "is_group": 1,
+      "iconfont": null,
+      "any_text": null
+    },
+    {
+      "layout": {
+        "is_collapsable": 0,
+        "is_collapsed": 0,
+        "collapsed_count": 5
+      },
+      "is_group": 1,
+      "iconfont": "acstar",
+      "any_text": "No stars selected",
+      "irene_resp_id": "class",
+      "title": "Star Rating",
+      "id": "class",
+      "categories": [
+        {
+          "count": 185,
+          "selected": 1,
+          "name": "Unrated",
+          "style_for_count": 1,
+          "id": "class::0"
+        },
+        {
+          "count": 17,
+          "selected": 1,
+          "name": "1 star",
+          "style_for_count": 1,
+          "id": "class::1"
+        },
+        {
+          "selected": 1,
+          "name": "2 stars",
+          "count": 64,
+          "id": "class::2",
+          "style_for_count": 1
+        },
+        {
+          "name": "3 stars",
+          "selected": 0,
+          "count": 166,
+          "id": "class::3",
+          "style_for_count": 1
+        },
+        {
+          "id": "class::4",
+          "style_for_count": 1,
+          "selected": 0,
+          "name": "4 stars",
+          "count": 177
+        },
+        {
+          "style_for_count": 1,
+          "id": "class::5",
+          "count": 39,
+          "selected": 0,
+          "name": "5 stars"
+        }
+      ],
+      "type": "multiple_union"
+    },
+    {
+      "irene_resp_id": "ht_id",
+      "title": "Property Type",
+      "is_group": 1,
+      "layout": {
+        "is_collapsed": 1,
+        "collapsed_count": 5,
+        "is_collapsable": 1
+      },
+      "iconfont": "homecrop",
+      "any_text": "No property type selected",
+      "experiment_tracking_data": {
+        "track_on_view": [
+          {
+            "type": 0,
+            "experiment_tag": "srx_apps_remove_aparthotels_from_hotels",
+            "value": 1
+          },
+          {
+            "experiment_tag": "srx_apps_remove_aparthotels_from_hotels",
+            "type": 0,
+            "value": 3
+          },
+          {
+            "value": 4,
+            "type": 0,
+            "experiment_tag": "srx_apps_remove_aparthotels_from_hotels"
+          },
+          {
+            "experiment_tag": "srx_apps_remove_aparthotels_from_hotels",
+            "type": 0,
+            "value": 8
+          }
+        ]
+      },
+      "type": "multiple_union",
+      "id": "property_type",
+      "categories": [
+        {
+          "popular_rank": 12,
+          "style_for_count": 0,
+          "popular": 1,
+          "count": 142,
+          "selected": 0,
+          "name": "Hotels",
+          "id": "property_type::204"
+        },
+        {
+          "style_for_count": 0,
+          "id": "family_friendly_property::1",
+          "selected": 0,
+          "name": "Family-Friendly Properties",
+          "count": 89
+        },
+        {
+          "style_for_count": 0,
+          "id": "property_type::201",
+          "count": 74,
+          "selected": 0,
+          "name": "Apartments"
+        },
+        {
+          "name": "Homestays",
+          "selected": 0,
+          "count": 20,
+          "style_for_count": 0,
+          "id": "property_type::222"
+        },
+        {
+          "name": "Villas",
+          "selected": 0,
+          "count": 17,
+          "style_for_count": 0,
+          "id": "property_type::213"
+        },
+        {
+          "count": 8,
+          "name": "Hostels",
+          "selected": 0,
+          "id": "property_type::203",
+          "style_for_count": 0
+        },
+        {
+          "selected": 0,
+          "name": "Resorts",
+          "count": 3,
+          "id": "property_type::206",
+          "popular_rank": 7,
+          "style_for_count": 0,
+          "popular": 1
+        },
+        {
+          "style_for_count": 0,
+          "id": "property_type::216",
+          "count": 3,
+          "name": "Guesthouses",
+          "selected": 0
+        },
+        {
+          "id": "property_type::220",
+          "style_for_count": 0,
+          "count": 3,
+          "name": "Vacation Homes",
+          "selected": 0
+        },
+        {
+          "id": "property_type::208",
+          "style_for_count": 0,
+          "count": 2,
+          "selected": 0,
+          "name": "Bed and Breakfasts"
+        },
+        {
+          "name": "Motels",
+          "selected": 0,
+          "count": 1,
+          "id": "property_type::205",
+          "style_for_count": 0
+        },
+        {
+          "id": "property_type::214",
+          "style_for_count": 0,
+          "selected": 0,
+          "name": "Campgrounds",
+          "count": 1
+        },
+        {
+          "count": 1,
+          "name": "Luxury tents",
+          "selected": 0,
+          "style_for_count": 0,
+          "id": "property_type::224"
+        },
+        {
+          "count": 1,
+          "name": "Love Hotels",
+          "selected": 0,
+          "id": "property_type::226",
+          "style_for_count": 0
+        }
+      ]
+    },
+    {
+      "title": "Facilities",
+      "irene_resp_id": "hotelfacility",
+      "any_text": "No facilities selected",
+      "is_group": 1,
+      "layout": {
+        "is_collapsed": 1,
+        "collapsed_count": 5,
+        "is_collapsable": 1
+      },
+      "iconfont": "frontdesk",
+      "type": "multiple_intersection",
+      "experiment_tracking_data": {
+        "track_on_view": [
+          {
+            "value": 1,
+            "type": 0,
+            "experiment_tag": "families_app_family_rooms_blackout"
+          }
+        ]
+      },
+      "categories": [
+        {
+          "count": 176,
+          "selected": 0,
+          "name": "24-hour front desk",
+          "style_for_count": 0,
+          "id": "facility::8"
+        },
+        {
+          "selected": 0,
+          "name": "Airport shuttle",
+          "count": 134,
+          "id": "facility::17",
+          "popular_rank": 14,
+          "style_for_count": 0,
+          "popular": 1
+        },
+        {
+          "id": "facility::139",
+          "style_for_count": 0,
+          "selected": 0,
+          "name": "Airport shuttle (free)",
+          "count": 3
+        },
+        {
+          "style_for_count": 0,
+          "id": "facility::72",
+          "selected": 0,
+          "name": "BBQ facilities",
+          "count": 36
+        },
+        {
+          "name": "Electric vehicle charging station",
+          "selected": 0,
+          "count": 12,
+          "id": "facility::182",
+          "style_for_count": 0
+        },
+        {
+          "count": 25,
+          "name": "Facilities for disabled guests",
+          "selected": 0,
+          "id": "facility::25",
+          "style_for_count": 0
+        },
+        {
+          "popular": 1,
+          "style_for_count": 0,
+          "popular_rank": 8,
+          "id": "facility::28",
+          "name": "Family rooms",
+          "selected": 0,
+          "experiment_tracking_data": {
+            "track_on_select": [
+              {
+                "type": 1,
+                "experiment_tag": "families_app_family_rooms_blackout",
+                "value": 1
+              }
+            ]
+          },
+          "count": 190
+        },
+        {
+          "id": "facility::11",
+          "style_for_count": 0,
+          "selected": 0,
+          "name": "Fitness center",
+          "count": 20
+        },
+        {
+          "name": "Free parking",
+          "selected": 0,
+          "count": 227,
+          "id": "facility::46",
+          "style_for_count": 0
+        },
+        {
+          "count": 215,
+          "selected": 0,
+          "name": "Free WiFi",
+          "style_for_count": 0,
+          "id": "facility::107"
+        },
+        {
+          "style_for_count": 0,
+          "id": "facility::16",
+          "name": "Non-smoking rooms",
+          "selected": 0,
+          "count": 191
+        },
+        {
+          "id": "facility::2",
+          "style_for_count": 0,
+          "count": 247,
+          "name": "Parking",
+          "selected": 0
+        },
+        {
+          "count": 69,
+          "name": "Pet friendly",
+          "selected": 0,
+          "style_for_count": 0,
+          "id": "facility::4"
+        },
+        {
+          "id": "facility::3",
+          "style_for_count": 0,
+          "selected": 0,
+          "name": "Restaurant",
+          "count": 49
+        },
+        {
+          "name": "Room service",
+          "selected": 0,
+          "count": 161,
+          "style_for_count": 0,
+          "id": "facility::5"
+        },
+        {
+          "id": "facility::54",
+          "style_for_count": 0,
+          "selected": 0,
+          "name": "Spa",
+          "count": 35
+        },
+        {
+          "count": 54,
+          "name": "Swimming pool",
+          "selected": 0,
+          "style_for_count": 0,
+          "id": "facility::433"
+        }
+      ],
+      "id": "facility"
+    },
+    {
+      "categories": [
+        {
+          "count": 22,
+          "name": "Less than 1 km",
+          "selected": 0,
+          "id": "distance::1000",
+          "style_for_count": 0
+        },
+        {
+          "name": "Less than 3 km",
+          "selected": 0,
+          "count": 137,
+          "style_for_count": 0,
+          "id": "distance::3000"
+        },
+        {
+          "name": "Less than 5 km",
+          "selected": 0,
+          "count": 238,
+          "style_for_count": 0,
+          "id": "distance::5000"
+        }
+      ],
+      "id": "distance",
+      "type": "multiple_single_selection",
+      "any_text": "No Preference",
+      "iconfont": null,
+      "layout": {
+        "is_collapsable": 0,
+        "collapsed_count": 5,
+        "is_collapsed": 0
+      },
+      "is_group": 1,
+      "title": "Distance from city center",
+      "irene_resp_id": "distance"
+    },
+    {
+      "layout": {
+        "is_collapsable": 0,
+        "collapsed_count": 5,
+        "is_collapsed": 0
+      },
+      "iconfont": null,
+      "is_group": 1,
+      "any_text": null,
+      "irene_resp_id": "BeachAccessFacilityFilter",
+      "title": "Beach Access",
+      "id": "BeachAccessFacilityFilter",
+      "categories": [
+        {
+          "count": 44,
+          "name": "Private beach",
+          "selected": 0,
+          "style_for_count": 0,
+          "id": "BeachAccessFacilityFilter::0"
+        },
+        {
+          "selected": 0,
+          "name": "Beachfront",
+          "count": 99,
+          "style_for_count": 0,
+          "id": "BeachAccessFacilityFilter::1"
+        },
+        {
+          "count": 196,
+          "name": "Less than 1/2 mile",
+          "selected": 0,
+          "style_for_count": 0,
+          "id": "BeachAccessFacilityFilter::2"
+        },
+        {
+          "style_for_count": 0,
+          "id": "BeachAccessFacilityFilter::3",
+          "count": 228,
+          "selected": 0,
+          "name": "Less than 1 mile"
+        },
+        {
+          "id": "BeachAccessFacilityFilter::4",
+          "style_for_count": 0,
+          "count": 260,
+          "selected": 0,
+          "name": "Less than 2 miles"
+        }
+      ],
+      "type": "multiple_union"
+    },
+    {
+      "irene_resp_id": "mealplan",
+      "title": "Meals",
+      "iconfont": "restaurants",
+      "layout": {
+        "is_collapsable": 0,
+        "is_collapsed": 0,
+        "collapsed_count": 5
+      },
+      "is_group": 1,
+      "any_text": "Any meal options",
+      "type": "multiple_union",
+      "id": "mealplan",
+      "categories": [
+        {
+          "popular_rank": 4,
+          "popular": 1,
+          "style_for_count": 0,
+          "count": 22,
+          "name": "Breakfast Included",
+          "selected": 0,
+          "id": "mealplan::breakfast_included"
+        },
+        {
+          "count": 264,
+          "selected": 0,
+          "name": "Kitchen amenities",
+          "style_for_count": 0,
+          "id": "mealplan::999"
+        }
+      ]
+    },
+    {
+      "id": "chaincode",
+      "categories": [
+        {
+          "selected": 0,
+          "name": "Mercure",
+          "count": 1,
+          "id": "chaincode::1051",
+          "style_for_count": 0
+        },
+        {
+          "style_for_count": 0,
+          "id": "chaincode::6015",
+          "selected": 0,
+          "name": "OYO Rooms",
+          "count": 7
+        }
+      ],
+      "type": "multiple_union",
+      "is_group": 1,
+      "layout": {
+        "is_collapsed": 0,
+        "collapsed_count": 5,
+        "is_collapsable": 0
+      },
+      "iconfont": "hotel",
+      "any_text": "No chain selected",
+      "irene_resp_id": "chaincode",
+      "title": "Chain"
+    },
+    {
+      "id": "reviewscorebuckets",
+      "categories": [
+        {
+          "selected": 0,
+          "name": "Fair: 5+",
+          "count": 156,
+          "id": "reviewscorebuckets::50",
+          "style_for_count": 0
+        },
+        {
+          "name": "Pleasant: 6+",
+          "selected": 0,
+          "count": 154,
+          "style_for_count": 0,
+          "id": "reviewscorebuckets::60"
+        },
+        {
+          "id": "reviewscorebuckets::70",
+          "style_for_count": 0,
+          "count": 149,
+          "selected": 0,
+          "name": "Good: 7+"
+        },
+        {
+          "popular": 1,
+          "style_for_count": 0,
+          "popular_rank": 6,
+          "id": "reviewscorebuckets::80",
+          "name": "Very Good: 8+",
+          "selected": 0,
+          "count": 124
+        },
+        {
+          "style_for_count": 0,
+          "id": "reviewscorebuckets::90",
+          "count": 40,
+          "name": "Wonderful: 9+",
+          "selected": 0
+        },
+        {
+          "count": 52,
+          "name": "No rating",
+          "selected": 0,
+          "id": "reviewscorebuckets::999",
+          "style_for_count": 0
+        }
+      ],
+      "type": "multiple_single_selection",
+      "is_group": 1,
+      "layout": {
+        "is_collapsed": 1,
+        "collapsed_count": 5,
+        "is_collapsable": 1
+      },
+      "iconfont": "reviews",
+      "any_text": "No score selected",
+      "irene_resp_id": "review_score",
+      "title": "Review Score"
+    },
+    {
+      "title": "Room Facilities",
+      "irene_resp_id": "roomfacility",
+      "any_text": "No room facilities selected",
+      "layout": {
+        "is_collapsable": 1,
+        "collapsed_count": 5,
+        "is_collapsed": 1
+      },
+      "is_group": 1,
+      "iconfont": "bath",
+      "type": "multiple_intersection",
+      "categories": [
+        {
+          "style_for_count": 0,
+          "id": "room_facility::38",
+          "name": "Private bathroom",
+          "selected": 0,
+          "count": 264
+        },
+        {
+          "id": "room_facility::11",
+          "style_for_count": 0,
+          "name": "Air conditioning",
+          "selected": 0,
+          "count": 264
+        },
+        {
+          "count": 264,
+          "name": "Kitchen/Kitchenette",
+          "selected": 0,
+          "style_for_count": 0,
+          "id": "room_facility::999"
+        },
+        {
+          "id": "room_facility::75",
+          "style_for_count": 0,
+          "name": "Flat-screen TV",
+          "selected": 0,
+          "count": 264
+        },
+        {
+          "id": "room_facility::17",
+          "style_for_count": 0,
+          "count": 264,
+          "name": "Balcony",
+          "selected": 0
+        },
+        {
+          "style_for_count": 0,
+          "id": "room_facility::108",
+          "name": "Ocean view",
+          "selected": 0,
+          "count": 264
+        },
+        {
+          "count": 264,
+          "name": "Washing machine",
+          "selected": 0,
+          "style_for_count": 0,
+          "id": "room_facility::34"
+        },
+        {
+          "id": "room_facility::998",
+          "style_for_count": 0,
+          "selected": 0,
+          "name": "Coffee/Tea maker",
+          "count": 264
+        },
+        {
+          "style_for_count": 0,
+          "id": "room_facility::5",
+          "count": 264,
+          "selected": 0,
+          "name": "Bathtub"
+        },
+        {
+          "style_for_count": 0,
+          "id": "room_facility::81",
+          "selected": 0,
+          "name": "View",
+          "count": 264
+        },
+        {
+          "style_for_count": 0,
+          "id": "room_facility::123",
+          "selected": 0,
+          "name": "Terrace",
+          "count": 264
+        },
+        {
+          "count": 264,
+          "name": "Spa tub",
+          "selected": 0,
+          "id": "room_facility::20",
+          "style_for_count": 0
+        },
+        {
+          "count": 264,
+          "name": "Private pool",
+          "selected": 0,
+          "id": "room_facility::93",
+          "style_for_count": 0
+        },
+        {
+          "style_for_count": 0,
+          "id": "room_facility::37",
+          "count": 264,
+          "name": "Patio",
+          "selected": 0
+        },
+        {
+          "id": "room_facility::79",
+          "style_for_count": 0,
+          "selected": 0,
+          "name": "Soundproof",
+          "count": 264
+        },
+        {
+          "name": "Electric kettle",
+          "selected": 0,
+          "count": 264,
+          "id": "room_facility::86",
+          "style_for_count": 0
+        },
+        {
+          "id": "room_facility::120",
+          "style_for_count": 0,
+          "name": "Coffee machine",
+          "selected": 0,
+          "count": 264
+        }
+      ],
+      "id": "room_facility"
+    },
+    {
+      "experiment_tracking_data": {
+        "track_on_view": [
+          {
+            "value": 1,
+            "experiment_tag": "android_fax_cribs_filter",
+            "type": 0
+          },
+          {
+            "type": 0,
+            "experiment_tag": "android_fax_cribs_filter",
+            "value": 1
+          }
+        ]
+      },
+      "type": "multiple_union",
+      "id": "twin_double_bed",
+      "categories": [
+        {
+          "selected": 0,
+          "name": "2 single beds",
+          "count": 0,
+          "id": "twin_double_bed::2",
+          "style_for_count": 0
+        },
+        {
+          "count": 0,
+          "selected": 0,
+          "name": "Double bed",
+          "style_for_count": 0,
+          "id": "twin_double_bed::3"
+        }
+      ],
+      "irene_resp_id": "tdb",
+      "title": "Bed Preference",
+      "layout": {
+        "is_collapsed": 0,
+        "collapsed_count": 5,
+        "is_collapsable": 0
+      },
+      "iconfont": null,
+      "is_group": 1,
+      "any_text": "Select bed type"
+    },
+    {
+      "title": "District",
+      "irene_resp_id": "di",
+      "any_text": "No district selected",
+      "layout": {
+        "is_collapsable": 1,
+        "is_collapsed": 1,
+        "collapsed_count": 5
+      },
+      "is_group": 1,
+      "iconfont": "marker",
+      "type": "multiple_union",
+      "categories": [
+        {
+          "style_for_count": 0,
+          "popular": 1,
+          "popular_rank": 1,
+          "id": "district::5342",
+          "count": 148,
+          "name": "My Khe Beach",
+          "selected": 0
+        },
+        {
+          "style_for_count": 0,
+          "id": "district::5453",
+          "count": 38,
+          "name": "Han River",
+          "selected": 0
+        },
+        {
+          "popular": 1,
+          "style_for_count": 0,
+          "popular_rank": 10,
+          "id": "district::5454",
+          "selected": 0,
+          "name": "Da Nang City Center",
+          "count": 36
+        },
+        {
+          "style_for_count": 0,
+          "id": "district::5343",
+          "name": "Bac My An Beach",
+          "selected": 0,
+          "count": 22
+        },
+        {
+          "style_for_count": 0,
+          "id": "district::5344",
+          "name": "Non Nuoc Beach",
+          "selected": 0,
+          "count": 16
+        },
+        {
+          "name": "Da Nang Bay",
+          "selected": 0,
+          "count": 10,
+          "id": "district::5452",
+          "style_for_count": 0
+        },
+        {
+          "count": 4,
+          "selected": 0,
+          "name": "Marble Mountain",
+          "id": "district::5345",
+          "style_for_count": 0
+        },
+        {
+          "style_for_count": 0,
+          "id": "district::5339",
+          "count": 1,
+          "name": "Son Tra Peninsula",
+          "selected": 0
+        },
+        {
+          "id": "district::5340",
+          "style_for_count": 0,
+          "name": "Tho Quang Beach",
+          "selected": 0,
+          "count": 1
+        }
+      ],
+      "id": "district"
+    },
+    {
+      "type": "multiple_union",
+      "categories": [
+        {
+          "style_for_count": 0,
+          "id": "popular_nearby_landmarks::264200",
+          "name": "Dragon Bridge",
+          "selected": 0,
+          "count": 33
+        },
+        {
+          "id": "popular_nearby_landmarks::248776",
+          "style_for_count": 0,
+          "count": 2,
+          "name": "Marble Mountains",
+          "selected": 0
+        }
+      ],
+      "id": "popular_nearby_landmarks",
+      "title": "Landmarks",
+      "irene_resp_id": "popular_nearby_landmarks",
+      "any_text": "No landmarks selected",
+      "layout": {
+        "is_collapsable": 0,
+        "collapsed_count": 5,
+        "is_collapsed": 0
+      },
+      "is_group": 1,
+      "iconfont": "landmark"
+    }
+  ],
+  "unfiltered_primary_count": 266,
+  "count": 266,
+  "primary_count": 266
+}
