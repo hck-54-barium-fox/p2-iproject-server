@@ -31,9 +31,9 @@ class EventController {
         }
     }
 
-    static async getAllEvents(request, response) {
+    static async getEventDetail(request, response) {
         try {
-            const { event } = request.body;
+            const event = request.params.name ;
             const { data } = await axios({
                 method: "GET",
                 url: `https://api.seatgeek.com/2/events?q=${event}&client_id=${API_KEY}`,
@@ -54,7 +54,7 @@ class EventController {
                     },
                     title: el.title,
                     price: el.stats.average_price,
-                    date: el.datetime_local,
+                    date: new Date(el.datetime_local).toISOString().split('T')[0],
                     performer: el.performers[0].name,
                     image: el.performers[0].image
                 }
@@ -63,6 +63,7 @@ class EventController {
 
             response.status(200).json(events);
         } catch (err) {
+            console.log(err)
             response.status(500).json({
                 message: "Internal server error",
             });
