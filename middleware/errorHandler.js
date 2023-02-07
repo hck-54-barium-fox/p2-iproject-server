@@ -10,7 +10,7 @@ function errorHandler(err, req, res, next) {
         })
         code = 400
     } else if (err.name === "InvalidLogin") {
-        message = "Error login user not found or password not matched"
+        message = "Error login user not found or password not matched or username not filled up"
         code = 401
     } else if (err.name === "InvalidToken") {
         message = "Error authentication"

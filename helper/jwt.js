@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY
+const JWT_SECRET_KEY = "devicantik"
 
 function sign(payload) {
     return jwt.sign(payload, JWT_SECRET_KEY)
