@@ -5,7 +5,7 @@ const router = express();
 
 router.use(authentication);
 router.get("/", MemeController.getAllMemes);
-// router.post("/", MemeController.postGenerateMeme);
+router.post("/", MemeController.postGenerateMeme);
 router.get("/:memeId", MemeController.getMemeById);
 
 module.exports = router;
