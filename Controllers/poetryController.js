@@ -1,7 +1,7 @@
 const { User, Letter } = require("../models");
 const nodemailer = require("nodemailer");
 const cloudinary = require("../helpers/cloudinary");
-const fs = require("fs");
+// const fs = require("fs");
 const axios = require("axios");
 
 class PoetryController {
@@ -17,7 +17,7 @@ class PoetryController {
       }
       const choose = Math.ceil(Math.random() * data.length - 1);
       const result = data[choose].lines.join(" ");
-      
+
       await Letter.create({
         content: result,
         UserId: req.user.id,
@@ -44,6 +44,7 @@ class PoetryController {
       next(err);
     }
   }
+
   static async uploadImage(req, res, next) {
     try {
       const uploader = async (path) => await cloudinary.uploads(path, "Images");
@@ -68,6 +69,47 @@ class PoetryController {
         message: "Upload image is successful",
         data: newPath,
       });
+    } catch (err) {
+      console.log(err);
+      next(err);
+    }
+  }
+
+  static async letterById(req, res, next) {
+    try {
+      const { letterId } = req.params;
+      const letter = await Letter.findByPk(letterId);
+      if (!letter) {
+        throw { name: "notFound" };
+      }
+      res.status(200).json(letter);
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  static async sendEmail(req, res, next) {
+    try {
+      const { email, subject } = req.body;
+      const { letterId } = req.params;
+      const letter = await Letter.findByPk(letterId);
+      if (!letter) {
+        throw { name: "notFound" };
+      }
+      const transporter = nodemailer.createTransport({
+        service: "gmail.com",
+        auth: {
+          user: process.env.EMAIL, // generated ethereal user
+          pass: testAccount.pass.PASSWORD_EMAIL, // generated ethereal password
+        },
+      });
+      const info = await transporter.sendMail({
+        from: '"Indra the boy 👻" <rahadyindra16juni.com>', // sender address
+        to: email, 
+        subject,
+        html: `<img>${letter.imageUrl}</img>`, // html body
+      });
+      res.status(200).json(`Message sent ${info.messageId}`);
     } catch (err) {
       console.log(err);
       next(err);
