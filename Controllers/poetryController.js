@@ -105,11 +105,27 @@ class PoetryController {
       });
       const info = await transporter.sendMail({
         from: '"Indra the boy 👻" <rahadyindra16juni.com>', // sender address
-        to: email, 
+        to: email,
         subject,
         html: `<img>${letter.imageUrl}</img>`, // html body
       });
-      res.status(200).json(`Message sent ${info.messageId}`);
+      res.status(200).json({ message: `message sent ${info.messageId}` });
+    } catch (err) {
+      console.log(err);
+      next(err);
+    }
+  }
+
+  static async destroyPoetry(req, res, next) {
+    try {
+      await Letter.destroy({
+        where: {
+          status: "unpaid",
+        },
+      });
+      res.status(200).json({
+        message: "cleaning letter done",
+      });
     } catch (err) {
       console.log(err);
       next(err);
