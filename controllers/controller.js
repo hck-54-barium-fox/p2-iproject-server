@@ -54,6 +54,18 @@ class Controller {
         }
     }
 
+    static async getShoes(req, res, next) {
+        try {
+            const data = await Shoe.findAll({
+                attributes: { exclude: ["createdAt", "updatedAt"] }
+            })
+            res.status(200).json(data)
+        } catch (err) {
+            console.log(err);
+            res.status(500).json({ message: "Internal server error" })
+        }
+    }
+
 }
 
 module.exports = Controller
