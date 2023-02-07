@@ -1,5 +1,11 @@
 const axios = require("axios");
+const Amadeus = require('amadeus');
 let API_KEY = process.env.API_KEY;
+
+const amadeus = new Amadeus({
+    clientId: 'FXcORF3vmnSitJpqZWbIdFGVqAB5O8Jz',
+    clientSecret: 'QcXh7PqFipLHXGA3'
+})
 
 class EventController {
     static async getAllTaxonomies(request, response) {
@@ -69,6 +75,34 @@ class EventController {
             });
         }
     }
+
+    static getHotelByGeolocation(request, response) {
+        const {latitude, longitude} = request.headers
+        amadeus.referenceData.locations.hotels.byGeocode.get({
+            latitude: latitude,
+            longitude: longitude,
+            radius: 3,
+            radiusUnit: 'KM'
+        }).then((res) => {
+            const hotels = res.result.data.map((el) => {
+                const obj = {
+                    name: el.name,
+                    hotelId: el.hotelId,
+                    geoCode: {
+                        latitude: el.geoCode.latitude,
+                        longitude: el.geoCode.longitude
+                    }
+                }
+                return obj
+            })
+            response.status(200).json(hotels.slice(0,5))
+        }).catch((err) => {
+            response.status(400).json({
+                message: "Bad Request"
+            })
+        })
+    }
+
 }
 
 module.exports = EventController;
