@@ -13,6 +13,22 @@ class PostController {
       next(err);
     }
   }
+
+  static async getPostById(req, res, next) {
+    try {
+      const id = req.params.id;
+      const getPostByIdData = await Post.findOne({
+        where: {
+          id: id,
+        },
+      });
+
+      res.status(200).json(getPostByIdData);
+    } catch (err) {
+      console.log(err);
+      next(err);
+    }
+  }
 }
 
 module.exports = PostController;
