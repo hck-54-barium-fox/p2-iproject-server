@@ -1,10 +1,14 @@
 const express = require('express');
 const { sendVerificationEmail } = require('../helpers/verification');
-const { generateToken, verifyToken } = require('../helpers/jwt');
+const {
+  generateToken,
+  verifyToken,
+  signTokenLogin,
+} = require('../helpers/jwt');
 const router = express.Router();
 const { User } = require('../models');
 const { sendForgotPassword } = require('../helpers/forgotPassword');
-const { hashPassword } = require('../helpers/bcryptjs');
+const { hashPassword, comparePassword } = require('../helpers/bcryptjs');
 
 class UserController {
   static async createUser(req, res) {
@@ -15,6 +19,30 @@ class UserController {
       res.status(201).send('User created. Verification email sent.');
     } catch (err) {
       res.json(err);
+    }
+  }
+
+  static async login(req, res) {
+    try {
+      const { email, password } = req.body;
+      if (!email) {
+        throw { name: 'bad email' };
+      }
+      if (!password) {
+        throw { name: 'bad password' };
+      }
+      const user = await User.finOne({ where: { email } });
+      if (!user) {
+        throw { name: 'unauth user' };
+      }
+      const checkPassword = comparePassword(password, user.password);
+      if (!checkPassword) {
+        throw { name: 'unauth user' };
+      }
+      const generateToken = signTokenLogin({ id: user.id, email: user.email });
+      res.status(200).json({ access_token: generateToken });
+    } catch (err) {
+      res.status(500).json(err);
     }
   }
 
