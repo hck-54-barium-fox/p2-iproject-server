@@ -1,4 +1,6 @@
 const { User } = require('../models/index')
+const { comparePassword } = require('../helpers/bycriptjs')
+const { createToken } = require('../helpers/jwt')
 class userController{
     static async userRegister(req, res, next){
         try {
@@ -14,6 +16,29 @@ class userController{
     }
 
     static async userLogin(req, res, next){
+        try {
+            let { email, password } = req.body
+        if(!email){
+            throw {name : "badRequestEmail"}
+        }
+        if(!password){
+            throw {name : "badRequestPassword"}
+        }
+        const user = await User.findOne({ where : {email}})
+        if(!user){
+            throw {name : "Unauthorized"}
+        }
+        const compare = comparePassword(password, user.password)
+        if(!compare){
+            throw {name : "Unauthorized"}
+        }
+        const token = createToken({ id : user.id})
+        console.log(token);
+        res.status(200).json({access_token : token})
+
+        } catch (error) {
+            next(error)
+        }
         
     }
 }
