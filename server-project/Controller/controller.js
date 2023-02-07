@@ -2,7 +2,8 @@ const { comparePassword } = require("../helpers/bcrypt");
 const { signToken } = require("../helpers/jwt");
 const { User } = require("../models/index");
 const games = require('../games.json');
-const axios =require('axios');
+const axios = require('axios');
+const fs = require("fs");
 
 class Controller {
 
@@ -112,20 +113,20 @@ class Controller {
             params: {
                 'country': 'us',
                 'category': 'technology',
-                'apiKey':'3224442aca354406b000d716385f5412'
+                'apiKey': '3224442aca354406b000d716385f5412'
             }
         };
         axios.request(options).then(function (response) {
             // console.log(response.data);
             let dataNews = response.data
-            let resultNews= dataNews.articles.map(el=>{
+            let resultNews = dataNews.articles.map(el => {
                 return {
-                    "source":el.source.name,
-                    "author":el.author,
-                    "title" :el.title,
-                    "urlToImage":el.urlToImage,
-                    "publishedAt":el.publishedAt.substring(0,10),
-                    "content":el.content
+                    "source": el.source.name,
+                    "author": el.author,
+                    "title": el.title,
+                    "urlToImage": el.urlToImage,
+                    "publishedAt": el.publishedAt.substring(0, 10),
+                    "content": el.content
                 }
             })
             res.status(200).json(resultNews)
@@ -134,6 +135,94 @@ class Controller {
             console.log(err);
             res.status(500).json({ message: "Internal server error" })
         });
+    }
+
+
+
+
+    static async fetchDataGamesSteamAppId(req, res) {
+        try {
+
+            // const id = 985810
+            const dataId = [570, 985810, 10, 500,1748523,1748524,1748525,1748526,1748527,1748528,578080
+            ]
+
+            const dataTotalUrl = []
+            for (let i = 0; i < dataId.length; i++) {
+                let options = {
+                    method: 'GET',
+                    url: 'https://store.steampowered.com/api/appdetails',
+                    params: {
+                        appids: dataId[i]
+                    }
+                }
+                dataTotalUrl.push(options)
+            }
+            // console.log(dataTotalUrl);
+
+            const secondGetSteam = async (payload) => {
+                const { data } = await axios(payload)
+                return data
+            }
+
+            let array = []
+
+            for (const steam of dataTotalUrl) {
+                let dataSteam = await secondGetSteam(steam)
+                // console.log(dataSteam)
+
+                let resultDataSteam = '';
+                for (let key in dataSteam) {
+                    resultDataSteam = dataSteam[`${key}`].data
+                }
+
+                let finalDataSteam = {}
+                for (let gameSteam in resultDataSteam) {
+                    if (resultDataSteam['is_free'] === false) {
+
+                        finalDataSteam = {
+                            name: resultDataSteam['name'],
+                            steam_appid: resultDataSteam['steam_appid'],
+                            price: resultDataSteam['price_overview'].final_formatted,
+                            about_the_game: resultDataSteam['about_the_game'],
+                            detailed_description: resultDataSteam['detailed_description'],
+                            image: resultDataSteam['header_image'],
+                            platforms: resultDataSteam['platforms']
+                        }
+
+                    } else {
+
+                        finalDataSteam = {
+                            name: resultDataSteam['name'],
+                            steam_appid: resultDataSteam['steam_appid'],
+                            price: "Rp 0",
+                            detailed_description: resultDataSteam['detailed_description'],
+                            supported_languages: resultDataSteam['supported_languages'],
+                            image: resultDataSteam['header_image'],
+                            platforms: resultDataSteam['platforms']
+                        }
+                    }
+                }
+                array.push(finalDataSteam)
+            }
+            // console.log(array)
+         
+
+            const jsonData = JSON.stringify(array);
+
+            fs.writeFile("games.json", jsonData, "utf8", (error) => {
+                if (error) {
+                    console.error(error);
+                } else {
+                    console.log("Data saved to data.json file");
+                }
+            });
+
+            res.status(200).json(array)
+        } catch (err) {
+            res.status(500).json({ message: "Internal server eror" })
+        }
+
     }
 }
 module.exports = Controller
