@@ -1,0 +1,23 @@
+Your Steam Web API Key
+Key: 70ADC90E4953B0FBCB16F420D743AF68
+
+Domain Name: http://localhost:1812/
+
+
+https://github.com/pvpoke/pvpoke
+https://docs.pokemontcg.io/api-reference/cards/card-object
+https://dev.pokemontcg.io/dashboard
+https://www.tcgpark.com/ptcgoprices/
+
+https://partner.steamgames.com/doc/webapi_overview
+
+
+
+GET
+https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/?key=FBDD4952A898BE1A214681A570F40B41&steamids=76561198192946697
+=> ini dapet Profile steam
+
+
+https://store.steampowered.com/api/appdetails?appids=570
+=> get dapet game
+
