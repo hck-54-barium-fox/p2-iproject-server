@@ -1,6 +1,5 @@
-
 const { hash, compare, encodeToken } = require('../helpers/helper');
-const{User,Product}=require('../models/index')
+const{User,Product,Category}=require('../models/index')
 class Controller{
 static async register(req, response) {
       try {
@@ -110,6 +109,18 @@ static async login(req, response) {
     }
 
   }
+
+  static async getCategory(req,response){
+    try {
+        const data= await Category.findAll({})
+        console.log(data);
+        response.status(200).json(data)
+    } catch (error) {
+        response.status(500).json(error)
+    }
+  }
+
+  
 }
 
 
