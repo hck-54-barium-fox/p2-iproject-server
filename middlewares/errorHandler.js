@@ -4,6 +4,10 @@ function errorHandler(error, req, res, next){
         res.status(400).json({message : error.errors[0].message})
     }
 
+    else if (error.code === 400 || error.code === 401){
+        res.status(error.code).json({message : error.message})
+    }
+
 
 
 
