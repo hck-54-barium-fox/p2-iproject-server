@@ -19,6 +19,8 @@ app.get('/games',Controller.fetchGames)
 
 app.get('/newsTechnlogies',Controller.fetchNewsTechnologies)
 
+app.get('/gamesData',Controller.fetchDataGamesSteamAppId)
+
 app.get('/games/:id',Controller.fetchGamesById)
 
 
