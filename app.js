@@ -15,6 +15,8 @@ app.post('/login', Controller.login)
 app.get('/getbmi', authentication, Controller.getBmi)
 app.get('/listofbodypart', authentication, Controller.getBodyPart)
 app.get('/exercisebybodypart', authentication, Controller.getExerciseByBodyPart)
+app.get('/listofequipment', authentication, Controller.getEquipment)
+app.get('/exercisebyequipment', authentication, Controller.getExerciseByEquipment)
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)

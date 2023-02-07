@@ -85,11 +85,45 @@ class Controller {
 
     static async getExerciseByBodyPart(req, res) {
         try {
-            const {bodyPart} = req.query
+            const { bodyPart } = req.query
             const words = bodyPart.split(' ').join('%20')
             const { data } = await axios({
                 method: 'GET',
                 url: `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${words}`,
+                headers: {
+                    'X-RapidAPI-Key': '6f99339649mshabefed9036baf74p11ebddjsnb7b1e29afef6',
+                    'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+                }
+            })
+            res.status(200).json(data)
+        } catch (error) {
+            res.status(500).json(error)
+        }
+    }
+
+    static async getEquipment(req, res) {
+        try {
+            const { data } = await axios({
+                method: 'GET',
+                url: 'https://exercisedb.p.rapidapi.com/exercises/equipmentList',
+                headers: {
+                    'X-RapidAPI-Key': '6f99339649mshabefed9036baf74p11ebddjsnb7b1e29afef6',
+                    'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+                }
+            })
+            res.status(200).json(data)
+        } catch (error) {
+            res.status(500).json(error)
+        }
+    }
+
+    static async getExerciseByEquipment(req, res) {
+        try {
+            const { equipment } = req.query
+            const words = equipment.split(' ').join('%20')
+            const { data } = await axios({
+                method: 'GET',
+                url: `https://exercisedb.p.rapidapi.com/exercises/equipment/${words}`,
                 headers: {
                     'X-RapidAPI-Key': '6f99339649mshabefed9036baf74p11ebddjsnb7b1e29afef6',
                     'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
