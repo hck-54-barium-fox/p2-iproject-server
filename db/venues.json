@@ -1,0 +1,315 @@
+{
+    "venues": [
+        {
+            "state": "KY",
+            "name_v2": "Kentucky Proud Park",
+            "postal_code": "40502",
+            "name": "Kentucky Proud Park",
+            "links": [],
+            "timezone": "America/New_York",
+            "url": "https://seatgeek.com/venues/kentucky-proud-park/tickets",
+            "score": 1,
+            "location": {
+                "lat": 38.0185,
+                "lon": -84.5033
+            },
+            "address": "570 Wildcat Court",
+            "country": "US",
+            "has_upcoming_events": true,
+            "num_upcoming_events": 31,
+            "city": "Lexington",
+            "slug": "kentucky-proud-park",
+            "extended_address": "Lexington, KY 40502",
+            "stats": {
+                "event_count": 31
+            },
+            "id": 458662,
+            "popularity": 0,
+            "access_method": null,
+            "metro_code": 541,
+            "capacity": 0,
+            "display_location": "Lexington, KY"
+        },
+        {
+            "state": "CA",
+            "name_v2": "Candlestick Park",
+            "postal_code": "94124",
+            "name": "Candlestick Park",
+            "links": [],
+            "timezone": "America/Los_Angeles",
+            "url": "https://seatgeek.com/venues/candlestick-park/tickets",
+            "score": 0.950707,
+            "location": {
+                "lat": 37.711,
+                "lon": -122.386
+            },
+            "address": "490 Jamestown Ave",
+            "country": "US",
+            "has_upcoming_events": false,
+            "num_upcoming_events": 0,
+            "city": "San Francisco",
+            "slug": "candlestick-park",
+            "extended_address": "San Francisco, CA 94124",
+            "stats": {
+                "event_count": 0
+            },
+            "id": 1132,
+            "popularity": 0,
+            "access_method": null,
+            "metro_code": 807,
+            "capacity": 69732,
+            "display_location": "San Francisco, CA"
+        },
+        {
+            "state": "QC",
+            "name_v2": "Hippodrome de Montreal",
+            "postal_code": "H2W1S4",
+            "name": "Hippodrome de Montreal",
+            "links": [],
+            "timezone": "America/Toronto",
+            "url": "https://seatgeek.com/venues/hippodrome-de-montreal/tickets",
+            "score": 0.876696,
+            "location": {
+                "lat": 45.4953,
+                "lon": -73.6551
+            },
+            "address": "7440 Decarie Boulevard",
+            "country": "Canada",
+            "has_upcoming_events": false,
+            "num_upcoming_events": 0,
+            "city": "Montreal",
+            "slug": "hippodrome-de-montreal",
+            "extended_address": "Montreal, Canada",
+            "stats": {
+                "event_count": 0
+            },
+            "id": 3668,
+            "popularity": 0,
+            "access_method": null,
+            "metro_code": 0,
+            "capacity": 0,
+            "display_location": "Montreal, Canada"
+        },
+        {
+            "state": null,
+            "name_v2": "Estadio do Maracana",
+            "postal_code": "20271150",
+            "name": "Estadio do Maracana",
+            "links": [],
+            "timezone": "America/Sao_Paulo",
+            "url": "https://seatgeek.com/venues/estadio-do-maracana/tickets",
+            "score": 0.865,
+            "location": {
+                "lat": -22.9105,
+                "lon": -43.231
+            },
+            "address": "16 Avenida Presidente Castelo Branco",
+            "country": "Brazil",
+            "has_upcoming_events": false,
+            "num_upcoming_events": 0,
+            "city": "Rio de Janeiro",
+            "slug": "estadio-do-maracana",
+            "extended_address": "Rio de Janeiro, Brazil",
+            "stats": {
+                "event_count": 0
+            },
+            "id": 55771,
+            "popularity": 0,
+            "access_method": null,
+            "metro_code": 0,
+            "capacity": 0,
+            "display_location": "Rio de Janeiro, Brazil"
+        },
+        {
+            "state": "PA",
+            "name_v2": "Merion Golf Club",
+            "postal_code": "19003",
+            "name": "Merion Golf Club",
+            "links": [],
+            "timezone": "America/New_York",
+            "url": "https://seatgeek.com/venues/merion-golf-club/tickets",
+            "score": 0.855178,
+            "location": {
+                "lat": 40.0019,
+                "lon": -75.3118
+            },
+            "address": "450 Ardmore Ave.",
+            "country": "US",
+            "has_upcoming_events": false,
+            "num_upcoming_events": 0,
+            "city": "Ardmore",
+            "slug": "merion-golf-club",
+            "extended_address": "Ardmore, PA 19003",
+            "stats": {
+                "event_count": 0
+            },
+            "id": 7942,
+            "popularity": 0,
+            "access_method": null,
+            "metro_code": 504,
+            "capacity": 0,
+            "display_location": "Ardmore, PA"
+        },
+        {
+            "state": "WA",
+            "name_v2": "Chambers Bay",
+            "postal_code": "98467",
+            "name": "Chambers Bay",
+            "links": [],
+            "timezone": "America/Los_Angeles",
+            "url": "https://seatgeek.com/venues/chambers-bay/tickets",
+            "score": 0.838784,
+            "location": {
+                "lat": 47.2004,
+                "lon": -122.571
+            },
+            "address": "6320 Grandview Drive",
+            "country": "US",
+            "has_upcoming_events": false,
+            "num_upcoming_events": 0,
+            "city": "University Place",
+            "slug": "chambers-bay",
+            "extended_address": "University Place, WA 98467",
+            "stats": {
+                "event_count": 0
+            },
+            "id": 69798,
+            "popularity": 0,
+            "access_method": null,
+            "metro_code": 819,
+            "capacity": 0,
+            "display_location": "University Place, WA"
+        },
+        {
+            "state": "TX",
+            "name_v2": "The Museum Of Fine Arts Houston",
+            "postal_code": "77005",
+            "name": "The Museum Of Fine Arts Houston",
+            "links": [],
+            "timezone": "America/Chicago",
+            "url": "https://seatgeek.com/venues/the-museum-of-fine-arts-houston/tickets",
+            "score": 0.818204,
+            "location": {
+                "lat": 29.7257,
+                "lon": -95.3905
+            },
+            "address": "1001 Bissonnet St",
+            "country": "US",
+            "has_upcoming_events": false,
+            "num_upcoming_events": 0,
+            "city": "Houston",
+            "slug": "the-museum-of-fine-arts-houston",
+            "extended_address": "Houston, TX 77005",
+            "stats": {
+                "event_count": 0
+            },
+            "id": 14340,
+            "popularity": 0,
+            "access_method": null,
+            "metro_code": 618,
+            "capacity": 0,
+            "display_location": "Houston, TX"
+        },
+        {
+            "state": "FL",
+            "name_v2": "Francis Field",
+            "postal_code": "32084",
+            "name": "Francis Field",
+            "links": [],
+            "timezone": "America/New_York",
+            "url": "https://seatgeek.com/venues/francis-field/tickets",
+            "score": 0.817655,
+            "location": {
+                "lat": 29.8985,
+                "lon": -81.3178
+            },
+            "address": "14 W. Castillo Drive",
+            "country": "US",
+            "has_upcoming_events": false,
+            "num_upcoming_events": 0,
+            "city": "Saint Augustine",
+            "slug": "francis-field",
+            "extended_address": "Saint Augustine, FL 32084",
+            "stats": {
+                "event_count": 0
+            },
+            "id": 42988,
+            "popularity": 0,
+            "access_method": null,
+            "metro_code": 561,
+            "capacity": 0,
+            "display_location": "Saint Augustine, FL"
+        },
+        {
+            "state": "CA",
+            "name_v2": "Los Angeles Grand Park",
+            "postal_code": "90012",
+            "name": "Los Angeles Grand Park",
+            "links": [],
+            "timezone": "America/Los_Angeles",
+            "url": "https://seatgeek.com/venues/los-angeles-grand-park/tickets",
+            "score": 0.814953,
+            "location": {
+                "lat": 34.0563,
+                "lon": -118.247
+            },
+            "address": "200 N Grand Ave",
+            "country": "US",
+            "has_upcoming_events": false,
+            "num_upcoming_events": 0,
+            "city": "Los Angeles",
+            "slug": "los-angeles-grand-park",
+            "extended_address": "Los Angeles, CA 90012",
+            "stats": {
+                "event_count": 0
+            },
+            "id": 60844,
+            "popularity": 0,
+            "access_method": null,
+            "metro_code": 803,
+            "capacity": 0,
+            "display_location": "Los Angeles, CA"
+        },
+        {
+            "state": "MI",
+            "name_v2": "Joe Louis Arena",
+            "postal_code": "48226",
+            "name": "Joe Louis Arena",
+            "links": [],
+            "timezone": "America/Detroit",
+            "url": "https://seatgeek.com/venues/joe-louis-arena/tickets",
+            "score": 0.809955,
+            "location": {
+                "lat": 42.3252,
+                "lon": -83.0515
+            },
+            "address": "19 Steve Yzerman Dr.",
+            "country": "US",
+            "has_upcoming_events": false,
+            "num_upcoming_events": 0,
+            "city": "Detroit",
+            "slug": "joe-louis-arena",
+            "extended_address": "Detroit, MI 48226",
+            "stats": {
+                "event_count": 0
+            },
+            "id": 1242,
+            "popularity": 0,
+            "access_method": {
+                "method": "QRCODE_TM",
+                "created_at": "2015-10-09T16:54:40Z",
+                "employee_only": false
+            },
+            "metro_code": 505,
+            "capacity": 21666,
+            "display_location": "Detroit, MI"
+        }
+    ],
+    "meta": {
+        "total": 441376,
+        "took": 6,
+        "page": 1,
+        "per_page": 10,
+        "geolocation": null
+    }
+}
