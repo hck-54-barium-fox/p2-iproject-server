@@ -1,7 +1,7 @@
 const { comparePassword } = require("../helpers/bcrypt");
 const { signToken } = require("../helpers/jwt");
 const { User } = require("../models/index");
-const games = require ('../games.json')
+const games = require('../games.json')
 
 class Controller {
 
@@ -25,7 +25,7 @@ class Controller {
             } else if (err.name === "SequelizeValidationError") {
                 res.status(400).json({ message: err.errors[0].message })
             } else {
-                res.status(500).json({ message: "Internal server error" ,err})
+                res.status(500).json({ message: "Internal server error", err })
             }
         }
     }
@@ -45,7 +45,7 @@ class Controller {
                     email
                 }
             })
-            
+
             if (!dataLogin) {
                 throw ({ name: "Invalid email/password" })
             }
@@ -69,11 +69,37 @@ class Controller {
     }
 
     static async fetchGames(req, res) {
-        try{
-            
+        try {
+
             res.status(200).json(games)
-        }catch(err){
+        } catch (err) {
             res.status(500).json({ message: "Internal server error" })
+        }
+    }
+
+    static async fetchGamesById(req, res) {
+        try {
+            let { id } = req.params
+            let result = []
+            games.find(el => {
+                if (el.steam_appid === +(id)) {
+                    return result = el
+                }
+            })
+
+            if (result.length === 0) {
+                throw ({ name: "Data Not Found" })
+            }
+
+            res.status(200).json(result)
+
+        } catch (err) {
+            if (err.name === "Data Not Found") {
+                res.status(400).json({ message: "Data Not Found" })
+            } else {
+                res.status(500).json({ message: "Internal server error" })
+
+            }
         }
     }
 
