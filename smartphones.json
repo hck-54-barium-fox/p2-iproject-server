@@ -1,0 +1,9 @@
+[
+    {
+        "brand" : "Apple",
+        "name" : "Iphone X",
+        "imageUrl" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7xwG5Oa-jmHyb01lRLxfmV1uZwY711TPH6Q&usqp=CAU",
+        "description" : "Chipset: Apple A11 Bionic (10 nm). CPU: Hexa-core 2.39 GHz (2x Monsoon + 4x Mistral). GPU: Apple GPU (three-core graphics). Memori internal: 64GB/256GB. Baterai: Li-Ion 2716 mAh, non-removable (10.35 Wh).",
+        "price" : 100000
+    }
+]
