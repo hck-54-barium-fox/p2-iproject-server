@@ -16,6 +16,10 @@ const authentication = async (req, res, next) => {
         name: "InvalidToken",
       };
     }
+    req.user = {
+      id: user.id,
+      email: user.email,
+    };
     next();
   } catch (error) {
     console.log(error);
