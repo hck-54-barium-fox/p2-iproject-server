@@ -18,7 +18,7 @@ function errorHandler(err, req, res, next) {
     });
   } else if (err.name === "not-double") {
     res.status(400).json({
-      message: "This News Has Been Like",
+      message: "This Post Has Been Like",
     });
   } else if (err.name === "forbidden") {
     res.status(403).json({ message: "This action is only for the admin role or the original author" });
