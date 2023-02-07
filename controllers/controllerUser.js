@@ -72,15 +72,26 @@ class ControllerUser {
           battlecount: data.battleCount,
         });
       } else {
-        let user = await User.create({
-          email: `${findPlayer.name}@mail.com`,
-          password: findPlayer.tag
+        let findUser = await User.findOne({
+          where: {
+            email: `${findPlayer.name}@mail.com`
+          }
         })
-        let access_token = createToken({ id: user.id, email: user.email });
-      res
-        .status(200)
-        .json({ access_token, id: user.id, username: user.email });
-        res.status(201).json(user)
+        if (!findUser) {
+          let user = await User.create({
+            email: `${findPlayer.name}@mail.com`,
+            password: findPlayer.tag
+          })
+          let access_token = createToken({ id: user.id, email: user.email });
+        res
+          .status(200)
+          .json({ access_token, id: user.id, username: user.email });
+        } else {
+          let access_token = createToken({id: findUser.id, email: findUser.email})
+          res
+          .status(200)
+          .json({ access_token, id: findUser.id, email: findUser.email });
+        }
 
       }
     } catch (error) {
