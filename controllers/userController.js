@@ -14,7 +14,7 @@ class UserController {
                 id: user.id,
                 email: user.email
             })
-        } catch (err) {
+        } catch (err) { 
             if (err.name === 'SequelizeValidationError' || err.name === 'SequelizeUniqueConstraintError') {
                 const errorMessage = err.errors[0].message;
                 response.status(400).json({
