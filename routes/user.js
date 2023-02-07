@@ -1,5 +1,8 @@
 const express = require('express');
 const routes = express.Router();
+const axios = require('axios');
+const GITHUB_CLIENT_ID = 'be3ebd106d67ef861d01';
+const GITHUB_CLIENT_SECRET = '341e775120b1dd5d17099fe73cc97af71d3fae0f';
 const UserController = require('../controllers/customerControllers');
 
 // Create user
@@ -8,6 +11,10 @@ routes.post('/register', UserController.createUser);
 // Verify user
 routes.get('/verify', UserController.verifyUser);
 
+// login
+
+routes.post('/login', UserController.login);
+
 // forgot password
 // Forgot password route
 routes.post('/forgot-password', UserController.forgetPassword);
@@ -15,9 +22,6 @@ routes.post('/forgot-password', UserController.forgetPassword);
 routes.patch('/reset-password/:token', UserController.postUpdatedPassword);
 
 // github login
-const axios = require('axios');
-const GITHUB_CLIENT_ID = 'be3ebd106d67ef861d01';
-const GITHUB_CLIENT_SECRET = '341e775120b1dd5d17099fe73cc97af71d3fae0f';
 
 routes.get('/login-github', (req, res) => {
   try {

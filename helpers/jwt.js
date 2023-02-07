@@ -5,6 +5,10 @@ const generateToken = (user) => {
   return jwt.sign({ id: user.id }, secret, { expiresIn: '10m' });
 };
 
+const signTokenLogin = (payload) => {
+  return jwt.sign(payload, secret);
+};
+
 const verifyToken = (token) => {
   return jwt.verify(token, secret);
 };
@@ -12,4 +16,5 @@ const verifyToken = (token) => {
 module.exports = {
   generateToken,
   verifyToken,
+  signTokenLogin,
 };
