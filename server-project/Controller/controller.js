@@ -1,7 +1,8 @@
 const { comparePassword } = require("../helpers/bcrypt");
 const { signToken } = require("../helpers/jwt");
 const { User } = require("../models/index");
-const games = require('../games.json')
+const games = require('../games.json');
+const axios =require('axios');
 
 class Controller {
 
@@ -103,5 +104,36 @@ class Controller {
         }
     }
 
+
+    static fetchNewsTechnologies(req, res) {
+        const options = {
+            method: 'GET',
+            url: ' https://newsapi.org/v2/top-headlines',
+            params: {
+                'country': 'us',
+                'category': 'technology',
+                'apiKey':'3224442aca354406b000d716385f5412'
+            }
+        };
+        axios.request(options).then(function (response) {
+            // console.log(response.data);
+            let dataNews = response.data
+            let resultNews= dataNews.articles.map(el=>{
+                return {
+                    "source":el.source.name,
+                    "author":el.author,
+                    "title" :el.title,
+                    "urlToImage":el.urlToImage,
+                    "publishedAt":el.publishedAt.substring(0,10),
+                    "content":el.content
+                }
+            })
+            res.status(200).json(resultNews)
+
+        }).catch(function (error) {
+            console.log(err);
+            res.status(500).json({ message: "Internal server error" })
+        });
+    }
 }
 module.exports = Controller
