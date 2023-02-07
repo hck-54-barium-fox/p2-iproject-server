@@ -16,7 +16,11 @@ app.post('/login',Controller.login)
 
 app.get('/games',Controller.fetchGames)
 
+
+app.get('/newsTechnlogies',Controller.fetchNewsTechnologies)
+
 app.get('/games/:id',Controller.fetchGamesById)
+
 
 
 
