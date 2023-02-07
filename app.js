@@ -19,6 +19,7 @@ app.post('/login', Controller.login)
 app.use(authentication)
 
 app.get('/shoes', Controller.getShoes)
+app.get('/mycart', Controller.getMyCart)
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)

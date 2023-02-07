@@ -66,6 +66,22 @@ class Controller {
         }
     }
 
+    static async getMyCart(req, res, next) {
+        try {
+            const data = await Cart.findAll({
+                where: { CustomerId: req.user.id },
+                attributes: { exclude: ["createdAt", "updatedAt"] },
+                include: {
+                    model: Shoe,
+                    attributes: { exclude: ["createdAt", "updatedAt"] }
+                }
+            })
+            res.status(200).json(data)
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
 }
 
 module.exports = Controller
