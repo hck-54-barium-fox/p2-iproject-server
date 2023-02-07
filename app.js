@@ -20,6 +20,7 @@ app.use(authentication)
 
 app.get('/shoes', Controller.getShoes)
 app.get('/mycart', Controller.getMyCart)
+app.post('/mycart/:shoeId', Controller.addToCart)
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
