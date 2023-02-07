@@ -82,6 +82,54 @@ class Controller {
         }
     }
 
+    static async addToCart(req, res, next) {
+        try {
+            const { shoeId } = req.params
+
+            const findShoes = await Shoe.findOne({ where: { id: shoeId } })
+
+            if (!findShoes) {
+                throw { status: 404, msg: "Shoe not found" }
+            }
+
+            const findCart = await Cart.findOne({
+                where: { ShoeId: findShoes.id },
+                include: {
+                    model: Shoe,
+                    attributes: { exclude: ["createdAt", "updatedAt"] }
+                }
+            })
+
+            if (!findCart) {
+                const data = await Cart.create({
+                    CustomerId: req.user.id,
+                    ShoeId: shoeId,
+                    quantity: 1,
+                    totalPrice: findShoes.price
+                })
+                res.status(201).json({ message: `Success add to cart!` })
+            } else {
+                const data = await Cart.update(
+                    {
+                        quantity: findCart.quantity + 1,
+                        // totalPrice: findCart.totalPrice + findCart.dataValues.Shoe.dataValues.price
+                        totalPrice: findCart.totalPrice + findShoes.price
+                    },
+                    { where: { id: findCart.id } }
+                )
+                res.status(201).json({ message: `Success add to cart!` })
+            }
+
+        } catch (err) {
+            console.log(err);
+            if (err.msg) {
+                res.status(err.status).json({ message: err.msg });
+            } else {
+                res.status(500).json({ message: "Internal server error" });
+            }
+        }
+    }
+
 }
 
 module.exports = Controller
