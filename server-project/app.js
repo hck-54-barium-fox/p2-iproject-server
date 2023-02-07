@@ -14,6 +14,9 @@ app.post('/register',Controller.register)
 
 app.post('/login',Controller.login)
 
+app.get('/games',Controller.fetchGames)
+
+app.get('/games/:id',Controller.fetchGamesById)
 
 
 
