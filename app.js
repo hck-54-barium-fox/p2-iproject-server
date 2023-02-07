@@ -13,6 +13,7 @@ app.post('/register', Controller.register)
 app.post('/login', Controller.login)
 ///get user status BMI
 app.get('/getbmi', authentication, Controller.getBmi)
+app.get('/listofbodypart', authentication, Controller.getBodyPart)
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
