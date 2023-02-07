@@ -14,6 +14,8 @@ router.post(
 router.get("/find/:search", PoetryController.getLetterPerSearch);
 router.post("/payment/:letterId", PaymentController.payment);
 router.get("/myletter", PoetryController.getMyLetter);
+router.get("/letterbyid/:letterId", PoetryController.letterById);
+router.post("/sendemail/:letterId", PoetryController.sendEmail);
 
 // router.post("/send/")
 
