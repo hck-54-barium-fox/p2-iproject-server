@@ -1,0 +1,1128 @@
+[
+  {
+    "available_deal_descriptions": [],
+    "mobile_discount_percentage": 10,
+    "free_cancellation_recommendation": {
+      "banner": {
+        "subtitle": "Starting April 6, 2020, your chosen cancellation policy will apply, regardless of the coronavirus. We recommend booking an option with free cancellation in case your travel plans change.",
+        "title": "Find a cancellation policy that works for you",
+        "action_text": "Read more"
+      },
+      "action_modal": {
+        "details": "For bookings made on or after April 6, 2020, be sure to consider the risk of the coronavirus (COVID-19) and associated government measures. If you don’t book a flexible rate, you may not be entitled to a refund. Your cancellation request will be handled by the property, based on your chosen policy and consumer law where applicable. During times of uncertainty, we recommend booking an option with free cancellation. If your plans change, you can cancel free of charge until free cancellation expires.",
+        "title": "Check your booking conditions"
+      }
+    },
+    "district_id": 3376,
+    "is_closed": 0,
+    "top_ufi_benefits": [
+      {
+        "icon": "wifi",
+        "translated_name": "WiFi"
+      },
+      {
+        "translated_name": "Parking",
+        "icon": "parking_sign"
+      },
+      {
+        "icon": "nosmoking",
+        "translated_name": "Non-smoking rooms"
+      },
+      {
+        "icon": "clean",
+        "translated_name": "Room service"
+      },
+      {
+        "translated_name": "24-hour front desk",
+        "icon": "frontdesk"
+      },
+      {
+        "translated_name": "Elevator",
+        "icon": "elevator"
+      }
+    ],
+    "min_room_distribution": {
+      "adults": 2,
+      "children": []
+    },
+    "check_only_x_left": "",
+    "city_name_en": "Manila",
+    "b_legal_use_neutral_color_for_persuasion_legal": 0,
+    "plq_sensitivity": "",
+    "languages_spoken": {
+      "languagecode": ["tl", "en-gb"]
+    },
+    "is_hotel_ctrip": 0,
+    "url": "https://www.booking.com/hotel/ph/eurotel-pedro-gil.html",
+    "cc1": "ph",
+    "districts": [3376, 8110],
+    "info_banners": [
+      {
+        "id": "coronavirus",
+        "messages": [
+          "Get the travel advice you need. Read more about possible travel restrictions before you go."
+        ],
+        "show_after_dismissed_time": 24,
+        "show_after_dismissed": 1,
+        "title": "Coronavirus (COVID-19) update",
+        "position_to_inject": 0,
+        "dismissable": 0,
+        "collapsible": 0,
+        "is_default_collapsed": 1,
+        "primary_action": {
+          "action_context": "my-reservations",
+          "text": "Contact property",
+          "action": "open-page"
+        },
+        "secondary_action": {
+          "action_context": "help-center",
+          "text": "Help Center",
+          "action": "open-page"
+        },
+        "priority": 100,
+        "type": "banner"
+      }
+    ],
+    "hotel_name": "Eurotel Pedro Gil",
+    "soldout": 0,
+    "booking_home": {},
+    "rare_find_state": "NOT_RARE",
+    "seen_cc_app_hp_missing_info": 0,
+    "seen_cc_app_rp_missing_fac": 0,
+    "breakfast_review_score": {
+      "rating": 0,
+      "review_score": 0,
+      "review_count": 0,
+      "review_snippet": "",
+      "review_score_word": "",
+      "review_number": 0
+    },
+    "nr_bookings_today": 10,
+    "default_wishlist_name": "Manila",
+    "family_facilities": [],
+    "average_room_size_for_ufi_m2": "25.96",
+    "address_required": 0,
+    "is_city_center": 0,
+    "hotel_id": 245841,
+    "default_language": "en-gb",
+    "city_in_trans": "in Manila",
+    "latitude": 14.5745187634186,
+    "max_rooms_in_reservation": 10,
+    "b_sca_flow_property_user_ip": 0,
+    "has_theme_park_benefits": 0,
+    "departure_date": "2023-09-19",
+    "cvc_required": "1",
+    "last_reservation": {
+      "countrycode": null,
+      "time": "",
+      "country": null
+    },
+    "wholesaler_request_params": null,
+    "duplicate_rates_removed": 0,
+    "use_new_bui_icon_highlight": 0,
+    "cc_required": "1",
+    "hotel_text": {
+      "policies": [
+        {
+          "content": "Note that if canceled, modified, or in case of no-show, the total price of the reservation will be charged.",
+          "class": "POLICY_CANCELLATION"
+        },
+        {
+          "class": "POLICY_CHILDREN",
+          "content": "Children of all ages are allowed. Up to 2 children (up to and including 12 years old) stay for free when using existing beds.\nNo cribs are available.\n No extra beds are available. \nThe maximum number of total guests is 5.\n"
+        },
+        {
+          "class": "POLICY_HOTEL_INTERNET",
+          "content": "WiFi is available in all areas and is free of charge. "
+        },
+        {
+          "class": "POLICY_HOTEL_PARKING",
+          "content": "Free private parking is available  on site (reservation is not needed). "
+        },
+        {
+          "content": "Pets are not allowed. ",
+          "class": "POLICY_HOTEL_PETS"
+        },
+        {
+          "content": "You'll be charged a prepayment of the total price at any time.",
+          "class": "POLICY_PREPAY"
+        },
+        {
+          "content": "The property reserves the right to pre-authorize credit cards before arrival.",
+          "class": "POLICY_PREAUTHORIZE"
+        },
+        {
+          "content": "12 % VAT is excluded. A City tax is not applicable. A Service charge is not applicable.",
+          "items": [
+            "12 % VAT is excluded.",
+            "A City tax is not applicable.",
+            "A Service charge is not applicable."
+          ],
+          "class": "POLICY_HOTEL_EXTRACHARGES"
+        }
+      ],
+      "important_information": "Due to coronavirus (COVID-19), this property adheres to strict physical distancing measures. Due to the coronavirus (COVID-19), wearing a face mask is mandatory in all indoor common areas."
+    },
+    "available_rooms": 10,
+    "timezone": "Asia/Manila",
+    "b_max_los_data": {
+      "max_allowed_los": 90,
+      "default_los": 45,
+      "has_extended_los": 1,
+      "experiment": "long_stays_android_extend_los_2",
+      "is_fullon": 0,
+      "extended_los": 90
+    },
+    "accommodation_type_name": "Hotels",
+    "is_cpv2_property": 1,
+    "qualifies_for_no_cc_reservation": 0,
+    "is_vp2_enrolled": 0,
+    "cant_book": 0,
+    "aggregated_data": {
+      "common_kitchen_fac": [],
+      "has_nonrefundable": 1,
+      "has_seating": 0,
+      "has_kitchen": 0,
+      "has_refundable": 0
+    },
+    "urgency_room_string": "Studio",
+    "room_recommendation": [
+      {
+        "total_extra_bed_price": 0,
+        "total_extra_bed_price_in_hotel_currency": 0,
+        "number_of_extra_beds": 0,
+        "children": 0,
+        "babies": 0,
+        "adults": 2,
+        "block_id": "24584105_272392741_0_2_0"
+      }
+    ],
+    "block_price_breakdown": {
+      "24584101_272392741_0_2_0": {
+        "currency": "USD",
+        "has_incalculable_charges": 0,
+        "gross_price": "119.40",
+        "all_inclusive_price": 133.73,
+        "sum_excluded_raw": 14.33
+      },
+      "24584103_145409959_0_1_0": {
+        "has_incalculable_charges": 0,
+        "gross_price": 192.68,
+        "all_inclusive_price": 215.8,
+        "sum_excluded_raw": 23.12,
+        "currency": "USD"
+      },
+      "24584104_272392741_0_2_0": {
+        "currency": "USD",
+        "sum_excluded_raw": 24.24,
+        "has_incalculable_charges": 0,
+        "gross_price": 202.03,
+        "all_inclusive_price": 226.27
+      },
+      "24584105_272392741_0_2_0": {
+        "sum_excluded_raw": 13.23,
+        "has_incalculable_charges": 0,
+        "gross_price": 110.22,
+        "all_inclusive_price": 123.45,
+        "currency": "USD"
+      },
+      "24584106_145409959_0_1_0": {
+        "currency": "USD",
+        "sum_excluded_raw": 18.71,
+        "all_inclusive_price": 174.67,
+        "gross_price": 155.96,
+        "has_incalculable_charges": 0
+      },
+      "24584103_272392741_0_2_0": {
+        "currency": "USD",
+        "sum_excluded_raw": 17.64,
+        "gross_price": 146.99,
+        "all_inclusive_price": 164.63,
+        "has_incalculable_charges": 0
+      },
+      "24584101_145409959_0_1_0": {
+        "currency": "USD",
+        "sum_excluded_raw": 18.71,
+        "has_incalculable_charges": 0,
+        "gross_price": 155.96,
+        "all_inclusive_price": 174.67
+      },
+      "24584105_145409959_0_1_0": {
+        "currency": "USD",
+        "all_inclusive_price": 164.39,
+        "gross_price": 146.78,
+        "has_incalculable_charges": 0,
+        "sum_excluded_raw": 17.61
+      },
+      "24584106_272392741_0_2_0": {
+        "sum_excluded_raw": 14.33,
+        "all_inclusive_price": 133.73,
+        "gross_price": "119.40",
+        "has_incalculable_charges": 0,
+        "currency": "USD"
+      },
+      "24584104_145409959_0_1_0": {
+        "currency": "USD",
+        "sum_excluded_raw": 33.03,
+        "has_incalculable_charges": 0,
+        "all_inclusive_price": 308.3,
+        "gross_price": 275.27
+      }
+    },
+    "is_crimea": 0,
+    "country_trans": "Philippines",
+    "ufi": -2437894,
+    "address_trans": "",
+    "review_nr": 609,
+    "class_is_estimated": 0,
+    "wl_dest_id": "city::-2437894",
+    "is_wholesaler_candidate": 1,
+    "block": [
+      {
+        "rack_rate": {
+          "currency": "USD",
+          "price": "0.00"
+        },
+        "mealplan": "Continental breakfast costs US$5 per person per night.",
+        "is_secret_deal": 0,
+        "number_of_bedrooms": 0,
+        "is_mobile_deal": 0,
+        "extrabed_available": 0,
+        "full_board": 0,
+        "roomtype_id": 12,
+        "price_breakdown": {
+          "all_inclusive_price": 123.45,
+          "gross_price": 110.22,
+          "has_incalculable_charges": 0,
+          "has_fine_print_charges": 0,
+          "sum_excluded_raw": 13.23,
+          "has_tax_exceptions": 0,
+          "currency": "USD",
+          "excluded_charges_detail": null
+        },
+        "max_occupancy": "2",
+        "can_reserve_free_parking": 1,
+        "max_children_free": 1,
+        "refundable": 0,
+        "genius_discount_percentage": 0,
+        "deals": {
+          "deal_attributes": {
+            "has_secret_channel_option": 0
+          }
+        },
+        "nr_children": 0,
+        "bh_room_highlights": [],
+        "half_board": 0,
+        "must_reserve_free_parking": 0,
+        "is_flash_deal": 0,
+        "max_children_free_age": 13,
+        "extrabed_available_amount": null,
+        "room_name": "Studio",
+        "dinner_included": 0,
+        "breakfast_included": 0,
+        "babycots_available_amount": null,
+        "number_of_bathrooms": 0,
+        "is_last_minute_deal": 0,
+        "room_surface_in_feet2": 172.2225664,
+        "lunch_included": 0,
+        "room_id": 24584105,
+        "smoking": 0,
+        "rate_type_id": 0,
+        "block_text": {
+          "policies": [
+            {
+              "class": "POLICY_CANCELLATION",
+              "content": "Note that if canceled, modified, or in case of no-show, the total price of the reservation will be charged."
+            },
+            {
+              "class": "POLICY_PREPAY",
+              "content": "You'll be charged a prepayment of the total price at any time."
+            },
+            {
+              "currencycode": "PHP",
+              "class": "POLICY_HOTEL_MEALPLAN",
+              "price": 275,
+              "mealplan_vector": "2",
+              "content": "Continental breakfast costs US$5 per person per night."
+            },
+            {
+              "content": "12% VAT",
+              "class": "POLICY_SUMMARY_EXCLUDED"
+            },
+            {
+              "class": "POLICY_TITLE",
+              "content": "Non Refundable"
+            }
+          ]
+        },
+        "room_surface_in_m2": 16,
+        "is_genius_deal": null,
+        "deposit_required": 1,
+        "product_price_breakdown": {
+          "all_inclusive_amount": {
+            "currency": "USD",
+            "value": 123.444600589365
+          },
+          "items": [
+            {
+              "name": "VAT",
+              "item_amount": {
+                "currency": "USD",
+                "value": 13.2262072060034
+              },
+              "base": {
+                "percentage": 12,
+                "kind": "percentage"
+              },
+              "kind": "charge",
+              "inclusion_type": "excluded",
+              "details": "12 % VAT"
+            },
+            {
+              "kind": "discount",
+              "identifier": "basic-deal",
+              "name": "Bonus savings",
+              "item_amount": {
+                "value": 52.4848604962705,
+                "currency": "USD"
+              },
+              "details": "You’re getting a reduced rate because this property is offering a discount."
+            },
+            {
+              "kind": "discount",
+              "identifier": "mobile-discount",
+              "item_amount": {
+                "currency": "USD",
+                "value": 12.2465295628609
+              },
+              "details": "You're getting a reduced rate because you're using a mobile device.",
+              "name": "Mobile-only price"
+            }
+          ],
+          "excluded_amount": {
+            "value": 13.2262072060034,
+            "currency": "USD"
+          },
+          "strikethrough_amount_per_night": {
+            "currency": "USD",
+            "value": 43.7374458606232
+          },
+          "gross_amount": {
+            "value": 110.218393383361,
+            "currency": "USD"
+          },
+          "strikethrough_price": {
+            "value": 174.949783442493,
+            "currency": "USD"
+          },
+          "net_amount": {
+            "currency": "USD",
+            "value": 110.218393383361
+          },
+          "discounted_amount": {
+            "currency": "USD",
+            "value": 64.7313900591314
+          },
+          "nr_stays": 10,
+          "gross_amount_per_night": {
+            "currency": "USD",
+            "value": 27.5545983458403
+          }
+        },
+        "all_inclusive": 0,
+        "pod_ios_migrate_policies_to_smp_fullon": 0,
+        "is_genius_discount_geo": 0,
+        "refundable_until": "",
+        "is_dormitory": 0,
+        "is_domestic_rate": 0,
+        "name_without_policy": "Studio",
+        "min_price": {
+          "price": "5914.87",
+          "currency": "PHP",
+          "extra_charges_breakdown": {
+            "net_price": "5914.87",
+            "extra_charge": [
+              {
+                "excluded": 1,
+                "amount": 709.78,
+                "inclusion_type": "excluded",
+                "charge_price_mode": 5,
+                "type": "VAT",
+                "currency": "PHP",
+                "charge_amount": "12.00",
+                "name": "VAT"
+              }
+            ]
+          }
+        },
+        "incremental_price": [
+          {
+            "price": 5914.87,
+            "currency": "PHP",
+            "extra_charges_breakdown": {
+              "net_price": 5914.87,
+              "extra_charge": [
+                {
+                  "name": "VAT",
+                  "charge_amount": "12.00",
+                  "type": "VAT",
+                  "currency": "PHP",
+                  "charge_price_mode": 5,
+                  "inclusion_type": "excluded",
+                  "amount": 709.78,
+                  "excluded": 1
+                }
+              ]
+            }
+          },
+          {
+            "extra_charges_breakdown": {
+              "net_price": 11829.74,
+              "extra_charge": [
+                {
+                  "excluded": 1,
+                  "inclusion_type": "excluded",
+                  "amount": "1419.56",
+                  "currency": "PHP",
+                  "type": "VAT",
+                  "charge_price_mode": 5,
+                  "charge_amount": "12.00",
+                  "name": "VAT"
+                }
+              ]
+            },
+            "currency": "PHP",
+            "price": 11829.74
+          },
+          {
+            "extra_charges_breakdown": {
+              "net_price": 17744.61,
+              "extra_charge": [
+                {
+                  "excluded": 1,
+                  "type": "VAT",
+                  "currency": "PHP",
+                  "charge_price_mode": 5,
+                  "inclusion_type": "excluded",
+                  "amount": "2129.34",
+                  "charge_amount": "12.00",
+                  "name": "VAT"
+                }
+              ]
+            },
+            "currency": "PHP",
+            "price": 17744.61
+          },
+          {
+            "price": 23659.48,
+            "extra_charges_breakdown": {
+              "net_price": 23659.48,
+              "extra_charge": [
+                {
+                  "name": "VAT",
+                  "charge_amount": "12.00",
+                  "type": "VAT",
+                  "currency": "PHP",
+                  "charge_price_mode": 5,
+                  "inclusion_type": "excluded",
+                  "amount": "2839.12",
+                  "excluded": 1
+                }
+              ]
+            },
+            "currency": "PHP"
+          },
+          {
+            "extra_charges_breakdown": {
+              "net_price": 29574.35,
+              "extra_charge": [
+                {
+                  "amount": "3548.90",
+                  "inclusion_type": "excluded",
+                  "type": "VAT",
+                  "currency": "PHP",
+                  "charge_price_mode": 5,
+                  "excluded": 1,
+                  "name": "VAT",
+                  "charge_amount": "12.00"
+                }
+              ]
+            },
+            "currency": "PHP",
+            "price": 29574.35
+          },
+          {
+            "currency": "PHP",
+            "extra_charges_breakdown": {
+              "extra_charge": [
+                {
+                  "charge_price_mode": 5,
+                  "type": "VAT",
+                  "currency": "PHP",
+                  "inclusion_type": "excluded",
+                  "amount": "4258.68",
+                  "excluded": 1,
+                  "name": "VAT",
+                  "charge_amount": "12.00"
+                }
+              ],
+              "net_price": 35489.22
+            },
+            "price": 35489.22
+          },
+          {
+            "currency": "PHP",
+            "extra_charges_breakdown": {
+              "net_price": 41404.09,
+              "extra_charge": [
+                {
+                  "type": "VAT",
+                  "currency": "PHP",
+                  "charge_price_mode": 5,
+                  "inclusion_type": "excluded",
+                  "amount": "4968.46",
+                  "excluded": 1,
+                  "name": "VAT",
+                  "charge_amount": "12.00"
+                }
+              ]
+            },
+            "price": 41404.09
+          },
+          {
+            "price": 47318.96,
+            "extra_charges_breakdown": {
+              "extra_charge": [
+                {
+                  "currency": "PHP",
+                  "type": "VAT",
+                  "charge_price_mode": 5,
+                  "amount": "5678.24",
+                  "inclusion_type": "excluded",
+                  "excluded": 1,
+                  "name": "VAT",
+                  "charge_amount": "12.00"
+                }
+              ],
+              "net_price": 47318.96
+            },
+            "currency": "PHP"
+          },
+          {
+            "currency": "PHP",
+            "extra_charges_breakdown": {
+              "net_price": 53233.83,
+              "extra_charge": [
+                {
+                  "charge_amount": "12.00",
+                  "name": "VAT",
+                  "excluded": 1,
+                  "currency": "PHP",
+                  "type": "VAT",
+                  "charge_price_mode": 5,
+                  "amount": "6388.02",
+                  "inclusion_type": "excluded"
+                }
+              ]
+            },
+            "price": 53233.83
+          },
+          {
+            "extra_charges_breakdown": {
+              "extra_charge": [
+                {
+                  "name": "VAT",
+                  "charge_amount": "12.00",
+                  "currency": "PHP",
+                  "type": "VAT",
+                  "charge_price_mode": 5,
+                  "amount": "7097.80",
+                  "inclusion_type": "excluded",
+                  "excluded": 1
+                }
+              ],
+              "net_price": "59148.70"
+            },
+            "currency": "PHP",
+            "price": "59148.70"
+          }
+        ],
+        "nr_adults": 2,
+        "b_bsb_campaigns": [],
+        "name": "Studio - Low rate – no money back",
+        "babycots_available": 0,
+        "is_smart_deal": 0,
+        "room_count": 20,
+        "block_id": "24584105_272392741_0_2_0",
+        "detail_mealplan": [
+          {
+            "title": "Breakfast available (Continental, Asian, Buffet)",
+            "price": 275,
+            "icon": "coffee",
+            "currency": "PHP"
+          }
+        ],
+        "paymentterms": {
+          "prepayment": {
+            "info": {
+              "time_before_midnight": null,
+              "timezone": null,
+              "timezone_offset": null,
+              "date": null,
+              "prepayment_at_booktime": 0,
+              "refundable": 0,
+              "time": null,
+              "is_midnight": null,
+              "date_before": null
+            },
+            "type": "full_prepayment",
+            "description": "You'll be charged a prepayment of the total price at any time.",
+            "type_translation": "SECURE YOUR BOOKING – pay now",
+            "extended_type_translation": "SECURE YOUR BOOKING – pay now",
+            "simple_translation": "Prepayment",
+            "type_extended": "non_refundable_prepayment",
+            "timeline": {
+              "currency_code": "PHP",
+              "policygroup_instance_id": "1/1/337",
+              "nr_stages": 1,
+              "stages": [
+                {
+                  "limit_from_date": "February 7, 2023",
+                  "fee_remaining_pretty": "PHP 0",
+                  "b_state": "NONREF",
+                  "limit_from_time": "2:16 PM",
+                  "stage_fee_pretty": "PHP 5915",
+                  "u_fee_remaining": "0.00",
+                  "limit_from": "February 7, 2023 2:16 PM",
+                  "limit_until": "February 7, 2023 2:16 PM",
+                  "fee_pretty": "PHP 5914",
+                  "limit_until_time": "2:16 PM",
+                  "amount": "110.22",
+                  "u_fee_remaining_pretty": "US$ 0",
+                  "amount_pretty": "US$ 110",
+                  "b_number": 0,
+                  "is_effective": 1,
+                  "u_stage_fee_pretty": "US$ 110",
+                  "current_stage": 1,
+                  "u_fee": 110.22,
+                  "u_fee_pretty": "US$ 110",
+                  "limit_until_date": "February 7, 2023",
+                  "text": "Before you stay you'll pay",
+                  "fee_rounded": 5915,
+                  "fee_remaining": 0,
+                  "is_free": 0,
+                  "limit_from_raw": "2023-02-07 14:16:49",
+                  "fee": 5914.87,
+                  "limit_timezone": "Manila",
+                  "limit_until_raw": "2023-02-07 14:16:49",
+                  "effective_number": 0,
+                  "u_stage_fee": "110.22",
+                  "stage_fee": 5914.87
+                }
+              ],
+              "u_currency_code": "USD"
+            }
+          },
+          "cancellation": {
+            "type": "non_refundable",
+            "info": {
+              "date_before_raw": null,
+              "time_before_midnight": null,
+              "timezone": null,
+              "date_raw": null,
+              "date": null,
+              "timezone_offset": null,
+              "refundable": 0,
+              "is_midnight": null,
+              "date_before": null,
+              "time": null
+            },
+            "non_refundable_anymore": 0,
+            "description": "Note that if canceled, modified, or in case of no-show, the total price of the reservation will be charged.",
+            "guaranteed_non_refundable": 0,
+            "bucket": "SMP_NON_REF",
+            "timeline": {
+              "nr_stages": 1,
+              "stages": [
+                {
+                  "fee": 5914.87,
+                  "limit_timezone": "Manila",
+                  "stage_translation": "No refund if you cancel",
+                  "limit_from_raw": "2023-02-07 14:16:49",
+                  "is_free": 0,
+                  "effective_number": 0,
+                  "u_stage_fee": "110.22",
+                  "stage_fee": 5914.87,
+                  "limit_until_raw": "2023-02-07 14:16:49",
+                  "current_stage": 1,
+                  "u_fee": "110.22",
+                  "u_fee_pretty": "US$ 110",
+                  "is_effective": 1,
+                  "u_stage_fee_pretty": "US$ 110",
+                  "fee_remaining": 0,
+                  "limit_until_date": "February 7, 2023",
+                  "text": "Until 2:16 PM on Feb 7",
+                  "fee_rounded": 5915,
+                  "u_fee_remaining": "0.00",
+                  "limit_from": "February 7, 2023 2:16 PM",
+                  "limit_until": "February 7, 2023 2:16 PM",
+                  "fee_pretty": "PHP 5914",
+                  "amount": 110.22,
+                  "amount_pretty": "US$ 110",
+                  "u_fee_remaining_pretty": "US$ 0",
+                  "b_number": 0,
+                  "limit_until_time": "2:16 PM",
+                  "text_refundable": "You'll get a US$ 0 refund if you cancel before 2:16 PM on February 7, 2023.",
+                  "fee_remaining_pretty": "PHP 0",
+                  "limit_from_date": "February 7, 2023",
+                  "b_state": "NONREF",
+                  "limit_from_time": "2:16 PM",
+                  "stage_fee_pretty": "PHP 5915"
+                }
+              ],
+              "policygroup_instance_id": "1/1/337",
+              "currency_code": "PHP",
+              "u_currency_code": "USD"
+            },
+            "type_translation": "Non-refundable"
+          }
+        },
+        "is_block_fit": 1,
+        "children_ages": []
+      }
+    ],
+    "is_exclusive": null,
+    "city": "Manila",
+    "total_blocks": 10,
+    "spoken_languages": ["tl", "en-gb"],
+    "longitude": 120.984916090965,
+    "city_trans": "Manila",
+    "address": "616 Pedro Gil Street, Ermita",
+    "rooms": {
+      "24584105": {
+        "photos": [
+          {
+            "url_original": "https://cf.bstatic.com/xdata/images/hotel/max500/183612426.jpg?k=a07fc4d7f7ffb803ee83e93b9f96447d035d2e7e9d76b0e31cb9cb58661cccf1&o=",
+            "photo_id": 183612426,
+            "url_640x200": "https://cf.bstatic.com/xdata/images/hotel/640x200/183612426.jpg?k=a07fc4d7f7ffb803ee83e93b9f96447d035d2e7e9d76b0e31cb9cb58661cccf1&o=",
+            "ratio": 1.5,
+            "url_square60": "https://cf.bstatic.com/xdata/images/hotel/square60/183612426.jpg?k=a07fc4d7f7ffb803ee83e93b9f96447d035d2e7e9d76b0e31cb9cb58661cccf1&o=",
+            "last_update_date": "2019-02-25 12:33:23",
+            "url_max300": "https://cf.bstatic.com/xdata/images/hotel/max300/183612426.jpg?k=a07fc4d7f7ffb803ee83e93b9f96447d035d2e7e9d76b0e31cb9cb58661cccf1&o=",
+            "new_order": 0
+          },
+          {
+            "url_original": "https://cf.bstatic.com/xdata/images/hotel/max500/183968200.jpg?k=e2e52e159fe6b68cd39477839e1fa1f02a386199e610c649d81d8625b509bed7&o=",
+            "photo_id": 183968200,
+            "url_640x200": "https://cf.bstatic.com/xdata/images/hotel/640x200/183968200.jpg?k=e2e52e159fe6b68cd39477839e1fa1f02a386199e610c649d81d8625b509bed7&o=",
+            "ratio": 1.33439675174014,
+            "url_square60": "https://cf.bstatic.com/xdata/images/hotel/square60/183968200.jpg?k=e2e52e159fe6b68cd39477839e1fa1f02a386199e610c649d81d8625b509bed7&o=",
+            "last_update_date": "2019-02-27 11:32:23",
+            "url_max300": "https://cf.bstatic.com/xdata/images/hotel/max300/183968200.jpg?k=e2e52e159fe6b68cd39477839e1fa1f02a386199e610c649d81d8625b509bed7&o=",
+            "new_order": 1
+          },
+          {
+            "url_original": "https://cf.bstatic.com/xdata/images/hotel/max500/183968210.jpg?k=08d2c579bad9eb3b16f09f681ae02241793956894c6c3379872add80e9ac649d&o=",
+            "ratio": 1.33439675174014,
+            "url_640x200": "https://cf.bstatic.com/xdata/images/hotel/640x200/183968210.jpg?k=08d2c579bad9eb3b16f09f681ae02241793956894c6c3379872add80e9ac649d&o=",
+            "photo_id": 183968210,
+            "url_square60": "https://cf.bstatic.com/xdata/images/hotel/square60/183968210.jpg?k=08d2c579bad9eb3b16f09f681ae02241793956894c6c3379872add80e9ac649d&o=",
+            "last_update_date": "2019-02-27 11:32:25",
+            "url_max300": "https://cf.bstatic.com/xdata/images/hotel/max300/183968210.jpg?k=08d2c579bad9eb3b16f09f681ae02241793956894c6c3379872add80e9ac649d&o=",
+            "new_order": 2
+          },
+          {
+            "url_original": "https://cf.bstatic.com/xdata/images/hotel/max500/183966438.jpg?k=36a3d0b40c895289cb8372f971d15cbf459de6770d880594e2d630995e049a94&o=",
+            "photo_id": 183966438,
+            "url_640x200": "https://cf.bstatic.com/xdata/images/hotel/640x200/183966438.jpg?k=36a3d0b40c895289cb8372f971d15cbf459de6770d880594e2d630995e049a94&o=",
+            "ratio": 1.33333333333333,
+            "url_square60": "https://cf.bstatic.com/xdata/images/hotel/square60/183966438.jpg?k=36a3d0b40c895289cb8372f971d15cbf459de6770d880594e2d630995e049a94&o=",
+            "last_update_date": "2019-02-27 11:20:33",
+            "url_max300": "https://cf.bstatic.com/xdata/images/hotel/max300/183966438.jpg?k=36a3d0b40c895289cb8372f971d15cbf459de6770d880594e2d630995e049a94&o=",
+            "new_order": 3
+          }
+        ],
+        "facilities": [
+          {
+            "id": 8,
+            "facilitytype_name": "Media & Technology",
+            "alt_facilitytype_id": 6,
+            "facilitytype_id": 6,
+            "alt_facilitytype_name": "Media & Technology",
+            "name": "TV"
+          },
+          {
+            "id": 125,
+            "alt_facilitytype_id": 17,
+            "facilitytype_id": 8,
+            "facilitytype_name": "Services & Extras",
+            "alt_facilitytype_name": "Bedroom",
+            "name": "Linens"
+          },
+          {
+            "alt_facilitytype_name": "Accessibility",
+            "name": "Upper floors accessible by elevator",
+            "id": 132,
+            "alt_facilitytype_id": 19,
+            "facilitytype_name": "Accessibility",
+            "facilitytype_id": 19
+          },
+          {
+            "alt_facilitytype_name": "Bathroom",
+            "name": "Toilet",
+            "id": 31,
+            "facilitytype_id": 5,
+            "alt_facilitytype_id": 5,
+            "facilitytype_name": "Bathroom"
+          },
+          {
+            "alt_facilitytype_name": "Media & Technology",
+            "name": "Flat-screen TV",
+            "id": 75,
+            "alt_facilitytype_id": 6,
+            "facilitytype_name": "Media & Technology",
+            "facilitytype_id": 6
+          },
+          {
+            "id": 83,
+            "facilitytype_name": "Services & Extras",
+            "alt_facilitytype_id": 3,
+            "facilitytype_id": 8,
+            "alt_facilitytype_name": "Services",
+            "name": "Wake-up service"
+          },
+          {
+            "alt_facilitytype_id": 6,
+            "facilitytype_id": 6,
+            "facilitytype_name": "Media & Technology",
+            "id": 9,
+            "name": "Telephone",
+            "alt_facilitytype_name": "Media & Technology"
+          },
+          {
+            "name": "Shower",
+            "alt_facilitytype_name": "Bathroom",
+            "facilitytype_name": "Bathroom",
+            "alt_facilitytype_id": 5,
+            "facilitytype_id": 5,
+            "id": 4
+          },
+          {
+            "id": 94,
+            "facilitytype_id": 4,
+            "alt_facilitytype_id": 12,
+            "facilitytype_name": "Room Amenities",
+            "alt_facilitytype_name": "Kitchen",
+            "name": "Dryer"
+          },
+          {
+            "alt_facilitytype_name": "Bathroom",
+            "name": "Bidet",
+            "id": 100,
+            "alt_facilitytype_id": 5,
+            "facilitytype_id": 5,
+            "facilitytype_name": "Bathroom"
+          },
+          {
+            "facilitytype_id": 6,
+            "alt_facilitytype_id": 6,
+            "facilitytype_name": "Media & Technology",
+            "id": 68,
+            "name": "Cable channels",
+            "alt_facilitytype_name": "Media & Technology"
+          },
+          {
+            "alt_facilitytype_name": "Bathroom",
+            "name": "Towels",
+            "id": 124,
+            "alt_facilitytype_id": 5,
+            "facilitytype_name": "Services & Extras",
+            "facilitytype_id": 8
+          },
+          {
+            "alt_facilitytype_id": 17,
+            "facilitytype_id": 4,
+            "facilitytype_name": "Room Amenities",
+            "id": 95,
+            "name": "Wardrobe or closet",
+            "alt_facilitytype_name": "Bedroom"
+          },
+          {
+            "name": "Free toiletries",
+            "alt_facilitytype_name": "Bathroom",
+            "alt_facilitytype_id": 5,
+            "facilitytype_name": "Bathroom",
+            "facilitytype_id": 5,
+            "id": 27
+          },
+          {
+            "id": 141,
+            "facilitytype_id": 5,
+            "alt_facilitytype_id": 5,
+            "facilitytype_name": "Bathroom",
+            "alt_facilitytype_name": "Bathroom",
+            "name": "Toilet paper"
+          },
+          {
+            "id": 11,
+            "facilitytype_id": 4,
+            "alt_facilitytype_id": 1,
+            "facilitytype_name": "Room Amenities",
+            "alt_facilitytype_name": "General",
+            "name": "Air conditioning"
+          },
+          {
+            "facilitytype_id": 5,
+            "alt_facilitytype_id": 5,
+            "facilitytype_name": "Bathroom",
+            "id": 43,
+            "name": "Slippers",
+            "alt_facilitytype_name": "Bathroom"
+          },
+          {
+            "id": 38,
+            "alt_facilitytype_id": 5,
+            "facilitytype_id": 5,
+            "facilitytype_name": "Bathroom",
+            "alt_facilitytype_name": "Bathroom",
+            "name": "Private bathroom"
+          },
+          {
+            "alt_facilitytype_id": 5,
+            "facilitytype_id": 5,
+            "facilitytype_name": "Bathroom",
+            "id": 12,
+            "name": "Hairdryer",
+            "alt_facilitytype_name": "Bathroom"
+          }
+        ],
+        "highlights": [
+          {
+            "translated_name": "Free WiFi",
+            "icon": "icon_wifi"
+          },
+          {
+            "id": 11,
+            "translated_name": "Air conditioning",
+            "icon": "icon_airconditioning"
+          },
+          {
+            "icon": "icon_bath",
+            "translated_name": "Attached bathroom",
+            "id": 38
+          },
+          {
+            "icon": "icon_flattv",
+            "translated_name": "Flat-screen TV",
+            "id": 75
+          }
+        ],
+        "children_and_beds_text": {
+          "age_intervals": [],
+          "allow_children": 1,
+          "cribs_and_extra_beds": [
+            {
+              "text": "No capacity for extra beds or cribs.",
+              "highlight": 0
+            }
+          ],
+          "children_at_the_property": [
+            {
+              "text": "Children of all ages are welcome.",
+              "highlight": 0
+            },
+            {
+              "highlight": 0,
+              "text": "Children 13 and above are considered adults at this property."
+            },
+            {
+              "highlight": 1,
+              "text": "To see correct prices and occupancy info, add the number and ages of children in your group to your search."
+            }
+          ]
+        },
+        "is_high_floor_guaranteed": 0,
+        "private_bathroom_highlight": {
+          "has_highlight": 1,
+          "text": "Private bathroom with shower"
+        },
+        "private_bathroom_count": 0,
+        "description": "This studio comes with 1 double bed.",
+        "bed_configurations": [
+          {
+            "bed_types": [
+              {
+                "count": 1,
+                "bed_type": 2,
+                "description": "131-150 cm wide",
+                "name_with_count": "1 full bed",
+                "description_imperial": "52-59 inches wide",
+                "description_localized": null,
+                "name": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "zip": "1004",
+    "preferences": [],
+    "payment_product": "accept_cc",
+    "district": null,
+    "is_preferred": 0,
+    "is_preferred_plus": 0,
+    "hotel_name_trans": "",
+    "accommodation_type": 204,
+    "countrycode": "ph",
+    "tax_exceptions": [],
+    "hotel_include_breakfast": 1,
+    "arrival_date": "2023-09-15",
+    "wifi_review_score": {
+      "rating": "6.0"
+    },
+    "facilities_block": {
+      "name": "Most Popular Facilities",
+      "type": "popular",
+      "facilities": [
+        {
+          "icon": "nosmoking",
+          "name": "Non-smoking rooms"
+        },
+        {
+          "icon": "wifi",
+          "name": "Free WiFi"
+        },
+        {
+          "icon": "clean",
+          "name": "Room service"
+        },
+        {
+          "name": "Free parking",
+          "icon": "parking_sign"
+        },
+        {
+          "icon": "wifi",
+          "name": "WiFi in all areas"
+        },
+        {
+          "name": "Private Parking",
+          "icon": "parking_sign"
+        }
+      ]
+    },
+    "hotel_facilities": "16,107,47,158,91,124,219,6,181,163,424,110,46,423,5,48,184,51,421,420,109,160,161,422,179,96,81,8,2,418,462,75",
+    "distance_to_cc": 2.47729580795531,
+    "health_and_safety": {
+      "total_measures_count": null,
+      "categories": [
+        {
+          "name": "Physical distancing",
+          "icon": "couple",
+          "facilities": ["Physical distancing rules followed"],
+          "facility_type_id": 39
+        }
+      ],
+      "latest_edit": null
+    }
+  }
+]
