@@ -1,8 +1,7 @@
 const {Customer, Bookmark, Product} = require("../models")
 const { comparePassword } = require("../helper/bcrypt")
 const { sign } = require("../helper/jwt")
-const { OAuth2Client } = require("google-auth-library");
-const { Op } = require("sequelize");
+// const { OAuth2Client } = require("google-auth-library");
 
 class CustomerController {
     static async register(req, res, next){
