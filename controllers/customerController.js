@@ -1,5 +1,7 @@
 const { response } = require('express');
 const{User,Product,Category,Invoice}=require('../models/index')
+const axios = require("axios");
+
 
 class CustomerController{
 
@@ -39,6 +41,28 @@ class CustomerController{
             response.status(500).json(error)
         }
     }
+
+    static async findAnimal(req,response){
+        try {
+            
+        const  {data} = await axios(
+            {
+                method: 'GET',
+                url: 'https://animals-by-api-ninjas.p.rapidapi.com/v1/animals',
+                params: {name: 'bird'},
+                headers: {
+                'X-RapidAPI-Key': 'fd32907c3amshd16b823d7e1ba07p1a4f98jsnee295af8773a',
+                'X-RapidAPI-Host': 'animals-by-api-ninjas.p.rapidapi.com'
+                }
+            }) 
+                response.status(200).json(data)
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    // static async findCat(req,response){
+
+    // }
 }
 
 module.exports=CustomerController;
