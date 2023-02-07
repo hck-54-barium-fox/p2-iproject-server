@@ -1,6 +1,7 @@
 const { comparePassword } = require("../helpers/bcrypt");
 const { signToken } = require("../helpers/jwt");
 const { User } = require("../models/index");
+const games = require ('../games.json')
 
 class Controller {
 
@@ -64,6 +65,15 @@ class Controller {
             } else {
                 res.status(500).json({ message: "Internal server error" })
             }
+        }
+    }
+
+    static async fetchGames(req, res) {
+        try{
+            
+            res.status(200).json(games)
+        }catch(err){
+            res.status(500).json({ message: "Internal server error" })
         }
     }
 
