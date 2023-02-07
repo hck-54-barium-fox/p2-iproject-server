@@ -63,7 +63,16 @@ class mainController {
       let weather = req.body.weather
       let token = await mainController.getAuthToken()
       let data = await mainController.getPlaylist(token, weather)
-      res.status(200).json(data)
+      res.status(200).json(data.items.map(el => {
+        let playlist_data = {
+          playlist_title: el.name,
+          playlist_owner: el.owner.display_name,
+          playlist_tracks: el.tracks.href,
+          playlist_link: el.external_urls.spotify,
+          playlist_image: el.images[0].url,
+        }
+        return playlist_data
+      }))
     } catch (err) {
       console.log(err);
       next(err)
@@ -80,8 +89,11 @@ class mainController {
       console.log(data, 'RESULT');
       res.status(200).json(data.items.slice(0,5).map(el => {
         let data = {
-          track_artist: el.track.artists[0].name,
           track_name: el.track.name,
+          track_artist: el.track.artists[0].name,
+          track_link: el.track.external_urls.spotify,
+          artist_link: el.track.artists[0].external_urls.spotify,
+          album_image: el.track.album.images[1].url
         }
         return data
       }))
