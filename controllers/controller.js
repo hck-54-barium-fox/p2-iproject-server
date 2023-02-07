@@ -1,4 +1,4 @@
-const { User } = require("../models/index")
+const { User, MyCart} = require("../models/index")
 const { compare } = require("../helpers/bcrypt")
 const { sign } = require("../helpers/jwt")
 const axios = require('axios')
@@ -8,8 +8,8 @@ const nodemailer = require('../helpers/nodemailer')
 
 class Controller {
     static async register(req, res, next) {
-       
         try {
+            
             const user = await User.create({
                 username: req.body.username,
                 email: req.body.email,
@@ -22,6 +22,7 @@ class Controller {
                 email: user.email
             })
         } catch (err) {
+            console.log(">>>",err, "ERROR");
             next(err)
         }
     }
@@ -55,15 +56,26 @@ class Controller {
                 methods:'GET',
                 url: `${url}`,
             })
-            
-            res.status(200).json(data)
+            let sliceData = data.slice(0,11)
+            // console.log(sliceData, "<<<");
+            res.status(200).json(sliceData)
         }
         catch(err){
             console.log(err)
         }
     }
 
+    static async addCart(req, res, next){
+        try{
+            const UserId = req.user.id
+            const { data } = await MyCart.create({
+                
+            })
+        }
+        catch{
 
+        }
+    }
 
     // static async googleOAuth(req, res, next) {
         
