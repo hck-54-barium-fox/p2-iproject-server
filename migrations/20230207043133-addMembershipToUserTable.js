@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -9,7 +9,10 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    await queryInterface.addColumn("Users", "membership", Sequelize.STRING);
+    await queryInterface.addColumn("Users", "membership", {
+      type: Sequelize.STRING,
+      allowNull: false,
+    });
   },
 
   async down(queryInterface, Sequelize) {
@@ -22,4 +25,3 @@ module.exports = {
     await queryInterface.removeColumn("Users", "membership", null);
   },
 };
-
