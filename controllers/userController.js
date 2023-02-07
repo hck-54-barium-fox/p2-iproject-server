@@ -1,6 +1,6 @@
 
 const { hash, compare, encodeToken } = require('../helpers/helper');
-const{User}=require('../models/index')
+const{User,Product}=require('../models/index')
 class Controller{
 static async register(req, response) {
       try {
@@ -74,10 +74,24 @@ static async login(req, response) {
     }
   }
 
+  static async getProduct(req,response){
+    try {
+        const data = await Product.findAll({})
+
+        response.status(200).json(data)
+    } catch (error) {
+        response.status(500).json(error)
+    }
+  }
   static async addProduct(req,response){
     try {
         const {name,price,stock,image,description,CategoryId}=req.body
-        const data = await product.create({
+        if(!name||!price||!stock||!image||!description||!!CategoryId){
+            throw{
+                message:"All input required"
+            }
+        }
+        const data = await Product.create({
             name,
             price,
             stock,
@@ -85,8 +99,14 @@ static async login(req, response) {
             description,
             CategoryId
         })
+
+        response.status(201).json(data)
     } catch (error) {
-        
+        if(error.message){
+            response.status(400).json(error.message)
+        }else{
+            response.status(500).json(error)
+        }
     }
 
   }
