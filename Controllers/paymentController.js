@@ -1,5 +1,7 @@
 const { User, Letter } = require("../models");
 const letter = require("../models/letter");
+const stripe = require("stripe")(process.env.STRIPE_KEY);
+
 class PaymentController {
   static async checkPayment(req, res, next) {
     try {
@@ -14,6 +16,7 @@ class PaymentController {
         });
         res.redirect("http://google.com");
       } else {
+        
         await Letter.update(
           {
             status: "paid",
