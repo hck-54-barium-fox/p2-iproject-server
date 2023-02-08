@@ -7,8 +7,10 @@ class ControllerCard {
       let option = {
           order: [['elixir', 'asc']]
       }
-      if (req.query.sort) {
+      if (+req.query.sort === 1) {
         option.order = [['elixir', 'desc']]
+      } else {
+        option.order = [['elixir', 'asc']]
       }
       let cardData = await Card.findAll(option);
       if (cardData.length) {
