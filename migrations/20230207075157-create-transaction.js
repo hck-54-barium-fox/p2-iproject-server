@@ -16,11 +16,7 @@ module.exports = {
         type: Sequelize.DATE
       },
       paymentBy: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'Users',
-          key: 'id'
-        }
+        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,
