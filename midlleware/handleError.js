@@ -9,7 +9,17 @@ const errorHandler = (err,req,res,next) => {
         res.status(400).json({
             message : err.errors[0].message
         })
-    } else {
+    }  else if(err.name ==='invalid login') {
+        res.status(400).json({
+            message : "invalid email/password"
+        })
+    } 
+    else if(err.name ==='inavalidToken') {
+        res.status(400).json({
+            message : "Please Login"
+        })
+    } 
+      else {
         res.status(500).json({
             message:'internal server error'
         })

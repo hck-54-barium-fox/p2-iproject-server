@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 
-function sendEmail(email) {
+function sendEmail2(email) {
 
     const transporter = nodemailer.createTransport({
         // host: "smtp.gmail.email",
@@ -17,8 +17,8 @@ function sendEmail(email) {
     const option = {
         from: "rayhanay115@gmail.com",
         to: email,
-        subject: "Acount Success Create",
-        text: "Your Account has been create in web Rifold ",
+        subject: "Acount Success buy product",
+        text: "Your Account has been create ",
         html: "<b>Your Account has been create</b>"
     };
 
@@ -34,4 +34,4 @@ function sendEmail(email) {
     })
 }
 
-module.exports = sendEmail
+module.exports = sendEmail2
