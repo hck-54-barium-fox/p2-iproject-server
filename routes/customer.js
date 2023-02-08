@@ -9,8 +9,12 @@ router.post("/register", Controller.register)
 router.post("/login", Controller.login)
 router.get('/products', Controller.fetchProducts)
 router.use(authentication)
+router.get('/mycart', Controller.fetchMycart)
+router.patch('/checkout', Controller.updateStatus)
+console.log('masuk ke router <<<<<<<<<<<<<<<<<')
+router.post('/generate-midtrans-token', Controller.midtrans)
 router.post('/products/:productId', Controller.addCart)
-router.get('/products/mycart', Controller.fetchMycart)
+
 
 
 

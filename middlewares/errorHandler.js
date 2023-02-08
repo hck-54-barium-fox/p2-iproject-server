@@ -24,6 +24,11 @@ async function errorHandler(err, req, res, next) {
                 message: "Invalid email or password"
             })
             break;
+        case "already subscribe":
+        res.status(400).json({
+            message: "already subscribe"
+        })
+            break;
         case "Data not found":
             res.status(404).json({
                 message: "News not found, please try again"
@@ -39,6 +44,11 @@ async function errorHandler(err, req, res, next) {
                 message: "Invalid token"
             })
             break;
+        case "MidtransError":
+                res.status(400).json({
+                    message:err.ApiResponse.error_message[0]
+                })
+                break;
         default:
             res.status(500).json({
                 message: "Error"
