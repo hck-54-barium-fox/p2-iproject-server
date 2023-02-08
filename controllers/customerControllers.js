@@ -47,7 +47,11 @@ class UserController {
       if (!checkPassword) {
         throw { name: 'unauth user' };
       }
-      const generateToken = signTokenLogin({ id: user.id, email: user.email });
+      const generateToken = signTokenLogin({
+        id: user.id,
+        email: user.email,
+        verified: user.verified,
+      });
       res.status(200).json({ access_token: generateToken });
     } catch (err) {
       console.log(err);

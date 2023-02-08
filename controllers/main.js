@@ -49,6 +49,7 @@ class Controller {
       let { arrivalDate, departureDate, roomQuantity, childrenQuantity } =
         req.body;
       // for default data
+      console.log(arrivalDate, departureDate, 'ini bener gak?');
       if (!arrivalDate || !departureDate) {
         const today = new Date();
         const tomorrow = new Date(today);
@@ -74,10 +75,14 @@ class Controller {
           .toISOString()
           .substring(0, 10)
           .replace(/-/g, '-');
-        arrivalDate = formattedToday;
+        console.log({
+          formattedDayAfterTomorrow,
+          formattedThreeDaysAfterTomorrow,
+        });
+        arrivalDate = formattedDayAfterTomorrow;
         departureDate = formattedThreeDaysAfterTomorrow;
       }
-      if (!roomQuantity || childrenQuantity) {
+      if (!roomQuantity || !childrenQuantity) {
         roomQuantity = 1;
         childrenQuantity = 1;
       }
@@ -106,6 +111,7 @@ class Controller {
         },
       };
       const { data } = await axios(options);
+
       const allHotels = data?.result?.map((el) => {
         return {
           mainImgUrl: el?.main_photo_url?.replace('square60', 'square500'),
@@ -173,7 +179,11 @@ class Controller {
           .toISOString()
           .substring(0, 10)
           .replace(/-/g, '-');
-        arrivalDate = formattedToday;
+        console.log({
+          formattedDayAfterTomorrow,
+          formattedThreeDaysAfterTomorrow,
+        });
+        arrivalDate = formattedDayAfterTomorrow;
         departureDate = formattedThreeDaysAfterTomorrow;
       }
 
@@ -273,7 +283,11 @@ class Controller {
           .toISOString()
           .substring(0, 10)
           .replace(/-/g, '-');
-        arrivalDate = formattedToday;
+        console.log({
+          formattedDayAfterTomorrow,
+          formattedThreeDaysAfterTomorrow,
+        });
+        arrivalDate = formattedDayAfterTomorrow;
         departureDate = formattedThreeDaysAfterTomorrow;
       }
       const options = {

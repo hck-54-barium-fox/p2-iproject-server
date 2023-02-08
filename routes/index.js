@@ -3,15 +3,32 @@ const routeUser = require('./user');
 const routes = express.Router();
 
 const Controller = require('../controllers/main');
+const { authentication, authorization } = require('../middlewares/auth');
 // cari hotel berdasarkan location
 routes.use(routeUser);
 routes.get('/hotels', Controller.getAllHotel);
 // mendapatkan destination location berdasarkan lokasi
 routes.get('/hotels/location', Controller.getHotelByLocation);
 // rooms dari hotel"
-routes.get('/hotels/:id', Controller.getRoomHotel);
+routes.get(
+  '/hotels/:id',
+  authentication,
+  authorization,
+  Controller.getRoomHotel
+);
 // properti detail dari hotel yang di maksud
-routes.get('/hotels/properties/:id', Controller.detailHotel);
-routes.post('/check-in', Controller.checkInHotel);
+routes.get(
+  '/hotels/properties/:id',
+  authentication,
+  authorization,
+  Controller.detailHotel
+);
+// chek in saat deal
+routes.post(
+  '/check-in',
+  authentication,
+  authorization,
+  Controller.checkInHotel
+);
 
 module.exports = routes;
