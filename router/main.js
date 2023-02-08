@@ -4,10 +4,10 @@ const { authentication } = require('../middlewares/auth')
 const router = express.Router()
 
 router.use(authentication)
-router.get('/weather', mainController.getWeather)
-router.get('/suggestAI', mainController.generateAIAnswer)
-router.get('/playlist', mainController.fetchPlaylist)
-router.get('/tracks', mainController.fetchTracks)
+router.post('/weather', mainController.getWeather)
+router.post('/suggestAI', mainController.generateAIAnswer)
+router.post('/playlist', mainController.fetchPlaylist)
+router.post('/tracks', mainController.fetchTracks)
 
 router.post('/payment', ) // TODO - Add payment gateway static method
 

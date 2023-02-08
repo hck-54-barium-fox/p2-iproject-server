@@ -10,6 +10,9 @@ class mainController {
       let api_key = process.env.OPEN_WEATHER_API_KEY
       let {latitude, longitude} = req.body
 
+      console.log(latitude, longitude, 'yangini')
+      console.log(req, 'yangini2')
+
       if (!latitude || !longitude) {
         throw {code: 400, msg: "Coordinates are required"}
       }
@@ -21,11 +24,12 @@ class mainController {
       console.log(data);
       res.status(200).json({
         nearest_station: data.name,
-        weather: data.weather
+        weather: data.weather,
+        temp: data.main.temp
       })
 
     } catch (err) {
-      console.log(err);
+      console.log(err, 'yang ini?');
       next(err)
     }
   }
@@ -42,7 +46,7 @@ class mainController {
       
       const response = await openai.createCompletion({
         model: "text-davinci-003",
-        prompt: `suggest one music search query for ${searchQuery}`,
+        prompt: `suggest 1 music search query for ${searchQuery} weather condition in 3 words without the word "playlist" and some creative twist`,
         temperature: 0.9,
         max_tokens: 150,
         top_p: 1,
@@ -60,9 +64,9 @@ class mainController {
   //? Spotify API Sequence
   static async fetchPlaylist(req, res, next){
     try {
-      let weather = req.body.weather
+      let searchQuery = req.body.searchQuery
       let token = await mainController.getAuthToken()
-      let data = await mainController.getPlaylist(token, weather)
+      let data = await mainController.getPlaylist(token, searchQuery)
       res.status(200).json(data.items.map(el => {
         let playlist_data = {
           playlist_title: el.name,
@@ -72,7 +76,7 @@ class mainController {
           playlist_image: el.images[0].url,
         }
         return playlist_data
-      }))
+      }).slice(0,12))
     } catch (err) {
       console.log(err);
       next(err)
@@ -86,8 +90,9 @@ class mainController {
       let token = await mainController.getAuthToken()
       console.log(token, url, 'check this');
       let data = await mainController.getTracks(token, url)
-      console.log(data, 'RESULT');
-      res.status(200).json(data.items.slice(0,5).map(el => {
+      let randomStart = Math.floor(Math.random() * (data.items.length - 5))
+      let randomEnd = randomStart + 5
+      res.status(200).json(data.items.slice(randomStart, randomEnd).map(el => {
         let data = {
           track_name: el.track.name,
           track_artist: el.track.artists[0].name,
