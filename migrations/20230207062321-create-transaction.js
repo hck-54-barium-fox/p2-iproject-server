@@ -9,6 +9,11 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      status: {
+        allowNull: false,
+        defaultValue: "Unpaid",
+        type: Sequelize.STRING
+      },
       SmartphoneId: {
         type: Sequelize.INTEGER,
         references: {
