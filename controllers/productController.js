@@ -54,7 +54,19 @@ class productController {
         }
     }
 
-    static async getAllProduct(req, res)
+    static async getAllProduct(req, res){
+        try {
+            let result = await Product.findAll(
+                {attributes : {exclude : ['createdAt', 'updatedAt']},
+                order : ['id']
+            })
+
+            console.log(result)
+            res.status(200).json(result)
+        } catch (error) {
+            console.log(error)
+        }
+    }
 }
 
 module.exports = productController
