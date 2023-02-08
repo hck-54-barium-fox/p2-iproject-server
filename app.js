@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== "production") {
+    require('dotenv').config()
+}
+
 const express = require('express')
 const cors = require('cors')
 const Controller = require('./controllers/controller')
@@ -9,9 +13,9 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(cors())
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+// app.get('/', (req, res) => {
+//     res.send('Hello World!')
+// })
 
 app.post('/register', Controller.register)
 app.post('/login', Controller.login)
@@ -21,6 +25,8 @@ app.use(authentication)
 app.get('/shoes', Controller.getShoes)
 app.get('/mycart', Controller.getMyCart)
 app.post('/mycart/:shoeId', Controller.addToCart)
+
+app.post('/generate-midtrans-token', Controller.midtransToken)
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
