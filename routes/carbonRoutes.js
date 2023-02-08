@@ -8,6 +8,7 @@ const router = express.Router()
 //   })
 
 router.get('/tobbaco', CarbonController.calculateTobbaco)
+router.get('/vehicle', CarbonController.calculateEmission)
 
 
 
