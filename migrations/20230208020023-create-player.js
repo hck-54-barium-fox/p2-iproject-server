@@ -24,6 +24,9 @@ module.exports = {
       number: {
         type: Sequelize.INTEGER
       },
+      thirdapiId: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

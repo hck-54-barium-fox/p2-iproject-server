@@ -1,8 +1,11 @@
+require('dotenv').config()
+
 const express = require('express')
 const router = require('./routes')
 const app = express()
 const PORT = 3000
 const CORS = require('cors')
+const midtransClient = require('midtrans-client');
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
