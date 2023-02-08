@@ -1,7 +1,7 @@
 const midtransClient = require('midtrans-client')
 const {Product, Customer} = require('../models/index')
 
-class midtransController {
+class productController {
     static async generatePayment(req, res, next){
         try {
 
@@ -53,6 +53,8 @@ class midtransController {
             console.log(error)
         }
     }
+
+    static async getAllProduct(req, res)
 }
 
-module.exports = midtransController
+module.exports = productController
