@@ -3,8 +3,8 @@ const{User,Product,Category}=require('../models/index')
 class Controller{
 static async register(req, response) {
       try {
-        const { email, password,phoneNumber } = req.body;      
-        if(!email||!password||!phoneNumber){
+        const { email, password } = req.body;      
+        if(!email||!password){
             throw {required:"All input is Required"}
         }
 
@@ -12,7 +12,6 @@ static async register(req, response) {
           email,
           password: hash(password),
           role:'Admin',
-          phoneNumber
         });
         response.status(201).json({ id: user.id, email: user.email });
       } catch (error) {
@@ -82,43 +81,7 @@ static async login(req, response) {
         response.status(500).json(error)
     }
   }
-  static async addProduct(req,response){
-    try {
-        const {name,price,stock,image,description,CategoryId}=req.body
-        if(!name||!price||!stock||!image||!description||!!CategoryId){
-            throw{
-                message:"All input required"
-            }
-        }
-        const data = await Product.create({
-            name,
-            price,
-            stock,
-            image,
-            description,
-            CategoryId
-        })
 
-        response.status(201).json(data)
-    } catch (error) {
-        if(error.message){
-            response.status(400).json(error.message)
-        }else{
-            response.status(500).json(error)
-        }
-    }
-
-  }
-
-  static async getCategory(req,response){
-    try {
-        const data= await Category.findAll({})
-        console.log(data);
-        response.status(200).json(data)
-    } catch (error) {
-        response.status(500).json(error)
-    }
-  }
 
   
 }

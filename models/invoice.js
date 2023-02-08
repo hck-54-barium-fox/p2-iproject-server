@@ -30,7 +30,10 @@ module.exports = (sequelize, DataTypes) => {
         key:'id'
       }
     },
-    totalPrice: DataTypes.INTEGER
+    totalPrice: DataTypes.INTEGER,
+    status:{
+      type:DataTypes.STRING
+    }
   }, {
     sequelize,
     modelName: 'Invoice',
