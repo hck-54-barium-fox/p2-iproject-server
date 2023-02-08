@@ -4,6 +4,7 @@ const { Card, Player } = require("../models/index");
 class ControllerPlayer {
   static async getPlayerById(req, res, next) {
     try {
+      console.log(req.body.tag, 'initaggg')
       let playerData = await Player.findOne({
         where: {
           tag: `#${req.body.tag}`,
@@ -32,6 +33,7 @@ class ControllerPlayer {
         res.status(200).json(dataPlayer)
       }
     } catch (error) {
+      console.log(error)
         next(error)
     }
   }

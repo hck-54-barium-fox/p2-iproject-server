@@ -7,7 +7,8 @@ class ControllerDeck {
             let dataDeck = await Deck.findAll({
                 where: {
                     UserId: req.user.id
-                }
+                },
+                include: Card
             })
             res.status(200).json(dataDeck)
         } catch (error) {
