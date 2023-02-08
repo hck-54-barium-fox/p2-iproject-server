@@ -38,18 +38,6 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
-    message: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        notNull: {
-          msg: 'message cannot be empty'
-        },
-        notEmpty: {
-          msg: 'message cannot be empty'
-        }
-      }
-    },
     eventDate: {
       type: DataTypes.DATE,
       allowNull: false,

@@ -1,9 +1,10 @@
-const Controller = require("../controllers/controllerAuth");
+const ControllerEvent = require("../controllers/controllerEvent");
 const express = require('express');
 const route = express.Router()
 
-route.get("/", Controller.getInventory)
-route.post("/",)
+route.get("/", ControllerEvent.getAllEvent)
+route.post("/", ControllerEvent.addEvent)
+route.get("/:eventId", ControllerEvent.getEventDetails)
 
 
 module.exports = route

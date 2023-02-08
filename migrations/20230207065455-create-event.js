@@ -17,10 +17,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.TEXT
       },
-      message: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
       eventDate: {
         allowNull: false,
         type: Sequelize.DATE
@@ -32,6 +28,10 @@ module.exports = {
           model: 'Users',
           key: 'id'
         }
+      },
+      imageUrl: {
+        type: Sequelize.STRING,
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
