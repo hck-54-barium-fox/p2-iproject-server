@@ -40,7 +40,7 @@ class Controller{
                 id: user.id
             }
             let access_token = signToken(payload.id)
-            res.status(200).json({access_token})
+            res.status(200).json({access_token, email})
         } catch (error) {
             console.log(error);
             next(error)
@@ -75,6 +75,7 @@ class Controller{
           res.status(200).json({ access_token, email: user.email});
           verify().catch(console.error);
         } catch (error) {
+            console.log(error);
           next(error);
         }
     }
