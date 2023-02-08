@@ -87,7 +87,7 @@ class Controller {
   static async fetchMycart(req, res, next) {
     try {
       const UserId = req.user.id;
-      const data = await MyCart.findAll({ where: { UserId } });
+      const data = await MyCart.findAll({ where: { UserId, status:'unpaid' } });
       res.status(200).json(data);
     } catch (err) {
       console.log(err);
@@ -99,13 +99,14 @@ class Controller {
 
   static async updateStatus(req, res, next) {
     try {
+        const UserId = req.user.id
       await MyCart.update(
         {
           status: "paid",
         },
         {
           where: {
-            id: req.user.id,
+            UserId
           },
         }
       );
@@ -135,19 +136,48 @@ class Controller {
     }
   }
 
-  static async paymentSucceed(req, res, next){
+  static async rajaOngkir(req, res, next){
     try{
-        const succeed = MyCart.destroy({
-            where:{
-                UserId: req.user.id
-            }
+        const { data } = await axios({
+            method: 'GET',
+            url: 'https://api.rajaongkir.com/starter/city',
+            headers:{
+                key: process.env.RAJAONGKIR_KEY
+            },
         })
-        res.status(200).json({
-            message: "Payment success"
-        })
+        res.status(200).json(data)
     }
     catch(err){
-        next(err)
+        res.status(500).json({
+            message: "Error"
+        })
+    }
+  }
+
+  static async feeDelivery(req, res, next){
+    try{
+        let courier = "jne"
+        const { destination } = req.query;
+        const form = {
+            origin: '153',
+            destination,
+            weight: 100,
+            courier
+        }
+        const { data } = await axios({
+            method: 'POST',
+            url: 'https://api.rajaongkir.com/starter/cost',
+            data: form,
+            headers:{
+                key: process.env.RAJAONGKIR_KEY
+            }
+        })
+        const result = data.rajaongkir.results[0].costs[0].cost[0].value
+        console.log(result, "<<<");
+        res.status(201).json(result)
+    }
+    catch(err){
+        console.log(err);
     }
   }
 
@@ -158,9 +188,9 @@ class Controller {
       const findMyCart = await MyCart.findOne({
         where: { UserId },
       });
-      if (findMyCart.status == "paid") {
-        throw { name: "already subscribe" };
-      }
+    //   if (findMyCart.status == "paid") {
+    //     throw { name: "already subscribe" };
+    //   }
 
       let snap = new midtransClient.Snap({
         // Set to true if you want Production Environment (accept real transaction).
