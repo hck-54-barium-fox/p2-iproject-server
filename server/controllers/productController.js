@@ -1,8 +1,10 @@
 const axios = require("axios");
 const { Product, Cart } = require('../models/index');
+const midtransClient = require('midtrans-client');
 
 
 class ProductController {
+
     static async getCPU(req, res) {
         try {
             const data = await Product.findAll({ where: { type: 'Processor' } })
@@ -36,7 +38,7 @@ class ProductController {
                     }
                 });
 
-       
+
                 let result = []
                 for (const processor of processors) {
                     let data = {}
@@ -61,7 +63,7 @@ class ProductController {
             res.status(500).json({ message: 'Internal server error' })
         }
     }
-    
+
     static async getGPU(req, res) {
         try {
             const data = await Product.findAll({ where: { type: 'GPU' } })
@@ -88,14 +90,14 @@ class ProductController {
                 const { data: GPU } = await axios({
                     method: 'GET',
                     url: 'https://computer-components-api.p.rapidapi.com/gpu',
-                    params: {limit: '20', offset: '0'},
+                    params: { limit: '20', offset: '0' },
                     headers: {
-                      'X-RapidAPI-Key': '694730de7bmshfb067e0019ac1cdp1f7aa4jsna7927f57bec2',
-                      'X-RapidAPI-Host': 'computer-components-api.p.rapidapi.com'
+                        'X-RapidAPI-Key': '694730de7bmshfb067e0019ac1cdp1f7aa4jsna7927f57bec2',
+                        'X-RapidAPI-Host': 'computer-components-api.p.rapidapi.com'
                     }
                 });
 
-       
+
                 let result = []
                 for (const gpu of GPU) {
                     let data = {}
@@ -147,14 +149,14 @@ class ProductController {
                 const { data: RAM } = await axios({
                     method: 'GET',
                     url: 'https://computer-components-api.p.rapidapi.com/ram',
-                    params: {limit: '20', offset: '0'},
+                    params: { limit: '20', offset: '0' },
                     headers: {
-                      'X-RapidAPI-Key': '694730de7bmshfb067e0019ac1cdp1f7aa4jsna7927f57bec2',
-                      'X-RapidAPI-Host': 'computer-components-api.p.rapidapi.com'
+                        'X-RapidAPI-Key': '694730de7bmshfb067e0019ac1cdp1f7aa4jsna7927f57bec2',
+                        'X-RapidAPI-Host': 'computer-components-api.p.rapidapi.com'
                     }
                 });
 
-       
+
                 let result = []
                 for (const ram of RAM) {
                     let data = {}
@@ -206,14 +208,14 @@ class ProductController {
                 const { data: Motherboards } = await axios({
                     method: 'GET',
                     url: 'https://computer-components-api.p.rapidapi.com/motherboard',
-                    params: {limit: '20', offset: '0'},
+                    params: { limit: '20', offset: '0' },
                     headers: {
-                      'X-RapidAPI-Key': '694730de7bmshfb067e0019ac1cdp1f7aa4jsna7927f57bec2',
-                      'X-RapidAPI-Host': 'computer-components-api.p.rapidapi.com'
+                        'X-RapidAPI-Key': '694730de7bmshfb067e0019ac1cdp1f7aa4jsna7927f57bec2',
+                        'X-RapidAPI-Host': 'computer-components-api.p.rapidapi.com'
                     }
                 });
 
-       
+
                 let result = []
                 for (const motherboard of Motherboards) {
                     let data = {}
@@ -265,14 +267,14 @@ class ProductController {
                 const { data: PSU } = await axios({
                     method: 'GET',
                     url: 'https://computer-components-api.p.rapidapi.com/power_supply',
-                    params: {limit: '20', offset: '0'},
+                    params: { limit: '20', offset: '0' },
                     headers: {
-                      'X-RapidAPI-Key': '694730de7bmshfb067e0019ac1cdp1f7aa4jsna7927f57bec2',
-                      'X-RapidAPI-Host': 'computer-components-api.p.rapidapi.com'
+                        'X-RapidAPI-Key': '694730de7bmshfb067e0019ac1cdp1f7aa4jsna7927f57bec2',
+                        'X-RapidAPI-Host': 'computer-components-api.p.rapidapi.com'
                     }
                 });
 
-       
+
                 let result = []
                 for (const psu of PSU) {
                     let data = {}
@@ -303,31 +305,31 @@ class ProductController {
             const UserId = req.user.id
             const ProductId = req.params.productId
 
-            const findProduct = await Product.findOne({where:{id: ProductId}})
-            if(!findProduct){
-                throw {status: 404, message: 'Product Not Found'}
+            const findProduct = await Product.findOne({ where: { id: ProductId } })
+            if (!findProduct) {
+                throw { status: 404, message: 'Product Not Found' }
             }
-            
-            const findCart = await Cart.findOne({where:{ProductId: findProduct.id}})
-            if(!findCart){
-                const createdCart = await Cart.create({UserId, ProductId, quantity: 1, totalPrice: findProduct.price})
 
-                res.status(201).json({message: 'Success Add Product To Cart'})
-            }else{
+            const findCart = await Cart.findOne({ where: { ProductId: findProduct.id, UserId } })
+            if (!findCart) {
+                const createdCart = await Cart.create({ UserId, ProductId, quantity: 1, totalPrice: findProduct.price })
+
+                res.status(201).json({ message: 'Success Add Product To Cart' })
+            } else {
                 const updateCart = await Cart.update({
                     quantity: findCart.quantity + 1,
-                    
+
                     totalPrice: findCart.totalPrice + findProduct.price
                 },
-                {where:{id: findCart.id}}
+                    { where: { UserId: req.user.id } }
                 )
-                res.status(201).json({message: 'Success Add Product To Cart'})
+                res.status(201).json({ message: 'Success Update Product To Cart' })
             }
         } catch (error) {
-            if(error.status){
-                res.status(res.status).json({message: error.message})
-            }else{
-                res.status(500).json({message: 'Internal server error'})
+            if (error.status) {
+                res.status(res.status).json({ message: error.message })
+            } else {
+                res.status(500).json({ message: 'Internal server error' })
             }
             console.log(error);
         }
@@ -336,11 +338,50 @@ class ProductController {
     static async getCart(req, res) {
         try {
             const UserId = req.user.id
-            const dataCart = await Cart.findAll({include:Product ,where:{UserId}})
+            console.log(UserId);
+            const dataCart = await Cart.findAll({ include: Product, where: { UserId } })
 
             res.status(200).json(dataCart)
         } catch (error) {
-            res.status(500).json({message: 'Internal server error'})
+            res.status(500).json({ message: 'Internal server error' })
+        }
+    }
+
+    static async generateMidtransToken(req, res) {
+        const UserId = req.user.id
+        const findCart = await Cart.findAll({where:{UserId}})
+
+        let totalPayment = 0
+
+        findCart.forEach(el => {
+            totalPayment += el.totalPrice
+        });
+
+        try {
+            let snap = new midtransClient.Snap({
+                // Set to true if you want Production Environment (accept real transaction).
+                isProduction: false,
+                serverKey: process.env.MIDTRANS_SERVER_KEY
+            });
+
+            let parameter = {
+                "transaction_details": {
+                    "order_id": "InvoiceId_" + Math.floor(100000 + Math.random() * 900000),
+                    "gross_amount": totalPayment
+                },
+                "credit_card": {
+                    "secure": true
+                },
+                "customer_details": {
+                    "email": req.user.email,
+                }
+            };
+
+            const tokenMidtrans = await snap.createTransaction(parameter)
+            
+            res.status(201).json(tokenMidtrans)
+        } catch (error) {
+            res.status(500).json({})
         }
     }
 }

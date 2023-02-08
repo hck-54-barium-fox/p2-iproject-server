@@ -14,5 +14,5 @@ router.get('/mobo', ProductController.getMobo)
 router.get('/psu', ProductController.getPSU)
 router.get('/cart', ProductController.getCart)
 router.post('/addcart/:productId', ProductController.addToCart)
-
+router.post('/midtranstoken', ProductController.generateMidtransToken)
 module.exports = router
