@@ -1,5 +1,6 @@
 const { Customer, Shoe, Cart, Transaction } = require('../models')
 const { compare, sign } = require('../helpers/helper')
+const midtransClient = require('midtrans-client');
 
 class Controller {
     static async register(req, res, next) {
@@ -130,6 +131,41 @@ class Controller {
         }
     }
 
+    static async midtransToken(req, res, next) {
+
+        console.log(req.body, '<<<<<< req.body');
+
+        try {
+            let snap = new midtransClient.Snap({
+                // Set to true if you want Production Environment (accept real transaction).
+                isProduction: false,
+                serverKey: process.env.MIDTRANS_SERVER_KEY
+            });
+
+            let parameter = {
+                "transaction_details": {
+                    "order_id": "ORDERID_" + Math.floor(1000000 + Math.random() * 9000000), //randomized
+                    "gross_amount": 10000 //kalkulasi total harga + ongkir
+                },
+                "credit_card": {
+                    "secure": true
+                },
+                "customer_details": {
+                    // "first_name": "budi",
+                    // "last_name": "pratama",
+                    "email": req.user.email,
+                    // "phone": "08111222333"
+                }
+            };
+
+            const midtransToken = await snap.createTransaction(parameter)
+            // console.log(midtransToken, '<<<< midtrans token');
+            res.status(201).json(midtransToken)
+
+        } catch (err) {
+            console.log(err);
+        }
+    }
 }
 
 module.exports = Controller
