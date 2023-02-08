@@ -1,4 +1,4 @@
-const {User, Transaction} = require('../models/index')
+const {User, Transaction, Player} = require('../models/index')
 const { compare } = require('../helpers/bcrypt')
 const { sign } = require('../helpers/jwt');
 
