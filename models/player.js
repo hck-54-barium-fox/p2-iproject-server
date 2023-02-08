@@ -99,7 +99,7 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     bio: {
-      type:DataTypes.STRING,
+      type:DataTypes.TEXT,
       allowNull: false,
       validate:{
         notEmpty: {

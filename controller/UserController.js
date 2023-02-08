@@ -95,7 +95,7 @@ class UserController {
                 paymentDate: new Date(),
                 paymentBy: findUser.username
             })
-            response.status(200).json({ message: `User with id ${findUser.Username} is now a subscriber` })
+            response.status(200).json({ message: `${findUser.Username} is now a subscriber` })
         } catch (error) {
             console.log(error);
             response.status(500).json({ message: `Internal Server Error` })
