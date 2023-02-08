@@ -18,6 +18,9 @@ app.post('/login',Controller.login)
 
 app.use(authorized)
 
+
+app.get('/profile',Controller.profile)
+
 app.get('/games',Controller.fetchGames)
 
 app.patch('/updatePaid',Controller.changeUpaid)

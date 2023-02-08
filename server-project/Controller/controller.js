@@ -84,6 +84,20 @@ class Controller {
         }
     }
 
+    static async profile(req,res){
+        try{
+            console.log(req.userLogin.id);
+            let dataProfile =  await User.findOne({
+                where:{
+                    id:req.userLogin.id
+                }
+            })
+            res.status(200).json(dataProfile)
+        }catch(err){
+            res.status(500).json({ message: "Internal server error" })
+        }
+    }
+
     static async fetchGamesById(req, res) {
         try {
             let { id } = req.params
