@@ -7,6 +7,9 @@ function errorHandler(error, req, res, next){
     else if (error.code === 400 || error.code === 401){
         res.status(error.code).json({message : error.message})
     }
+    else if(error.name ==='JsonWebTokenError'){
+        res.status(401).json({message : 'Invalid Token'})
+    }
 
 
 

@@ -1,8 +1,10 @@
 const axios = require("axios");
 const calculateTime = require("../helpers/calculateTime");
-const url = `https://beta3.api.climatiq.io/estimate`;
-const API_KEY = "5Q1HXJDH2R48F7HZYB4DQTYV70HJ"; //env
+const url = process.env.CLIMATE_API
+const API_KEY = process.env.CLIMATE_API_KEY //env
 
+// console.log(url)
+// console.log(API_KEY)
 class CarbonController {
   static async calculateTobbaco(req, res) {
     try {

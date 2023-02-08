@@ -41,6 +41,7 @@ class CustomerController {
                 throw({code : 401, message : "Invalid email or password"})
             }
 
+            req.customer = ({id: customer.id, email:customer.email})
             let access_token = signToken({id:customer.id, email})
 
             // console.log(access_token)
