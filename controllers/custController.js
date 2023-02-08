@@ -1,5 +1,5 @@
 const { compareHash, signToken } = require('../helpers/jwt')
-const {User} = require('../models/index')
+const { User } = require('../models/index')
 
 
 class Controller{
@@ -47,6 +47,37 @@ class Controller{
         }
     }
 
+    static async googleSignIn(req, res, next) {
+        try {
+          let token = req.headers.google_token;
+          const CLIENT_ID = process.env.CLIENT_ID
+          const client = new OAuth2Client(CLIENT_ID);
+    
+          const ticket = await client.verifyIdToken({
+            idToken: token,
+            audience: CLIENT_ID,
+          });
+          const googlePayload = ticket.getPayload();
+          const [user, created] = await User.findOrCreate({
+            where: { email: googlePayload.email },
+            defaults: {
+              email: googlePayload.email,
+              password: "password",
+            },
+            hooks: false,
+          });
+    
+          let payload = {
+            id: user.id,
+          };
+    
+          let access_token = signToken(payload);
+          res.status(200).json({ access_token, email: user.email});
+          verify().catch(console.error);
+        } catch (error) {
+          next(error);
+        }
+    }
 
 
 }
