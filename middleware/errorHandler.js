@@ -14,19 +14,13 @@ function errorHandler(err, req, res, next) {
         code = 401
     } else if (err.name === "InvalidToken") {
         message = "Error authentication"
-        code = 401
-    } else if (err.name === "Forbidden") {
-        message = "Forbidden error at authorization"
-        code = 403
+        code = 402
     } else if (err.name === "NotFound") {
         message = "Data not found"
-        code = 404
-    } else if (err.name === "MovieNotFound") {
-        message = "Movie Not Found"
-        code = 404
+        code = 403
     } else if(err.name ===  "InvalidBookmark"){
-        message = "You have already bookmark this movie"
-        code = 400
+        message = "You have already bookmark this product"
+        code = 404
     } else if (err.name === "JsonWebTokenError"){
         message ="Invalid Token"
         code = 401
