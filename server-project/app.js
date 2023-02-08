@@ -16,10 +16,13 @@ app.post('/register',Controller.register)
 
 app.post('/login',Controller.login)
 
+app.post('/sendmailRegister',Controller.Registermail)
+
 app.use(authorized)
 
 
 app.get('/profile',Controller.profile)
+
 
 app.get('/games',Controller.fetchGames)
 
@@ -32,6 +35,8 @@ app.get('/newsTechnlogies',Controller.fetchNewsTechnologies)
 app.get('/gamesData',Controller.fetchDataGamesSteamAppId)
 
 app.get('/games/:id',Controller.fetchGamesById)
+
+app.get('/newsTechnlogies/:id',Controller.newsTechnlogiesById)
 
 
 
