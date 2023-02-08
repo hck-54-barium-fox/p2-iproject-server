@@ -1,4 +1,5 @@
 const axios = require('axios');
+const midtransClient = require('midtrans-client');
 class Controller {
   static async getHotelByLocation(req, res) {
     try {
@@ -317,6 +318,45 @@ class Controller {
     } catch (err) {
       res.json(err);
       console.log(err);
+    }
+  }
+
+  static async checkInHotel(req, res) {
+    try {
+      // Create Snap API instance
+      let { price, name, email } = req.body;
+      let snap = new midtransClient.Snap({
+        // Set to true if you want Production Environment (accept real transaction).
+        isProduction: false,
+        serverKey: process.env.MIDTRANDS_KEY,
+      });
+
+      let parameter = {
+        transaction_details: {
+          order_id:
+            'Your-Order-id' +
+            Math.floor(100000000000 + Math.random() * 90000000),
+          gross_amount: +price,
+        },
+        credit_card: {
+          secure: true,
+        },
+        customer_details: {
+          name,
+          email,
+        },
+      };
+
+      const data = await snap.createTransaction(parameter);
+      console.log(data);
+      res.json(data);
+    } catch (err) {
+      console.log(err);
+      if (err.name === 'MidtransError') {
+        res.json(err.ApiResponse.error_messages[0]);
+      } else {
+        res.json(err);
+      }
     }
   }
 }

@@ -12,5 +12,6 @@ routes.get('/hotels/location', Controller.getHotelByLocation);
 routes.get('/hotels/:id', Controller.getRoomHotel);
 // properti detail dari hotel yang di maksud
 routes.get('/hotels/properties/:id', Controller.detailHotel);
+routes.post('/check-in', Controller.checkInHotel);
 
 module.exports = routes;
