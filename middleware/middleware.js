@@ -9,6 +9,7 @@ async function authentication(request, response, next) {
             console.log('test')
             // throw {name: "unauthenticated"}
             response.status(403).json({message: 'Invalid Token'})
+            return
         }
         let payload = decodepayload(access_token)
         let dataUser = await User.findByPk(payload.id)
@@ -18,6 +19,7 @@ async function authentication(request, response, next) {
             console.log('ini masuk ye');
             // throw new ErrorClass(403, "You must login first")
             response.status(403).json({message: 'Invalid Token'})
+            return
         }
         request.user = { id: dataUser.id, email: dataUser.email, username: dataUser.username }
         next()

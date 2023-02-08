@@ -73,6 +73,18 @@ module.exports = (sequelize, DataTypes) => {
           message: 'number is required'
         }
       }
+    },
+    thirdapiId: {
+      type:DataTypes.INTEGER,
+      allowNull: false,
+      validate:{
+        notEmpty: {
+          message:'thirdapiId is required'
+        },
+        notNull: {
+          message: 'thirdapiId is required'
+        }
+      }
     }
   }, {
     sequelize,
