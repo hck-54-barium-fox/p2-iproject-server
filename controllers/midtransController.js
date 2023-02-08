@@ -11,8 +11,8 @@ class midtransController {
 
             let product = await Product.findByPk(id)
 
-            console.log(product.price)
-            console.log(product.name, 'INI FIND ID')
+            // console.log(product.price)
+            // console.log(product.name, 'INI FIND ID')
             
             //find barangnya dulu
 
@@ -38,11 +38,7 @@ class midtransController {
                     "secure" : true
                 },
                 "customer_details": {
-                    // "first_name": "budi",
-                    // "last_name": "pratama",
-                    // customer id : ??
                     "email": email,
-                    // "phone": "08111222333"
                 }
             };
 
