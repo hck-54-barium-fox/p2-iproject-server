@@ -4,7 +4,9 @@ const { Card } = require("../models/index");
 class ControllerCard {
   static async fetchCard(req, res, next) {
     try {
-      let cardData = await Card.findAll();
+      let cardData = await Card.findAll({
+        order: [['elixir', 'asc']]
+      });
       if (cardData.length) {
         res.status(200).json(cardData);
       } else {
