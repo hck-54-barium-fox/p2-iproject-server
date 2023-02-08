@@ -137,9 +137,6 @@ class Controller {
 
   static async paymentSucceed(req, res, next){
     try{
-        const data = await MyCart.findAll({
-            where: {UserId: req.user.id}
-        })
         const succeed = MyCart.destroy({
             where:{
                 UserId: req.user.id
