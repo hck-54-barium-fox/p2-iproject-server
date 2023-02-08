@@ -15,7 +15,7 @@ class UserController {
             }
             const dataUser = await User.create({ email, password: hashPassword(password) })
 
-            res.status(200).json({ id: dataUser.id, email: email })
+            res.status(201).json({ id: dataUser.id, email: email })
 
         } catch (error) {
             console.log(error);
