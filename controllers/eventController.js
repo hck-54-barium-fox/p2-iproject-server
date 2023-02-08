@@ -99,8 +99,8 @@ class EventController {
             })
             response.status(200).json(hotels.slice(0,5))
         }).catch((err) => {
-            response.status(400).json({
-                message: "Bad Request"
+            response.status(500).json({
+                message: "Internal server error"
             })
         })
     }
@@ -130,9 +130,8 @@ class EventController {
             }
             response.status(200).json(event)
         } catch (err) {
-            console.log(err)
             response.status(400).json({
-                message: "Bad Request"
+                message: "Internal server error"
             })
         }
     }
