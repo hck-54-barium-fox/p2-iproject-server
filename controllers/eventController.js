@@ -1,6 +1,6 @@
 const axios = require("axios");
 const Amadeus = require('amadeus');
-let API_KEY = process.env.API_KEY;
+let API_KEY = process.env.SEAT_GEEK_API_KEY;
 
 const amadeus = new Amadeus({
     clientId: process.env.AMADEUS_API_KEY,
@@ -130,7 +130,7 @@ class EventController {
             }
             response.status(200).json(event)
         } catch (err) {
-            response.status(400).json({
+            response.status(500).json({
                 message: "Internal server error"
             })
         }
