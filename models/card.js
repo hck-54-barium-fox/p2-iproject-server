@@ -16,7 +16,8 @@ module.exports = (sequelize, DataTypes) => {
   }
   Card.init({
     name: DataTypes.STRING,
-    iconUrl: DataTypes.STRING
+    iconUrl: DataTypes.STRING,
+    elixir: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Card',
