@@ -3,14 +3,17 @@ const Amadeus = require('amadeus');
 let API_KEY = process.env.API_KEY;
 
 const amadeus = new Amadeus({
-    clientId: 'FXcORF3vmnSitJpqZWbIdFGVqAB5O8Jz',
-    clientSecret: 'QcXh7PqFipLHXGA3'
+    clientId: process.env.AMADEUS_API_KEY,
+    clientSecret: process.env.AMADEUS_SECRET_KEY
 })
 
 class EventController {
     static async getAllTaxonomies(request, response) {
         try {
-            const data = require("../db/taxonomies.json");
+            const { data } = await axios({
+                method: 'GET',
+                url: `https://api.seatgeek.com/2/taxonomies?client_id=${API_KEY}`
+            })
             let taxonomies = [];
             let sportTaxonomies = data.taxonomies
                 .filter((el) => {
@@ -69,7 +72,6 @@ class EventController {
 
             response.status(200).json(events);
         } catch (err) {
-            console.log(err)
             response.status(500).json({
                 message: "Internal server error",
             });
