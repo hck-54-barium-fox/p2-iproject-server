@@ -2,11 +2,12 @@ const express = require('express');
 const Controller = require('./Controller/controller');
 const app = express()
 const port = 1812
-
+const cors =require('cors')
 const steamid = '76561198192946697'
 
 const steamApiKey = 'FBDD4952A898BE1A214681A570F40B41';
 
+app.use(cors())
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) 
 

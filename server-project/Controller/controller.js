@@ -120,14 +120,38 @@ class Controller {
             // console.log(response.data);
             let dataNews = response.data
             let resultNews = dataNews.articles.map(el => {
-                return {
-                    "source": el.source.name,
-                    "author": el.author,
-                    "title": el.title,
-                    "urlToImage": el.urlToImage,
-                    "publishedAt": el.publishedAt.substring(0, 10),
-                    "content": el.content
+
+                if (el.source.name === null || el.urlToImage === null) {
+                    delete el.name,
+                        delete el.source,
+                        delete el.title,
+                        delete el.urlToImage
+                        delete el.publishedAt
+                        delete el.content
+
+                } else if (el.author === null || el.content === null) {
+                    return {
+                        "source": el.source.name,
+                        "author": "anonymous",
+                        "title": el.title,
+                        "urlToImage": el.urlToImage,
+                        "publishedAt": el.publishedAt.substring(0, 10),
+                        "content": "anonymous"
+                    }
+
+                } else {
+                    return {
+                        "source": el.source.name,
+                        "author": el.author,
+                        "title": el.title,
+                        "urlToImage": el.urlToImage,
+                        "publishedAt": el.publishedAt.substring(0, 10),
+                        "content": el.content
+                    }
                 }
+
+
+
             })
             res.status(200).json(resultNews)
 
@@ -144,8 +168,7 @@ class Controller {
         try {
 
             // const id = 985810
-            const dataId = [570, 985810, 10, 500,1748523,1748524,1748525,1748526,1748527,1748528,578080
-            ]
+            const dataId = [570, 985810, 500, 1748528, 578080, 1172470, 601150, 397540]
 
             const dataTotalUrl = []
             for (let i = 0; i < dataId.length; i++) {
@@ -206,7 +229,7 @@ class Controller {
                 array.push(finalDataSteam)
             }
             // console.log(array)
-         
+
 
             const jsonData = JSON.stringify(array);
 
@@ -222,7 +245,6 @@ class Controller {
         } catch (err) {
             res.status(500).json({ message: "Internal server eror" })
         }
-
     }
 }
 module.exports = Controller
