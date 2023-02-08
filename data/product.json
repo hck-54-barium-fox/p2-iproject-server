@@ -5,7 +5,7 @@
       "stock": 15,
       "description" : "baju dengan ketebalan 30s sangat nyaman dipakai sehari sehari ",
       "price":200000,
-      "imageUrl":"'../picture/acceptance back shopee.png",
+      "imageUrl" : "https://images.unsplash.com/photo-1665661322980-150a6163ab6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHVuaXFsbyUyMGthb3N8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
       "CategoryId":1
     },
     {
@@ -14,7 +14,7 @@
         "stock": 19,
         "description" : "baju dengan ketebalan 30s sangat nyaman dipakai sehari sehari ",
         "price":190000,
-        "imageUrl":"../picture/acceptance front shopee.png",
+        "imageUrl":"https://cdn.shopify.com/s/files/1/0054/6737/3638/products/rug-1668486326609-4_400x.jpg?v=1670308223",
         "CategoryId":1
     },
     {
@@ -23,7 +23,7 @@
         "stock": 20,
         "description" : "baju dengan ketebalan 30s sangat nyaman dipakai sehari sehari ",
         "price":190000,
-        "imageUrl":"../picture/basic shopee.png",
+        "imageUrl":"https://cdn.shopify.com/s/files/1/0054/6737/3638/products/rug-1675310405381-1_400x.jpg?v=1675393458",
         "CategoryId":1
     },
     {
@@ -32,7 +32,7 @@
         "stock": 2,
         "description" : "baju dengan ketebalan 30s sangat nyaman dipakai sehari sehari ",
         "price":190000,
-        "imageUrl":"'../picture/sailing boat shopee.png",
+        "imageUrl":"https://cdn.shopify.com/s/files/1/0054/6737/3638/products/rug-1675160768374-1_400x.jpg?v=1675237315",
         "CategoryId":1
     },
     {
