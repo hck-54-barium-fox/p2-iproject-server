@@ -14,9 +14,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Event.init({
-    title:  {
+    title: {
       type: DataTypes.STRING,
-      allowNull:false,
+      allowNull: false,
       validate: {
         notNull: {
           msg: 'title cannot be empty'
@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     content: {
       type: DataTypes.TEXT,
-      allowNull:false,
+      allowNull: false,
       validate: {
         notNull: {
           msg: 'content cannot be empty'
@@ -40,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     message: {
       type: DataTypes.STRING,
-      allowNull:false,
+      allowNull: false,
       validate: {
         notNull: {
           msg: 'message cannot be empty'
@@ -52,7 +52,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     eventDate: {
       type: DataTypes.DATE,
-      allowNull:false,
+      allowNull: false,
       validate: {
         notNull: {
           msg: 'date cannot be empty'
@@ -62,7 +62,19 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
-    UserId: DataTypes.INTEGER
+    UserId: DataTypes.INTEGER,
+    imageUrl: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notNull: {
+          msg: 'image cannot be empty'
+        },
+        notEmpty: {
+          msg: 'image cannot be empty'
+        }
+      }
+    }
   }, {
     sequelize,
     modelName: 'Event',
