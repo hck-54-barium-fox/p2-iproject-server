@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Nikola Jokic",
+        "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203999.png",
+        "team": "Denver Nugget",
+        "position": "Center",
+        "number": 15
+    },
+    {
+        "name": "Joel Embiid",
+        "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203954.png",
+        "team": "Philadelphia 76ers",
+        "position": "Center, Power Forward",
+        "number": 21
+    },
+    {
+        "name": "Giannis Antetokounmpo",
+        "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203507.png",
+        "team": "Milwaukee Bucks",
+        "position": "Power Forward",
+        "number": 34
+    },
+    {
+        "name": "Jayson Tatum",
+        "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628369.png",
+        "team": "Boston Celtics",
+        "position": "Small Forward, Power Forward",
+        "number": 0
+    },
+    {
+        "name": "Luka Doncic",
+        "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629029.png",
+        "team": "Dallas Mavericks",
+        "position": "Point Guard, Shooting Guard",
+        "number": 77
+    },
+    {
+        "name": "Kevin Durant",
+        "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201142.png",
+        "team": "Brooklyn Nets",
+        "position": "Power Forward, Small Forward",
+        "number": 7
+    },
+    {
+        "name": "Domantas Sabonis",
+        "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627734.png",
+        "team": "Sacramento Kings",
+        "position": "Power Forward, Center",
+        "number": 10
+    },
+    {
+        "name": "Ja Morant",
+        "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629630.png",
+        "team": "Memphis Grizzlies",
+        "position": "Point Guard",
+        "number": 12
+    },
+    {
+        "name": "Stephen Curry",
+        "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png",
+        "team": "Golden States Warrior",
+        "position": "Point Guard",
+        "number": 30
+    }
+]
