@@ -119,9 +119,15 @@ class Controller {
     }
   }
 
-  static async removeCart(req, res, next) {
+  static async removeitem(req, res, next) {
     try {
-
+        const id = req.params.id
+        await MyCart.destroy({
+            where:{id}
+        })
+        res.status(200).json({
+            message:"Delete success"
+        })
     } catch (err) {
       res.status(500).json({
         message: "error",
@@ -129,10 +135,28 @@ class Controller {
     }
   }
 
+  static async paymentSucceed(req, res, next){
+    try{
+        const data = await MyCart.findAll({
+            where: {UserId: req.user.id}
+        })
+        const succeed = MyCart.destroy({
+            where:{
+                UserId: req.user.id
+            }
+        })
+        res.status(200).json({
+            message: "Payment success"
+        })
+    }
+    catch(err){
+        next(err)
+    }
+  }
+
   static async midtrans(req, res, next) {
     try {
-        const amount = req.query.amount
-    //   console.log(req.user, "masuk midtranss >>>>>>>>>>>>>>");
+      const amount = req.query.amount;
       const UserId = req.user.id;
       const findMyCart = await MyCart.findOne({
         where: { UserId },
@@ -147,7 +171,6 @@ class Controller {
         serverKey: process.env.MIDTRANS_SERVER_KEY,
       });
 
-      
       let parameter = {
         transaction_details: {
           order_id:
@@ -164,19 +187,13 @@ class Controller {
       };
 
       let token = await snap.createTransaction(parameter);
-
-      
-
-    
-
-      console.log(token,'ini datanya')
+      console.log(token, "ini datanya");
       res.status(201).json(token);
       //   res.status(200).json();
     } catch (err) {
-        console.log(err,"|||||||||||||||||||")
+      console.log(err, "|||||||||||||||||||");
     }
   }
-
 }
 
 module.exports = Controller;
