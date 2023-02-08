@@ -35,7 +35,7 @@ router.post("/generate-midtrans-token", async (req, res, next) => {
       },
     };
     const midtransToken = await snap.createTransaction(parameter);
-    console.log(midtransToken);
+    res.status(200).json(midtransToken);
   } catch (error) {
     console.log(error);
     next(error);
