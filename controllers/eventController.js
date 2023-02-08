@@ -105,6 +105,38 @@ class EventController {
         })
     }
 
+    static async getEventById(request, response) {
+        try {
+            const id = +request.params.id
+            const { data } = await axios({
+                method: 'GET',
+                url: `https://api.seatgeek.com/2/events/${id}?client_id=${API_KEY}`,
+            })
+            let event = {
+                type: data.type,
+                id: data.id,
+                title: data.title,
+                date: new Date(data.datetime_utc).toISOString().split('T')[0],
+                venue: {
+                    state: data.venue.state,
+                    country: data.venue.country,
+                    address: data.venue.address,
+                },
+                performer: {
+                    name: data.performers[0].name,
+                    image: data.performers[0].image,        
+                },
+                price: data.stats.lowest_price
+            }
+            response.status(200).json(event)
+        } catch (err) {
+            console.log(err)
+            response.status(400).json({
+                message: "Bad Request"
+            })
+        }
+    }
+
 }
 
 module.exports = EventController;
