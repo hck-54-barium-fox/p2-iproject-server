@@ -31,7 +31,7 @@ async function errorHandler(err, req, res, next) {
             break;
         case "Data not found":
             res.status(404).json({
-                message: "News not found, please try again"
+                message: "Data not found, please try again"
             })
             break;
         case "Unauthorized":

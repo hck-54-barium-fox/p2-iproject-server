@@ -23,7 +23,6 @@ class Controller {
         email: user.email,
       });
     } catch (err) {
-      console.log(">>>", err, "ERROR");
       next(err);
     }
   }
@@ -57,15 +56,13 @@ class Controller {
         url: `${url}`,
       });
       let sliceData = data.slice(0, 12);
-      // console.log(sliceData, "<<<");
       res.status(200).json(sliceData);
     } catch (err) {
-      console.log(err);
+      next(err);
     }
   }
 
   static async addCart(req, res, next) {
-    // console.log(req.body, "ini req.body");
     try {
       const UserId = req.user.id;
       const ProductId = req.params.productId;
@@ -80,7 +77,7 @@ class Controller {
         message: "add to cart",
       });
     } catch (err) {
-      console.log(err);
+      next(err);
     }
   }
 
@@ -88,12 +85,12 @@ class Controller {
     try {
       const UserId = req.user.id;
       const data = await MyCart.findAll({ where: { UserId, status:'unpaid' } });
+      if(!data){
+        throw {name: "Data not found"}
+      }
       res.status(200).json(data);
     } catch (err) {
-      console.log(err);
-      res.status(500).json({
-        message: "Error",
-      });
+        next(err)
     }
   }
 
@@ -114,9 +111,7 @@ class Controller {
         message: "The receipt will be send to your email shorlty!",
       });
     } catch (err) {
-      res.status(500).json({
-        message: "Error",
-      });
+        next(err)
     }
   }
 
@@ -173,11 +168,11 @@ class Controller {
             }
         })
         const result = data.rajaongkir.results[0].costs[0].cost[0].value
-        console.log(result, "<<<");
+
         res.status(201).json(result)
     }
     catch(err){
-        console.log(err);
+       next(err);
     }
   }
 
@@ -214,11 +209,10 @@ class Controller {
       };
 
       let token = await snap.createTransaction(parameter);
-      console.log(token, "ini datanya");
       res.status(201).json(token);
-      //   res.status(200).json();
+
     } catch (err) {
-      console.log(err, "|||||||||||||||||||");
+      next(err)
     }
   }
 }
