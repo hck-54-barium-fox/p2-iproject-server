@@ -19,13 +19,14 @@ app.use(cors())
 
 app.post('/register', Controller.register)
 app.post('/login', Controller.login)
+app.get('/shoes', Controller.getShoes)
 
 app.use(authentication)
 
-app.get('/shoes', Controller.getShoes)
 app.get('/mycart', Controller.getMyCart)
 app.post('/mycart/:shoeId', Controller.addToCart)
-
+app.patch('/mycart/:cartId', Controller.reduceCart)
+app.post('/checkOngkir', Controller.checkOngkir)
 app.post('/generate-midtrans-token', Controller.midtransToken)
 
 app.listen(port, () => {
