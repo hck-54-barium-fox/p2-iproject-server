@@ -1,7 +1,7 @@
 const express = require('express');
 const errorHandler = require('./middleWare/errorHandler');
 const app = express()
-const PORT = 3000
+const PORT = 4000
 const cors = require('cors')
 const route = require('./routes/index');
 
@@ -13,5 +13,5 @@ app.use('/', route)
 app.use(errorHandler)
 
 app.listen(PORT, () => {
-    console.log(`Running at localhost:3000`)
+    console.log(`Running at localhost:${PORT}`)
 })
