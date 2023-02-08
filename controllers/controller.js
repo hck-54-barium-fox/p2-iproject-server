@@ -5,6 +5,7 @@ const axios = require('axios')
 const url = 'https://makeup-api.herokuapp.com/api/v1/products.json'
 const nodemailer = require('../helpers/nodemailer')
 const { where } = require("sequelize")
+const e = require("express")
 // const { OAuth2Client } = require('google-auth-library');
 
 class Controller {
@@ -57,7 +58,7 @@ class Controller {
                 methods:'GET',
                 url: `${url}`,
             })
-            let sliceData = data.slice(0,11)
+            let sliceData = data.slice(0,12)
             // console.log(sliceData, "<<<");
             res.status(200).json(sliceData)
         }
@@ -67,7 +68,7 @@ class Controller {
     }
 
     static async addCart(req, res, next){
-        console.log(req.body, "ini req.body");
+        // console.log(req.body, "ini req.body");
         try{
             const UserId = req.user.id
             const ProductId = req.params.productId
@@ -77,13 +78,38 @@ class Controller {
                 ProductId,
                 product_api_url,
                 status:'unpaid'
-            }, {where:{UserId}})
+            })
             res.status(201).json({
                 message: "add to cart"
             })
         }
         catch(err){
             console.log(err);
+        }
+    }
+    
+    static async fetchMycart(req, res, next){
+        try{
+            const UserId = req.user.id
+            const data = await MyCart.findAll({where: {UserId}})
+            res.status(200).json(data)
+        }
+        catch(err){
+            console.log(err)
+            res.status(500).json({
+                message: "Error"
+            });
+        }
+    }
+
+    static removeCart(req, res, next){
+        try{
+
+        }
+        catch(err){
+            res.status(500).json({
+                message: "error"
+            })
         }
     }
 

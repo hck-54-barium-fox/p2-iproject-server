@@ -10,6 +10,7 @@ router.post("/login", Controller.login)
 router.get('/products', Controller.fetchProducts)
 router.use(authentication)
 router.post('/products/:productId', Controller.addCart)
+router.get('/products/mycart', Controller.fetchMycart)
 
 
 
