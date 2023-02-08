@@ -84,12 +84,18 @@ class UserController {
 
     static async subscribe(request, response) {
         try {
+            let findUser = await User.findByPk(request.user.id)
             let changeStatus = await User.update({ status: 'premium' }, {
                 where: {
                     id: request.user.id
                 }
             })
-            response.status(200).json({ message: `User with id ${request.user.id} now is a subsriber` })
+            let newTransaction = await Transaction.create({
+                log: `${findUser.username} has been subscribe`,
+                paymentDate: new Date(),
+                paymentBy: findUser.username
+            })
+            response.status(200).json({ message: `User with id ${findUser.Username} is now a subscriber` })
         } catch (error) {
             console.log(error);
             response.status(500).json({ message: `Internal Server Error` })

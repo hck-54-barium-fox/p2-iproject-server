@@ -85,6 +85,30 @@ module.exports = (sequelize, DataTypes) => {
           message: 'thirdapiId is required'
         }
       }
+    },
+    teamImageUrl: {
+      type:DataTypes.STRING,
+      allowNull: false,
+      validate:{
+        notEmpty: {
+          message:'teamImageUrl is required'
+        },
+        notNull: {
+          message: 'teamImageUrl is required'
+        }
+      }
+    },
+    bio: {
+      type:DataTypes.STRING,
+      allowNull: false,
+      validate:{
+        notEmpty: {
+          message:'bio is required'
+        },
+        notNull: {
+          message: 'bio is required'
+        }
+      }
     }
   }, {
     sequelize,

@@ -27,6 +27,12 @@ module.exports = {
       thirdapiId: {
         type: Sequelize.INTEGER
       },
+      teamImageUrl: {
+        type: Sequelize.STRING
+      },
+      bio: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
