@@ -19,14 +19,18 @@ const errorHandler = (err, req, res, next) => {
     res.status(400).json({
       message: err.errors[0].message,
     });
-  } else if (err.name === 'InvalidToken') {
+  } else if (err.name === "InvalidToken") {
     res.status(401).json({
-      message:'Invalid token'
-    })
+      message: "Invalid token",
+    });
   } else if (err.name === "JsonWebTokenError") {
     res.status(401).json({
-      message: 'Invalid token'
-    })
+      message: "Invalid token",
+    });
+  } else if (err.name === "AlreadyPurchased") {
+    res.status(400).json({
+      message: "You already purchased",
+    });
   } else {
     res.status(500).json({
       message: "Internal server error",

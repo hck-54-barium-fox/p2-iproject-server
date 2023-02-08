@@ -71,6 +71,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       phoneNumber: DataTypes.STRING,
       address: DataTypes.STRING,
+      isPurchased: DataTypes.BOOLEAN,
     },
     {
       sequelize,

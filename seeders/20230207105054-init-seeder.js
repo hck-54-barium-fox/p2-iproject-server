@@ -17,6 +17,7 @@ module.exports = {
     try {
       const users = require("../datas/users.json").map((user) => {
         user.password = hash(user.password);
+        user.isPurchased = false
         user.createdAt = new Date();
         user.updatedAt = new Date();
         return user;

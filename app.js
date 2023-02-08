@@ -5,6 +5,7 @@ const cors = require("cors");
 require("dotenv").config();
 const userRouter = require("./routers/userRouter");
 const favoriteRouter = require("./routers/favoriteRouter");
+const paymentRouter = require("./routers/paymentRouter");
 const errorHandler = require("./middlewares/errorHandler");
 const authentication = require("./middlewares/autentication");
 
@@ -18,6 +19,7 @@ app.get("/", (req, res) => {
 app.use(userRouter);
 app.use(authentication);
 app.use(favoriteRouter);
+app.use(paymentRouter);
 
 app.use(errorHandler);
 
