@@ -20,7 +20,7 @@ class UserController {
         } catch (error) {
             console.log(error);
             if (error.status) {
-                res.status(res.status).json({ message: error.message })
+                res.status(error.status).json({ message: error.message })
             } else {
                 res.status(500).json({ message: 'Internal server error' })
             }

@@ -5,6 +5,17 @@ const midtransClient = require('midtrans-client');
 
 class ProductController {
 
+    static async getAllProduct(req, res) {
+        try {
+            const data = await Product.findAll()
+            // console.log(dataProc.length);
+            res.status(200).json(data)
+        } catch (error) {
+            // console.log(error);
+            res.status(500).json({ message: 'Internal server error' })
+        }
+    }
+
     static async getCPU(req, res) {
         try {
             const data = await Product.findAll({ where: { type: 'Processor' } })
@@ -340,6 +351,19 @@ class ProductController {
             const UserId = req.user.id
             console.log(UserId);
             const dataCart = await Cart.findAll({ include: Product, where: { UserId } })
+
+            res.status(200).json(dataCart)
+        } catch (error) {
+            res.status(500).json({ message: 'Internal server error' })
+        }
+    }
+
+    static async delCart(req, res) {
+        try {
+            const UserId = req.user.id
+            console.log(UserId);
+            const dataCart = await Cart.findAll({ include: Product, where: { UserId } })
+            await Cart.destroy({ where: { UserId } })
 
             res.status(200).json(dataCart)
         } catch (error) {
