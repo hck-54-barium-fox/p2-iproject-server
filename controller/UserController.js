@@ -129,6 +129,9 @@ class UserController {
                 
         } catch (error) {
             console.log(error);
+            if(error.name == 'MidtransError') {
+                response.status(400).json(error.ApiResponse.error_messages[0])
+            }
         }
     }
 }
