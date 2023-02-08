@@ -18,7 +18,7 @@ class Controller{
           if (!dataPhone) {
             throw { name: "NotFound" };
           } 
-          res.status(200).json( dataPhone );
+          res.status(200).json(dataPhone);
         } catch (error) {
           next(error);
         }
