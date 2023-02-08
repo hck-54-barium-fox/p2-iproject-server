@@ -18,13 +18,16 @@ class PoetryController {
       const choose = Math.ceil(Math.random() * data.length - 1);
       const result = data[choose].lines.join(" ");
 
-      await Letter.create({
+      const createLetter = await Letter.create({
         content: result,
         UserId: req.user.id,
         status: "unpaid",
       });
 
-      res.status(200).json(result);
+      res.status(200).json({
+        content: result,
+        id: createLetter.id
+      });
     } catch (err) {
       console.log(err);
       next(err);
