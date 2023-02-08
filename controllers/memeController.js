@@ -99,6 +99,40 @@ class MemeController {
       next(err);
     }
   }
+
+  static async createMemeMulter(req, res, next) {
+    try {
+      const { path, filename, originalname } = req.file;
+
+      const title = originalname.split(".")[0];
+      console.log(title);
+
+      var ImageKit = require("imagekit");
+      const fs = require("fs");
+
+      const imagekit = new ImageKit({
+        publicKey: "public_2m9bUCMNIYAZyIAapS9WRlZ9S9E=",
+        privateKey: "private_qhiULTWglJLPhg1MX7VwaMmhz+4=",
+        urlEndpoint: "https://ik.imagekit.io/hamzahdiza",
+      });
+
+      const fileUploaded = fs.readFileSync(`./uploads/${filename}`);
+      const result = await imagekit.upload({
+        file: fileUploaded,
+        fileName: filename,
+      });
+
+      const post = await Post.create({
+        title,
+        imgUrl: result.url,
+        UserId: req.user.id,
+      });
+
+      res.status(201).json(post);
+    } catch (err) {
+      next(err);
+    }
+  }
 }
 
 module.exports = MemeController;
