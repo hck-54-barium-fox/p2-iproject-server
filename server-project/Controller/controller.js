@@ -2,10 +2,12 @@ const { comparePassword } = require("../helpers/bcrypt");
 const { signToken } = require("../helpers/jwt");
 const { User } = require("../models/index");
 const games = require('../games.json');
+const newsGames = require('../dataNews.json');
 const axios = require('axios');
 const fs = require("fs");
 const midtransClient = require('midtrans-client');
-const { log } = require("console");
+const nodemailer = require("nodemailer");
+
 
 
 
@@ -84,16 +86,16 @@ class Controller {
         }
     }
 
-    static async profile(req,res){
-        try{
+    static async profile(req, res) {
+        try {
             console.log(req.userLogin.id);
-            let dataProfile =  await User.findOne({
-                where:{
-                    id:req.userLogin.id
+            let dataProfile = await User.findOne({
+                where: {
+                    id: req.userLogin.id
                 }
             })
             res.status(200).json(dataProfile)
-        }catch(err){
+        } catch (err) {
             res.status(500).json({ message: "Internal server error" })
         }
     }
@@ -138,7 +140,7 @@ class Controller {
         axios.request(options).then(function (response) {
             // console.log(response.data);
             let dataNews = response.data
-            let resultNews = dataNews.articles.map(el => {
+            let resultNews = dataNews.articles.map((el,index) => {
 
                 if (el.source.name === null || el.urlToImage === null) {
                     delete el.name,
@@ -150,6 +152,7 @@ class Controller {
 
                 } else if (el.author === null || el.content === null) {
                     return {
+                        "id":index,
                         "source": el.source.name,
                         "author": "anonymous",
                         "title": el.title,
@@ -160,6 +163,7 @@ class Controller {
 
                 } else {
                     return {
+                        "id":index,
                         "source": el.source.name,
                         "author": el.author,
                         "title": el.title,
@@ -168,10 +172,16 @@ class Controller {
                         "content": el.content
                     }
                 }
-
-
-
             })
+            const jsonData = JSON.stringify(resultNews);
+
+            fs.writeFile("dataNews.json", jsonData, "utf8", (error) => {
+                if (error) {
+                    console.error(error);
+                } else {
+                    console.log("Data saved to data.json file");
+                }
+            });
             res.status(200).json(resultNews)
 
         }).catch(function (error) {
@@ -180,14 +190,38 @@ class Controller {
         });
     }
 
+    static async newsTechnlogiesById(req, res) {
+        try {
+            let { id } = req.params
+            let result = []
+            newsGames.find(el => {
+                if (el.id === +(id)) {
+                    return result = el
+                }
+            })
 
+            if (result.length === 0) {
+                throw ({ name: "Data Not Found" })
+            }
+
+            res.status(200).json(result)
+
+        } catch (err) {
+            if (err.name === "Data Not Found") {
+                res.status(400).json({ message: "Data Not Found" })
+            } else {
+                res.status(500).json({ message: "Internal server error" })
+
+            }
+        }
+    }
 
 
     static async fetchDataGamesSteamAppId(req, res) {
         try {
 
             // const id = 985810
-            const dataId = [570, 985810, 500, 1748528, 578080, 1172470, 601150, 397540, 1811950,625960]
+            const dataId = [570, 985810, 500, 1748528, 578080, 1172470, 601150, 397540, 1811950, 625960]
 
             const dataTotalUrl = []
             for (let i = 0; i < dataId.length; i++) {
@@ -283,7 +317,7 @@ class Controller {
                 // Set to true if you want Production Environment (accept real transaction).
                 isProduction: false,
                 // serverKey: process.env.MITRANS-SERVER-KEY
-                serverKey:"SB-Mid-server-8zF3hYnLlqiwn_pfBbqMw0MR"
+                serverKey: "SB-Mid-server-8zF3hYnLlqiwn_pfBbqMw0MR"
             });
 
             let parameter = {
@@ -313,22 +347,57 @@ class Controller {
 
         }
     }
-    static async changeUpaid(req,res){
-        try{
-            console.log(req.userLogin.id,">>>>>><<<<<<<");
-            let unpaidStatus = await  User.update({
-                status:"paid"
-            },{
-                where:{
-                    id:req.userLogin.id
+    static async changeUpaid(req, res) {
+        try {
+            console.log(req.userLogin.id, ">>>>>><<<<<<<");
+            let unpaidStatus = await User.update({
+                status: "paid"
+            }, {
+                where: {
+                    id: req.userLogin.id
                 }
             })
             // console.log("iniiiii",req.userLogin.id);
             res.status(200).json('Sucess paid')
-        }catch(err){
-            
-            res.status(500).json({ message: "Internal server eror",err })
+        } catch (err) {
+
+            res.status(500).json({ message: "Internal server eror" })
         }
     }
+    static async Registermail(req, res) {
+
+        let transporter = nodemailer.createTransport({
+            service: "gmail",
+            secure: true,
+            auth: {
+                user: 'arvin.wantau@gmail.com',
+                pass: 'xyuyivoxpahdamzm'
+            }
+        });
+
+        try {
+            let email = req.body.email
+            // console.log(email, "<<mail");
+
+
+
+            const info = await transporter.sendMail({
+                from: '"Wantau  Games👻" <arvin.wantau@gmail.com>', // sender address
+                to: email,
+                subject: "Sucess Register Wantau Games",
+                html: `
+                <h1> Thank You Register Wantau Games</h1>
+                    `,
+            });
+
+            console.log('Message sent: %s', info.messageId);
+            res.status(200).json({ message: `message sent ${info.messageId}` });
+        } catch (err) {
+            console.log(err);
+
+            res.status(500).json({ message: "Internal server eror" })
+        }
+    }
+
 }
 module.exports = Controller
