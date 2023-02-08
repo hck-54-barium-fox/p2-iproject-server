@@ -31,6 +31,10 @@ const errorHandler = (err, req, res, next) => {
     res.status(400).json({
       message: "You already purchased",
     });
+  } else if (err.name === "MidtransError") {
+    res.status(400).json({
+      message: err.ApiResponse.error_messages[0],
+    });
   } else {
     res.status(500).json({
       message: "Internal server error",

@@ -5,7 +5,7 @@ class PaymentController {
     try {
       await User.update(
         {
-          isPurchased: false,
+          isPurchased: true,
         },
         {
           where: {
