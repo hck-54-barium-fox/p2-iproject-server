@@ -5,7 +5,6 @@ const deckRoute = express.Router()
 
 deckRoute.get('/', ControllerDeck.getMyDeck)
 deckRoute.post('/:id', ControllerDeck.postMyDeck)
-deckRoute.use(authorization)
-deckRoute.delete('/:id', ControllerDeck.deleteMyCardInDeck)
+deckRoute.delete('/:id', authorization, ControllerDeck.deleteMyCardInDeck)
 
 module.exports = deckRoute

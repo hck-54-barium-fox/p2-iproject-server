@@ -17,11 +17,21 @@ class ControllerDeck {
     }
     static async postMyDeck(req, res, next) {
         try {
+            let findCard = await Card.findByPk(req.params.id)
+            if (!findCard) throw ({status: 404, msg: 'Card not found'})
+
             let totalDeck = await Deck.findAll({
                 where: {
                     UserId: req.user.id
                 }
             })
+            let checkCard = await Deck.findAll({
+                where: {
+                    UserId: req.user.id,
+                    CardId: req.params.id
+                }
+            })
+            if (checkCard.length) throw ({status: 400, msg: 'You can only add 1 type card to your deck!'})
             if (totalDeck.length >= 8) throw ({status: 401, msg: 'Your deck is full!'})
             let dataDeck = await Deck.create({
                 UserId: req.user.id,
@@ -34,7 +44,12 @@ class ControllerDeck {
     }
     static async deleteMyCardInDeck(req, res, next) {
         try {
-            await Deck.destroy({
+            let findCard = await Deck.findOne({
+                CardId: req.params.id
+            })
+            if (!findCard) throw ({status: 404, msg: 'Card not found'})
+
+            await Deck.destroy({ 
                 where: {
                     CardId: req.params.id
                 }
