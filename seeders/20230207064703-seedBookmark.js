@@ -19,6 +19,10 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.bulkDelete("Bookmarks", null, {})
+    await queryInterface.bulkDelete("Bookmarks",null, {
+      cascade: true,
+      truncate: true,
+      restartIdentity: true,
+     })
   }
 };

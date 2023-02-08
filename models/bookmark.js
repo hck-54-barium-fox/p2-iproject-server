@@ -15,9 +15,15 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Bookmark.init({
+    id : {
+      type : DataTypes.INTEGER,
+      primaryKey : true,
+      allowNull : false,
+      autoIncrement : true
+    },
     CustomerId: DataTypes.INTEGER,
     ProductId: DataTypes.INTEGER,
-    totalProduct: DataTypes.INTEGER
+    totalProduct: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Bookmark',

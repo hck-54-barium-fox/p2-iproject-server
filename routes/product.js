@@ -1,5 +1,4 @@
 const ProductController = require("../controller/productController")
-const { route } = require("./customer")
 
 const router = require('express').Router()
 

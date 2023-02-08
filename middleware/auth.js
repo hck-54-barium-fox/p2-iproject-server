@@ -9,20 +9,21 @@ async function custAuthentication(req, res, next) {
                 name: "InvalidToken"
             }
         }
-
+        
         const data = decode(access_token)
         const dataCust = await Customer.findByPk(data.id)
+        
         if (!dataCust) {
             throw {
                 name: "InvalidToken"
             }
         }
-
+        
         req.customer = {
-            id: dataCust.id,
-            email: dataCust.email,
-            role: dataCust.role
-        }
+                id: dataCust.id,
+                email: dataCust.email,
+                role: dataCust.role
+            }
         next()
     } catch (err) {
         next(err)
