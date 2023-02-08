@@ -1,4 +1,5 @@
 const axios = require("axios");
+const { Post } = require("../models/index");
 
 class MemeController {
   static async getAllMemes(req, res, next) {
@@ -77,6 +78,22 @@ class MemeController {
       console.log(resultImage);
 
       res.status(201).json(resultImage);
+    } catch (err) {
+      console.log(err);
+      next(err);
+    }
+  }
+
+  static async postMemeToDb(req, res, next) {
+    try {
+      const { title, imgUrl } = req.body;
+      const postData = await Post.create({
+        title,
+        imgUrl,
+        UserId: req.user.id,
+      });
+
+      res.status(201).json(postData);
     } catch (err) {
       console.log(err);
       next(err);
