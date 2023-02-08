@@ -1,7 +1,7 @@
-const { User } = require("../models/index");
+const { User, Transaction } = require("../models/index");
 const { decodeToken } = require("../helpers/jwt");
 
-async function authetication(req, res, next) {
+async function authentication(req, res, next) {
   try {
     let access_token = req.headers.access_token;
     if (!access_token) {
@@ -9,6 +9,7 @@ async function authetication(req, res, next) {
     }
 
     let payload = decodeToken(access_token);
+    console.log(payload);
     let dataUser = await User.findByPk(payload.id);
     if (!dataUser) {
       throw { name: "Unauthorized" };
@@ -22,6 +23,31 @@ async function authetication(req, res, next) {
 }
 
 
+async function authorization(req, res, next) {
+  try {
+    let id = req.params.id;
+    let transaction = await Transaction.findByPk(id);
+
+    if (!transaction) {
+      throw { name: "NotFound" };
+    }
+
+    let transUser = transaction.UserId;
+    let userId = req.user.id;
+
+    if (transUser !== userId) {
+      throw { name: "Forbidden" };
+    }
+
+    next();
+  } catch (error) {
+    next(error);
+  }
+}
 
 
-module.exports = { authetication };
+
+
+
+
+module.exports = { authentication, authorization };

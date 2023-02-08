@@ -47,6 +47,42 @@ module.exports = (sequelize, DataTypes) => {
           msg: `password can't be empty`
         }
       }
+    },
+    phoneNumber: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notNull: {
+          msg: 'phoneNumber is required'
+        },
+        notEmpty: {
+          msg: `phoneNumber can't be empty`
+        }
+      }
+    },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notNull: {
+          msg: 'Image is required'
+        },
+        notEmpty: {
+          msg: `Image can't be empty`
+        }
+      }
+    },
+    noIDCard: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notNull: {
+          msg: 'noIDCard is required'
+        },
+        notEmpty: {
+          msg: `noIDCard can't be empty`
+        }
+      }
     }
   }, {
     sequelize,

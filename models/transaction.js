@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Transaction.init({
-    Status: DataTypes.STRING,
+    status: DataTypes.STRING,
     SmartphoneId: {
       type: DataTypes.INTEGER,
       allowNull: false,

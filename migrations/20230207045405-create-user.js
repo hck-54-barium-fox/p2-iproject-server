@@ -16,6 +16,15 @@ module.exports = {
       password: {
         type: Sequelize.STRING
       },
+      phoneNumber: {
+        type: Sequelize.INTEGER
+      },
+      image: {
+        type: Sequelize.STRING
+      },
+      noIdentity: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

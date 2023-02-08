@@ -4,182 +4,182 @@
         "name" : "Iphone 14 Pro Max",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png",
         "description" : "iPhone 14 Pro Max memiliki layar Super Retina XDR menyeluruh 6,7 inci1. Bagian belakangnya terbuat dari kaca matte premium dan terdapat lapisan baja tahan karat dengan tepian rata di sekeliling rangka. Tombol samping berada di sisi kanan perangkat. Terdapat tiga kamera di bagian belakang: Ultra Lebar, Utama, dan Telefoto.",
-        "price" : 100000
+        "price" : 1350000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone 14 Pro",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-colors.png",
         "description" : "iPhone 14 Pro memiliki layar Super Retina XDR menyeluruh 6,1 inci1. Bagian belakangnya terbuat dari kaca matte premium dan terdapat lapisan baja tahan karat dengan tepian rata di sekeliling rangka. Tombol samping berada di sisi kanan perangkat. Terdapat tiga kamera di bagian belakang: Ultra Lebar, Utama, dan Telefoto.",
-        "price" : 100000
+        "price" : 1300000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone 14 Plus",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-plus-colors.png",
         "description" : "iPhone 14 Plus memiliki layar Super Retina XDR menyeluruh 6,7 inci1. Bagian belakang terbuat dari kaca dan terdapat lapisan aluminium teranodisasi dengan tepian rata di sekeliling rangka. Tombol samping berada di sisi kanan perangkat. Terdapat dua kamera di bagian belakang: Ultra Lebar dan Utama.",
-        "price" : 100000
+        "price" : 1250000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone 14",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-colors.png",
         "description" : "iPhone 14 memiliki layar Super Retina XDR menyeluruh 6,1 inci1. Bagian belakang terbuat dari kaca dan terdapat lapisan aluminium teranodisasi dengan tepian rata di sekeliling rangka. Tombol samping berada di sisi kanan perangkat. Terdapat dua kamera di bagian belakang: Ultra Lebar dan Utama.",
-        "price" : 100000
+        "price" : 1200000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone SE Gen 3",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-se-3rd-gen-colors.png",
         "description" : "Layar berukuran 4,7 inci (diagonal). Bagian depan yang terbuat dari kaca berbentuk rata dengan tepi yang melengkung. Bagian belakang terbuat dari kaca, dan terdapat pita aluminium teranodisasi yang mengitari rangkanya. Tombol samping berada di sisi kanan perangkat. Perangkat memiliki tombol Utama solid-state dengan Touch ID.",
-        "price" : 100000
+        "price" : 300000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone 13 Pro Max",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/2022-spring-iphone13-pro-max-colors.png",
         "description" : "iPhone 13 Pro Max memiliki layar Super Retina XDR menyeluruh 6,7 inci1 dengan ProMotion. Bagian belakangnya terbuat dari kaca matte bertekstur dan terdapat lapisan baja tahan karat dengan tepian rata di sekeliling rangka. Tombol samping berada di sisi kanan perangkat. Terdapat tiga kamera 12 MP di bagian belakang: Ultra Lebar, Lebar, dan Telefoto.",
-        "price" : 100000
+        "price" : 1150000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone 13 Pro",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/2022-spring-iphone13-pro-colors.png",
         "description" : "iPhone 13 Pro memiliki layar Super Retina XDR menyeluruh 6,1 inci1 dengan ProMotion. Bagian belakangnya terbuat dari kaca matte bertekstur dan terdapat lapisan baja tahan karat dengan tepian rata di sekeliling rangka. Tombol samping berada di sisi kanan perangkat. Terdapat tiga kamera 12 MP di bagian belakang: Ultra Lebar, Lebar, dan Telefoto.",
-        "price" : 100000
+        "price" : 1100000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone 13",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/2022-spring-iphone13-colors.png",
         "description" : "iPhone 13 memiliki layar Super Retina XDR menyeluruh 6,1 inci1. Bagian belakang terbuat dari kaca dan terdapat lapisan aluminium teranodisasi dengan tepian rata di sekeliling rangka. Tombol samping berada di sisi kanan perangkat. Terdapat dua kamera 12 MP di bagian belakang: Ultra Lebar dan Lebar.",
-        "price" : 100000
+        "price" : 1050000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone 13 Mini",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/2022-iphone13-mini-colors.png",
         "description" : "iPhone 13 mini memiliki layar Super Retina XDR menyeluruh 5,4 inci1. Bagian belakang terbuat dari kaca dan terdapat lapisan aluminium teranodisasi dengan tepian rata di sekeliling rangka. Tombol samping berada di sisi kanan perangkat. Terdapat dua kamera 12 MP di bagian belakang: Ultra Lebar dan Lebar.",
-        "price" : 100000
+        "price" : 1000000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone 12 Pro Max",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone12promax/iphone12-pro-max-colors.jpg",
         "description" : "iPhone 12 Pro Max memiliki layar Super Retina XDR menyeluruh 6,7 inci1. Bagian belakangnya terbuat dari kaca matte bertekstur dan terdapat lapisan baja tahan karat dengan tepian rata di sekeliling rangka. Tombol samping berada di sisi kanan perangkat. Terdapat tiga kamera 12 MP di bagian belakang: Ultra Lebar, Lebar, dan Telefoto. Terdapat Pemindai LiDAR di bagian belakang.",
-        "price" : 100000
+        "price" : 950000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone 12 Pro",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone12pro/iphone12-pro-colors.jpg",
         "description" : "iPhone 12 Pro memiliki layar Super Retina XDR menyeluruh 6,1 inci1. Bagian belakangnya terbuat dari kaca matte bertekstur dan terdapat lapisan baja tahan karat dengan tepian rata di sekeliling rangka. Tombol samping berada di sisi kanan perangkat. Terdapat tiga kamera 12 MP di bagian belakang: Ultra Lebar, Lebar, dan Telefoto. Terdapat Pemindai LiDAR di bagian belakang.",
-        "price" : 100000
+        "price" : 900000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone 12",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/2021-iphone12-colors.png",
         "description" : "iPhone 12 memiliki layar Super Retina XDR menyeluruh 6,1 inci1. Bagian belakang terbuat dari kaca dan terdapat lapisan aluminium teranodisasi dengan tepian rata di sekeliling rangka. Tombol samping berada di sisi kanan perangkat. Terdapat dua kamera 12 MP di bagian belakang: Ultra Lebar dan Lebar.",
-        "price" : 100000
+        "price" : 850000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone 12 Mini",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/2021-iphone12-mini-colors.png",
         "description" : " iPhone 12 mini memiliki layar Super Retina XDR menyeluruh 5,4 inci1. Bagian belakang terbuat dari kaca dan terdapat lapisan aluminium teranodisasi dengan tepian rata di sekeliling rangka. Tombol samping berada di sisi kanan perangkat. Terdapat dua kamera 12 MP di bagian belakang: Ultra Lebar dan Lebar.",
-        "price" : 100000
+        "price" : 800000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone SE Gen 2",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone_se/iphone-se-2nd-gen-colors.jpg",
         "description" : "Layar berukuran 4,7 inci (diagonal). Bagian depan yang terbuat dari kaca berbentuk rata dengan tepi yang melengkung. Bagian belakang terbuat dari kaca, dan terdapat pita aluminium teranodisasi yang mengitari rangkanya. Tombol samping berada di sisi kanan perangkat. Perangkat memiliki tombol Utama solid-state dengan Touch ID.",
-        "price" : 100000
+        "price" : 750000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone 12 Mini",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/2021-iphone12-mini-colors.png",
         "description" : " iPhone 12 mini memiliki layar Super Retina XDR menyeluruh 5,4 inci1. Bagian belakang terbuat dari kaca dan terdapat lapisan aluminium teranodisasi dengan tepian rata di sekeliling rangka. Tombol samping berada di sisi kanan perangkat. Terdapat dua kamera 12 MP di bagian belakang: Ultra Lebar dan Lebar.",
-        "price" : 100000
+        "price" : 700000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone 11 Pro",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/identify-iphone-11pro.jpg",
         "description" : "iPhone 11 Pro memiliki layar Super Retina XDR menyeluruh 5,8 inci1. Bagian belakangnya terbuat dari kaca matte bertekstur dan terdapat lapisan baja tahan karat di sekeliling rangka. Tombol samping berada di sisi kanan perangkat. Terdapat tiga kamera 12 MP di bagian belakang: Ultra Lebar, Lebar, dan Telefoto. ",
-        "price" : 100000
+        "price" : 650000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone 11 Pro Max",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/identify-iphone-11pro-max.jpg",
         "description" : "iPhone 11 Pro Max memiliki layar Super Retina XDR menyeluruh 6,5 inci1. Bagian belakangnya terbuat dari kaca matte bertekstur dan terdapat lapisan baja tahan karat di sekeliling rangka. Tombol samping berada di sisi kanan perangkat. Terdapat tiga kamera 12 MP di bagian belakang: Ultra Lebar, Lebar, dan Telefoto.",
-        "price" : 100000
+        "price" : 600000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone 11",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/identify-iphone-11-colors.jpg",
         "description" : "iPhone 11 memiliki layar Liquid Retina 6,1 inci1. Bagian belakang terbuat dari kaca, dan terdapat pita aluminium teranodisasi yang mengitari rangkanya. Tombol samping berada di sisi kanan perangkat. Terdapat dua kamera 12 MP di bagian belakang: Ultra Lebar dan Lebar.",
-        "price" : 100000
+        "price" : 550000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone XS Max",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-xs-max-colors.jpg",
         "description" : "iPhone XS Max memiliki layar Super Retina menyeluruh 6,5 inci1. Bagian belakangnya terbuat dari kaca, dan terdapat tali baja tahan karat yang mengitari rangkanya. Tombol samping berada di sisi kanan perangkat. Terdapat kamera telefoto dan sudut lebar 12 MP di bagian belakang.",
-        "price" : 100000
+        "price" : 500000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone XS",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-xs-colors.jpg",
         "description" : "iPhone XS memiliki layar Super Retina menyeluruh 5,8 inci1. Bagian belakangnya terbuat dari kaca, dan terdapat tali baja tahan karat yang mengitari rangkanya. Tombol samping berada di sisi kanan perangkat. Terdapat kamera telefoto dan sudut lebar 12 MP di bagian belakang.",
-        "price" : 100000
+        "price" : 450000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone XR",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-xr/identify-iphone-xr-colors.jpg",
         "description" : "iPhone XR memiliki layar Liquid Retina 6,1 inci1. Bagian belakang terbuat dari kaca, dan terdapat pita aluminium teranodisasi yang mengitari rangkanya. Tombol samping berada di sisi kanan perangkat. Terdapat kamera sudut lebar 12 MP di bagian belakang.",
-        "price" : 100000
+        "price" : 400000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone X",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-x-colors.jpg",
         "description" : "iPhone X memiliki layar Super Retina menyeluruh 5,8 inci1. Bagian belakangnya terbuat dari kaca, dan terdapat tali baja tahan karat yang mengitari rangkanya. Tombol samping berada di sisi kanan perangkat. Terdapat kamera telefoto dan sudut lebar 12 MP di bagian belakang.",
-        "price" : 100000
+        "price" : 350000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone 8",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone8/iphone-8-colors.jpg",
         "description" : "Layar berukuran 4,7 inci (diagonal). Bagian depan yang terbuat dari kaca berbentuk rata dengan tepi yang melengkung. Bagian belakang terbuat dari kaca, dan terdapat pita aluminium teranodisasi yang mengitari rangkanya. Tombol samping berada di sisi kanan perangkat.",
-        "price" : 100000
+        "price" : 300000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone 8 Plus",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone8plus/iphone-8plus-colors.jpg",
         "description" : "Layar berukuran 5,5 inci (diagonal). Bagian depan yang terbuat dari kaca berbentuk rata dengan tepi yang melengkung. Bagian belakang terbuat dari kaca, dan terdapat pita aluminium teranodisasi yang mengitari rangkanya. Tombol samping berada di sisi kanan perangkat. Perangkat memiliki tombol Utama solid-state dengan Touch ID.",
-        "price" : 100000
+        "price" : 250000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone 7",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone7/iphone7-colors.jpg",
         "description" : "Layar berukuran 4,7 inci (diagonal). Bagian depan yang terbuat dari kaca berbentuk rata dengan tepi yang melengkung. Bagian belakang terbuat dari aluminium teranodisasi. Tombol Tidur/Bangun ada di sisi kanan perangkat. Perangkat memiliki tombol Utama solid-state dengan Touch ID.",
-        "price" : 100000
+        "price" : 200000
     },
     {
         "brand" : "Apple",
         "name" : "Iphone 7 Plus",
         "imageUrl" : "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone7plus/iphone7plus-colors.jpg",
         "description" : " Layar berukuran 5,5 inci (diagonal). Bagian depan yang terbuat dari kaca berbentuk rata dengan tepi yang melengkung. Bagian belakang terbuat dari aluminium teranodisasi. Tombol Tidur/Bangun ada di sisi kanan perangkat. Perangkat memiliki tombol Utama solid-state dengan Touch ID. Terdapat kamera ganda 12 MP di bagian belakang.",
-        "price" : 100000
+        "price" : 150000
     },
     {
         "brand" : "Apple",
