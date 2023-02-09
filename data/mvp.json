@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Nikola Jokic",
+        "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203999.png",
+        "team": "Denver Nugget",
+        "position": "Center",
+        "number": 15,
+        "thirdapiId": 279,
+        "teamImageUrl": "https://cdn.nba.com/logos/nba/1610612743/global/D/logo.svg",
+        "bio": "Denver Nuggets (2015–present) On June 26, 2014, Jokić was selected by the Denver Nuggets with the 41st overall pick in the 2014 NBA draft. 2015–16 season In the summer of 2015, Jokić joined the Denver Nuggets, one season after being drafted."
+    },
+    {
+        "name": "Joel Embiid",
+        "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203954.png",
+        "team": "Philadelphia 76ers",
+        "position": "Center, Power Forward",
+        "number": 21,
+        "thirdapiId": 159,
+        "teamImageUrl": "https://cdn.nba.com/logos/nba/1610612755/global/D/logo.svg",
+        "bio" : "Holds career averages of 16.4 points (.554% FG, .583% FT), 8.5 rebounds, 7.5 assists and 34.0 minutes in 160 games (160 starts) over 2 NBA seasons with Philadelphia"
+    },
+    {
+        "name": "Giannis Antetokounmpo",
+        "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/203507.png",
+        "team": "Milwaukee Bucks",
+        "position": "Power Forward",
+        "number": 34,
+        "thirdapiId": 20,
+        "teamImageUrl": "https://cdn.nba.com/logos/nba/1610612749/global/D/logo.svg",
+        "bio": "2018-19 NBA MVP 3-time NBA All-Star Game starter (2017, 2018, 2019); captain of Team Giannis in 2019 NBA All-Star Game 3-time All-NBA (2019 1st Team; 2017, 2018 2nd Team); 2-time NBA All-Defensive Team (2019 1st Team, 2017 2nd Team);"
+    },
+    {
+        "name": "Jayson Tatum",
+        "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628369.png",
+        "team": "Boston Celtics",
+        "position": "Small Forward, Power Forward",
+        "number": 0,
+        "thirdapiId": 882,
+        "teamImageUrl": "https://cdn.nba.com/logos/nba/1610612738/global/D/logo.svg",
+        "bio": "2019-20: Appeared in 66 games, averaging 23.4 points, 7.0 rebounds, 3.0 assists and 1.41 steals in 34.3 minutes per game…Shot 45.0 percent from the field, 50.3 percent from three and 81.2 percent from the free-throw line…"
+    },
+    {
+        "name": "Luka Doncic",
+        "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629029.png",
+        "team": "Dallas Mavericks",
+        "position": "Point Guard, Shooting Guard",
+        "number": 77,
+        "thirdapiId": 963,
+        "teamImageUrl": "https://cdn.nba.com/logos/nba/1610612742/global/D/logo.svg",
+        "bio": "Luka Dončić (LOO-kuh DON-chitch) has put up historic numbers through first two NBA seasons, producing one of the best starts to a career the league has ever seen. He turned just 21 years old on Feb. 28, 2020, and finished with the second-highest scoring average (24.2 ppg) by a player before his 21st birthday in league history (LeBron James, 25.0 ppg)."
+    },
+    {
+        "name": "Kevin Durant",
+        "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201142.png",
+        "team": "Brooklyn Nets",
+        "position": "Power Forward, Small Forward",
+        "number": 7,
+        "thirdapiId": 153,
+        "teamImageUrl": "https://cdn.nba.com/logos/nba/1610612751/global/D/logo.svg",
+        "bio": "Has appeared in 849 games (all starts) over 12 seasons with Seattle/Oklahoma City and Golden State, averaging 27.0 points (.493 FG%, .381 3P%, .883 FT%), 7.1 rebounds, 4.1 assists, 1.12 steals, 1.1 blocks in 36.9 minutes per game… Selected by the Seattle SuperSonics in the first round (second overall) of the 2007 NBA Draft…"
+    },
+    {
+        "name": "Domantas Sabonis",
+        "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1627734.png",
+        "team": "Sacramento Kings",
+        "position": "Power Forward, Center",
+        "number": 10,
+        "thirdapiId": 463,
+        "teamImageUrl":"https://cdn.nba.com/logos/nba/1610612758/global/D/logo.svg",
+        "bio": "Over his three NBA seasons with the Thunder (2016-17) and Pacers (2017-19), Sabonis has averaged 10.4 points, 6.8 rebounds and 1.9 assists over 229 games (90 starts). He has posted 47 double-doubles during his career, including a season high of 30 during the 2018-19 season."
+    },
+    {
+        "name": "Ja Morant",
+        "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/1629630.png",
+        "team": "Memphis Grizzlies",
+        "position": "Point Guard",
+        "number": 12,
+        "thirdapiId": 1881,
+        "teamImageUrl":"https://cdn.nba.com/logos/nba/1610612763/global/L/logo.svg",
+        "bio": "The 2019-20 NBA Rookie of the Year started all 130 of his appearances in two seasons with the Memphis Grizzlies… Has averaged 18.4 points, 3.9 rebounds and 7.3 assists in 31.7 minutes while shooting 46.3 percent from the field, 31.7 percent from 3-point range and 75.0 percent from the free throw line"
+    },
+    {
+        "name": "Stephen Curry",
+        "imageUrl": "https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png",
+        "team": "Golden States Warrior",
+        "position": "Point Guard",
+        "number": 30,
+        "thirdapiId": 124,
+        "teamImageUrl": "https://cdn.nba.com/logos/nba/1610612744/global/D/logo.svg",
+        "bio": "Selected by the Golden State Warriors as an early entry candidate in the first round (seventh overall) of the 2009 NBA Draft ... Three-time NBA Champion (2015, 2017, 2018) …Two-time NBA Most Valuable Player (2014-15, 2015-16) … Six-time All-Star (2014-2019)"
+    }
+]
