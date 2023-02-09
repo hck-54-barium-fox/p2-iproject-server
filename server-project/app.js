@@ -1,42 +1,49 @@
 const express = require('express');
 const Controller = require('./Controller/controller');
 const app = express()
+// const port = process.env.PORT
+
 const port = 1812
-const cors =require('cors');
-const { authorized } = require('./middleware/auth');
+const cors = require('cors');
+const { authentication } = require('./middleware/auth');
 const steamid = '76561198192946697'
 
 const steamApiKey = 'FBDD4952A898BE1A214681A570F40B41';
 
+// if (process.env.NODE_ENV !== 'production') {
+//     require('dotenv').config();
+// }
+
 app.use(cors())
 app.use(express.json()) // for parsing application/json
-app.use(express.urlencoded({ extended: true })) 
+app.use(express.urlencoded({ extended: true }))
 
-app.post('/register',Controller.register)
+app.post('/register', Controller.register)
 
-app.post('/login',Controller.login)
+app.post('/login', Controller.login)
 
-app.post('/sendmailRegister',Controller.Registermail)
+app.post('/sendmailRegister', Controller.Registermail)
 
-app.use(authorized)
-
-
-app.get('/profile',Controller.profile)
+app.use(authentication)
 
 
-app.get('/games',Controller.fetchGames)
+app.get('/profile', Controller.profile)
 
-app.patch('/updatePaid',Controller.changeUpaid)
 
-app.post('/generateMitransToken',Controller.generateMitransToken)
+app.get('/games', Controller.fetchGames)
 
-app.get('/newsTechnlogies',Controller.fetchNewsTechnologies)
+app.patch('/updatePaid', Controller.changeUpaid)
 
-app.get('/gamesData',Controller.fetchDataGamesSteamAppId)
+app.post('/generateMitransToken', Controller.generateMitransToken)
 
-app.get('/games/:id',Controller.fetchGamesById)
+app.get('/newsTechnlogies', Controller.fetchNewsTechnologies)
 
-app.get('/newsTechnlogies/:id',Controller.newsTechnlogiesById)
+app.get('/gamesData', Controller.fetchDataGamesSteamAppId)
+
+app.get('/newsTechnlogies/:id', Controller.newsTechnlogiesById)
+
+app.get('/games/:id', Controller.fetchGamesById)
+
 
 
 

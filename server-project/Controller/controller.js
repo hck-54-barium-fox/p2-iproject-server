@@ -94,7 +94,13 @@ class Controller {
                     id: req.userLogin.id
                 }
             })
-            res.status(200).json(dataProfile)
+            let resultProfile={
+                id:dataProfile.id,
+                username:dataProfile.username,
+                emai:dataProfile.email,
+                status:dataProfile.status
+            }
+            res.status(200).json(resultProfile)
         } catch (err) {
             res.status(500).json({ message: "Internal server error" })
         }
@@ -140,7 +146,7 @@ class Controller {
         axios.request(options).then(function (response) {
             // console.log(response.data);
             let dataNews = response.data
-            let resultNews = dataNews.articles.map((el,index) => {
+            let resultNews = dataNews.articles.map((el, index) => {
 
                 if (el.source.name === null || el.urlToImage === null) {
                     delete el.name,
@@ -152,7 +158,7 @@ class Controller {
 
                 } else if (el.author === null || el.content === null) {
                     return {
-                        "id":index,
+                        "id": index,
                         "source": el.source.name,
                         "author": "anonymous",
                         "title": el.title,
@@ -163,7 +169,7 @@ class Controller {
 
                 } else {
                     return {
-                        "id":index,
+                        "id": index,
                         "source": el.source.name,
                         "author": el.author,
                         "title": el.title,
@@ -193,13 +199,18 @@ class Controller {
     static async newsTechnlogiesById(req, res) {
         try {
             let { id } = req.params
+            console.log(id, "siniii");
             let result = []
-            newsGames.find(el => {
+            // console.log(newsGames);
+
+            const filteredData = newsGames.filter(item => item !== null);
+
+            filteredData.filter(el => {
                 if (el.id === +(id)) {
                     return result = el
                 }
-            })
-
+            });
+    
             if (result.length === 0) {
                 throw ({ name: "Data Not Found" })
             }
@@ -207,6 +218,7 @@ class Controller {
             res.status(200).json(result)
 
         } catch (err) {
+            console.log(err);
             if (err.name === "Data Not Found") {
                 res.status(400).json({ message: "Data Not Found" })
             } else {
@@ -358,7 +370,7 @@ class Controller {
                 }
             })
             // console.log("iniiiii",req.userLogin.id);
-            res.status(200).json('Sucess paid')
+            res.status(200).json({message:'Sucess paid'})
         } catch (err) {
 
             res.status(500).json({ message: "Internal server eror" })
