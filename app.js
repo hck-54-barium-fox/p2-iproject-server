@@ -1,6 +1,9 @@
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
+
 const express = require("express");
 const app = express();
-const port = 3000;
 const cors = require("cors");
 require("dotenv").config();
 const userRouter = require("./routers/userRouter");
@@ -8,6 +11,7 @@ const favoriteRouter = require("./routers/favoriteRouter");
 const paymentRouter = require("./routers/paymentRouter");
 const errorHandler = require("./middlewares/errorHandler");
 const authentication = require("./middlewares/autentication");
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
