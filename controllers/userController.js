@@ -4,8 +4,8 @@ const {comparePassword, createToken} = require('../helpers/crypto');
 const querystring = require('querystring');
 const axios = require('axios');
 
-const BASE_URL = 'http://localhost:5173'  // dev
-// const BASE_URL = 'https://chillclouds-ipro.web.app'  // prod
+// const BASE_URL = 'http://localhost:5173'  // dev
+const BASE_URL = 'https://chillclouds-ipro.web.app'  // prod
 
 
 class userController {
