@@ -143,6 +143,8 @@ class Controller {
             total += el.totalPrice
         });
 
+        total += +req.body.ongkir
+
         try {
             let snap = new midtransClient.Snap({
                 // Set to true if you want Production Environment (accept real transaction).
