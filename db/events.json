@@ -1,0 +1,1568 @@
+{
+    "events": [
+        {
+            "type": "mls",
+            "id": 5928628,
+            "datetime_utc": "2023-02-01T11:30:00",
+            "venue": {
+                "state": "CA",
+                "name_v2": "Empire Polo Club",
+                "postal_code": "92201",
+                "name": "Empire Polo Club",
+                "links": [],
+                "timezone": "America/Los_Angeles",
+                "url": "https://seatgeek.com/venues/empire-polo-club/tickets",
+                "score": 0.54,
+                "location": {
+                    "lat": 33.6764,
+                    "lon": -116.237
+                },
+                "address": "81800 Avenue 51",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 14,
+                "city": "Indio",
+                "slug": "empire-polo-club",
+                "extended_address": "Indio, CA 92201",
+                "id": 1745,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 804,
+                "capacity": 0,
+                "display_location": "Indio, CA"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "mls",
+                    "name": "Coachella Valley Invitational",
+                    "image": "https://seatgeek.com/images/performers-landscape/coachella-valley-invitational-2fa31c/800979/huge.jpg",
+                    "id": 800979,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/coachella-valley-invitational-2fa31c/800979/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 8
+                    },
+                    "taxonomies": [],
+                    "image_attribution": "SeatGeek - 2022 (2000 X 2000)",
+                    "url": "https://seatgeek.com/coachella-valley-invitational-tickets",
+                    "score": 0.28,
+                    "slug": "coachella-valley-invitational",
+                    "home_venue_id": null,
+                    "short_name": "Coachella Valley Invitational",
+                    "num_upcoming_events": 8,
+                    "colors": null,
+                    "image_license": "SeatGeek - 2022 (2000 X 2000)",
+                    "popularity": 0,
+                    "home_team": true,
+                    "location": null,
+                    "image_rights_message": ""
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2023-02-01T03:30:00",
+            "time_tbd": true,
+            "short_title": "Coachella Valley Invitational - All Sessions (2/1 - 2/18)",
+            "visible_until_utc": "2023-02-18T20:00:00",
+            "stats": {
+                "listing_count": null,
+                "average_price": null,
+                "lowest_price_good_deals": null,
+                "lowest_price": null,
+                "highest_price": null,
+                "visible_listing_count": null,
+                "dq_bucket_counts": null,
+                "median_price": null,
+                "lowest_sg_base_price": null,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1050000,
+                    "name": "soccer",
+                    "parent_id": 1000000,
+                    "rank": 0
+                },
+                {
+                    "id": 1050100,
+                    "name": "mls",
+                    "parent_id": 1050000,
+                    "rank": 7
+                }
+            ],
+            "url": "https://seatgeek.com/coachella-valley-invitational-all-sessions-2-1-2-18-tickets/mls/2023-02-01-3-30-am/5928628",
+            "score": 0.331,
+            "announce_date": "2022-12-01T00:00:00",
+            "created_at": "2023-01-30T19:02:03",
+            "date_tbd": false,
+            "title": "Coachella Valley Invitational - All Sessions (2/1 - 2/18)",
+            "popularity": 0.697,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": "2023-02-18T20:00:00",
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "concert",
+            "id": 5921419,
+            "datetime_utc": "2023-02-03T09:30:00",
+            "venue": {
+                "state": "TX",
+                "name_v2": "Hurricane Harry's",
+                "postal_code": "77840",
+                "name": "Hurricane Harry's",
+                "links": [],
+                "timezone": "America/Chicago",
+                "url": "https://seatgeek.com/venues/hurricane-harry-s/tickets",
+                "score": 0.18,
+                "location": {
+                    "lat": 30.6236,
+                    "lon": -96.3436
+                },
+                "address": "313 College Avenue",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 4,
+                "city": "College Station",
+                "slug": "hurricane-harry-s",
+                "extended_address": "College Station, TX 77840",
+                "id": 12570,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 625,
+                "capacity": 0,
+                "display_location": "College Station, TX"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "band",
+                    "name": "Drake Milligan",
+                    "image": "https://seatgeek.com/images/performers-landscape/drake-milligan-a594ef/799846/huge.jpg",
+                    "id": 799846,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/drake-milligan-a594ef/799846/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 5
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 2000000,
+                            "name": "concerts",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 1
+                        }
+                    ],
+                    "image_attribution": "Mike Coppola / Getty Images Entertainment / Getty Images",
+                    "url": "https://seatgeek.com/drake-milligan-tickets",
+                    "score": 0.28,
+                    "slug": "drake-milligan",
+                    "home_venue_id": null,
+                    "short_name": "Drake Milligan",
+                    "num_upcoming_events": 5,
+                    "colors": null,
+                    "image_license": "rightsmanaged",
+                    "genres": [
+                        {
+                            "id": 450,
+                            "name": "Country",
+                            "slug": "country",
+                            "primary": true,
+                            "images": {
+                                "1200x525": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-33f7af/797285/1200x525.jpg",
+                                "1200x627": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-ecb7cd/797285/1200x627.jpg",
+                                "136x136": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-5e4173/797285/136x136.jpg",
+                                "500_700": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-980de8/797285/500_700.jpg",
+                                "800x320": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-0e29a9/797285/800x320.jpg",
+                                "banner": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-b2a51d/797285/banner.jpg",
+                                "block": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-cd2735/797285/block.jpg",
+                                "criteo_130_160": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-6c4869/797285/criteo_130_160.jpg",
+                                "criteo_170_235": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-9a42b0/797285/criteo_170_235.jpg",
+                                "criteo_205_100": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-c48ddb/797285/criteo_205_100.jpg",
+                                "criteo_400_300": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-9cf993/797285/criteo_400_300.jpg",
+                                "fb_100x72": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-29f47c/797285/fb_100x72.jpg",
+                                "fb_600_315": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-571764/797285/fb_600_315.jpg",
+                                "huge": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-a6d843/797285/huge.jpg",
+                                "ipad_event_modal": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-498dd7/797285/ipad_event_modal.jpg",
+                                "ipad_header": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-7bb559/797285/ipad_header.jpg",
+                                "ipad_mini_explore": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-4157c6/797285/ipad_mini_explore.jpg",
+                                "mongo": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-a4a14d/797285/mongo.jpg",
+                                "square_mid": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-0fee8f/797285/square_mid.jpg",
+                                "triggit_fb_ad": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-6a2431/797285/triggit_fb_ad.jpg"
+                            },
+                            "image": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-a6d843/797285/huge.jpg",
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            }
+                        },
+                        {
+                            "id": 467,
+                            "name": "Folk",
+                            "slug": "folk",
+                            "primary": false,
+                            "images": {
+                                "1200x525": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-6da60d/370135/1200x525.jpg",
+                                "1200x627": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-16f08f/370135/1200x627.jpg",
+                                "136x136": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-14884d/370135/136x136.jpg",
+                                "500_700": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-2c15a8/370135/500_700.jpg",
+                                "800x320": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-5414af/370135/800x320.jpg",
+                                "banner": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-e252f5/370135/banner.jpg",
+                                "block": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-4dcde5/370135/block.jpg",
+                                "criteo_130_160": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-579f3a/370135/criteo_130_160.jpg",
+                                "criteo_170_235": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-d9e67b/370135/criteo_170_235.jpg",
+                                "criteo_205_100": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-1cbde4/370135/criteo_205_100.jpg",
+                                "criteo_400_300": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-cc2b6d/370135/criteo_400_300.jpg",
+                                "fb_100x72": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-07a235/370135/fb_100x72.jpg",
+                                "fb_600_315": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-5f4b5c/370135/fb_600_315.jpg",
+                                "huge": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-b19535/370135/huge.jpg",
+                                "ipad_event_modal": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-91ee7d/370135/ipad_event_modal.jpg",
+                                "ipad_header": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-fba953/370135/ipad_header.jpg",
+                                "ipad_mini_explore": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-84d2a5/370135/ipad_mini_explore.jpg",
+                                "mongo": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-6e1ab3/370135/mongo.jpg",
+                                "square_mid": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-6adbf5/370135/square_mid.jpg",
+                                "triggit_fb_ad": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-006723/370135/triggit_fb_ad.jpg"
+                            },
+                            "image": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-b19535/370135/huge.jpg",
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            }
+                        }
+                    ],
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": "(c) Mike Coppola / Getty Images Entertainment / Getty Images"
+                },
+                {
+                    "type": "band",
+                    "name": "William Beckmann",
+                    "image": "https://seatgeek.com/images/performers-landscape/william-beckmann-ae460b/787776/huge.jpg",
+                    "id": 787776,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/william-beckmann-ae460b/787776/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "stats": {
+                        "event_count": 4
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 2000000,
+                            "name": "concerts",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 1
+                        }
+                    ],
+                    "image_attribution": "SeatGeek - 2022 (2000 X 2000)",
+                    "url": "https://seatgeek.com/william-beckmann-tickets",
+                    "score": 0.36,
+                    "slug": "william-beckmann",
+                    "home_venue_id": null,
+                    "short_name": "William Beckmann",
+                    "num_upcoming_events": 4,
+                    "colors": null,
+                    "image_license": "SeatGeek - 2022 (2000 X 2000)",
+                    "genres": [
+                        {
+                            "id": 450,
+                            "name": "Country",
+                            "slug": "country",
+                            "primary": true,
+                            "images": {
+                                "1200x525": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-33f7af/797285/1200x525.jpg",
+                                "1200x627": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-ecb7cd/797285/1200x627.jpg",
+                                "136x136": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-5e4173/797285/136x136.jpg",
+                                "500_700": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-980de8/797285/500_700.jpg",
+                                "800x320": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-0e29a9/797285/800x320.jpg",
+                                "banner": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-b2a51d/797285/banner.jpg",
+                                "block": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-cd2735/797285/block.jpg",
+                                "criteo_130_160": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-6c4869/797285/criteo_130_160.jpg",
+                                "criteo_170_235": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-9a42b0/797285/criteo_170_235.jpg",
+                                "criteo_205_100": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-c48ddb/797285/criteo_205_100.jpg",
+                                "criteo_400_300": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-9cf993/797285/criteo_400_300.jpg",
+                                "fb_100x72": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-29f47c/797285/fb_100x72.jpg",
+                                "fb_600_315": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-571764/797285/fb_600_315.jpg",
+                                "huge": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-a6d843/797285/huge.jpg",
+                                "ipad_event_modal": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-498dd7/797285/ipad_event_modal.jpg",
+                                "ipad_header": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-7bb559/797285/ipad_header.jpg",
+                                "ipad_mini_explore": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-4157c6/797285/ipad_mini_explore.jpg",
+                                "mongo": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-a4a14d/797285/mongo.jpg",
+                                "square_mid": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-0fee8f/797285/square_mid.jpg",
+                                "triggit_fb_ad": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-6a2431/797285/triggit_fb_ad.jpg"
+                            },
+                            "image": "https://seatgeek.com/images/performers-landscape/bailey-zimmerman-a6d843/797285/huge.jpg",
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            }
+                        },
+                        {
+                            "id": 467,
+                            "name": "Folk",
+                            "slug": "folk",
+                            "primary": false,
+                            "images": {
+                                "1200x525": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-6da60d/370135/1200x525.jpg",
+                                "1200x627": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-16f08f/370135/1200x627.jpg",
+                                "136x136": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-14884d/370135/136x136.jpg",
+                                "500_700": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-2c15a8/370135/500_700.jpg",
+                                "800x320": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-5414af/370135/800x320.jpg",
+                                "banner": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-e252f5/370135/banner.jpg",
+                                "block": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-4dcde5/370135/block.jpg",
+                                "criteo_130_160": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-579f3a/370135/criteo_130_160.jpg",
+                                "criteo_170_235": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-d9e67b/370135/criteo_170_235.jpg",
+                                "criteo_205_100": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-1cbde4/370135/criteo_205_100.jpg",
+                                "criteo_400_300": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-cc2b6d/370135/criteo_400_300.jpg",
+                                "fb_100x72": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-07a235/370135/fb_100x72.jpg",
+                                "fb_600_315": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-5f4b5c/370135/fb_600_315.jpg",
+                                "huge": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-b19535/370135/huge.jpg",
+                                "ipad_event_modal": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-91ee7d/370135/ipad_event_modal.jpg",
+                                "ipad_header": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-fba953/370135/ipad_header.jpg",
+                                "ipad_mini_explore": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-84d2a5/370135/ipad_mini_explore.jpg",
+                                "mongo": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-6e1ab3/370135/mongo.jpg",
+                                "square_mid": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-6adbf5/370135/square_mid.jpg",
+                                "triggit_fb_ad": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-006723/370135/triggit_fb_ad.jpg"
+                            },
+                            "image": "https://seatgeek.com/images/performers-landscape/phoebe-bridgers-b19535/370135/huge.jpg",
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            }
+                        }
+                    ],
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": ""
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2023-02-03T03:30:00",
+            "time_tbd": true,
+            "short_title": "Drake Milligan with William Beckmann",
+            "visible_until_utc": "2023-02-04T06:00:00",
+            "stats": {
+                "listing_count": null,
+                "average_price": null,
+                "lowest_price_good_deals": null,
+                "lowest_price": null,
+                "highest_price": null,
+                "visible_listing_count": null,
+                "dq_bucket_counts": null,
+                "median_price": null,
+                "lowest_sg_base_price": null,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 2000000,
+                    "name": "concert",
+                    "parent_id": null,
+                    "rank": 1
+                }
+            ],
+            "url": "https://seatgeek.com/drake-milligan-with-william-beckmann-tickets/college-station-texas-hurricane-harry-s-2023-02-03-3-30-am/concert/5921419",
+            "score": 0,
+            "announce_date": "2023-01-21T00:00:00",
+            "created_at": "2023-01-21T16:18:44",
+            "date_tbd": false,
+            "title": "Drake Milligan with William Beckmann",
+            "popularity": 0,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "wrestling",
+            "id": 5888025,
+            "datetime_utc": "2023-02-03T09:30:00",
+            "venue": {
+                "state": "OK",
+                "name_v2": "McCasland Field House",
+                "postal_code": "73019",
+                "name": "McCasland Field House",
+                "links": [],
+                "timezone": "America/Chicago",
+                "url": "https://seatgeek.com/venues/mccasland-field-house/tickets",
+                "score": 0.33,
+                "location": {
+                    "lat": 35.2082,
+                    "lon": -97.4423
+                },
+                "address": "151 W Brooks",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 2,
+                "city": "Norman",
+                "slug": "mccasland-field-house",
+                "extended_address": "Norman, OK 73019",
+                "id": 73342,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 650,
+                "capacity": 0,
+                "display_location": "Norman, OK"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "wrestling",
+                    "name": "Oklahoma Sooners Wrestling",
+                    "image": "https://seatgeek.com/images/performers-landscape/oklahoma-sooners-wrestling-8dbf10/795658/huge.jpg",
+                    "id": 795658,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/oklahoma-sooners-wrestling-8dbf10/795658/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 2
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1080000,
+                            "name": "fighting",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 12
+                        },
+                        {
+                            "id": 1080300,
+                            "name": "wrestling",
+                            "parent_id": 1080000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": "https://www.flickr.com/photos/145739041@N05/47579674162/in/photolist-2fusgtG-j5qdvF-2ebdfna-2ebdfLg-t6HTU-RNGPWF-2fusgrN-2ebdfjp-4VXVRF-rhT51i-QbB3pa-2et7T21-78mJs3-RNGPaR-dUfhoU-RNGP4i-RNGP7p-2ebdgg4-RNGP74-2fz7EkH-RNGP2K-2fushpj-2fz7Ejv-RNGP5R-2et7UEm-RNGP24-2fush5G-2ebdgot-2ebdgqH-2fusg7E-RNGPQi-2ebdf94-2fz7F2n-2fz7EZD-RNGPYV-VRTzCX-RNGQjV-RNGQee-2fusgwN-24Xw7LF-2fz7EKF-2fz7EKk-2et7V6G-2fushh5-RNGPJr-2et7V8A-2fushhA-2et7UZj-RNGRUt-2fz7Hce",
+                    "url": "https://seatgeek.com/oklahoma-sooners-wrestling-tickets",
+                    "score": 0.26,
+                    "slug": "oklahoma-sooners-wrestling",
+                    "home_venue_id": null,
+                    "short_name": "Oklahoma Sooners Wrestling",
+                    "num_upcoming_events": 2,
+                    "colors": null,
+                    "image_license": "https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=rich",
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": "[This image](https://www.flickr.com/photos/145739041@N05/47579674162/in/photolist-2fusgtG-j5qdvF-2ebdfna-2ebdfLg-t6HTU-RNGPWF-2fusgrN-2ebdfjp-4VXVRF-rhT51i-QbB3pa-2et7T21-78mJs3-RNGPaR-dUfhoU-RNGP4i-RNGP7p-2ebdgg4-RNGP74-2fz7EkH-RNGP2K-2fushpj-2fz7Ejv-RNGP5R-2et7UEm-RNGP24-2fush5G-2ebdgot-2ebdgqH-2fusg7E-RNGPQi-2ebdf94-2fz7F2n-2fz7EZD-RNGPYV-VRTzCX-RNGQjV-RNGQee-2fusgwN-24Xw7LF-2fz7EKF-2fz7EKk-2et7V6G-2fushh5-RNGPJr-2et7V8A-2fushhA-2et7UZj-RNGRUt-2fz7Hce) is available through [Creative Commons](https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=rich) on Flickr and has been modified from the original. Email [images@seatgeek.com](mailto:images@seatgeek.com) with any questions."
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2023-02-03T03:30:00",
+            "time_tbd": true,
+            "short_title": "Missouri Tigers at Oklahoma Sooners Wrestling",
+            "visible_until_utc": "2023-02-04T06:00:00",
+            "stats": {
+                "listing_count": 1,
+                "average_price": 25,
+                "lowest_price_good_deals": null,
+                "lowest_price": 25,
+                "highest_price": 25,
+                "visible_listing_count": 1,
+                "dq_bucket_counts": [0, 0, 0, 0, 0, 0, 0, 0],
+                "median_price": 25,
+                "lowest_sg_base_price": 13,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1080000,
+                    "name": "fighting",
+                    "parent_id": 1000000,
+                    "rank": 12
+                },
+                {
+                    "id": 1080300,
+                    "name": "wrestling",
+                    "parent_id": 1080000,
+                    "rank": 0
+                }
+            ],
+            "url": "https://seatgeek.com/missouri-tigers-at-oklahoma-sooners-wrestling-tickets/wrestling/2023-02-03-3-30-am/5888025",
+            "score": 0.391,
+            "announce_date": "2022-12-04T00:00:00",
+            "created_at": "2022-12-04T16:03:31",
+            "date_tbd": false,
+            "title": "Missouri Tigers at Oklahoma Sooners Wrestling",
+            "popularity": 0.721,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "concert",
+            "id": 5886992,
+            "datetime_utc": "2023-02-03T11:30:00",
+            "venue": {
+                "state": "WA",
+                "name_v2": "Tacoma Dome",
+                "postal_code": "98421",
+                "name": "Tacoma Dome",
+                "links": [],
+                "timezone": "America/Los_Angeles",
+                "url": "https://seatgeek.com/venues/tacoma-dome/tickets",
+                "score": 0.54,
+                "location": {
+                    "lat": 47.2363,
+                    "lon": -122.427
+                },
+                "address": "2727 East D Street",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 21,
+                "city": "Tacoma",
+                "slug": "tacoma-dome",
+                "extended_address": "Tacoma, WA 98421",
+                "id": 156,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 819,
+                "capacity": 23000,
+                "display_location": "Tacoma, WA"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "band",
+                    "name": "Excision",
+                    "image": "https://seatgeek.com/images/performers-landscape/excision-c5bed3/7257/huge.jpg",
+                    "id": 7257,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/excision-c5bed3/7257/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 10
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 2000000,
+                            "name": "concerts",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 1
+                        }
+                    ],
+                    "image_attribution": "SeatGeek - 2022 (Creative Project)",
+                    "url": "https://seatgeek.com/excision-tickets",
+                    "score": 0.37,
+                    "slug": "excision",
+                    "home_venue_id": null,
+                    "short_name": "Excision",
+                    "num_upcoming_events": 10,
+                    "colors": null,
+                    "image_license": "SeatGeek - 2022 (Creative Project)",
+                    "genres": [
+                        {
+                            "id": 477,
+                            "name": "Electronic",
+                            "slug": "electronic",
+                            "primary": false,
+                            "images": {
+                                "1200x525": "https://seatgeek.com/images/performers-landscape/led-anniversary-a46e5b/112825/1200x525.jpg",
+                                "1200x627": "https://seatgeek.com/images/performers-landscape/led-anniversary-a4698b/112825/1200x627.jpg",
+                                "136x136": "https://seatgeek.com/images/performers-landscape/led-anniversary-ba66b1/112825/136x136.jpg",
+                                "500_700": "https://seatgeek.com/images/performers-landscape/led-anniversary-de4dff/112825/500_700.jpg",
+                                "800x320": "https://seatgeek.com/images/performers-landscape/led-anniversary-fa754a/112825/800x320.jpg",
+                                "banner": "https://seatgeek.com/images/performers-landscape/led-anniversary-b2677a/112825/banner.jpg",
+                                "block": "https://seatgeek.com/images/performers-landscape/led-anniversary-2d097b/112825/block.jpg",
+                                "criteo_130_160": "https://seatgeek.com/images/performers-landscape/led-anniversary-ed97ed/112825/criteo_130_160.jpg",
+                                "criteo_170_235": "https://seatgeek.com/images/performers-landscape/led-anniversary-2ea3a5/112825/criteo_170_235.jpg",
+                                "criteo_205_100": "https://seatgeek.com/images/performers-landscape/led-anniversary-7c55aa/112825/criteo_205_100.jpg",
+                                "criteo_400_300": "https://seatgeek.com/images/performers-landscape/led-anniversary-dbad21/112825/criteo_400_300.jpg",
+                                "fb_100x72": "https://seatgeek.com/images/performers-landscape/led-anniversary-ef3be9/112825/fb_100x72.jpg",
+                                "fb_600_315": "https://seatgeek.com/images/performers-landscape/led-anniversary-39dcd7/112825/fb_600_315.jpg",
+                                "huge": "https://seatgeek.com/images/performers-landscape/led-anniversary-b8b5f7/112825/huge.jpg",
+                                "ipad_event_modal": "https://seatgeek.com/images/performers-landscape/led-anniversary-ed2374/112825/ipad_event_modal.jpg",
+                                "ipad_header": "https://seatgeek.com/images/performers-landscape/led-anniversary-fc7d21/112825/ipad_header.jpg",
+                                "ipad_mini_explore": "https://seatgeek.com/images/performers-landscape/led-anniversary-876ca8/112825/ipad_mini_explore.jpg",
+                                "mongo": "https://seatgeek.com/images/performers-landscape/led-anniversary-60ae68/112825/mongo.jpg",
+                                "square_mid": "https://seatgeek.com/images/performers-landscape/led-anniversary-3befda/112825/square_mid.jpg",
+                                "triggit_fb_ad": "https://seatgeek.com/images/performers-landscape/led-anniversary-ae8813/112825/triggit_fb_ad.jpg"
+                            },
+                            "image": "https://seatgeek.com/images/performers-landscape/led-anniversary-b8b5f7/112825/huge.jpg",
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            }
+                        },
+                        {
+                            "id": 457,
+                            "name": "Alternative",
+                            "slug": "alternative",
+                            "primary": true,
+                            "images": {
+                                "1200x525": "https://seatgeek.com/images/performers-landscape/jj-lin-d24189/257209/1200x525.jpg",
+                                "1200x627": "https://seatgeek.com/images/performers-landscape/jj-lin-2df49e/257209/1200x627.jpg",
+                                "136x136": "https://seatgeek.com/images/performers-landscape/jj-lin-154d71/257209/136x136.jpg",
+                                "500_700": "https://seatgeek.com/images/performers-landscape/jj-lin-7eefbe/257209/500_700.jpg",
+                                "800x320": "https://seatgeek.com/images/performers-landscape/jj-lin-a74785/257209/800x320.jpg",
+                                "banner": "https://seatgeek.com/images/performers-landscape/jj-lin-13ed3a/257209/banner.jpg",
+                                "block": "https://seatgeek.com/images/performers-landscape/jj-lin-a13aa2/257209/block.jpg",
+                                "criteo_130_160": "https://seatgeek.com/images/performers-landscape/jj-lin-8d07f3/257209/criteo_130_160.jpg",
+                                "criteo_170_235": "https://seatgeek.com/images/performers-landscape/jj-lin-30376e/257209/criteo_170_235.jpg",
+                                "criteo_205_100": "https://seatgeek.com/images/performers-landscape/jj-lin-c9af1d/257209/criteo_205_100.jpg",
+                                "criteo_400_300": "https://seatgeek.com/images/performers-landscape/jj-lin-a3eb63/257209/criteo_400_300.jpg",
+                                "fb_100x72": "https://seatgeek.com/images/performers-landscape/jj-lin-80bbae/257209/fb_100x72.jpg",
+                                "fb_600_315": "https://seatgeek.com/images/performers-landscape/jj-lin-6fcd28/257209/fb_600_315.jpg",
+                                "huge": "https://seatgeek.com/images/performers-landscape/jj-lin-b626d2/257209/huge.jpg",
+                                "ipad_event_modal": "https://seatgeek.com/images/performers-landscape/jj-lin-e0d24c/257209/ipad_event_modal.jpg",
+                                "ipad_header": "https://seatgeek.com/images/performers-landscape/jj-lin-f7619b/257209/ipad_header.jpg",
+                                "ipad_mini_explore": "https://seatgeek.com/images/performers-landscape/jj-lin-d07120/257209/ipad_mini_explore.jpg",
+                                "mongo": "https://seatgeek.com/images/performers-landscape/jj-lin-23692f/257209/mongo.jpg",
+                                "square_mid": "https://seatgeek.com/images/performers-landscape/jj-lin-6bdb78/257209/square_mid.jpg",
+                                "triggit_fb_ad": "https://seatgeek.com/images/performers-landscape/jj-lin-cab57f/257209/triggit_fb_ad.jpg"
+                            },
+                            "image": "https://seatgeek.com/images/performers-landscape/jj-lin-b626d2/257209/huge.jpg",
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            }
+                        }
+                    ],
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": ""
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2023-02-03T03:30:00",
+            "time_tbd": true,
+            "short_title": "Excision - 2 Day Pass (2/3 - 2/4) (18+ Event)",
+            "visible_until_utc": "2023-02-05T01:00:00",
+            "stats": {
+                "listing_count": 1,
+                "average_price": 525,
+                "lowest_price_good_deals": null,
+                "lowest_price": 526,
+                "highest_price": 538,
+                "visible_listing_count": 1,
+                "dq_bucket_counts": [0, 0, 0, 0, 0, 0, 0, 0],
+                "median_price": 525,
+                "lowest_sg_base_price": 398,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 2000000,
+                    "name": "concert",
+                    "parent_id": null,
+                    "rank": 1
+                }
+            ],
+            "url": "https://seatgeek.com/excision-2-day-pass-2-3-2-4-18-event-tickets/tacoma-washington-tacoma-dome-2023-02-03-3-30-am/concert/5886992",
+            "score": 0.616,
+            "announce_date": "2022-11-04T00:00:00",
+            "created_at": "2022-12-02T20:15:12",
+            "date_tbd": false,
+            "title": "Excision - 2 Day Pass (2/3 - 2/4) (18+ Event)",
+            "popularity": 0.848,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": "2023-02-05T01:00:00",
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "family",
+            "id": 5851319,
+            "datetime_utc": "2023-02-03T11:30:00",
+            "venue": {
+                "state": "NV",
+                "name_v2": "Le Theatre Des Arts at Paris Las Vegas",
+                "postal_code": "89109",
+                "name": "Le Theatre Des Arts at Paris Las Vegas",
+                "links": [],
+                "timezone": "America/Los_Angeles",
+                "url": "https://seatgeek.com/venues/le-theatre-des-arts-at-paris-las-vegas-2/tickets",
+                "score": 0.47,
+                "location": {
+                    "lat": 36.11,
+                    "lon": -115.171
+                },
+                "address": "3655 Las Vegas Blvd South",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 397,
+                "city": "Las Vegas",
+                "slug": "le-theatre-des-arts-at-paris-las-vegas-2",
+                "extended_address": "Las Vegas, NV 89109",
+                "id": 1610,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 839,
+                "capacity": 0,
+                "display_location": "Las Vegas, NV"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "theater_family",
+                    "name": "Eiffel Tower Experience",
+                    "image": "https://seatgeek.com/images/performers-landscape/eiffel-tower-experience-ce92de/605657/huge.jpg",
+                    "id": 605657,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/eiffel-tower-experience-ce92de/605657/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 331
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 3000000,
+                            "name": "theater",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 8
+                        },
+                        {
+                            "id": 3050000,
+                            "name": "family",
+                            "parent_id": 3000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": "https://www.flickr.com/photos/30478819@N08/33015766008/in/photolist-SiuqYY-2aAJ6nb-27tFEJr-TfEqvU-5aFqe6-2fRfscU-5DcTqo-aeB1dg-bwAYdx-2bPCenq-8ARy1R-bEMH74-8AVpGL-8hqR5S-VdZ7nk-jxcedC-22scg7N-9xTeGb-JpxkhQ-aZSDGK-TeZcdy-UyCnMt-KAvtd8-Zs5p3j-dAxQMP-wWQ9yZ-SVBXhi-U6EHKs-2avypie-27tFDtv-28L2Gyd-27tFTRP-266CDAq-55FPdQ-cQMWE3-cQMWJC-23gcZ9w-eUSFKb-o7da-6iS3sK-bdJx7r-4Li5MP-aFafGG-4Li66X-7JPSpe-4faxNq-bVSDK2-bVSCu4-bVSyga-bVSzfF",
+                    "url": "https://seatgeek.com/eiffel-tower-experience-tickets",
+                    "score": 0.22,
+                    "slug": "eiffel-tower-experience",
+                    "home_venue_id": null,
+                    "short_name": "Eiffel Tower Experience",
+                    "num_upcoming_events": 331,
+                    "colors": null,
+                    "image_license": "https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=rich",
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": "[This image](https://www.flickr.com/photos/30478819@N08/33015766008/in/photolist-SiuqYY-2aAJ6nb-27tFEJr-TfEqvU-5aFqe6-2fRfscU-5DcTqo-aeB1dg-bwAYdx-2bPCenq-8ARy1R-bEMH74-8AVpGL-8hqR5S-VdZ7nk-jxcedC-22scg7N-9xTeGb-JpxkhQ-aZSDGK-TeZcdy-UyCnMt-KAvtd8-Zs5p3j-dAxQMP-wWQ9yZ-SVBXhi-U6EHKs-2avypie-27tFDtv-28L2Gyd-27tFTRP-266CDAq-55FPdQ-cQMWE3-cQMWJC-23gcZ9w-eUSFKb-o7da-6iS3sK-bdJx7r-4Li5MP-aFafGG-4Li66X-7JPSpe-4faxNq-bVSDK2-bVSCu4-bVSyga-bVSzfF) is available through [Creative Commons](https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=rich) on Flickr. Email [images@seatgeek.com](mailto:images@seatgeek.com) with any questions."
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2023-02-03T03:30:00",
+            "time_tbd": true,
+            "short_title": "Eiffel Tower Experience - Las Vegas",
+            "visible_until_utc": "2023-02-04T08:00:00",
+            "stats": {
+                "listing_count": null,
+                "average_price": null,
+                "lowest_price_good_deals": null,
+                "lowest_price": null,
+                "highest_price": null,
+                "visible_listing_count": null,
+                "dq_bucket_counts": null,
+                "median_price": null,
+                "lowest_sg_base_price": null,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 3000000,
+                    "name": "theater",
+                    "parent_id": null,
+                    "rank": 8
+                },
+                {
+                    "id": 3050000,
+                    "name": "family",
+                    "parent_id": 3000000,
+                    "rank": 0
+                }
+            ],
+            "url": "https://seatgeek.com/eiffel-tower-experience-las-vegas-tickets/family/2023-02-03-3-30-am/5851319",
+            "score": 0.307,
+            "announce_date": "2022-10-23T00:00:00",
+            "created_at": "2022-10-23T16:02:49",
+            "date_tbd": false,
+            "title": "Eiffel Tower Experience - Las Vegas",
+            "popularity": 0.667,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "nhl",
+            "id": 5907724,
+            "datetime_utc": "2023-02-03T23:59:00",
+            "venue": {
+                "state": "FL",
+                "name_v2": "FLA Live Arena",
+                "postal_code": "33323",
+                "name": "FLA Live Arena",
+                "links": [],
+                "timezone": "America/New_York",
+                "url": "https://seatgeek.com/venues/fla-live-arena-2/tickets",
+                "score": 0.59,
+                "location": {
+                    "lat": 26.1585,
+                    "lon": -80.3255
+                },
+                "address": "1 Panther Pkwy",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 27,
+                "city": "Sunrise",
+                "slug": "fla-live-arena-2",
+                "extended_address": "Sunrise, FL 33323",
+                "id": 126,
+                "popularity": 0,
+                "access_method": {
+                    "method": "QRCODE_TM",
+                    "created_at": "2018-09-21T15:55:22Z",
+                    "employee_only": false
+                },
+                "metro_code": 528,
+                "capacity": 0,
+                "display_location": "Sunrise, FL"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "nhl",
+                    "name": "NHL All Star Weekend",
+                    "image": "https://seatgeek.com/images/performers-landscape/nhl-all-star-weekend-2faa4c/331164/huge.jpg",
+                    "id": 331164,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/nhl-all-star-weekend-2faa4c/331164/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 3
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1040000,
+                            "name": "hockey",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1040100,
+                            "name": "nhl",
+                            "parent_id": 1040000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 4
+                        }
+                    ],
+                    "image_attribution": "SeatGeek - 2022",
+                    "url": "https://seatgeek.com/nhl-all-star-weekend-tickets",
+                    "score": 0.45,
+                    "slug": "nhl-all-star-weekend",
+                    "home_venue_id": null,
+                    "short_name": "NHL All Star Weekend",
+                    "num_upcoming_events": 3,
+                    "colors": null,
+                    "image_license": "SeatGeek - 2022",
+                    "popularity": 0,
+                    "home_team": true,
+                    "location": null,
+                    "image_rights_message": ""
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2023-02-03T03:30:00",
+            "time_tbd": true,
+            "short_title": "NHL All Star Weekend - 2 Day Pass",
+            "visible_until_utc": "2023-02-04T20:29:00",
+            "stats": {
+                "listing_count": null,
+                "average_price": null,
+                "lowest_price_good_deals": null,
+                "lowest_price": null,
+                "highest_price": null,
+                "visible_listing_count": null,
+                "dq_bucket_counts": null,
+                "median_price": null,
+                "lowest_sg_base_price": null,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1040000,
+                    "name": "hockey",
+                    "parent_id": 1000000,
+                    "rank": 0
+                },
+                {
+                    "id": 1040100,
+                    "name": "nhl",
+                    "parent_id": 1040000,
+                    "rank": 4
+                }
+            ],
+            "url": "https://seatgeek.com/nhl-all-star-weekend-2-day-pass-tickets/2-3-2023-sunrise-florida-fla-live-arena-2/nhl/5907724",
+            "score": 0.494,
+            "announce_date": "2023-01-04T00:00:00",
+            "created_at": "2023-01-04T19:00:18",
+            "date_tbd": false,
+            "title": "NHL All Star Weekend - 2 Day Pass",
+            "popularity": 0.8,
+            "description": "",
+            "status": "normal",
+            "access_method": {
+                "method": "QRCODE_TM",
+                "created_at": "2018-09-21T15:55:22Z",
+                "employee_only": false
+            },
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "theater",
+            "id": 5800673,
+            "datetime_utc": "2023-02-04T01:30:00",
+            "venue": {
+                "state": "TX",
+                "name_v2": "UTEP Dinner Theatre",
+                "postal_code": "79968",
+                "name": "UTEP Dinner Theatre",
+                "links": [],
+                "timezone": "America/Denver",
+                "url": "https://seatgeek.com/venues/utep-dinner-theatre-1/tickets",
+                "score": 0.37,
+                "location": {
+                    "lat": 31.7714,
+                    "lon": -106.504
+                },
+                "address": "207 Union Building West UTEP Campus",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 11,
+                "city": "El Paso",
+                "slug": "utep-dinner-theatre-1",
+                "extended_address": "El Paso, TX 79968",
+                "id": 4488,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 765,
+                "capacity": 0,
+                "display_location": "El Paso, TX"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "theater",
+                    "name": "UTEP Dinner Theatre",
+                    "image": "https://seatgeek.com/images/performers-landscape/utep-dinner-theatre-8dd3b5/676638/huge.jpg",
+                    "id": 676638,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/utep-dinner-theatre-8dd3b5/676638/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 11
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 3000000,
+                            "name": "theater",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": "SeatGeek - 2022 (2000 X 2000)",
+                    "url": "https://seatgeek.com/utep-dinner-theatre-tickets",
+                    "score": 0.24,
+                    "slug": "utep-dinner-theatre",
+                    "home_venue_id": null,
+                    "short_name": "UTEP Dinner Theatre",
+                    "num_upcoming_events": 11,
+                    "colors": null,
+                    "image_license": "SeatGeek - 2022 (2000 X 2000)",
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": ""
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2023-02-03T18:30:00",
+            "time_tbd": false,
+            "short_title": "UTEP Dinner Theatre - El Paso",
+            "visible_until_utc": "2023-02-04T05:30:00",
+            "stats": {
+                "listing_count": 1,
+                "average_price": 379,
+                "lowest_price_good_deals": null,
+                "lowest_price": 379,
+                "highest_price": 379,
+                "visible_listing_count": 1,
+                "dq_bucket_counts": [0, 0, 0, 0, 0, 0, 0, 0],
+                "median_price": 379,
+                "lowest_sg_base_price": 288,
+                "lowest_sg_base_price_good_deals": null
+            },
+            "taxonomies": [
+                {
+                    "id": 3000000,
+                    "name": "theater",
+                    "parent_id": null,
+                    "rank": 0
+                }
+            ],
+            "url": "https://seatgeek.com/utep-dinner-theatre-el-paso-tickets/theater/2023-02-03-6-30-pm/5800673",
+            "score": 0.329,
+            "announce_date": "2022-09-07T00:00:00",
+            "created_at": "2022-09-07T16:04:08",
+            "date_tbd": false,
+            "title": "UTEP Dinner Theatre - El Paso",
+            "popularity": 0.604,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "cirque_du_soleil",
+            "id": 5818272,
+            "datetime_utc": "2023-02-04T01:30:00",
+            "venue": {
+                "state": "TX",
+                "name_v2": "Moody Center ATX",
+                "postal_code": "78712",
+                "name": "Moody Center ATX",
+                "links": [],
+                "timezone": "America/Chicago",
+                "url": "https://seatgeek.com/venues/moody-center-atx-2/tickets",
+                "score": 0.51,
+                "location": {
+                    "lat": 30.2805,
+                    "lon": -97.7318
+                },
+                "address": "2001 Robert Dedman Drive",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 47,
+                "city": "Austin",
+                "slug": "moody-center-atx-2",
+                "extended_address": "Austin, TX 78712",
+                "id": 518721,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 635,
+                "capacity": 0,
+                "display_location": "Austin, TX"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "cirque_du_soleil",
+                    "name": "Cirque du Soleil: Corteo",
+                    "image": "https://seatgeek.com/images/performers-landscape/cirque-du-soleil-corteo-2e87b2/141718/huge.jpg",
+                    "id": 141718,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/cirque-du-soleil-corteo-2e87b2/141718/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 161
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 3000000,
+                            "name": "theater",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 8
+                        },
+                        {
+                            "id": 3020000,
+                            "name": "cirque_du_soleil",
+                            "parent_id": 3000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": "https://www.flickr.com/photos/agenciaandes_ec/23119012472/in/photolist-BdWYXj-AKTKUw-egd1hT-YXTt5n-ALZR4w-9F1zZi-9F4uMy-BdWYJ3-bowD3B-ABdmGo-Y8NU2t-ALZRd9-ACiXG6-AjoUvk-AECgjK-AjoUwx-ALZRbf-AjgeSo-Bf4c6j-AjoVmZ-ACjvFN-Bhj8Tp-AECgbZ-bowwDa-bowzRa-BdY1Cw-Aib99L-GHXTXC-GLd4pn-GLdf36-GLdbbD-GLdm9e-FQRw6g-GEhU6e-GEhV4M-bxSCGJ-bLMjMa-GHWQxd-9tAij7-efGCMp-pgTjX2-5Tsdo1-5Tsgqh-5AG8nD-ay1mwH-W1To6K-9txQw2-9tA5V9-9txv14-9tAbSw",
+                    "url": "https://seatgeek.com/cirque-du-soleil-corteo-tickets",
+                    "score": 0.27,
+                    "slug": "cirque-du-soleil-corteo",
+                    "home_venue_id": null,
+                    "short_name": "Cirque du Soleil: Corteo",
+                    "num_upcoming_events": 161,
+                    "colors": null,
+                    "image_license": "https://creativecommons.org/licenses/by-sa/2.0/",
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": "[This image](https://www.flickr.com/photos/agenciaandes_ec/23119012472/in/photolist-BdWYXj-AKTKUw-egd1hT-YXTt5n-ALZR4w-9F1zZi-9F4uMy-BdWYJ3-bowD3B-ABdmGo-Y8NU2t-ALZRd9-ACiXG6-AjoUvk-AECgjK-AjoUwx-ALZRbf-AjgeSo-Bf4c6j-AjoVmZ-ACjvFN-Bhj8Tp-AECgbZ-bowwDa-bowzRa-BdY1Cw-Aib99L-GHXTXC-GLd4pn-GLdf36-GLdbbD-GLdm9e-FQRw6g-GEhU6e-GEhV4M-bxSCGJ-bLMjMa-GHWQxd-9tAij7-efGCMp-pgTjX2-5Tsdo1-5Tsgqh-5AG8nD-ay1mwH-W1To6K-9txQw2-9tA5V9-9txv14-9tAbSw) is available through [Creative Commons](https://creativecommons.org/licenses/by-sa/2.0/) (@agenciaandes_ec - Flickr). Email [images@seatgeek.com](mailto:images@seatgeek.com) with any questions."
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2023-02-03T19:30:00",
+            "time_tbd": false,
+            "short_title": "Cirque du Soleil: Corteo - Austin",
+            "visible_until_utc": "2023-02-04T05:30:00",
+            "stats": {
+                "listing_count": 4,
+                "average_price": 305,
+                "lowest_price_good_deals": 122,
+                "lowest_price": 122,
+                "highest_price": 481,
+                "visible_listing_count": 4,
+                "dq_bucket_counts": [1, 1, 1, 0, 1, 1, 1, 0],
+                "median_price": 287,
+                "lowest_sg_base_price": 88,
+                "lowest_sg_base_price_good_deals": 88
+            },
+            "taxonomies": [
+                {
+                    "id": 3000000,
+                    "name": "theater",
+                    "parent_id": null,
+                    "rank": 8
+                },
+                {
+                    "id": 3020000,
+                    "name": "cirque_du_soleil",
+                    "parent_id": 3000000,
+                    "rank": 0
+                }
+            ],
+            "url": "https://seatgeek.com/cirque-du-soleil-corteo-austin-tickets/cirque-du-soleil/2023-02-03-7-30-pm/5818272",
+            "score": 0.367,
+            "announce_date": "2022-09-26T00:00:00",
+            "created_at": "2022-09-26T19:05:10",
+            "date_tbd": false,
+            "title": "Cirque du Soleil: Corteo - Austin",
+            "popularity": 0.722,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "comedy",
+            "id": 5825710,
+            "datetime_utc": "2023-02-04T01:30:00",
+            "venue": {
+                "state": "TX",
+                "name_v2": "Majestic Theatre - Dallas",
+                "postal_code": "75201",
+                "name": "Majestic Theatre - Dallas",
+                "links": [],
+                "timezone": "America/Chicago",
+                "url": "https://seatgeek.com/venues/majestic-theatre-dallas/tickets",
+                "score": 0.48,
+                "location": {
+                    "lat": 32.813,
+                    "lon": -96.7698
+                },
+                "address": "1925 Elm Street",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 36,
+                "city": "Dallas",
+                "slug": "majestic-theatre-dallas",
+                "extended_address": "Dallas, TX 75201",
+                "id": 3621,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 623,
+                "capacity": 1704,
+                "display_location": "Dallas, TX"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "theater_comedy",
+                    "name": "Miranda Sings",
+                    "image": "https://seatgeek.com/images/performers-landscape/miranda-sings-b3bbdc/151630/huge.jpg",
+                    "id": 151630,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/miranda-sings-b3bbdc/151630/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 13
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 3000000,
+                            "name": "theater",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 8
+                        },
+                        {
+                            "id": 3040000,
+                            "name": "comedy",
+                            "parent_id": 3000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 9
+                        }
+                    ],
+                    "image_attribution": "Joe Scarnici / Getty Images Entertainment / Getty Images",
+                    "url": "https://seatgeek.com/miranda-sings-tickets",
+                    "score": 0.34,
+                    "slug": "miranda-sings",
+                    "home_venue_id": null,
+                    "short_name": "Miranda Sings",
+                    "num_upcoming_events": 13,
+                    "colors": null,
+                    "image_license": "rightsmanaged",
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": "(c) Joe Scarnici / Getty Images Entertainment / Getty Images"
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2023-02-03T19:30:00",
+            "time_tbd": false,
+            "short_title": "Miranda Sings",
+            "visible_until_utc": "2023-02-04T05:30:00",
+            "stats": {
+                "listing_count": 6,
+                "average_price": 208,
+                "lowest_price_good_deals": 48,
+                "lowest_price": 48,
+                "highest_price": 3971,
+                "visible_listing_count": 6,
+                "dq_bucket_counts": [1, 4, 1, 1, 0, 0, 1, 0],
+                "median_price": 65,
+                "lowest_sg_base_price": 31,
+                "lowest_sg_base_price_good_deals": 31
+            },
+            "taxonomies": [
+                {
+                    "id": 3000000,
+                    "name": "theater",
+                    "parent_id": null,
+                    "rank": 8
+                },
+                {
+                    "id": 3040000,
+                    "name": "comedy",
+                    "parent_id": 3000000,
+                    "rank": 9
+                }
+            ],
+            "url": "https://seatgeek.com/miranda-sings-tickets/comedy/2023-02-03-7-30-pm/5825710",
+            "score": 0.501,
+            "announce_date": "2022-09-28T00:00:00",
+            "created_at": "2022-09-28T19:04:11",
+            "date_tbd": false,
+            "title": "Miranda Sings",
+            "popularity": 0.798,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        },
+        {
+            "type": "rodeo",
+            "id": 5759762,
+            "datetime_utc": "2023-02-04T01:30:00",
+            "venue": {
+                "state": "TX",
+                "name_v2": "Dickies Arena",
+                "postal_code": "76107",
+                "name": "Dickies Arena",
+                "links": [],
+                "timezone": "America/Chicago",
+                "url": "https://seatgeek.com/venues/dickies-arena/tickets",
+                "score": 0.53,
+                "location": {
+                    "lat": 32.7414,
+                    "lon": -97.3688
+                },
+                "address": "1911 Montgomery Street",
+                "country": "US",
+                "has_upcoming_events": true,
+                "num_upcoming_events": 65,
+                "city": "Fort Worth",
+                "slug": "dickies-arena",
+                "extended_address": "Fort Worth, TX 76107",
+                "id": 460055,
+                "popularity": 0,
+                "access_method": null,
+                "metro_code": 623,
+                "capacity": 13300,
+                "display_location": "Fort Worth, TX"
+            },
+            "datetime_tbd": false,
+            "performers": [
+                {
+                    "type": "rodeo",
+                    "name": "Fort Worth Stock Show and Rodeo",
+                    "image": "https://seatgeek.com/images/performers-landscape/fort-worth-stock-show-and-rodeo-c179b2/93669/huge.jpg",
+                    "id": 93669,
+                    "images": {
+                        "huge": "https://seatgeek.com/images/performers-landscape/fort-worth-stock-show-and-rodeo-c179b2/93669/huge.jpg"
+                    },
+                    "divisions": null,
+                    "has_upcoming_events": true,
+                    "primary": true,
+                    "stats": {
+                        "event_count": 2
+                    },
+                    "taxonomies": [
+                        {
+                            "id": 1000000,
+                            "name": "sports",
+                            "parent_id": null,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1100000,
+                            "name": "animal_sports",
+                            "parent_id": 1000000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        },
+                        {
+                            "id": 1100200,
+                            "name": "rodeo",
+                            "parent_id": 1100000,
+                            "document_source": {
+                                "source_type": "ELASTIC",
+                                "generation_type": "FULL"
+                            },
+                            "rank": 0
+                        }
+                    ],
+                    "image_attribution": "https://www.flickr.com/photos/criminalintent/5962738967/in/photolist-a5UAyg-a74JEd-8vKZzo-8vHroH-8vLFrL-8vKQ3y-8vLuAC-8vLsTG-8vHkui-a74JgN-a74HN5-DeeyN5-y8GYy-a71SHx-8vLz1u-8vLy5b-8vLPQq-8vLixL-8vLgQG-8vLD9G-8vLxPh-8vHLWx-8vLPiU-8vHofp-8vHhg4-8vGQhz-8vKZas-8vHJbH-8vLbbE-8vLjDW-8vHyiT-8vLzZL-8vLmjo-8vGZva-8vKXtm-8vKXaE-8vLNLL-8vHLqg-a5Xshj-a74NCu-8vLPAy-8vKPjQ-8vHg6i-8vKNuG-8vHeAR-p42Fr9-8vHtC6-8vLfCf-8vLeru-8vH1Z2",
+                    "url": "https://seatgeek.com/fort-worth-stock-show-and-rodeo-tickets",
+                    "score": 0.39,
+                    "slug": "fort-worth-stock-show-and-rodeo",
+                    "home_venue_id": null,
+                    "short_name": "Fort Worth Stock Show and Rodeo",
+                    "num_upcoming_events": 2,
+                    "colors": null,
+                    "image_license": "https://creativecommons.org/licenses/by-sa/2.0/",
+                    "popularity": 0,
+                    "location": null,
+                    "image_rights_message": "[This image](https://www.flickr.com/photos/criminalintent/5962738967/in/photolist-a5UAyg-a74JEd-8vKZzo-8vHroH-8vLFrL-8vKQ3y-8vLuAC-8vLsTG-8vHkui-a74JgN-a74HN5-DeeyN5-y8GYy-a71SHx-8vLz1u-8vLy5b-8vLPQq-8vLixL-8vLgQG-8vLD9G-8vLxPh-8vHLWx-8vLPiU-8vHofp-8vHhg4-8vGQhz-8vKZas-8vHJbH-8vLbbE-8vLjDW-8vHyiT-8vLzZL-8vLmjo-8vGZva-8vKXtm-8vKXaE-8vLNLL-8vHLqg-a5Xshj-a74NCu-8vLPAy-8vKPjQ-8vHg6i-8vKNuG-8vHeAR-p42Fr9-8vHtC6-8vLfCf-8vLeru-8vH1Z2) is available through [Creative Commons](https://creativecommons.org/licenses/by-sa/2.0/) (@criminalintent - Flickr) and has been modified from the original. Email [images@seatgeek.com](mailto:images@seatgeek.com) with any questions."
+                }
+            ],
+            "is_open": false,
+            "links": [],
+            "datetime_local": "2023-02-03T19:30:00",
+            "time_tbd": false,
+            "short_title": "Fort Worth Stock Show and Rodeo - Pro Rodeo Tournament",
+            "visible_until_utc": "2023-02-04T05:30:00",
+            "stats": {
+                "listing_count": 1,
+                "average_price": 130,
+                "lowest_price_good_deals": 116,
+                "lowest_price": 109,
+                "highest_price": 251,
+                "visible_listing_count": 1,
+                "dq_bucket_counts": [0, 2, 1, 1, 1, 1, 0, 0],
+                "median_price": 120,
+                "lowest_sg_base_price": 77,
+                "lowest_sg_base_price_good_deals": 82
+            },
+            "taxonomies": [
+                {
+                    "id": 1000000,
+                    "name": "sports",
+                    "parent_id": null,
+                    "rank": 0
+                },
+                {
+                    "id": 1100000,
+                    "name": "animal_sports",
+                    "parent_id": 1000000,
+                    "rank": 0
+                },
+                {
+                    "id": 1100200,
+                    "name": "rodeo",
+                    "parent_id": 1100000,
+                    "rank": 0
+                }
+            ],
+            "url": "https://seatgeek.com/fort-worth-stock-show-and-rodeo-pro-rodeo-tournament-tickets/rodeo/2023-02-03-7-30-pm/5759762",
+            "score": 0.541,
+            "announce_date": "2022-07-23T00:00:00",
+            "created_at": "2022-07-23T16:05:53",
+            "date_tbd": false,
+            "title": "Fort Worth Stock Show and Rodeo - Pro Rodeo Tournament",
+            "popularity": 0.825,
+            "description": "",
+            "status": "normal",
+            "access_method": null,
+            "event_promotion": null,
+            "announcements": {},
+            "conditional": false,
+            "enddatetime_utc": null,
+            "themes": [],
+            "domain_information": []
+        }
+    ],
+    "meta": {
+        "total": 91381,
+        "took": 10,
+        "page": 1,
+        "per_page": 10,
+        "geolocation": null
+    }
+}
