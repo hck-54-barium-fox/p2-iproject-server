@@ -3,6 +3,7 @@ function errorHandler(err, req, res, next) {
 	let status = 500;
 
 	switch (err.name) {
+		case "Name is required":
 		case "Email is required":
 		case "Password is required":
 		case "Name is required":

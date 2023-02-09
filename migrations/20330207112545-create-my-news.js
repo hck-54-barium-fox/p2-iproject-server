@@ -18,7 +18,12 @@ module.exports = {
         }
       },
       newsId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'News',
+          key: 'id',
+        }
       },
       createdAt: {
         allowNull: false,
