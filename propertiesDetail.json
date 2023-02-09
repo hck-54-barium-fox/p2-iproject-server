@@ -1,0 +1,1576 @@
+[
+  {
+    "seen_cc_app_hp_missing_info": 0,
+    "hotel_id": 1720410,
+    "ufi": -3712125,
+    "hotel_facilities": "47,158,110,458,16,5,424,468,108,146,223,221,81,6,3,64,465,51,462,420,488,451,22,8,461,23,91,194,449,199,163,48,455,119,301,450,421,423,418,487,433,302,44,422,456,425,104,109,169,96,457,28,464,459,467,220,486,107,7",
+    "rooms": {
+      "172041052": {
+        "description": "This double room features a electric kettle, private entrance and seating area.",
+        "private_bathroom_highlight": {
+          "has_highlight": 1,
+          "text": "Private bathroom with shower"
+        },
+        "children_and_beds_text": {
+          "allow_children": 1,
+          "children_at_the_property": [
+            {
+              "text": "Children of all ages are welcome.",
+              "highlight": 0
+            },
+            {
+              "text": "Children 18 and above are considered adults at this property.",
+              "highlight": 0
+            },
+            {
+              "text": "To see correct prices and occupancy info, add the number and ages of children in your group to your search.",
+              "highlight": 1
+            }
+          ],
+          "cribs_and_extra_beds": [
+            {
+              "text": "Additional fees are not calculated automatically in the total cost and will have to be paid for separately during your stay.",
+              "highlight": 0
+            },
+            {
+              "text": "The maximum number of cribs, extra beds, and children allowed in existing beds can vary depending on the option booked.",
+              "highlight": 0
+            },
+            {
+              "highlight": 0,
+              "text": "All cribs and extra beds are subject to availability."
+            },
+            {
+              "highlight": 0,
+              "text": "No capacity for extra beds."
+            }
+          ],
+          "age_intervals": [
+            {
+              "max_age": 2,
+              "min_age": 0,
+              "crib": {
+                "id": 28265651,
+                "price_type": "free",
+                "price_mode_n": 0,
+                "price_type_n": 0,
+                "price_mode": "per_night",
+                "price": 0
+              },
+              "group_by_price": {
+                "free,per_night,0": ["crib"]
+              },
+              "types_by_price": [["crib"]]
+            }
+          ]
+        },
+        "photos_may_sorted": 1,
+        "highlights": [
+          {
+            "icon": "icon_wifi",
+            "translated_name": "Free WiFi"
+          },
+          {
+            "icon": "icon_checkmark",
+            "translated_name": "Pool with a view",
+            "id": 159
+          },
+          {
+            "icon": "icon_airconditioning",
+            "translated_name": "Air conditioning",
+            "id": 11
+          },
+          {
+            "id": 38,
+            "translated_name": "Attached bathroom",
+            "icon": "icon_bath"
+          },
+          {
+            "translated_name": "Flat-screen TV",
+            "icon": "icon_flattv",
+            "id": 75
+          },
+          {
+            "id": 79,
+            "icon": "icon_soundproof",
+            "translated_name": "Soundproof"
+          }
+        ],
+        "is_high_floor_guaranteed": 0,
+        "facilities": [
+          {
+            "alt_facilitytype_name": "Bathroom",
+            "facilitytype_name": "Bathroom",
+            "id": 19,
+            "facilitytype_id": 5,
+            "name": "Bathrobe",
+            "alt_facilitytype_id": 5
+          },
+          {
+            "facilitytype_name": "Room Amenities",
+            "alt_facilitytype_name": "General",
+            "id": 6,
+            "facilitytype_id": 4,
+            "name": "Safe",
+            "alt_facilitytype_id": 1
+          },
+          {
+            "facilitytype_name": "Accessibility",
+            "alt_facilitytype_name": "Accessibility",
+            "id": 132,
+            "name": "Upper floors accessible by elevator",
+            "facilitytype_id": 19,
+            "alt_facilitytype_id": 19
+          },
+          {
+            "id": 75,
+            "alt_facilitytype_name": "Media & Technology",
+            "facilitytype_name": "Media & Technology",
+            "facilitytype_id": 6,
+            "name": "Flat-screen TV",
+            "alt_facilitytype_id": 6
+          },
+          {
+            "name": "Towels",
+            "facilitytype_id": 8,
+            "alt_facilitytype_id": 5,
+            "facilitytype_name": "Services & Extras",
+            "alt_facilitytype_name": "Bathroom",
+            "id": 124
+          },
+          {
+            "id": 26,
+            "alt_facilitytype_name": "Living Area",
+            "facilitytype_name": "Room Amenities",
+            "alt_facilitytype_id": 15,
+            "name": "Sitting area",
+            "facilitytype_id": 4
+          },
+          {
+            "facilitytype_id": 5,
+            "name": "Free toiletries",
+            "alt_facilitytype_id": 5,
+            "alt_facilitytype_name": "Bathroom",
+            "facilitytype_name": "Bathroom",
+            "id": 27
+          },
+          {
+            "alt_facilitytype_id": 4,
+            "name": "Socket near the bed",
+            "facilitytype_id": 4,
+            "alt_facilitytype_name": "Room Amenities",
+            "facilitytype_name": "Room Amenities",
+            "id": 184
+          },
+          {
+            "alt_facilitytype_id": 5,
+            "facilitytype_id": 5,
+            "name": "Slippers",
+            "id": 43,
+            "alt_facilitytype_name": "Bathroom",
+            "facilitytype_name": "Bathroom"
+          },
+          {
+            "facilitytype_id": 5,
+            "name": "Hairdryer",
+            "alt_facilitytype_id": 5,
+            "id": 12,
+            "alt_facilitytype_name": "Bathroom",
+            "facilitytype_name": "Bathroom"
+          },
+          {
+            "alt_facilitytype_name": "Media & Technology",
+            "facilitytype_name": "Media & Technology",
+            "id": 8,
+            "name": "TV",
+            "facilitytype_id": 6,
+            "alt_facilitytype_id": 6
+          },
+          {
+            "facilitytype_id": 8,
+            "name": "Linens",
+            "alt_facilitytype_id": 17,
+            "alt_facilitytype_name": "Bedroom",
+            "facilitytype_name": "Services & Extras",
+            "id": 125
+          },
+          {
+            "alt_facilitytype_id": 1,
+            "facilitytype_id": 4,
+            "name": "Tile/Marble floor",
+            "id": 80,
+            "alt_facilitytype_name": "General",
+            "facilitytype_name": "Room Amenities"
+          },
+          {
+            "id": 31,
+            "alt_facilitytype_name": "Bathroom",
+            "facilitytype_name": "Bathroom",
+            "alt_facilitytype_id": 5,
+            "name": "Toilet",
+            "facilitytype_id": 5
+          },
+          {
+            "alt_facilitytype_name": "General",
+            "facilitytype_name": "Room Amenities",
+            "id": 76,
+            "alt_facilitytype_id": 1,
+            "facilitytype_id": 4,
+            "name": "Private entrance"
+          },
+          {
+            "name": "Electric kettle",
+            "facilitytype_id": 7,
+            "alt_facilitytype_id": 12,
+            "id": 86,
+            "alt_facilitytype_name": "Kitchen",
+            "facilitytype_name": "Food & Drink"
+          },
+          {
+            "alt_facilitytype_name": "Media & Technology",
+            "facilitytype_name": "Media & Technology",
+            "id": 9,
+            "name": "Telephone",
+            "facilitytype_id": 6,
+            "alt_facilitytype_id": 6
+          },
+          {
+            "id": 4,
+            "alt_facilitytype_name": "Bathroom",
+            "facilitytype_name": "Bathroom",
+            "name": "Shower",
+            "facilitytype_id": 5,
+            "alt_facilitytype_id": 5
+          },
+          {
+            "alt_facilitytype_id": 6,
+            "name": "Cable channels",
+            "facilitytype_id": 6,
+            "alt_facilitytype_name": "Media & Technology",
+            "facilitytype_name": "Media & Technology",
+            "id": 68
+          },
+          {
+            "alt_facilitytype_id": 17,
+            "facilitytype_id": 4,
+            "name": "Wardrobe or closet",
+            "alt_facilitytype_name": "Bedroom",
+            "facilitytype_name": "Room Amenities",
+            "id": 95
+          },
+          {
+            "name": "Toilet paper",
+            "facilitytype_id": 5,
+            "alt_facilitytype_id": 5,
+            "alt_facilitytype_name": "Bathroom",
+            "facilitytype_name": "Bathroom",
+            "id": 141
+          },
+          {
+            "id": 79,
+            "alt_facilitytype_name": "General",
+            "facilitytype_name": "Room Amenities",
+            "alt_facilitytype_id": 1,
+            "name": "Soundproof",
+            "facilitytype_id": 4
+          },
+          {
+            "facilitytype_id": 4,
+            "name": "Interconnecting room(s) available",
+            "alt_facilitytype_id": 1,
+            "alt_facilitytype_name": "General",
+            "facilitytype_name": "Room Amenities",
+            "id": 73
+          },
+          {
+            "alt_facilitytype_name": "Media & Technology",
+            "facilitytype_name": "Media & Technology",
+            "id": 44,
+            "alt_facilitytype_id": 6,
+            "name": "Satellite channels",
+            "facilitytype_id": 6
+          },
+          {
+            "name": "Air conditioning",
+            "facilitytype_id": 4,
+            "alt_facilitytype_id": 1,
+            "id": 11,
+            "alt_facilitytype_name": "General",
+            "facilitytype_name": "Room Amenities"
+          },
+          {
+            "id": 38,
+            "alt_facilitytype_name": "Bathroom",
+            "facilitytype_name": "Bathroom",
+            "facilitytype_id": 5,
+            "name": "Private bathroom",
+            "alt_facilitytype_id": 5
+          }
+        ],
+        "private_bathroom_count": 0,
+        "bed_configurations": [
+          {
+            "bed_types": [
+              {
+                "description_localized": null,
+                "name_with_count": "1 queen bed",
+                "description": "151–180 cm wide",
+                "count": 1,
+                "bed_type": 6,
+                "description_imperial": "60–70 inches wide",
+                "name": "Queen bed(s)"
+              }
+            ]
+          }
+        ],
+        "photos": [
+          {
+            "url_640x200": "https://cf.bstatic.com/xdata/images/hotel/640x200/269648663.jpg?k=c239e5855c46e4b7727c555af395d7f292b261aaa67a29f8ff64c9b83ddd4b38&o=",
+            "url_square60": "https://cf.bstatic.com/xdata/images/hotel/square60/269648663.jpg?k=c239e5855c46e4b7727c555af395d7f292b261aaa67a29f8ff64c9b83ddd4b38&o=",
+            "photo_id": 269648663,
+            "url_original": "https://cf.bstatic.com/xdata/images/hotel/max500/269648663.jpg?k=c239e5855c46e4b7727c555af395d7f292b261aaa67a29f8ff64c9b83ddd4b38&o=",
+            "new_order": 0,
+            "last_update_date": "2020-09-20 18:19:55",
+            "ratio": 1.49947687800795,
+            "url_max300": "https://cf.bstatic.com/xdata/images/hotel/max300/269648663.jpg?k=c239e5855c46e4b7727c555af395d7f292b261aaa67a29f8ff64c9b83ddd4b38&o="
+          },
+          {
+            "ratio": 1.4991494991495,
+            "url_max300": "https://cf.bstatic.com/xdata/images/hotel/max300/222489161.jpg?k=ab427ac04a3ac72d18eaedf2a9c9d760facc7585d70c6f59347ed7d6672bfefa&o=",
+            "last_update_date": "2019-10-09 11:28:26",
+            "new_order": 2,
+            "url_original": "https://cf.bstatic.com/xdata/images/hotel/max500/222489161.jpg?k=ab427ac04a3ac72d18eaedf2a9c9d760facc7585d70c6f59347ed7d6672bfefa&o=",
+            "url_640x200": "https://cf.bstatic.com/xdata/images/hotel/640x200/222489161.jpg?k=ab427ac04a3ac72d18eaedf2a9c9d760facc7585d70c6f59347ed7d6672bfefa&o=",
+            "url_square60": "https://cf.bstatic.com/xdata/images/hotel/square60/222489161.jpg?k=ab427ac04a3ac72d18eaedf2a9c9d760facc7585d70c6f59347ed7d6672bfefa&o=",
+            "photo_id": 222489161
+          },
+          {
+            "last_update_date": "2019-10-09 11:33:25",
+            "new_order": 1,
+            "ratio": 1.49988811814724,
+            "url_max300": "https://cf.bstatic.com/xdata/images/hotel/max300/222490240.jpg?k=0585c2d69b29006650fa66d57288a335806d777f29177a48e88e8c58656727cf&o=",
+            "url_640x200": "https://cf.bstatic.com/xdata/images/hotel/640x200/222490240.jpg?k=0585c2d69b29006650fa66d57288a335806d777f29177a48e88e8c58656727cf&o=",
+            "photo_id": 222490240,
+            "url_square60": "https://cf.bstatic.com/xdata/images/hotel/square60/222490240.jpg?k=0585c2d69b29006650fa66d57288a335806d777f29177a48e88e8c58656727cf&o=",
+            "url_original": "https://cf.bstatic.com/xdata/images/hotel/max500/222490240.jpg?k=0585c2d69b29006650fa66d57288a335806d777f29177a48e88e8c58656727cf&o="
+          },
+          {
+            "url_max300": "https://cf.bstatic.com/xdata/images/hotel/max300/372909414.jpg?k=d8198eb2f6d723125316dda94aab2014a3d3ddec1255f76895b3b3270d1153ad&o=",
+            "ratio": 1.06844741235392,
+            "last_update_date": "2022-07-04 03:59:00",
+            "new_order": 3,
+            "url_original": "https://cf.bstatic.com/xdata/images/hotel/max500/372909414.jpg?k=d8198eb2f6d723125316dda94aab2014a3d3ddec1255f76895b3b3270d1153ad&o=",
+            "url_square60": "https://cf.bstatic.com/xdata/images/hotel/square60/372909414.jpg?k=d8198eb2f6d723125316dda94aab2014a3d3ddec1255f76895b3b3270d1153ad&o=",
+            "photo_id": 372909414,
+            "url_640x200": "https://cf.bstatic.com/xdata/images/hotel/640x200/372909414.jpg?k=d8198eb2f6d723125316dda94aab2014a3d3ddec1255f76895b3b3270d1153ad&o="
+          }
+        ]
+      }
+    },
+    "is_hotel_ctrip": 0,
+    "tax_exceptions": [],
+    "latitude": 16.0535052002516,
+    "average_room_size_for_ufi_m2": "26.62",
+    "composite_price_breakdown": {
+      "strikethrough_price": {
+        "value": 268.684039397829,
+        "currency": "USD"
+      },
+      "gross_amount": {
+        "value": 125.744130438184,
+        "currency": "USD"
+      },
+      "excluded_amount": {
+        "currency": "USD",
+        "value": 0
+      },
+      "all_inclusive_amount": {
+        "value": 125.744130438184,
+        "currency": "USD"
+      },
+      "items": [
+        {
+          "item_amount": {
+            "currency": "USD",
+            "value": 11.4312845852894
+          },
+          "inclusion_type": "included",
+          "base": {
+            "percentage": 10,
+            "kind": "percentage"
+          },
+          "details": "10 % VAT",
+          "name": "VAT",
+          "kind": "charge"
+        },
+        {
+          "name": "Service charge",
+          "details": "5 % Service charge",
+          "kind": "charge",
+          "inclusion_type": "included",
+          "item_amount": {
+            "currency": "USD",
+            "value": 5.44346885013783
+          },
+          "base": {
+            "percentage": 5,
+            "kind": "percentage"
+          }
+        },
+        {
+          "kind": "discount",
+          "identifier": "basic-deal",
+          "details": "You’re getting a reduced rate because this property is offering a discount.",
+          "name": "Bonus savings",
+          "item_amount": {
+            "currency": "USD",
+            "value": 128.968338910958
+          }
+        },
+        {
+          "name": "Mobile-only price",
+          "identifier": "mobile-discount",
+          "details": "You're getting a reduced rate because you're using a mobile device.",
+          "kind": "discount",
+          "item_amount": {
+            "value": 13.9715700486871,
+            "currency": "USD"
+          }
+        }
+      ],
+      "discounted_amount": {
+        "currency": "USD",
+        "value": 142.939908959645
+      },
+      "net_amount": {
+        "value": 108.869377002757,
+        "currency": "USD"
+      },
+      "gross_amount_per_night": {
+        "currency": "USD",
+        "value": 41.9147101460613
+      },
+      "strikethrough_amount_per_night": {
+        "value": 89.5613464659429,
+        "currency": "USD"
+      }
+    },
+    "class_is_estimated": 0,
+    "is_preferred": 1,
+    "wl_dest_id": "city::-3712125",
+    "b_legal_use_neutral_color_for_persuasion_legal": 0,
+    "genius_rates_can_be_available": 1,
+    "is_city_center": 0,
+    "address": "274 Vo Nguyen Giap Street, My An Ward, Ngu Hanh Son District",
+    "zip": "",
+    "city_trans": "Danang",
+    "is_vp2_enrolled": 0,
+    "longitude": 108.247655332088,
+    "info_banners": [
+      {
+        "type": "banner",
+        "is_default_collapsed": 1,
+        "collapsible": 0,
+        "position_to_inject": 0,
+        "primary_action": {
+          "text": "Contact property",
+          "action_context": "my-reservations",
+          "action": "open-page"
+        },
+        "id": "coronavirus",
+        "dismissable": 0,
+        "show_after_dismissed_time": 24,
+        "messages": [
+          "Get the travel advice you need. Read more about possible travel restrictions before you go."
+        ],
+        "title": "Coronavirus (COVID-19) update",
+        "show_after_dismissed": 1,
+        "secondary_action": {
+          "action_context": "help-center",
+          "action": "open-page",
+          "text": "Help Center"
+        },
+        "priority": 100
+      }
+    ],
+    "timezone": "Asia/Ho_Chi_Minh",
+    "family_facilities": [
+      "Soundproof rooms",
+      "Outdoor pool (year-round)",
+      "Beachfront",
+      "Family rooms",
+      "Outdoor pool"
+    ],
+    "is_closed": 0,
+    "health_and_safety": {
+      "categories": [
+        {
+          "icon": "hospital_shield",
+          "name": "Safety features",
+          "facilities": [
+            "Staff follow all safety protocols as directed by local authorities",
+            "Shared stationery (e.g. printed menus, magazines, pens, paper) removed",
+            "Hand sanitizer in guest accommodation and common areas",
+            "Process in place to check health of guests",
+            "First aid kits available",
+            "Access to healthcare professionals",
+            "Thermometers for guests provided by property",
+            "Face masks for guests available"
+          ],
+          "facility_type_id": 37
+        },
+        {
+          "facility_type_id": 39,
+          "facilities": [
+            "Cashless payment available",
+            "Physical distancing rules followed",
+            "Screens or physical barriers between staff and guests in appropriate areas"
+          ],
+          "icon": "couple",
+          "name": "Physical distancing"
+        },
+        {
+          "icon": "cleaning_spray",
+          "name": "Cleanliness & disinfection",
+          "facility_type_id": 40,
+          "facilities": [
+            "Use of cleaning chemicals that are effective against coronavirus",
+            "Linens, towels, and laundry washed in accordance with local authority guidelines",
+            "Guest accommodation disinfected between stays",
+            "Guests have the option to cancel any cleaning services for their accommodation during their stay"
+          ]
+        },
+        {
+          "name": "Food & drink safety",
+          "icon": "food_gourmet",
+          "facilities": [
+            "All plates, cutlery, glasses, and other tableware sanitized"
+          ],
+          "facility_type_id": 41
+        }
+      ],
+      "latest_edit": null,
+      "total_measures_count": null
+    },
+    "is_cpv2_property": 1,
+    "plq_sensitivity": "",
+    "address_trans": "",
+    "aggregated_data": {
+      "has_nonrefundable": 0,
+      "has_seating": 1,
+      "common_kitchen_fac": [
+        {
+          "id": 86,
+          "name": "Electric kettle"
+        }
+      ],
+      "has_refundable": 1,
+      "has_kitchen": 0
+    },
+    "min_room_distribution": {
+      "children": [],
+      "adults": 2
+    },
+    "nr_bookings_today": 1,
+    "hotel_name_trans": "",
+    "review_nr": 146,
+    "countrycode": "vn",
+    "use_new_bui_icon_highlight": 0,
+    "payment_product": "accept_cc",
+    "preferences": [],
+    "address_required": 0,
+    "districts": [5342],
+    "duplicate_rates_removed": 0,
+    "is_preferred_plus": 0,
+    "accommodation_type_name": "Hotels",
+    "seen_cc_app_rp_missing_fac": 0,
+    "room_recommendation": [
+      {
+        "number_of_extra_beds": 0,
+        "total_extra_bed_price_in_hotel_currency": 0,
+        "babies": 0,
+        "total_extra_bed_price": 0,
+        "children": 0,
+        "block_id": "172041052_364271069_2_1_0",
+        "adults": 2
+      }
+    ],
+    "arrival_date": "2023-08-02",
+    "b_max_los_data": {
+      "has_extended_los": 1,
+      "experiment": "long_stays_android_extend_los_2",
+      "max_allowed_los": 90,
+      "default_los": 45,
+      "extended_los": 90,
+      "is_fullon": 0
+    },
+    "cc1": "vn",
+    "city": "Da Nang",
+    "district": null,
+    "booking_home": {},
+    "departure_date": "2023-08-05",
+    "urgency_room_string": "Superior Double Room",
+    "cc_required": "1",
+    "top_ufi_benefits": [
+      {
+        "translated_name": "Swimming pool",
+        "icon": "pool"
+      },
+      {
+        "icon": "wifi",
+        "translated_name": "WiFi"
+      },
+      {
+        "translated_name": "Outdoor pool",
+        "icon": "pool"
+      },
+      {
+        "translated_name": "Family rooms",
+        "icon": "family"
+      },
+      {
+        "icon": "beach",
+        "translated_name": "Beachfront"
+      },
+      {
+        "icon": "nosmoking",
+        "translated_name": "Non-smoking rooms"
+      }
+    ],
+    "mobile_discount_percentage": 10,
+    "country_trans": "Vietnam",
+    "cvc_required": "1",
+    "wholesaler_request_params": null,
+    "default_language": "en-us",
+    "sustainability": {
+      "hotel_page": {
+        "title": "Sustainability initiatives",
+        "description": "This property has taken steps to provide more sustainable and eco-friendly travel",
+        "cta": "Read more",
+        "has_badge": 0
+      },
+      "sustainability_page": {
+        "sustainable_facility_count": 11,
+        "title": "Sustainability initiatives",
+        "tier": "bronze",
+        "has_programmes": 0,
+        "efforts": [
+          {
+            "title": "Waste",
+            "steps": [
+              "Single-use shampoo, conditioner, and body wash bottles not used",
+              "The property makes efforts to reduce food waste"
+            ],
+            "icon": "recycling_sign"
+          },
+          {
+            "icon": "blood_drop",
+            "title": "Water",
+            "steps": [
+              "Option to reuse towels",
+              "Option to opt out of daily room cleaning",
+              "Water-efficient toilets",
+              "Water-efficient showers"
+            ]
+          },
+          {
+            "icon": "renewable_energy_charging",
+            "steps": [
+              "Key card or motion-controlled electricity",
+              "Most food provided at the property is locally sourced",
+              "Most lighting throughout property uses energy-efficient LED bulbs",
+              "All windows are double-glazed"
+            ],
+            "title": "Energy and greenhouse gases"
+          },
+          {
+            "icon": "tree",
+            "steps": ["Bicycle parking"],
+            "title": "Nature"
+          }
+        ],
+        "description": "These are the steps this property has taken to provide more sustainable and eco-friendly travel:"
+      }
+    },
+    "accommodation_type": 204,
+    "is_wholesaler_candidate": 1,
+    "total_blocks": 6,
+    "block_price_breakdown": {
+      "172041019_364271069_2_1_0": {
+        "all_inclusive_price": 125.74,
+        "has_incalculable_charges": 0,
+        "gross_price": 125.74,
+        "sum_excluded_raw": "0.00",
+        "currency": "USD"
+      },
+      "172041073_364271069_0_1_0": {
+        "all_inclusive_price": 173.65,
+        "currency": "USD",
+        "sum_excluded_raw": "0.00",
+        "gross_price": 173.65,
+        "has_incalculable_charges": 0
+      },
+      "172041005_364271069_3_1_0": {
+        "sum_excluded_raw": "0.00",
+        "currency": "USD",
+        "gross_price": 299.39,
+        "has_incalculable_charges": 0,
+        "all_inclusive_price": 299.39
+      },
+      "172041072_364271069_0_1_0": {
+        "all_inclusive_price": 173.65,
+        "sum_excluded_raw": "0.00",
+        "currency": "USD",
+        "gross_price": 173.65,
+        "has_incalculable_charges": 0
+      },
+      "172041052_364271069_2_1_0": {
+        "sum_excluded_raw": "0.00",
+        "currency": "USD",
+        "gross_price": 125.74,
+        "has_incalculable_charges": 0,
+        "all_inclusive_price": 125.74
+      },
+      "172041074_364271069_0_1_0": {
+        "has_incalculable_charges": 0,
+        "gross_price": 257.48,
+        "sum_excluded_raw": "0.00",
+        "currency": "USD",
+        "all_inclusive_price": 257.48
+      }
+    },
+    "available_deal_descriptions": [],
+    "max_rooms_in_reservation": 10,
+    "b_sca_flow_property_user_ip": 0,
+    "url": "https://www.booking.com/hotel/vn/serene-danang.html",
+    "is_exclusive": null,
+    "soldout": 0,
+    "breakfast_review_score": {
+      "rating": 0,
+      "review_score_word": "",
+      "review_snippet": "",
+      "review_count": 0,
+      "review_number": 0,
+      "review_score": 0
+    },
+    "hotel_include_breakfast": 1,
+    "cant_book": 0,
+    "check_only_x_left": "",
+    "city_name_en": "Da Nang",
+    "free_cancellation_recommendation": {
+      "banner": {
+        "title": "Find a cancellation policy that works for you",
+        "subtitle": "Starting April 6, 2020, your chosen cancellation policy will apply, regardless of the coronavirus. We recommend booking an option with free cancellation in case your travel plans change.",
+        "action_text": "Read more"
+      },
+      "action_modal": {
+        "details": "For bookings made on or after April 6, 2020, be sure to consider the risk of the coronavirus (COVID-19) and associated government measures. If you don’t book a flexible rate, you may not be entitled to a refund. Your cancellation request will be handled by the property, based on your chosen policy and consumer law where applicable. During times of uncertainty, we recommend booking an option with free cancellation. If your plans change, you can cancel free of charge until free cancellation expires.",
+        "title": "Check your booking conditions"
+      }
+    },
+    "languages_spoken": {
+      "languagecode": ["vi", "en-gb"]
+    },
+    "is_crimea": 0,
+    "available_rooms": 10,
+    "wifi_review_score": {
+      "rating": 7.1
+    },
+    "facilities_block": {
+      "facilities": [
+        {
+          "icon": "pool",
+          "name": "1 swimming pool"
+        },
+        {
+          "icon": "nosmoking",
+          "name": "Non-smoking rooms"
+        },
+        {
+          "name": "Free WiFi",
+          "icon": "wifi"
+        },
+        {
+          "icon": "family",
+          "name": "Family rooms"
+        },
+        {
+          "icon": "beach",
+          "name": "Beachfront"
+        },
+        {
+          "name": "Room service",
+          "icon": "clean"
+        },
+        {
+          "icon": "food_and_drink",
+          "name": "Restaurant"
+        },
+        {
+          "name": "WiFi in all areas",
+          "icon": "wifi"
+        }
+      ],
+      "type": "popular",
+      "name": "Most Popular Facilities"
+    },
+    "hotel_text": {
+      "important_information": "In accordance with government guidelines to minimize transmission of the coronavirus (COVID-19), this property may request additional documentation from guests to validate identity, travel itinerary, and other relevant info on dates where such guidelines exist. Food and beverage services at this property may be limited or unavailable due to the coronavirus (COVID-19). Due to the coronavirus (COVID-19), this property is taking steps to protect the safety of guests and staff. Certain services and amenities may be reduced or unavailable as a result. Due to the coronavirus (COVID-19), this property has reduced reception and service hours. Spa and gym facilities at this property are unavailable due to the coronavirus (COVID-19). Please inform Serene Beach Danang Hotel of your expected arrival time in advance. You can use the Special Requests box when booking, or contact the property directly using the contact details in your confirmation. Guests are required to show a photo ID and credit card upon check-in. Please note that all Special Requests are subject to availability and additional charges may apply.",
+      "policies": [
+        {
+          "content": "You can cancel for free until 3 days before arrival. You'll be charged the total price of the reservation if you cancel within 3 days of arrival. If you don't show up, the no-show fee will be the same as the cancellation fee.",
+          "class": "POLICY_CANCELLATION"
+        },
+        {
+          "content": "Children of all ages are allowed. 1 child (up to and including 2 years old) stays for free when using available cribs.\n1 child (up to and including 5 years old) stays for free when using existing beds.\n1 child (from 6 years old  to 11 years old) stays for VND 200,000 per child per night when using existing beds.\n1 child (from 12 years old  to 17 years old) stays for VND 350,000 per child per night when using existing beds.\n No extra beds are available. \nThe maximum number of cribs is 1.\nThe maximum number of total guests is 4.\n",
+          "class": "POLICY_CHILDREN"
+        },
+        {
+          "content": "WiFi is available in all areas and is free of charge. ",
+          "class": "POLICY_HOTEL_INTERNET"
+        },
+        {
+          "content": "No parking available. ",
+          "class": "POLICY_HOTEL_PARKING"
+        },
+        {
+          "content": "Pets are not allowed. ",
+          "class": "POLICY_HOTEL_PETS"
+        },
+        {
+          "content": "You'll be charged a prepayment of the total price of the reservation within 3 days of arrival.",
+          "class": "POLICY_PREPAY"
+        },
+        {
+          "class": "POLICY_PREAUTHORIZE",
+          "content": "The property reserves the right to pre-authorize credit cards before arrival."
+        },
+        {
+          "items": [
+            "10 % VAT is included.",
+            "5 % Service charge is included.",
+            "A City tax is not applicable."
+          ],
+          "content": "10 % VAT is included. 5 % Service charge is included. A City tax is not applicable.",
+          "class": "POLICY_HOTEL_EXTRACHARGES"
+        }
+      ]
+    },
+    "has_theme_park_benefits": 0,
+    "rare_find_state": "NOT_RARE",
+    "spoken_languages": ["vi", "en-gb"],
+    "block": [
+      {
+        "nr_children": 0,
+        "is_last_minute_deal": 0,
+        "is_domestic_rate": 0,
+        "extrabed_available": 0,
+        "babycots_available": 0,
+        "is_mobile_deal": 0,
+        "product_price_breakdown": {
+          "strikethrough_amount_per_night": {
+            "currency": "USD",
+            "value": 89.5613464659429
+          },
+          "gross_amount_per_night": {
+            "value": 41.9147101460613,
+            "currency": "USD"
+          },
+          "discounted_amount": {
+            "currency": "USD",
+            "value": 142.939908959645
+          },
+          "net_amount": {
+            "currency": "USD",
+            "value": 108.869377002757
+          },
+          "all_inclusive_amount": {
+            "value": 125.744130438184,
+            "currency": "USD"
+          },
+          "items": [
+            {
+              "base": {
+                "kind": "percentage",
+                "percentage": 10
+              },
+              "item_amount": {
+                "currency": "USD",
+                "value": 11.4312845852894
+              },
+              "inclusion_type": "included",
+              "kind": "charge",
+              "details": "10 % VAT",
+              "name": "VAT"
+            },
+            {
+              "kind": "charge",
+              "details": "5 % Service charge",
+              "name": "Service charge",
+              "base": {
+                "percentage": 5,
+                "kind": "percentage"
+              },
+              "item_amount": {
+                "value": 5.44346885013783,
+                "currency": "USD"
+              },
+              "inclusion_type": "included"
+            },
+            {
+              "kind": "discount",
+              "name": "Bonus savings",
+              "identifier": "basic-deal",
+              "details": "You’re getting a reduced rate because this property is offering a discount.",
+              "item_amount": {
+                "currency": "USD",
+                "value": 128.968338910958
+              }
+            },
+            {
+              "kind": "discount",
+              "identifier": "mobile-discount",
+              "details": "You're getting a reduced rate because you're using a mobile device.",
+              "name": "Mobile-only price",
+              "item_amount": {
+                "currency": "USD",
+                "value": 13.9715700486871
+              }
+            }
+          ],
+          "excluded_amount": {
+            "value": 0,
+            "currency": "USD"
+          },
+          "gross_amount": {
+            "currency": "USD",
+            "value": 125.744130438184
+          },
+          "nr_stays": 10,
+          "strikethrough_price": {
+            "currency": "USD",
+            "value": 268.684039397829
+          }
+        },
+        "smoking": 0,
+        "max_children_free": 1,
+        "nr_adults": 2,
+        "number_of_bedrooms": 0,
+        "must_reserve_free_parking": 0,
+        "is_dormitory": 0,
+        "breakfast_included": 1,
+        "genius_discount_percentage": 0,
+        "dinner_included": 0,
+        "refundable": 1,
+        "babycots_available_amount": null,
+        "is_flash_deal": 0,
+        "room_surface_in_feet2": 301.3894912,
+        "is_smart_deal": 0,
+        "block_id": "172041052_364271069_2_1_0",
+        "min_price": {
+          "currency": "VND",
+          "extra_charges_breakdown": {
+            "net_price": "2552727.27",
+            "extra_charge": [
+              {
+                "charge_price_mode": 5,
+                "charge_amount": "10.00",
+                "type": "VAT",
+                "inclusion_type": "included",
+                "name": "VAT",
+                "amount": "268036.36",
+                "currency": "VND",
+                "excluded": 0
+              },
+              {
+                "excluded": 0,
+                "amount": "127636.36",
+                "currency": "VND",
+                "name": "Service charge",
+                "charge_price_mode": 5,
+                "type": "SERVICECHARGE",
+                "charge_amount": "5.00",
+                "inclusion_type": "included"
+              }
+            ]
+          },
+          "price": "2948400.00"
+        },
+        "children_ages": [],
+        "room_surface_in_m2": 28,
+        "deposit_required": 1,
+        "b_bsb_campaigns": [],
+        "half_board": 0,
+        "number_of_bathrooms": 0,
+        "room_count": 20,
+        "max_occupancy": "2",
+        "rack_rate": {
+          "currency": "USD",
+          "price": "0.00"
+        },
+        "incremental_price": [
+          {
+            "extra_charges_breakdown": {
+              "net_price": 2552727.27,
+              "extra_charge": [
+                {
+                  "type": "VAT",
+                  "charge_amount": "10.00",
+                  "charge_price_mode": 5,
+                  "inclusion_type": "included",
+                  "name": "VAT",
+                  "amount": 268036.36,
+                  "currency": "VND",
+                  "excluded": 0
+                },
+                {
+                  "excluded": 0,
+                  "currency": "VND",
+                  "amount": 127636.36,
+                  "name": "Service charge",
+                  "charge_amount": "5.00",
+                  "type": "SERVICECHARGE",
+                  "charge_price_mode": 5,
+                  "inclusion_type": "included"
+                }
+              ]
+            },
+            "currency": "VND",
+            "price": "2948400.00"
+          },
+          {
+            "extra_charges_breakdown": {
+              "extra_charge": [
+                {
+                  "charge_amount": "10.00",
+                  "charge_price_mode": 5,
+                  "type": "VAT",
+                  "inclusion_type": "included",
+                  "name": "VAT",
+                  "currency": "VND",
+                  "amount": "536072.72",
+                  "excluded": 0
+                },
+                {
+                  "excluded": 0,
+                  "amount": "255272.72",
+                  "currency": "VND",
+                  "name": "Service charge",
+                  "inclusion_type": "included",
+                  "type": "SERVICECHARGE",
+                  "charge_price_mode": 5,
+                  "charge_amount": "5.00"
+                }
+              ],
+              "net_price": 5105454.54
+            },
+            "currency": "VND",
+            "price": "5896800.00"
+          },
+          {
+            "currency": "VND",
+            "extra_charges_breakdown": {
+              "extra_charge": [
+                {
+                  "name": "VAT",
+                  "inclusion_type": "included",
+                  "charge_amount": "10.00",
+                  "type": "VAT",
+                  "charge_price_mode": 5,
+                  "excluded": 0,
+                  "currency": "VND",
+                  "amount": "804109.08"
+                },
+                {
+                  "excluded": 0,
+                  "currency": "VND",
+                  "amount": "382909.08",
+                  "name": "Service charge",
+                  "charge_price_mode": 5,
+                  "charge_amount": "5.00",
+                  "type": "SERVICECHARGE",
+                  "inclusion_type": "included"
+                }
+              ],
+              "net_price": 7658181.81
+            },
+            "price": "8845200.00"
+          },
+          {
+            "price": "11793600.00",
+            "extra_charges_breakdown": {
+              "extra_charge": [
+                {
+                  "charge_amount": "10.00",
+                  "charge_price_mode": 5,
+                  "type": "VAT",
+                  "inclusion_type": "included",
+                  "name": "VAT",
+                  "amount": "1072145.44",
+                  "currency": "VND",
+                  "excluded": 0
+                },
+                {
+                  "amount": "510545.44",
+                  "currency": "VND",
+                  "excluded": 0,
+                  "inclusion_type": "included",
+                  "type": "SERVICECHARGE",
+                  "charge_amount": "5.00",
+                  "charge_price_mode": 5,
+                  "name": "Service charge"
+                }
+              ],
+              "net_price": 10210909.08
+            },
+            "currency": "VND"
+          },
+          {
+            "extra_charges_breakdown": {
+              "extra_charge": [
+                {
+                  "currency": "VND",
+                  "amount": "1340181.80",
+                  "excluded": 0,
+                  "inclusion_type": "included",
+                  "charge_amount": "10.00",
+                  "type": "VAT",
+                  "charge_price_mode": 5,
+                  "name": "VAT"
+                },
+                {
+                  "name": "Service charge",
+                  "inclusion_type": "included",
+                  "type": "SERVICECHARGE",
+                  "charge_price_mode": 5,
+                  "charge_amount": "5.00",
+                  "excluded": 0,
+                  "currency": "VND",
+                  "amount": "638181.80"
+                }
+              ],
+              "net_price": 12763636.35
+            },
+            "currency": "VND",
+            "price": "14742000.00"
+          },
+          {
+            "price": "17690400.00",
+            "currency": "VND",
+            "extra_charges_breakdown": {
+              "net_price": 15316363.62,
+              "extra_charge": [
+                {
+                  "name": "VAT",
+                  "charge_amount": "10.00",
+                  "charge_price_mode": 5,
+                  "type": "VAT",
+                  "inclusion_type": "included",
+                  "excluded": 0,
+                  "currency": "VND",
+                  "amount": "1608218.16"
+                },
+                {
+                  "amount": "765818.16",
+                  "currency": "VND",
+                  "excluded": 0,
+                  "type": "SERVICECHARGE",
+                  "charge_amount": "5.00",
+                  "charge_price_mode": 5,
+                  "inclusion_type": "included",
+                  "name": "Service charge"
+                }
+              ]
+            }
+          },
+          {
+            "extra_charges_breakdown": {
+              "extra_charge": [
+                {
+                  "name": "VAT",
+                  "type": "VAT",
+                  "charge_amount": "10.00",
+                  "charge_price_mode": 5,
+                  "inclusion_type": "included",
+                  "excluded": 0,
+                  "currency": "VND",
+                  "amount": "1876254.52"
+                },
+                {
+                  "name": "Service charge",
+                  "type": "SERVICECHARGE",
+                  "charge_price_mode": 5,
+                  "charge_amount": "5.00",
+                  "inclusion_type": "included",
+                  "excluded": 0,
+                  "amount": "893454.52",
+                  "currency": "VND"
+                }
+              ],
+              "net_price": 17869090.89
+            },
+            "currency": "VND",
+            "price": "20638800.00"
+          },
+          {
+            "price": "23587200.00",
+            "extra_charges_breakdown": {
+              "extra_charge": [
+                {
+                  "currency": "VND",
+                  "amount": "2144290.88",
+                  "excluded": 0,
+                  "inclusion_type": "included",
+                  "charge_amount": "10.00",
+                  "charge_price_mode": 5,
+                  "type": "VAT",
+                  "name": "VAT"
+                },
+                {
+                  "inclusion_type": "included",
+                  "charge_price_mode": 5,
+                  "charge_amount": "5.00",
+                  "type": "SERVICECHARGE",
+                  "name": "Service charge",
+                  "currency": "VND",
+                  "amount": "1021090.88",
+                  "excluded": 0
+                }
+              ],
+              "net_price": 20421818.16
+            },
+            "currency": "VND"
+          },
+          {
+            "currency": "VND",
+            "extra_charges_breakdown": {
+              "extra_charge": [
+                {
+                  "type": "VAT",
+                  "charge_price_mode": 5,
+                  "charge_amount": "10.00",
+                  "inclusion_type": "included",
+                  "name": "VAT",
+                  "currency": "VND",
+                  "amount": "2412327.24",
+                  "excluded": 0
+                },
+                {
+                  "excluded": 0,
+                  "amount": "1148727.24",
+                  "currency": "VND",
+                  "name": "Service charge",
+                  "inclusion_type": "included",
+                  "charge_price_mode": 5,
+                  "type": "SERVICECHARGE",
+                  "charge_amount": "5.00"
+                }
+              ],
+              "net_price": 22974545.43
+            },
+            "price": "26535600.00"
+          },
+          {
+            "price": "29484000.00",
+            "extra_charges_breakdown": {
+              "extra_charge": [
+                {
+                  "name": "VAT",
+                  "inclusion_type": "included",
+                  "charge_amount": "10.00",
+                  "type": "VAT",
+                  "charge_price_mode": 5,
+                  "excluded": 0,
+                  "amount": "2680363.60",
+                  "currency": "VND"
+                },
+                {
+                  "name": "Service charge",
+                  "charge_amount": "5.00",
+                  "type": "SERVICECHARGE",
+                  "charge_price_mode": 5,
+                  "inclusion_type": "included",
+                  "excluded": 0,
+                  "currency": "VND",
+                  "amount": "1276363.60"
+                }
+              ],
+              "net_price": "25527272.70"
+            },
+            "currency": "VND"
+          }
+        ],
+        "pod_ios_migrate_policies_to_smp_fullon": 0,
+        "room_id": 172041052,
+        "all_inclusive": 0,
+        "is_genius_discount_geo": 0,
+        "lunch_included": 0,
+        "room_name": "Superior Double Room",
+        "is_genius_deal": null,
+        "mealplan": "Continental breakfast is included in the room rate.",
+        "roomtype_id": 9,
+        "price_breakdown": {
+          "has_fine_print_charges": 0,
+          "excluded_charges_detail": null,
+          "all_inclusive_price": 125.74,
+          "has_tax_exceptions": 0,
+          "gross_price": 125.74,
+          "has_incalculable_charges": 0,
+          "sum_excluded_raw": "0.00",
+          "currency": "USD"
+        },
+        "bh_room_highlights": [],
+        "can_reserve_free_parking": 0,
+        "extrabed_available_amount": null,
+        "max_children_free_age": 6,
+        "is_block_fit": 1,
+        "paymentterms": {
+          "cancellation": {
+            "info": {
+              "timezone_offset": "25200",
+              "timezone": "+07",
+              "date_before": "July 29, 2023",
+              "time": "12:00 AM",
+              "refundable": 1,
+              "date": "July 30, 2023",
+              "date_before_raw": "2023-07-29",
+              "date_raw": "2023-07-30 00:00:00",
+              "is_midnight": 1,
+              "time_before_midnight": "11:59 PM"
+            },
+            "guaranteed_non_refundable": 0,
+            "timeline": {
+              "nr_stages": 2,
+              "currency_code": "VND",
+              "policygroup_instance_id": "31/31/-",
+              "u_currency_code": "USD",
+              "stages": [
+                {
+                  "u_stage_fee_pretty": "US$ 0",
+                  "fee": 0,
+                  "limit_until": "July 29, 2023 11:59 PM",
+                  "limit_from_raw": "2023-02-06 22:11:54",
+                  "text": "Free cancellation until 11:59 PM on Jul 29",
+                  "b_number": 0,
+                  "stage_fee": 0,
+                  "u_fee_pretty": "US$ 0",
+                  "limit_from": "February 6, 2023 10:11 PM",
+                  "limit_until_date": "July 29, 2023",
+                  "u_fee_remaining_pretty": "US$ 125",
+                  "limit_until_time": "11:59 PM",
+                  "u_fee": "0.00",
+                  "b_state": "FREE",
+                  "effective_number": 0,
+                  "u_fee_remaining": "125.74",
+                  "limit_from_time": "10:11 PM",
+                  "u_stage_fee": "0.00",
+                  "fee_remaining": 2948400,
+                  "stage_translation": "Free to cancel",
+                  "fee_rounded": 0,
+                  "limit_until_raw": "2023-07-29 23:59:59",
+                  "fee_remaining_pretty": "VND 2948400",
+                  "current_stage": 1,
+                  "stage_fee_pretty": "VND 0",
+                  "is_free": 1,
+                  "fee_pretty": "VND 0",
+                  "text_refundable": "You'll get a full refund if you cancel before 11:59 PM on July 29, 2023.",
+                  "limit_timezone": "Danang",
+                  "date_until": "2023-07-29 23:59:59 +0700",
+                  "limit_from_date": "February 6, 2023",
+                  "is_effective": 1
+                },
+                {
+                  "is_free": 0,
+                  "current_stage": 0,
+                  "stage_fee_pretty": "VND 2948400",
+                  "limit_from_date": "July 30, 2023",
+                  "is_effective": 1,
+                  "limit_timezone": "Danang",
+                  "text_refundable": "If you cancel after 12:00 AM on July 30, 2023, you won't be eligible for a refund.",
+                  "fee_pretty": "VND 2948400",
+                  "amount_pretty": "US$ 126",
+                  "fee_remaining": 0,
+                  "fee_remaining_pretty": "VND 0",
+                  "fee_rounded": 2948400,
+                  "limit_until_raw": "2023-07-30 00:00:00",
+                  "stage_translation": "No refund if you cancel",
+                  "u_fee_remaining_pretty": "US$ 0",
+                  "limit_until_date": "July 30, 2023",
+                  "u_fee_pretty": "US$ 126",
+                  "limit_from": "July 30, 2023 12:00 AM",
+                  "stage_fee": 2948400,
+                  "date_from": "2023-07-30 00:00:00 +0700",
+                  "effective_number": 1,
+                  "u_fee_remaining": "0.00",
+                  "u_stage_fee": "125.74",
+                  "limit_from_time": "12:00 AM",
+                  "b_state": "NONREF",
+                  "u_fee": "125.74",
+                  "limit_until_time": "12:00 AM",
+                  "fee": 2948400,
+                  "limit_until": "July 30, 2023 12:00 AM",
+                  "u_stage_fee_pretty": "US$ 126",
+                  "amount": 125.74,
+                  "text": "From 12:00 AM on Jul 30",
+                  "b_number": 1,
+                  "limit_from_raw": "2023-07-30 00:00:00"
+                }
+              ]
+            },
+            "non_refundable_anymore": 0,
+            "description": "You can cancel for free until 3 days before arrival. You'll be charged the total price of the reservation if you cancel within 3 days of arrival. If you don't show up, the no-show fee will be the same as the cancellation fee.",
+            "bucket": "SMP_FLEX",
+            "type_translation": "Free to cancel",
+            "type": "free_cancellation"
+          },
+          "prepayment": {
+            "info": {
+              "date_before": "July 29, 2023",
+              "timezone_offset": "25200",
+              "timezone": "+07",
+              "is_midnight": 1,
+              "time_before_midnight": "11:59 PM",
+              "time": "12:00 AM",
+              "refundable": 1,
+              "date": "July 30, 2023",
+              "prepayment_at_booktime": 0
+            },
+            "timeline": {
+              "stages": [
+                {
+                  "u_stage_fee_pretty": "US$ 0",
+                  "amount": "0.00",
+                  "limit_until": "July 29, 2023 11:59 PM",
+                  "fee": 0,
+                  "limit_from_raw": "2023-02-06 22:11:54",
+                  "text": "Today you'll pay",
+                  "b_number": 0,
+                  "u_fee_pretty": "US$ 0",
+                  "limit_from": "February 6, 2023 10:11 PM",
+                  "stage_fee": 0,
+                  "u_fee_remaining_pretty": "US$ 125",
+                  "limit_until_date": "July 29, 2023",
+                  "u_fee": "0.00",
+                  "limit_until_time": "11:59 PM",
+                  "u_fee_remaining": "125.74",
+                  "effective_number": 0,
+                  "u_stage_fee": "0.00",
+                  "limit_from_time": "10:11 PM",
+                  "b_state": "FREE",
+                  "fee_remaining": 2948400,
+                  "amount_pretty": "US$ 0",
+                  "fee_rounded": 0,
+                  "limit_until_raw": "2023-07-29 23:59:59",
+                  "fee_remaining_pretty": "VND 2948400",
+                  "current_stage": 1,
+                  "stage_fee_pretty": "VND 0",
+                  "is_free": 1,
+                  "fee_pretty": "VND 0",
+                  "limit_from_date": "February 6, 2023",
+                  "is_effective": 1,
+                  "limit_timezone": "Danang"
+                },
+                {
+                  "amount_pretty": "US$ 126",
+                  "fee_remaining": 0,
+                  "fee_remaining_pretty": "VND 0",
+                  "fee_rounded": 2948400,
+                  "limit_until_raw": "2023-07-30 00:00:00",
+                  "is_free": 0,
+                  "current_stage": 0,
+                  "stage_fee_pretty": "VND 2948400",
+                  "is_effective": 1,
+                  "limit_from_date": "July 30, 2023",
+                  "limit_timezone": "Danang",
+                  "fee_pretty": "VND 2948400",
+                  "limit_until": "July 30, 2023 12:00 AM",
+                  "fee": 2948400,
+                  "u_stage_fee_pretty": "US$ 126",
+                  "amount": "125.74",
+                  "text": "After July 30 you'll pay",
+                  "b_number": 1,
+                  "limit_from_raw": "2023-07-30 00:00:00",
+                  "u_fee_remaining_pretty": "US$ 0",
+                  "limit_until_date": "July 30, 2023",
+                  "limit_from": "July 30, 2023 12:00 AM",
+                  "u_fee_pretty": "US$ 126",
+                  "stage_fee": 2948400,
+                  "u_fee_remaining": "0.00",
+                  "effective_number": 1,
+                  "u_stage_fee": "125.74",
+                  "limit_from_time": "12:00 AM",
+                  "b_state": "NONREF",
+                  "u_fee": 125.74,
+                  "limit_until_time": "12:00 AM"
+                }
+              ],
+              "u_currency_code": "USD",
+              "policygroup_instance_id": "31/31/-",
+              "currency_code": "VND",
+              "nr_stages": 2
+            },
+            "simple_translation": "No prepayment",
+            "type_extended": "refundable_prepayment",
+            "description": "You'll be charged a prepayment of the total price of the reservation within 3 days of arrival.",
+            "type_translation": "SECURE YOUR BOOKING – pay now",
+            "extended_type_translation": "REFUNDABLE prepayment needed",
+            "type": "full_prepayment"
+          }
+        },
+        "name_without_policy": "Superior Double Room",
+        "deals": {
+          "deal_attributes": {
+            "has_secret_channel_option": 0
+          }
+        },
+        "rate_type_id": 0,
+        "full_board": 0,
+        "block_text": {
+          "policies": [
+            {
+              "class": "POLICY_CANCELLATION",
+              "content": "You can cancel for free until 3 days before arrival. You'll be charged the total price of the reservation if you cancel within 3 days of arrival. If you don't show up, the no-show fee will be the same as the cancellation fee."
+            },
+            {
+              "content": "You'll be charged a prepayment of the total price of the reservation within 3 days of arrival.",
+              "class": "POLICY_PREPAY"
+            },
+            {
+              "class": "POLICY_HOTEL_MEALPLAN",
+              "content": "Continental breakfast included",
+              "mealplan_vector": "1"
+            },
+            {
+              "class": "POLICY_SUMMARY_INCLUDED",
+              "content": "10% VAT, 5% Service charge"
+            },
+            {
+              "content": "General",
+              "class": "POLICY_TITLE"
+            }
+          ]
+        },
+        "is_secret_deal": 0,
+        "name": "Superior Double Room - Free cancellation",
+        "detail_mealplan": [
+          {
+            "title": "Breakfast included (Continental, Asian, American)",
+            "icon": "coffee"
+          }
+        ],
+        "refundable_until": "2023-07-29 23:59:59 +0700"
+      }
+    ],
+    "hotel_name": "Serene Beach Danang Hotel",
+    "qualifies_for_no_cc_reservation": 0,
+    "distance_to_cc": 3.46107696770738,
+    "city_in_trans": "in Danang",
+    "last_reservation": {
+      "time": "",
+      "countrycode": null,
+      "country": null
+    },
+    "district_id": 5342,
+    "default_wishlist_name": "Danang"
+  }
+]
