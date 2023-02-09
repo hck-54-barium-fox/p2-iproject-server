@@ -30,8 +30,7 @@ class MidtransController {
                 res.status(201).json(transactionToken)
             })
         } catch (err) {
-            console.log(err)
-            res.status(500).json(err)
+            res.status(500).json({message:"Server internal error"})
         }
     }
     static async userSubscribe(req,res){

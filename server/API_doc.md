@@ -90,7 +90,7 @@ OR
 
 &nbsp;
 
-## 7. GET /planets
+## 3. GET /planets
 
 Request:
 
@@ -130,7 +130,7 @@ _Response (200 - OK)_
 ]
 ```
 
-## 8. GET /planets/:id
+## 4. GET /planets/:id
 
 Request:
 
@@ -157,7 +157,7 @@ _Response (200 - Ok)_
 }
 ```
 
-## 7. GET /apod
+## 5. GET /apod
 
 Request:
 
@@ -186,7 +186,7 @@ _Response (200 - OK)_
 
 &nbsp;
 
-## 10. patch /subscribe
+## 6. patch /subscribe
 
 Description:
 
@@ -207,6 +207,40 @@ _Response (201 - created)_
 ```json
 {
     "message": "user with email daffa@gmail.com success subscribe"
+}
+```
+
+&nbsp;
+
+## 7. POST /transaction
+
+
+Request:
+-   headers:
+
+```json
+{
+    "access_token": "string"
+}
+```
+_Response (201 - Created)_
+
+```json
+{
+    "token": "string",
+    "redirect_url": "string"
+}
+```
+
+_Response (400 - Bad Request)_
+
+```json
+{
+    "errors": [
+        {
+            "message": "Email is required"
+        }
+    ]
 }
 ```
 
