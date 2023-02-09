@@ -1,17 +1,24 @@
 const { OAuth2Client } = require('google-auth-library')
 const { compareHash, signToken } = require('../helpers/jwt')
 const { User } = require('../models/index')
+const {sendEmail} = require("../helpers/nodemailer")
 
 
 
 class Controller{
     static async register(req, res, next){
         try {
-            let {email, password} = req.body
+            let {email, password, phoneNumber, noIdentity} = req.body
+            let imagePath = req.file.path
+            console.log(req.body, req.file);
             let user = await User.create({
                 email,
-                password
+                password,
+                phoneNumber,
+                noIdentity,
+                image : imagePath
             })
+            sendEmail(email)
             res.status(201).json(user)
         } catch (error) {
             console.log(error);

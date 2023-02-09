@@ -49,7 +49,7 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     phoneNumber: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         notNull: {
@@ -72,8 +72,8 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
-    noIDCard: {
-      type: DataTypes.INTEGER,
+    noIdentity: {
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         notNull: {

@@ -13,7 +13,6 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Transaction.belongsTo(models.Smartphone)
       Transaction.belongsTo(models.User)
-      Transaction.hasOne(models.UserIdentity)
     }
   }
   Transaction.init({

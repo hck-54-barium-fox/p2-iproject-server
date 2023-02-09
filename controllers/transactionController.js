@@ -89,22 +89,6 @@ class Controller {
       next(error)
     }
   }
-
-  static async handleIdentity(req, res, next){
-    try {
-      let TransactionId = req.params.id
-      let {phoneNumber} = req.body
-      let imgUrl = req.file.path 
-      let data = await IdentityUser.create({
-        image : imgUrl,
-        phoneNumber,
-        TransactionId
-      })
-      res.status(201).json(data)
-    } catch (error) {
-      next(error)
-    }
-  }
 }
 
 module.exports = Controller
