@@ -7,22 +7,24 @@ module.exports = {
       CustomerId: 1,
       ProductId: 1,
       totalProduct: 1000,
+      isPaid: false,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
       CustomerId: 2,
       ProductId: 2,
       totalProduct: 1000,
+      isPaid: false,
       createdAt: new Date(),
       updatedAt: new Date()
     }], {})
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.bulkDelete("Bookmarks",null, {
+    await queryInterface.bulkDelete("Bookmarks", null, {
       cascade: true,
       truncate: true,
       restartIdentity: true,
-     })
+    })
   }
 };

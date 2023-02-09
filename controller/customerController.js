@@ -1,6 +1,8 @@
+const DataParseUri = require('datauri/parser')
 const { Customer, Bookmark, Product } = require("../models")
 const { comparePassword } = require("../helper/bcrypt")
 const { sign } = require("../helper/jwt")
+const cloudinary = require("../middleware/cloudinary");
 // const { OAuth2Client } = require("google-auth-library");
 
 class CustomerController {
@@ -16,8 +18,8 @@ class CustomerController {
 
     static async login(req, res, next) {
         try {
-            const { email, password, username } = req.body
-            if (!email || !password || !username) {
+            const { email, password } = req.body
+            if (!email || !password) {
                 throw {
                     name: "InvalidLogin"
                 }
@@ -42,8 +44,8 @@ class CustomerController {
                 }
             }
             let { id } = data
-            let token = sign({id})
-            res.status(200).json({token})
+            let token = sign({ id })
+            res.status(200).json({ token })
         } catch (err) {
             next(err)
         }
@@ -51,6 +53,52 @@ class CustomerController {
 
     static async loginByFacebook(req, res, next) {
 
+    }
+
+    static async myProfile(req, res, next) {
+        try {
+            const customerId = req.customer.id;
+            const user = await Customer.findByPk(customerId, {
+                attributes: { exclude: ['password'] }
+            })
+            res.status(200).json(user)
+        } catch (err) {
+            next(err)
+        }
+    }
+
+    static async updateProfile(req, res, next) {
+        try {
+            const { id, username, email, phoneNumber } = req.body
+            let payload = { id, username, email, phoneNumber }
+
+            if (req.file) {
+                const parser = new DataParseUri()
+                const pathImage = parser.format(req.file.originalname, req.file.buffer)
+                const resCloud = await cloudinary.uploader.upload(pathImage.content)
+
+                const img_profile = resCloud.secure_url
+                payload = {
+                    ...payload,
+                    address: img_profile
+                }
+
+                const updateCustomer = await Customer.update(payload, {
+                    where: { id }
+                })
+
+                res.status(200).json(updateCustomer)
+            } else {
+                const updateCustomer = await Customer.update(payload, {
+                    where: { id }
+                })
+
+                res.status(200).json(updateCustomer)
+            }
+
+        } catch (err) {
+            next(err)
+        }
     }
 
 }

@@ -1,7 +1,8 @@
 const { Customer, Bookmark, Product } = require("../models/index")
 const midtransClient = require('midtrans-client');
 
-const formatRupiah = require("../helper/formatRupiah")
+const formatRupiah = require("../helper/formatRupiah");
+const { Op } = require("sequelize");
 
 class BookmarkController {
 
@@ -16,6 +17,8 @@ class BookmarkController {
                 attributes: {
                     exclude: ["createdAt", "updatedAt"],
                 },
+                include: Product,
+                order: [['createdAt', 'DESC']]
             };
 
             const data = await Bookmark.findAll(options)
@@ -51,7 +54,8 @@ class BookmarkController {
             const [isData, create] = await Bookmark.findOrCreate({
                 where: {
                     ProductId: dataBookmark.ProductId,
-                    CustomerId: dataBookmark.CustomerId
+                    CustomerId: dataBookmark.CustomerId,
+                    isPaid: false
                 },
                 defaults: dataBookmark,
                 // hooks: false,
@@ -78,14 +82,14 @@ class BookmarkController {
             const id = +req.params.bookmarkId
 
             const data = await Bookmark.findOne({
-                where : {
+                where: {
                     id
                 }
             })
             await data.destroy()
-            
+
             res.status(200).json({
-                message : ` id ${data.id} has been deleted`
+                message: ` id ${data.id} has been deleted`
             })
         } catch (err) {
             console.log(err.name);
@@ -93,61 +97,91 @@ class BookmarkController {
         }
     }
 
-    static async countBookmark(req, res, next){
+    static async countBookmark(req, res, next) {
         try {
-            
+
             const customerId = req.customer.id
             const id = +req.params.productId
 
             const data = await Bookmark.findAll({
-                where : {
-                    CustomerId : customerId
+                where: {
+                    CustomerId: customerId
                 },
-                include : {
-                    model : Product
+                include: {
+                    model: Product
                 }
             })
             let totalPrice = 0
             data.forEach(el => {
                 totalPrice += el.Product.product_price
             })
-            
+
             res.status(200).json(formatRupiah(totalPrice))
         } catch (err) {
             next(err)
         }
     }
 
-    static async generateMidtrans(req, res, next){
+    static async generateMidtrans(req, res, next) {
         try {
             const customerId = req.customer.id
             const id = +req.params.productId
-            
+
             const dataCust = await Customer.findByPk(customerId)
             const dataProduct = await Product.findByPk(id)
 
             let snap = new midtransClient.Snap({
                 // Set to true if you want Production Environment (accept real transaction).
-                isProduction : false,
-                serverKey : process.env.MIDTRANS_SERVER_KEY
+                isProduction: false,
+                serverKey: process.env.MIDTRANS_SERVER_KEY
             });
 
             let parameter = {
                 transaction_details: {
-                  order_id: `TRANSACTION_${Math.floor(1000 + Math.random() * 10000)}`, // must be unique
-                  gross_amount: dataProduct.product_price,
+                    order_id: `TRANSACTION_${Math.floor(1000 + Math.random() * 10000)}`, // must be unique
+                    gross_amount: dataProduct.product_price,
                 },
                 credit_card: {
-                  secure: true,
+                    secure: true,
                 },
                 customer_details: {
-                    username : dataCust.username ,
-                    email : dataCust.email,
-                    product : dataProduct.product_name
+                    username: dataCust.username,
+                    email: dataCust.email,
+                    product: dataProduct.product_name
                 },
-              };
-              const tokenMidtrans = await snap.createTransaction(parameter);
-              res.status(201).json(tokenMidtrans);
+            };
+            const tokenMidtrans = await snap.createTransaction(parameter);
+            res.status(201).json(tokenMidtrans);
+        } catch (err) {
+            next(err)
+        }
+    }
+
+    static async successPayment(req, res, next) {
+        try {
+            const id = req.customer.id
+            const idProduct = req.body.id
+
+            const bookmarkCustomer = await Bookmark.findOne({
+                where: {
+                    [Op.and]: [{ CustomerId: id }, { ProductId: idProduct }]
+                }
+            })
+
+            if (!bookmarkCustomer) {
+                throw {
+                    name: "NotFound"
+                }
+            }
+
+            await Bookmark.update({ isPaid: true }, {
+                where: {
+                    [Op.and]: [{ CustomerId: id }, { ProductId: idProduct }]
+                }
+            })
+
+            res.status(200).json({ message: "Success Payment!!" })
+
         } catch (err) {
             next(err)
         }

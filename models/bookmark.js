@@ -23,7 +23,11 @@ module.exports = (sequelize, DataTypes) => {
     },
     CustomerId: DataTypes.INTEGER,
     ProductId: DataTypes.INTEGER,
-    totalProduct: DataTypes.STRING
+    totalProduct: DataTypes.STRING,
+    isPaid: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    }
   }, {
     sequelize,
     modelName: 'Bookmark',

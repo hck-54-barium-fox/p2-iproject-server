@@ -30,6 +30,10 @@ module.exports = {
       totalProduct: {
         type: Sequelize.STRING
       },
+      isPaid: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
