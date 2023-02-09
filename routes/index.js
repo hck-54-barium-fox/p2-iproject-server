@@ -10,19 +10,9 @@ routes.get('/hotels', Controller.getAllHotel);
 // mendapatkan destination location berdasarkan lokasi
 routes.get('/hotels/location', Controller.getHotelByLocation);
 // rooms dari hotel"
-routes.get(
-  '/hotels/:id',
-  authentication,
-  authorization,
-  Controller.getRoomHotel
-);
+routes.get('/hotels/:id', authentication, Controller.getRoomHotel);
 // properti detail dari hotel yang di maksud
-routes.get(
-  '/hotels/properties/:id',
-  authentication,
-  authorization,
-  Controller.detailHotel
-);
+routes.get('/hotels/properties/:id', authentication, Controller.detailHotel);
 // chek in saat deal
 routes.post(
   '/check-in',

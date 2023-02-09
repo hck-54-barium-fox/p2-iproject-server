@@ -20,7 +20,7 @@ class UserController {
         .status(201)
         .send({ message: 'User created. Verification email sent.' });
     } catch (err) {
-      res.json(err);
+      res.status(500).json(err);
     }
   }
 
@@ -68,7 +68,7 @@ class UserController {
       await user.save();
       res.send({ message: 'User verified.' });
     } catch (err) {
-      res.json(err);
+      res.status(500).json(err);
     }
   }
 
@@ -128,8 +128,7 @@ class UserController {
 
       return res.status(200).json({ message: 'Password reset successfully' });
     } catch (err) {
-      console.log(err);
-      return res.status(500).send('Server error');
+      res.status(500).json({ message: 'internal server error' });
     }
   }
 }

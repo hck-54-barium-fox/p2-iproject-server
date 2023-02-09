@@ -11,7 +11,7 @@ async function sendForgotPassword(user) {
   });
 
   // arahkan ke route client
-  const verificationLink = `http://localhost:8080/forgot-password?token=${user.resetPasswordToken}`;
+  const verificationLink = `https://ya-booking.web.app/forgot-password?token=${user.resetPasswordToken}`;
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: user.email,

@@ -4,7 +4,7 @@ class Controller {
   static async getHotelByLocation(req, res) {
     try {
       const { search } = req.query;
-      let qSearch = 'Hanoi';
+      let qSearch = 'philippines';
       if (search) {
         qSearch = search;
       }
