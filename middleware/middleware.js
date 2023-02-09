@@ -8,7 +8,7 @@ async function authentication(request, response, next) {
         if (!access_token) {
             console.log('test')
             // throw {name: "unauthenticated"}
-            response.status(403).json({message: 'Invalid Token'})
+            response.status(401).json({ message: 'Invalid Token' })
             return
         }
         let payload = decodepayload(access_token)
@@ -18,7 +18,7 @@ async function authentication(request, response, next) {
             // throw {name: "unauthenticated"}
             console.log('ini masuk ye');
             // throw new ErrorClass(403, "You must login first")
-            response.status(403).json({message: 'Invalid Token'})
+            response.status(401).json({ message: 'Invalid Token' })
             return
         }
         request.user = { id: dataUser.id, email: dataUser.email, username: dataUser.username }
@@ -26,62 +26,35 @@ async function authentication(request, response, next) {
 
     } catch (error) {
         if (error.name === "JsonWebTokenError") {
-            response.status(401).json({messsage: `Invalid Token`})
+            response.status(401).json({ messsage: `Invalid Token` })
         } else {
-            response.status(500).json({message: `Internal server error`})
+            response.status(500).json({ message: `Internal server error` })
         }
-        
+
     }
 }
 
-// async function authorization(request, response, next) {
-//     try {
-//         let {id} = request.params
-//         // console.log(id);
-//         // let {types} = request.body
-//         let dataFind = await Post.findByPk(id)
-//         // if (types === "Category") {
-//         //     console.log(types, "<<<");
-//         //     dataFind = await Category.findByPk(id)
-//         // } else if (types === "Post") {
-//         //     dataFind = await Post.findByPk(id)
-//         // }
-//         if (!dataFind) {
-//             throw new ErrorClass (404, 'Not found')
-//         }
-//         // if (request.user.role === 'admin') {
-//             //     next()
-//             // } else {
-//                 //     if (request.user.id === dataFind.authorId) {
-//                     //         next ()
-//                     //     } else {
-//                         //         throw new ErrorClass ('forbidden', 401, 'Forbidden')
-//                         //     }
-//                         // }
-//         let data = await User.findByPk(request.user.id)
-//         console.log(data.dataValues.role, '<<<');
-//         if (data.dataValues.role !== 'admin') {
-//             console.log(data.role);
-//             if (request.user.id !== dataFind.authorId) {
-//                 console.log(request.user.id !== dataFind.authorId, request.user.id, "!==", dataFind.authorId);
-//                 throw new ErrorClass(403, 'Forbidden')
-//             }
-//             // throw new ErrorClass(403, 'Forbidden')
-//         }
-//         // console.log('masuk');
-//         next()
-//     } catch (error) {
-//         // if (error.name === 'Not found') {
-//         //     response.status(404).json({message: 'Post not found'})
-//         // } else if (error.name === 'Forbidden') {
-//         //     response.status(403).json({message: 'Forbidden'})
-//         // } else {
-//         //     console.log(error);
-//         //     response.status(500).json({message: 'Internal Server error'})
-//         // }
-//         next(error)
-//     }
-// }
+async function authorization(request, response, next) {
+    try {
+        let id = request.user.id
+        let userLogin = await User.findByPk(id)
+        if (!userLogin) {
+            response.status(403).json({ message: 'Not Authorized' })
+            return
+        }
+        if (userLogin.status == 'member') {
+            response.status(403).json({ message: 'Not Authorized' })
+            return
+        } else if (userLogin.status == 'premium') {
+            next()
+        } else {
+            response.status(403).json({ message: 'Not Authorized' })
+            return
+        }
+    } catch (error) {
+        console.log(error);
+        response.status(500).json({ message: 'Internal Server error' })
+    }
+}
 
-
-module.exports = { authentication}
+module.exports = { authentication, authorization }
