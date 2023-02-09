@@ -11,13 +11,23 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Bookmark.belongsTo(models.Products)
+      Bookmark.belongsTo(models.Product)
     }
   }
   Bookmark.init({
+    id : {
+      type : DataTypes.INTEGER,
+      primaryKey : true,
+      allowNull : false,
+      autoIncrement : true
+    },
     CustomerId: DataTypes.INTEGER,
     ProductId: DataTypes.INTEGER,
-    totalProduct: DataTypes.INTEGER
+    totalProduct: DataTypes.STRING,
+    isPaid: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    }
   }, {
     sequelize,
     modelName: 'Bookmark',

@@ -11,20 +11,28 @@ module.exports = {
       },
       CustomerId: {
         type: Sequelize.INTEGER,
-        references : {
-          model : "Customers",
-          key : "id"
-        }
+        references: {
+          model: "Customers",
+          key: "id"
+        },
+        onDelete: "CASCADE",
+        onUpdate: "CASCADE"
       },
       ProductId: {
         type: Sequelize.INTEGER,
-        references : {
-          model : "Products",
-          key : "id"
-        }
+        references: {
+          model: "Products",
+          key: "id"
+        },
+        onDelete: "CASCADE",
+        onUpdate: "CASCADE"
       },
       totalProduct: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
+      },
+      isPaid: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
       },
       createdAt: {
         allowNull: false,

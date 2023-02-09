@@ -1,58 +1,35 @@
 const { Customer, Product } = require("../models")
 const { decode } = require("../helper/jwt")
 
-async function authentication(req, res, next) {
+async function custAuthentication(req, res, next) {
     try {
         const { access_token } = req.headers
-
+        
         if (!access_token) {
             throw {
                 name: "InvalidToken"
             }
         }
-
+        
         const data = decode(access_token)
-        const dataUser = await Customer.findByPk(data.id)
-
-        if (!dataUser) {
+        const dataCust = await Customer.findByPk(data.id)
+        
+        if (!dataCust) {
             throw {
                 name: "InvalidToken"
             }
         }
-
-        req.user = {
-            id: dataUser.id,
-            email: dataUser.email,
-            role: dataUser.role
-        }
+        
+        req.customer = {
+                id: dataCust.id,
+                email: dataCust.email,
+                role: dataCust.role
+            }
         next()
     } catch (err) {
-        console.log(err, "at authentication");
         next(err)
     }
 }
+module.exports = { custAuthentication }
 
 
-async function authorization(req, res, next) {
-    try {
-        const id = req.params.id
-
-        const data = await Product.findByPk(id)
-        let { id: userId, email } = req.user
-
-        if (!data) {
-            throw { name: "NotFound" }
-        }
-
-        if (data.id === userId) {
-            next()
-        } else {
-            throw { name: "Forbidden" };
-        }
-    } catch (err) {
-        console.log(err, "at authorization");
-        next(err)
-    }
-}
-
-module.exports = {authentication, authorization}
