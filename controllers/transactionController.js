@@ -66,24 +66,24 @@ class Controller {
       let snap = new midtransClient.Snap({
         isProduction : false,
         serverKey : process.env.MIDTRANS_SERVER_KEY
-    });
+      });
 
-    const user = await User.findByPk(id);
+      const user = await User.findByPk(id);
 
-    let parameter = {
+      let parameter = {
         transaction_details: {
-            order_id: "RenPhone" + Math.floor(1000000 + Math.random()*9999999),
-            gross_amount: price,
+          order_id: "RenPhone" + Math.floor(1000000 + Math.random()*9999999),
+          gross_amount: price,
         },
         credit_card:{
-            secure : true
+          secure : true
         },
         customer_details: {
-            email: user.email,
+          email: user.email,
         }
-    };
-    const midtransToken = await snap.createTransaction(parameter);
-    res.status(201).json(midtransToken);
+      };
+      const midtransToken = await snap.createTransaction(parameter);
+      res.status(201).json(midtransToken);
     } catch (error) {
       console.log(error);
       next(error)
