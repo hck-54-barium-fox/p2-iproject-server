@@ -136,7 +136,76 @@ class Controller {
         }
     }
 
-    
+    static async getTrainer(req, res) {
+        try {
+            const trainers = await Trainer.findAll()
+            res.status(200).json(trainers)
+        } catch (error) {
+            res.status(500).json(error)
+        }
+    }
+
+    static async midtrans(req, res) {
+        try {
+            const findUser = User.findByPk(req.user.id)
+            let snap = new midtransClient.Snap({
+                // Set to true if you want Production Environment (accept real transaction).
+                isProduction: false,
+                serverKey: 'SB-Mid-server-1H_EvcxAPZYItUm7-sgReZVB'
+            });
+
+            let parameter = {
+                "transaction_details": {
+                    "order_id": Math.random().toString().slice(2, 11),
+                    "gross_amount": 10000
+                },
+                "credit_card": {
+                    "secure": true
+                },
+                "customer_details": {
+                    // "first_name": "budi",
+                    // "last_name": "pratama",
+                    "email": findUser.email,
+                    // "phone": "08111222333"
+                }
+            };
+
+            const midtransToken = await snap.createTransaction(parameter)
+            res.status(200).json(midtransToken)
+        } catch (error) {
+            res.status(500).json(error)
+        }
+    }
+    static async addMyExercise(req, res) {
+        try {
+            const id = req.user.id
+            const { UserId, bodyPart, equipment, gifUrl, name,target} = req.body
+            const data = await MyExercise.create({
+                UserId: id,
+                bodyPart,
+                equipment,
+                gifUrl,
+                name,
+                target
+            })
+            res.status(200).json(data)
+        } catch (error) {
+            res.status(500).json(error)
+        }
+    }
+    static async getMyExercise(req, res) {
+        try {
+            const id = req.user.id
+            const data = await MyExercise.findAll({
+                where: {
+                    UserId : id
+                }
+            })
+            res.status(200).json(data)
+        } catch (error) {
+            res.status(500).json(error)
+        }
+    }
 }
 
 
