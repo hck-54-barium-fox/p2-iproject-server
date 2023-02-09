@@ -14,6 +14,6 @@
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "postgres://postgres:acongganteng@db.fqwmrfkorlwrrdxjorsu.supabase.co:6543/postgres"
+    "use_env_variable": "DATABASE_URL"
   }
 }
