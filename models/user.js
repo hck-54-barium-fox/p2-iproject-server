@@ -1,5 +1,6 @@
 "use strict";
 const { hash } = require("../helpers/bcrypt");
+const Crypto = require("crypto");
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
@@ -55,6 +56,8 @@ module.exports = (sequelize, DataTypes) => {
           },
         },
       },
+      status: { type: DataTypes.BOOLEAN, defaultValue: false },
+      verifyToken: { type: DataTypes.STRING },
     },
     {
       sequelize,
@@ -63,6 +66,7 @@ module.exports = (sequelize, DataTypes) => {
   );
   User.beforeCreate((user) => {
     user.password = hash(user.password);
+    user.verifyToken = Crypto.randomBytes(10).toString("hex");
   });
 
   return User;
