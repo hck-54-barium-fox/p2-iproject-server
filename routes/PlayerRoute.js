@@ -5,5 +5,6 @@ const {authentication} = require('../middleware/middleware')
 
 router.get('/', PlayerController.GetAllPlayers)
 router.get('/:id', authentication,PlayerController.GetPlayer)
+router.get('/third/:id', authentication, PlayerController.GetPlayerByThird)
 
 module.exports = router
