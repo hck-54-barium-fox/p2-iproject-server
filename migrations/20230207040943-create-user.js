@@ -19,6 +19,12 @@ module.exports = {
       password: {
         type: Sequelize.STRING,
       },
+      status: {
+        type: Sequelize.BOOLEAN,
+      },
+      verifyToken: {
+        type: Sequelize.STRING,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

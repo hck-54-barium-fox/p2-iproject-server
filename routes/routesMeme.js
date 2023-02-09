@@ -8,7 +8,7 @@ router.use(authentication);
 router.get("/", MemeController.getAllMemes);
 router.post("/", MemeController.postGenerateMeme);
 router.post("/postMeme", MemeController.postMemeToDb);
-router.post("/memeMulter", upload.single("meme"), MemeController.createMemeMulter);
+router.post("/memeMulter", upload.single("meme"), MemeController.memeMulter);
 router.get("/:memeId", MemeController.getMemeById);
 
 module.exports = router;

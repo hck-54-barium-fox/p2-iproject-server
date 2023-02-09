@@ -100,7 +100,7 @@ class MemeController {
     }
   }
 
-  static async createMemeMulter(req, res, next) {
+  static async memeMulter(req, res, next) {
     try {
       const { path, filename, originalname } = req.file;
 

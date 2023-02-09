@@ -24,6 +24,8 @@ function errorHandler(err, req, res, next) {
     res.status(403).json({ message: "This action is only for the admin role or the original author" });
   } else if (err.name === "invalid-login") {
     res.status(401).json({ message: "Email/Password Invalid" });
+  } else if (err.name === "notVerified") {
+    res.status(401).json({ message: "Your Email Unverified, Please Verified your Email" });
   } else if (err.name === "invalid-token" || err.name === "JsonWebTokenError") {
     res.status(401).json({ message: "Invalid Token" });
   } else {
