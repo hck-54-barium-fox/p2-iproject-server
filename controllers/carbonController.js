@@ -8,8 +8,10 @@ const API_KEY = process.env.CLIMATE_API_KEY //env
 class CarbonController {
   static async calculateTobbaco(req, res) {
     try {
+
+      // console.log(req.body, 'INI REQ BODY')
       let { price } = req.body;
-      // console.log(price)
+      console.log(price, 'ini PRICENYA')
       let currencyMoney = +price / 15000;
       const { data } = await axios({
         method: "post",
@@ -22,7 +24,7 @@ class CarbonController {
             activity_id: "consumer_goods-type_tobacco_products",
           },
           parameters: {
-            money: currencyMoney, //money di currency dulu baru diinput
+            money: +currencyMoney, //money di currency dulu baru diinput
             money_unit: "usd",
           },
         },
@@ -35,7 +37,7 @@ class CarbonController {
       res.status(200).json({ co2: co2, time: time });
     } catch (error) {
       // errornya perlu di handle bagaimana
-      console.log(error);
+      // console.log(error);
       res.send(error);
     }
   }

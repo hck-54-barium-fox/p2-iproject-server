@@ -7,8 +7,8 @@ const router = express.Router()
 //     res.send('Hello Carbon!')
 //   })
 
-router.get('/tobbaco', CarbonController.calculateTobbaco)
-router.get('/vehicle', CarbonController.calculateEmission)
+router.post('/tobbaco', CarbonController.calculateTobbaco)
+router.post('/vehicle', CarbonController.calculateEmission)
 
 
 
