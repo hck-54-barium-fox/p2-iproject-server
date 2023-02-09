@@ -3,7 +3,10 @@ const { User } = require('../models');
 const { OAuth2Client } = require('google-auth-library');
 const { comparePass } = require('../helpers/bcrypt');
 const { sign } = require('../helpers/jwt');
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcryptjs');
+const { sendEmail, konfirmasiTransfer } = require('../helpers/nodemailer');
+
+
 
 class Controller {
 
@@ -22,6 +25,8 @@ class Controller {
                 username: data.username,
                 status: data.status
             }
+            sendEmail(email)
+
             res.status(201).json(output)
         } catch (err) {
             next(err)
@@ -31,6 +36,7 @@ class Controller {
     static async login(req, res, next) {
         try {
             const { email, password } = req.body
+            console.log(req.body, '<<<<<<<<<<<<<<<<<<<');
             const find = await User.findOne({
                 where: {
                     email
@@ -49,7 +55,7 @@ class Controller {
                 username: find.username
             })
 
-            res.status(200).json({access_token})
+            res.status(200).json({ access_token })
         } catch (err) {
             next(err)
         }
@@ -92,7 +98,7 @@ class Controller {
     //     }
     // }
 
-    
+
 
 }
 

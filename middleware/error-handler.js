@@ -1,7 +1,7 @@
 const errorHandler = (err, req, res, next) => {
-    console.log('masuk err handler');
-    console.log(err, 'dari err handler');
-    console.log(err.name, 'err.name >>>>>>>>>>>>>>>>>>>>>>>>>');
+    // console.log('masuk err handler');
+    console.log(err, 'dari err handler ni bos', new Date());
+    // console.log(err.name, 'err.name >>>>>>>>>>>>>>>>>>>>>>>>>');
 
     if (err.name === 'SequelizeUniqueConstraintError') {
         let output = err.errors.map(el => {
@@ -10,14 +10,12 @@ const errorHandler = (err, req, res, next) => {
         res.status(400).json({ message: output.join(', ') })
 
     }
-    // else if (err.name === 'SequelizeDatabaseError') {
-    //     // let output = err.errors.map(el => {
-    //     //     return el.message
-    //     // })
+    else if (err.name === 'SequelizeDatabaseError') {
+        res.status(400).json(err)
+    }
 
-    //     res.status(400).json({ message: output.join(', ') })
 
-    // }
+
     else if (err.name === 'SequelizeValidationError' || err.name === 'ValidationErrorItem') {
         let output = err.errors.map(el => {
             return el.message
