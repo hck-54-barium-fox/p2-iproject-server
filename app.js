@@ -5,7 +5,7 @@ if (process.env.NODE_ENV !== "production") {
 const express = require('express')
 const router = require('./routes')
 const app = express()
-const PORT = 3000 || process.env.PORT
+const PORT = process.env.PORT || 3000
 const CORS = require('cors')
 const midtransClient = require('midtrans-client');
 
