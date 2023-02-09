@@ -4,6 +4,7 @@ const cloudinary = require("../helpers/cloudinary");
 // const fs = require("fs");
 const axios = require("axios");
 
+
 class PoetryController {
   static async getLetterPerSearch(req, res, next) {
     try {
@@ -23,10 +24,9 @@ class PoetryController {
         UserId: req.user.id,
         status: "unpaid",
       });
-
       res.status(200).json({
         content: result,
-        id: createLetter.id
+        id: createLetter.id,
       });
     } catch (err) {
       console.log(err);
@@ -55,12 +55,14 @@ class PoetryController {
       const { path } = req.file;
       const newPath = await uploader(path);
       const letter = await Letter.findByPk(letterId);
+      console.log(letterId);
       if (!letter) {
         throw { name: "notFound" };
       }
       await Letter.update(
         {
           imageUrl: newPath.url,
+          status: "paid"
         },
         {
           where: {
@@ -103,14 +105,19 @@ class PoetryController {
         service: "gmail.com",
         auth: {
           user: process.env.EMAIL, // generated ethereal user
-          pass: testAccount.pass.PASSWORD_EMAIL, // generated ethereal password
+          pass: process.env.PASSWORD_EMAIL, // generated ethereal password
         },
       });
       const info = await transporter.sendMail({
         from: '"Indra the boy 👻" <rahadyindra16juni.com>', // sender address
         to: email,
         subject,
-        html: `<img>${letter.imageUrl}</img>`, // html body
+        html: `
+        <div style="display: flex; flex-direction: column;">
+        <img style="max-height: 50vh; max-width: 50vh;" src="${letter.imageUrl}"/>
+                <p style="width: 500px; margin: auto;">${letter.content}</p>
+        </div>
+        `,
       });
       res.status(200).json({ message: `message sent ${info.messageId}` });
     } catch (err) {

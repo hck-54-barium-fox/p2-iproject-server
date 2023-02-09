@@ -3,34 +3,29 @@ const letter = require("../models/letter");
 const stripe = require("stripe")(process.env.STRIPE_KEY);
 
 class PaymentController {
-  static async checkPayment(req, res, next) {
+  static async okayPayment(req, res, next) {
     try {
-      const userId = req.params.id;
-      const { status, letterId } = req.params;
-
-      if (status === "failed") {
-        await Letter.destroy({
+      const { letterId } = req.params;
+      const letter = await Letter.findByPk(letterId);
+      if (!letter) {
+        throw { name: "notFound" };
+      }
+      await Letter.update(
+        {
+          status: "paid",
+        },
+        {
           where: {
             id: letterId,
           },
-        });
-        res.redirect("http://google.com");
-      } else {
-        
-        await Letter.update(
-          {
-            status: "paid",
-          },
-          {
-            where: {
-              id: letterId,
-            },
-          }
-        );
-        res.redirect("http://google.com");
-      }
+        }
+      );
+      res.status(200).json({
+        message: "Letter is now paid"
+      })
     } catch (err) {
       console.log(err);
+      next(err);
     }
   }
 
@@ -38,13 +33,14 @@ class PaymentController {
     try {
       const { letterId } = req.params;
       const data = await stripe.checkout.sessions.create({
-        success_url: `http://localhost:3000/checkpayment/${letterId}/success?user_id=${req.user.id}`,
-        cancel_url: `http://localhost:3000/checkpayment/${letterId}/failed?user_id=${req.user.id}`,
+        cancel_url: `http://localhost:5173/?paymentstatus=failed`,
+        success_url: `http://localhost:5173/submitpoem/${letterId}`,
         line_items: [{ price: "price_1MYlktKmmnAbjBro5otNEKfV", quantity: 1 }],
         mode: "payment",
       });
-      res.redirect(data.url);
+      res.status(200).json(data.url);
     } catch (err) {
+      next(err);
       console.log(err);
     }
   }

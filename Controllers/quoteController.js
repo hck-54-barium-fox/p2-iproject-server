@@ -3,10 +3,8 @@ const movieQuote = require("popular-movie-quotes");
 class QuoteController {
   static async getRandomQuote(req, res, next) {
     try {
-      res.status(200).
-        json({
-          message: movieQuote.getRandomQuote(),
-        });
+      const data = movieQuote.getSomeRandom(3); 
+      res.status(200).json(data);
     } catch (err) {
       next(err);
     }

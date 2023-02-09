@@ -17,7 +17,8 @@ module.exports = (sequelize, DataTypes) => {
   Letter.init({
     content: DataTypes.TEXT,
     UserId: DataTypes.INTEGER,
-    imageUrl: DataTypes.STRING
+    imageUrl: DataTypes.STRING,
+    status: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Letter',
