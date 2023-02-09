@@ -89,7 +89,7 @@ app.post('/google-login', async (req, res, next) => {
     let ticket
 
     try {
-        const verificationResult = client.verifyIdToken({
+        const verificationResult = await client.verifyIdToken({
             idToken: token,
             audience: process.env.GOOGLE_ID
         })
