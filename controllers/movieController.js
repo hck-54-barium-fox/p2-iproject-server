@@ -2,8 +2,14 @@ const axios = require('axios')
 class movieController{
     static async readAllMovies(req, res, next){
         try {
-            let { page, sort_by, year, genre } = req.query
+            let { page, sort_by, year, genre, search } = req.query
             let option = `&page=1`;
+            let type = 'discover'
+            if(search){
+                type = 'search'
+                option = `&query=${search}`
+            }
+            console.log(search);
             if(page){
                 option = `&page=${page}`
             }
@@ -16,10 +22,10 @@ class movieController{
             if(genre){
                 option += `&with_genres=${genre}`
             }
-            console.log(option);
+            // console.log(option);
             const { data } = await axios({
                 method : 'GET',
-                url : `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.SECRET_KEY_OMDB}${option}`,
+                url : `https://api.themoviedb.org/3/${type}/movie?api_key=${process.env.SECRET_KEY_OMDB}${option}`,
             })
             res.status(200).json(data)
         } catch (error) {
@@ -57,7 +63,7 @@ class movieController{
             })
             res.status(200).json(data)
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }
     }
     static async getDetailMovie(req, res, next){
@@ -67,9 +73,10 @@ class movieController{
                 method : 'GET',
                 url : `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.SECRET_KEY_OMDB}`,
             })
+            
             res.status(200).json(data)
         } catch (error) {
-            console.log(error);
+            
         }
     }
     static async readTopMovie(req, res, next){
@@ -90,7 +97,7 @@ class movieController{
             res.status(200).json(data)
         } catch (error) {
 
-            console.log(error);
+            // console.log(error,'<<<<<<<< masuk sini');
         }
     }
     static async readGenreMovies(req, res, next){
@@ -101,7 +108,7 @@ class movieController{
             })
             res.status(200).json(data)
         } catch (error) {
-            console.log(error);
+            // console.log(error, '<<<<<<<< masuk sini');
         }
     }
 }

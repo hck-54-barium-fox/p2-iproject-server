@@ -41,6 +41,37 @@ class userController{
         }
         
     }
+    static async googleLogin(req, res, next) {
+        try {
+          const oAuth2Client = new OAuth2Client(process.env.CLIENT_ID);
+    
+          const result = await oAuth2Client.verifyIdToken({
+            idToken: req.body.idToken,
+            expectedAudience: process.env.CLIENT_ID,
+          });
+    
+          const payload = await result.getPayload();
+          let [created] = await Customer.findOrCreate({
+            where: { email: payload.email },
+            defaults: {
+              email: payload.email,
+              password: "google-login",
+              role: "customer",
+            },
+            hooks: false,
+          });
+    
+          let token = createToken({
+            id: created.id,
+          });
+    
+          res
+            .status(200)
+            .json({ access_token: token, username: payload.given_name });
+        } catch (err) {
+          next(err);
+        }
+      }
 }
 
 module.exports = userController

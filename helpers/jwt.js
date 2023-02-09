@@ -1,11 +1,11 @@
 const jwt = require('jsonwebtoken');
 const createToken = (data) => {
-   return jwt.sign(data, 'shhhhh');
+   return jwt.sign(data, process.env.SECRET_KEY_JWT);
 } 
 // var decoded = jwt.verify(token, 'shhhhh');
 
-const verifyToken = () => {
-   return jwt.verify(token, 'shhhhh');
+const verifyToken = (token) => {
+   return jwt.verify(token, process.env.SECRET_KEY_JWT);
 }
 
-module.exports = { createToken }
+module.exports = { createToken, verifyToken }

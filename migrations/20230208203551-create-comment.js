@@ -2,17 +2,14 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Playlists', {
+    await queryInterface.createTable('Comments', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      watchTime: {
-        type: Sequelize.DATE
-      },
-      memeUrl: {
+      imageUrl: {
         type: Sequelize.STRING
       },
       UserId: {
@@ -26,7 +23,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         references : {
           model : 'Movies',
-          id : 'id'
+          key : 'id'
         }
       },
       createdAt: {
@@ -40,6 +37,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Playlists');
+    await queryInterface.dropTable('Comments');
   }
 };

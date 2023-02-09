@@ -7,6 +7,10 @@ function errHandler(err, req, res, next){
         res.status(400).json({message : "Password is required"})
     }else if(err.name === "Unauthorized"){
         res.status(401).json({message : "Email / Password Invalid"})
+    }else if(err.name === "InvalidToken"){
+        res.status(401).json({message : "Invalid Token"})
+    }else{
+        res.status(500).json({message : "Internal Server Error"})
     }
 }
 
