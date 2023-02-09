@@ -365,9 +365,8 @@ class Controller {
       console.log(data);
       res.json(data);
     } catch (err) {
-      console.log(err);
       if (err.name === 'MidtransError') {
-        res.json(err.ApiResponse.error_messages[0]);
+        res.status(400).json(err.ApiResponse.error_messages[0]);
       } else {
         res.json(err);
       }

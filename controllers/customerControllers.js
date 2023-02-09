@@ -81,7 +81,7 @@ class UserController {
       const user = await User.findOne({ where: { email } });
 
       if (!user) {
-        return res.status(400).json({ errors: [{ msg: 'User not found' }] });
+        throw { name: 'user not found' };
       }
 
       // Generate JWT for reset password
@@ -93,35 +93,40 @@ class UserController {
 
       await sendForgotPassword(user);
 
-      return res.json({ msg: 'Email sent' });
+      res.status(200).json({ message: 'Email sent' });
     } catch (err) {
-      console.log(err.message);
-      return res.status(500).send('Server error');
+      if (err.name === 'user not found') {
+        res.status(401).json({ message: 'User not Register Yet' });
+      } else if (err.name === 'bad email') {
+        res.status(400).json({ message: 'Email is required' });
+      } else {
+        console.log(err.message);
+        return res.status(500).send('Server error');
+      }
     }
   }
   static async postUpdatedPassword(req, res) {
     try {
       const { token } = req.query;
       const { password } = req.body;
-      console.log(token, '===', password);
       // Verify reset token
       const decoded = verifyToken(token);
       const user = await User.findByPk(decoded.id);
 
       if (!user) {
-        return res.status(400).json({ errors: [{ msg: 'User not found' }] });
+        return res.status(400).json({ message: 'Invalid Token' });
       }
 
       // Check if the reset token is valid
       if (user.resetPasswordToken !== token) {
-        return res.status(400).json({ errors: [{ msg: 'Invalid token' }] });
+        return res.status(400).json({ message: 'Invalid Token' });
       }
 
       // Hash the new password and update the user
       const hashedPassword = hashPassword(password);
       await user.update({ password: hashedPassword, resetPasswordToken: null });
 
-      return res.json({ msg: 'Password reset successfully' });
+      return res.status(200).json({ message: 'Password reset successfully' });
     } catch (err) {
       console.log(err);
       return res.status(500).send('Server error');
