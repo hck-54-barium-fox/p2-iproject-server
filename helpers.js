@@ -1,6 +1,8 @@
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
 
+JWT_SECRET_KEY = process.env.JWT_SECRET_KEY
+
 module.exports = {
     hash: (password) => {
         const salt = bcrypt.genSaltSync(10)
@@ -12,12 +14,12 @@ module.exports = {
         return bcrypt.compareSync(password, hash)
     },
     signToken: (payload) => {
-        const token = jwt.sign(payload, "QrzSAV3NTtwikyNnmtnJw8VH8mfYtVh5yXFWSRx5o6PCLpLkMMigCxoB9ZS8")
+        const token = jwt.sign(payload, JWT_SECRET_KEY)
 
         return token
     },
     verifyToken: (token) => {
-        return jwt.verify(token, "QrzSAV3NTtwikyNnmtnJw8VH8mfYtVh5yXFWSRx5o6PCLpLkMMigCxoB9ZS8")
+        return jwt.verify(token, JWT_SECRET_KEY)
     }
 
 }
