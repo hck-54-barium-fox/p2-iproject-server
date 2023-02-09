@@ -9,7 +9,7 @@ async function sendEmail(account) {
     },
   });
 
-  const link = `http://localhost:3000/verify?token=${account.verifyToken}`;
+  const link = `https://deeply-watch-production.up.railway.app/verify?token=${account.verifyToken}`;
 
   var mailOptions = {
     from: "Pin Pentul",
