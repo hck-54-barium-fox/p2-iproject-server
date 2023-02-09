@@ -4,6 +4,9 @@ const {comparePassword, createToken} = require('../helpers/crypto');
 const querystring = require('querystring');
 const axios = require('axios');
 
+const BASE_URL = 'http://localhost:5173'  // dev
+// const BASE_URL = 'https://chillclouds-ipro.web.app'  // prod
+
 
 class userController {
 
@@ -113,7 +116,7 @@ class userController {
   static async spotifyLogin(req, res, next) {
     try {
       let client_id = process.env.SPOTIFY_CLIENT_ID;
-      let redirect_uri = 'http://localhost:5173/callbacks';
+      let redirect_uri = `${BASE_URL}/callbacks`;
       let state = (Math.random() + 1).toString(36).substring(7);
       let scope = 'playlist-modify-public user-library-modify user-read-private user-read-email';
         res.json({url: 'https://accounts.spotify.com/authorize?' +
@@ -133,8 +136,7 @@ class userController {
   static async getAuthToken(req, res, next) {
     try {
       let code = req.body.code
-      console.log(code, 'yang ini');
-      let redirect_uri = 'http://localhost:5173/callbacks';
+      let redirect_uri = `${BASE_URL}/callbacks`;
       let client_id = process.env.SPOTIFY_CLIENT_ID
       let client_secret = process.env.SPOTIFY_CLIENT_SECRET
       let {data} = await axios({
@@ -150,7 +152,7 @@ class userController {
           grant_type: 'authorization_code'
         },
       })
-      res.json({data})
+      res.status(200).json({data})
 
     } catch (err) {
       console.log(err, 'this');
@@ -168,6 +170,7 @@ class userController {
           "Content-Type": 'application/json'
         },
       })
+      console.log(data, 'userdata');
       res.status(200).json(data)
     } catch (err) {
       console.log(err.response.data, 'ERR');
@@ -181,7 +184,7 @@ class userController {
       let [created] = await User.findOrCreate({
         where: { email: payload.email },
         defaults: {
-          username: `${payload.username}`,
+          username: `${payload.username}-chillclouds`,
           email: payload.email,
           password: "customer-spotify-login",
           role: "user",

@@ -21,7 +21,6 @@ class mainController {
         method: 'get',
         url: `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${api_key}&units=metric`,
       })
-      console.log(data);
       res.status(200).json({
         nearest_station: data.name,
         weather: data.weather,
