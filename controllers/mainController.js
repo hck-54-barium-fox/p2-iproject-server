@@ -10,8 +10,7 @@ class mainController {
       let api_key = process.env.OPEN_WEATHER_API_KEY
       let {latitude, longitude} = req.body
 
-      console.log(latitude, longitude, 'yangini')
-      console.log(req, 'yangini2')
+      console.log(latitude, longitude,)
 
       if (!latitude || !longitude) {
         throw {code: 400, msg: "Coordinates are required"}
@@ -45,7 +44,7 @@ class mainController {
       
       const response = await openai.createCompletion({
         model: "text-davinci-003",
-        prompt: `suggest 1 music search query for ${searchQuery} weather condition in 3 words without the word "playlist" and some creative twist`,
+        prompt: `suggest 1 music search query for ${searchQuery} weather condition in 3 words without the word "playlist" and "scattered" and some creative twist`,
         temperature: 0.9,
         max_tokens: 150,
         top_p: 1,
