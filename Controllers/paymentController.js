@@ -33,8 +33,8 @@ class PaymentController {
     try {
       const { letterId } = req.params;
       const data = await stripe.checkout.sessions.create({
-        cancel_url: `http://localhost:5173/?paymentstatus=failed`,
-        success_url: `http://localhost:5173/submitpoem/${letterId}`,
+        cancel_url: `https://somethingtosay-7407d.web.app?paymentstatus=failed`,
+        success_url: `https://somethingtosay-7407d.web.app/submitpoem/${letterId}`,
         line_items: [{ price: "price_1MYlktKmmnAbjBro5otNEKfV", quantity: 1 }],
         mode: "payment",
       });

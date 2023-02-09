@@ -1,6 +1,6 @@
 const express = require("express");
-const PaymentController = require("../Controllers/paymentController");
-const PoetryController = require("../Controllers/PoetryController");
+const PaymentController = require("../controllers/paymentController");
+const PoetryController = require("../controllers/poetryController");
 const multer = require("multer");
 const { authorization } = require("../middlewares/auth");
 
