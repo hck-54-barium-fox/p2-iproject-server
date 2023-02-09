@@ -40,7 +40,7 @@ class UserController {
             console.log(email, password);
             if (!email || !password) {
                 // response.status(400).json('email or apssword is required')
-                response.status(400).json({ message: 'Email or Password is required' })
+                response.status(401).json({ message: 'Email or Password is required' })
                 return
             }
             const user = await User.findOne({
@@ -49,13 +49,13 @@ class UserController {
                 }
             })
             if (!user) {
-                response.status(400).json({ message: 'Email or Password not found' })
+                response.status(401).json({ message: 'Email or Password not found' })
                 return
             }
             let compares = compare(password, user.password)
 
             if (!compares) {
-                response.status(400).json({ message: 'Email or Password not found' })
+                response.status(401).json({ message: 'Email or Password not found' })
                 return
             }
             let payload = {
@@ -95,7 +95,7 @@ class UserController {
                 paymentDate: new Date(),
                 paymentBy: findUser.username
             })
-            response.status(200).json({ message: `${findUser.Username} is now a subscriber` })
+            response.status(200).json({ message: `${newTransaction.log}` })
         } catch (error) {
             console.log(error);
             response.status(500).json({ message: `Internal Server Error` })
