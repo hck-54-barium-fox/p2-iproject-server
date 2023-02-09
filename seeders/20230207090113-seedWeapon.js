@@ -17,7 +17,7 @@ module.exports = {
       method: 'GET',
       url: 'https://valorant-agents-maps-arsenal.p.rapidapi.com/arsenal/en-us',
       headers: {
-        'X-RapidAPI-Key': '38a9d5e8acmsh52f1d03867e8dbdp1b9f55jsn580cb41faaa9',
+        'X-RapidAPI-Key': '154585a314mshf7232f01998f523p15e12fjsnbafc718ed6b9',
         'X-RapidAPI-Host': 'valorant-agents-maps-arsenal.p.rapidapi.com'
       }
     });
@@ -29,7 +29,7 @@ module.exports = {
       obj.category = el.weapon_category_machine_name
       obj.imageUrl = el.weapon_asset.url
       obj.tagline = el.weapon_tagline
-      obj.price = 150000
+      obj.price = Math.floor(Math.random() * 1000000) + 300000;
       obj.createdAt = new Date()
       obj.updatedAt = new Date()
 

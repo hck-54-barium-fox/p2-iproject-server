@@ -67,7 +67,7 @@ class myWeaponController {
             res.status(200).json({ message: "Weapon has been played" })
         } catch (err) {
             if (err.code) {
-                res.status(code).json(err.message)
+                res.status(err.code).json(err.message)
             } else {
                 res.status(500).status({ message: "Internal server error" })
             }
@@ -84,7 +84,7 @@ class myWeaponController {
                 }
             })
             if (!weapon) {
-                throw { code: 404, message: "Post Not Found" }
+                throw { code: 404, message: "Weapon Not Found" }
             }
             const deleted = await myWeapon.destroy({
                 where: {
@@ -94,7 +94,7 @@ class myWeaponController {
             res.status(200).json({ message: "Remove Weapon" })
         } catch (err) {
             if (err.code) {
-                res.status(code).json(err.message)
+                res.status(err.code).json(err.message)
             } else {
                 res.status(500).status({ message: "Internal server error" })
             }
