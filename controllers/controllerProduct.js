@@ -40,6 +40,7 @@ class Controller {
     }
     static async addProduct(req,res) {
         try {
+            
             const UserId = req.user.id
             const ProductId = req.params.id
             console.log(req.params.id);
@@ -57,6 +58,7 @@ class Controller {
                 UserId,
                 ProductId
             })
+            
             res.status(201).json(dataProduct)
         } catch (error) {
             console.log(error);
@@ -90,6 +92,8 @@ class Controller {
         // const { cost } = req.query;
 
         try {
+            console.log(req.query.total,'<<<<<<<,');
+            const email = req.user.email
             // const {email} = req.body
             const findUser = await User.findOne({
                 where: { id: req.user.id },
@@ -111,7 +115,7 @@ class Controller {
                     order_id:
                         "TRANSACTION" +
                         Math.floor(1000000 + Math.random() * 9000000),
-                    gross_amount: totalHarga + totalOngkir , //kalkulasi harga bisa juga dapat dari parameter query
+                    gross_amount: req.query.total , //kalkulasi harga bisa juga dapat dari parameter query
                 },
                 credit_card: {
                     secure: true,
@@ -123,6 +127,7 @@ class Controller {
             };
             const midtransToken = await snap.createTransaction(parameter);
             // console.log(midtransToken,'dari midtrans');
+            // sendEmail2(email)
             // sendEmail2(email)
             res.status(201).json(midtransToken);
         } catch (error) {
