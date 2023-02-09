@@ -15,14 +15,14 @@ async function generateAnswer() {
     
     const response = await openai.createCompletion({
       model: "text-davinci-003",
-      prompt: `can you tell me where is ${coor.lat},${coor.lon} and its current weather in json format only`,
-      temperature: 0,
+      prompt: `suggest one music search query for cloudy weather`,
+      temperature: 0.9,
       max_tokens: 150,
       top_p: 1,
-      frequency_penalty: 0,
+      frequency_penalty: 2,
       presence_penalty: 2,
     });
-    console.log(response.data, response.data.choices[0].text)
+    console.log(response.data.choices[0].text)
   } catch (err) {
     console.log(err);
   }
