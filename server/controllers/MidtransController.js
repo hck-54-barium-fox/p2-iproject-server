@@ -38,10 +38,16 @@ class MidtransController {
         try {
             let id = req.user.id
             await User.update({
-                role:'premium'
+                status:'premium'
+            },{
+                where:{
+                    id
+                },
+                hooks:false
             })
             res.status(201).json({message:`user with email ${req.user.email} success subscribe`})
         } catch (err) {
+            console.log(err)
             res.status(500).json({message:"Internal server error"})
         }
     }

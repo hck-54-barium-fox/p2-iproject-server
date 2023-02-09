@@ -38,19 +38,17 @@ class PlanetController{
                     'X-RapidAPI-Host': 'planets-info-by-newbapi.p.rapidapi.com'
                   }
             })
-            data = data.map(el=>{
-                return {
-                    id:el.id,
-                    name : el.name,
-                    description : el.description,
-                    img:{
-                        imgUrl:el.imgSrc[0].img,
-                        imgDescription:el.imgSrc[0].imgDescription
-                    },
-                    keyId:el.key
-                }
-            })
-            res.status(200).json(data)
+            let detailPlanet = {
+                id:data.id,
+                name : data.name,
+                description : data.description,
+                img:{
+                    imgUrl:data.imgSrc[0].img,
+                    imgDescription:data.imgSrc[0].imgDescription
+                },
+                keyId:data.key
+            }
+            res.status(200).json(detailPlanet)
         } catch (err) {
             console.log(err)
             res.status(500).json(err)
