@@ -1,6 +1,8 @@
 const { compare } = require('../middleware/bcrypt')
 const { createToken } = require('../middleware/jwt')
-const { User, Trainer } = require('../models/index')
+const { User, Trainer, MyExercise } = require('../models/index')
+const midtransClient = require('midtrans-client');
+
 const axios = require("axios");
 
 class Controller {
@@ -48,7 +50,6 @@ class Controller {
         try {
             const id = req.user.id
             const user = await User.findByPk(id)
-            console.log(user.weight, user.height)
             const { data } = await axios({
                 method: 'GET',
                 url: 'https://mega-fitness-calculator1.p.rapidapi.com/bmi',
@@ -101,39 +102,7 @@ class Controller {
         }
     }
 
-    static async getEquipment(req, res) {
-        try {
-            const { data } = await axios({
-                method: 'GET',
-                url: 'https://exercisedb.p.rapidapi.com/exercises/equipmentList',
-                headers: {
-                    'X-RapidAPI-Key': '6f99339649mshabefed9036baf74p11ebddjsnb7b1e29afef6',
-                    'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
-                }
-            })
-            res.status(200).json(data)
-        } catch (error) {
-            res.status(500).json(error)
-        }
-    }
-
-    static async getExerciseByEquipment(req, res) {
-        try {
-            const { equipment } = req.query
-            const words = equipment.split(' ').join('%20')
-            const { data } = await axios({
-                method: 'GET',
-                url: `https://exercisedb.p.rapidapi.com/exercises/equipment/${words}`,
-                headers: {
-                    'X-RapidAPI-Key': '6f99339649mshabefed9036baf74p11ebddjsnb7b1e29afef6',
-                    'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
-                }
-            })
-            res.status(200).json(data)
-        } catch (error) {
-            res.status(500).json(error)
-        }
-    }
+    
 }
 
 
