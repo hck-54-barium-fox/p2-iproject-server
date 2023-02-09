@@ -17,8 +17,8 @@ function sendEmail(email) {
     const option = {
         from: "beautydominique6@gmail.com",
         to: email,
-        subject: "Acount Success Create",
-        text: "Congratulations! Your Account has been create ",
+        subject: "Thank you for joining Ismuya Company!",
+        text: "Happy shopping and we hope you can find your favorite make up!",
         html: "<b>Your Account has been create</b>"
     };
 
