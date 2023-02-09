@@ -4,6 +4,7 @@ const { decode } = require("../helper/jwt")
 async function custAuthentication(req, res, next) {
     try {
         const { access_token } = req.headers
+        
         if (!access_token) {
             throw {
                 name: "InvalidToken"
@@ -30,3 +31,5 @@ async function custAuthentication(req, res, next) {
     }
 }
 module.exports = { custAuthentication }
+
+

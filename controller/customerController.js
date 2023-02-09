@@ -4,18 +4,19 @@ const { comparePassword } = require("../helper/bcrypt")
 const { sign } = require("../helper/jwt")
 const cloudinary = require("../middleware/cloudinary");
 // const { OAuth2Client } = require("google-auth-library");
+const { Op } = require("sequelize");
 
 class CustomerController {
     static async register(req, res, next) {
         try {
             const { email, password, username } = req.body
             const data = await Customer.create({ email, password, username })
+
             res.status(201).json(data)
         } catch (err) {
             next(err)
         }
     }
-
     static async login(req, res, next) {
         try {
             const { email, password } = req.body
@@ -26,7 +27,7 @@ class CustomerController {
             }
 
             let data = await Customer.findOne({
-                where: {
+                where : {
                     email
                 }
             })
@@ -49,10 +50,6 @@ class CustomerController {
         } catch (err) {
             next(err)
         }
-    }
-
-    static async loginByFacebook(req, res, next) {
-
     }
 
     static async myProfile(req, res, next) {
@@ -100,7 +97,5 @@ class CustomerController {
             next(err)
         }
     }
-
-}
 
 module.exports = CustomerController

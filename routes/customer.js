@@ -11,5 +11,4 @@ router.post("/ig-login", CustomerController.loginByFacebook)
 router.use(custAuthentication)
 router.get("/me", CustomerController.myProfile)
 router.put("/me", multerIploads.single('address'), CustomerController.updateProfile)
-
 module.exports = router
