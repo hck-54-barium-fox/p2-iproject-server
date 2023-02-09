@@ -15,7 +15,7 @@ class UserController {
       const payload = ticket.getPayload();
       const username = payload.given_name;
       const email = payload.email;
-
+      
       const [row, created] = await User.findOrCreate({
         where: {
           email,
@@ -24,7 +24,6 @@ class UserController {
           username,
           email,
           password: "indra",
-          membership: "regular",
         },
       });
       let access_token;
@@ -36,7 +35,7 @@ class UserController {
         res.status(200).json({
           access_token,
           username: row.dataValues.username,
-          role: row.dataValues.role,
+          email: row.dataValues.email
         });
       } else {
         access_token = signToken({
@@ -46,7 +45,7 @@ class UserController {
         res.status(200).json({
           access_token,
           username: created.dataValues.username,
-          role: row.dataValues.role,
+          email: created.dataValues.email
         });
       }
     } catch (err) {

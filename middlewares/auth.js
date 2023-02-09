@@ -23,6 +23,24 @@ const authentication = async (req, res, next) => {
     }
   };
 
+  const authorization = async (req, res, next)=>{
+    try {
+      const {letterId} = req.params
+      const letter = await Letter.findByPk(letterId);
+      if (!letter) {
+        throw { name: "notFound" };
+      }
+
+      if(letter.UserId !== req.user.id){
+        throw { name : "forbidden"}
+      }
+      next()
+    } catch (err) {
+      console.log(err)
+      next(err)
+    }
+  }
   module.exports = {
-    authentication
+    authentication,
+    authorization
   }
