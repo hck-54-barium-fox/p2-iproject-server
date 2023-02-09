@@ -3,7 +3,7 @@ const { verifityToken } = require("../helpers/jwt");
 const { User } = require("../models/index");
 
 
-const authorized = async (req, res, next) => {
+const authentication = async (req, res, next) => {
 
     try {
         // console.log(req.headers,"hahah");
@@ -37,4 +37,4 @@ const authorized = async (req, res, next) => {
 
 }
 
-module.exports = { authorized }
+module.exports = { authentication }
