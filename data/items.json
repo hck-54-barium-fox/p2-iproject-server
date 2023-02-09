@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Sleeve Artwork - T-Shirt",
+        "stock": 5,
+        "price": 185000,
+        "itemUrl": "https://morfemband.files.wordpress.com/2013/07/kaos-sleeve.jpg",
+        "UserId": 1,
+        "description": "(harga belum termasuk Ongkos Kirim) Available size : S, M, L, XL Klik photo untuk detail desain",
+        "CategoryId": 1
+    },
+    {
+        "name": "180 - T-Shirt",
+        "stock": 4,
+        "price": 185000,
+        "itemUrl": "https://morfemband.files.wordpress.com/2013/07/180-derajat.jpg",
+        "UserId": 1,
+        "description": "(harga belum termasuk Ongkos Kirim) Available size : S, M, L, XL Klik photo untuk detail desain",
+        "CategoryId": 1
+    },
+    {
+        "name": "Seka Ingusmu - T-Shirt",
+        "stock": 4,
+        "price": 175000,
+        "itemUrl": "https://morfemband.files.wordpress.com/2013/07/seka-ingusmu.jpg",
+        "UserId": 2,
+        "description": "(harga belum termasuk Ongkos Kirim) Available size : S, M, L, XL Klik photo untuk detail desain",
+        "CategoryId": 1
+    },
+    {
+        "name": "Hey, Makan Tuh Gitar! - CD",
+        "stock": 2,
+        "price": 50000,
+        "itemUrl": "https://morfemband.files.wordpress.com/2011/01/hmtgblog.jpg",
+        "UserId": 2,
+        "description": "Hey, Makan Tuh Gitar! '\\n' released March 2013 '\\n' MRFM/Demajors records '\\n' Produced by Jimi Multhazam & Pandu Fuzztoni '\\n' Mixed By Barlian Yoga '\\n' Mastered by Barlian Yoga '\\n' Recorded at Almos Studio 2012 '\\n' Artwork by Jimi Multhazam '\\n' Photograph by Agung Hartamurti Wirawan",
+        "CategoryId": 2
+    },
+    {
+        "name": "Morfem Sleeve Artwork - CD",
+        "stock": 3,
+        "price": 50000,
+        "itemUrl": "https://morfemband.files.wordpress.com/2011/01/sekaingusmu.jpg",
+        "UserId": 2,
+        "description": "Seka Ingusmu! '\\n' 2nd Anniversary Freedownload Single '\\n' Recorded Live Overdub at The Radiant '\\n' Produced by Morfem '\\n' Mixed by Wahyu HW '\\n' Enginered By Wahyu HW '\\n' Art Work by Jimi Multhazam '\\n' Band Photo by Agung Hartamurti Wirawan '\\n'",
+        "CategoryId": 2
+    }
+]
