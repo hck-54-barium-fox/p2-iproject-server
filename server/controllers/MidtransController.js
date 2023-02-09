@@ -7,7 +7,7 @@ class MidtransController {
             let snap = new midtransClient.Snap({
                 // Set to true if you want Production Environment (accept real transaction).
                 isProduction: false,
-                serverKey: "SB-Mid-server-6WTKbdq2ugAzW3FSDTI7Ehbw",
+                serverKey: process.env.MIDTRANS_KEY,
             })
             
             let parameter = {
@@ -47,7 +47,6 @@ class MidtransController {
             })
             res.status(201).json({message:`user with email ${req.user.email} success subscribe`})
         } catch (err) {
-            console.log(err)
             res.status(500).json({message:"Internal server error"})
         }
     }
