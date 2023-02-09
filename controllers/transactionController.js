@@ -33,7 +33,7 @@ class Controller {
       let id = req.user.id
       let data = await Transaction.findAll({
         where: {UserId : id},
-        include: ['Smartphone', 'UserIdentity']
+        include: ['Smartphone']
       })
       res.status(200).json(data)
     } catch (error) {

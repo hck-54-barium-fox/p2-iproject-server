@@ -21,7 +21,6 @@ const upload = multer({ storage: storage });
 
 router.post('/register', upload.single("image"), ControllerCust.register)
 router.post('/login', ControllerCust.login)
-router.post("/googleSignIn", ControllerCust.googleSignIn);
 
 
 

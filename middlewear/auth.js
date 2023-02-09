@@ -10,8 +10,9 @@ async function authentication(req, res, next) {
 
     let payload = decodeToken(access_token);
     console.log(payload);
-    let dataUser = await User.findByPk(payload.id);
+    let dataUser = await User.findByPk(payload);
     if (!dataUser) {
+      console.log('masuk sini');
       throw { name: "Unauthorized" };
     }
 
