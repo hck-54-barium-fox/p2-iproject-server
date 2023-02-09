@@ -1,8 +1,27 @@
-const express = require('express');
-const PoetryController = require('../Controllers/PoetryController');
-const router = express.Router()
+const express = require("express");
+const PaymentController = require("../Controllers/paymentController");
+const PoetryController = require("../Controllers/PoetryController");
+const multer = require("multer");
+const { authorization } = require("../middlewares/auth");
 
+const upload = multer({ dest: "./public/uploads/" });
 
+const router = express.Router();
+
+router.post(
+  "/upload-image/:letterId",
+  authorization,
+  upload.single("image"),
+  PoetryController.uploadImage
+);
+router.delete("/cleanletter", PoetryController.destroyPoetry);
 router.get("/find/:search", PoetryController.getLetterPerSearch);
+router.post("/payment/:letterId", PaymentController.payment);
+router.get("/myletter", PoetryController.getMyLetter);
+router.get("/letterbyid/:letterId", PoetryController.letterById);
+router.patch("/okaypayment/:letterId", PaymentController.okayPayment);
+router.post("/sendemail/:letterId", authorization, PoetryController.sendEmail);
 
-module.exports = router
+// router.post("/send/")
+
+module.exports = router;
