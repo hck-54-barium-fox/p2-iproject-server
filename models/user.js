@@ -24,7 +24,8 @@ module.exports = (sequelize, DataTypes) => {
         },
         notEmpty: {
           msg: 'username cannot be empty'
-        }
+        },
+
       }
     },
     email: {
@@ -39,12 +40,15 @@ module.exports = (sequelize, DataTypes) => {
         },
         notEmpty: {
           msg: 'email cannot be empty'
+        },
+        isEmail: {
+          msg: 'pliss input the right email format'
         }
       }
     },
     password: {
       type: DataTypes.STRING,
-      allowNull:false,
+      allowNull: false,
       validate: {
         notNull: {
           msg: 'password cannot be empty'
@@ -58,8 +62,8 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'User',
   });
-  User.addHook('beforeCreate',(user,options)=>[
-    user.password= hashPassword(user.password)
+  User.addHook('beforeCreate', (user, options) => [
+    user.password = hashPassword(user.password)
   ])
   return User;
 };

@@ -5,15 +5,15 @@ function errorHandler(err, req, res, next) {
         res.status(400).json(message)
     }else if (err.message === 'data not found') {
         res.status(404).json({ message: "data not found" })
-    }else if (err.message === 'invalid email or password') {
-        res.status(401).json({ message: "invalid email or password" })
+    }else if (err.message === 'Invalid email/password') {
+        res.status(401).json({ message: "Invalid email/password" })
     }else if (err.message === 'password is required') {
         res.status(400).json({ message: "password is required" })
     }else if (err.message === 'email is required') {
         res.status(400).json({ message: "email is required" })
     } else if (err.message === 'forbidden to access') {
         res.status(403).json({ message: "You are not authorized" })
-    } else if (err.message === 'invalid Token' || err.name === "JsonWebTokenError") {
+    } else if (err.message === 'invalid token' || err.name === "JsonWebTokenError") {
         // console.log(err)
         res.status(401).json({ message: "Invalid token" })
     } else {

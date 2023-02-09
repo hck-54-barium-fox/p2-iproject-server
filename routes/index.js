@@ -6,5 +6,7 @@ const ControllerAuth = require('../controllers/controllerAuth');
 route.use('/event', routeEvent)
 route.post('/register', ControllerAuth.register)
 route.post('/login', ControllerAuth.login)
+route.post('/login-google', ControllerAuth.loginUserGoogle)
+route.post('/login-facebook', ControllerAuth.loginUserFacebook)
 
 module.exports = route

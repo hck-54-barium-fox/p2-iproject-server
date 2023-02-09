@@ -1,0 +1,231 @@
+# **REST API Documentation**
+## **Get /event**
+This endpoint is to list all event available inside of the DB.
+<br>
+
+### **Response Status**
+```
+Success
+=======
+200 OK
+
+Error
+=======
+500 internal server error
+```
+
+### **Response Body**
+```
+Successful sample:
+====================
+[ 
+   dataEvent:
+    {
+        "id": integer,
+        "title": "string",
+        "content": "string",
+        "eventDate": "date",
+        "UserId": integer,
+        "imageUrl": "string",
+        "createdAt": "date",
+        "updatedAt": "date"
+    },
+```
+    ]
+<br>
+#### **POST /register**
+This endpoint is to register user
+<br>
+
+### **Response Status**
+```
+Success
+=======
+201 OK
+
+Error
+=======
+500 internal server error
+```
+### **Response Body**
+```
+Successful sample:
+====================
+{
+    "id": integer,
+    "email": "String"
+}
+```
+<br>
+
+## **POST /login**
+This endpoint is to list all Posts available inside of the DB.
+<br>
+
+### **Response Status**
+```
+Success
+=======
+200 OK
+
+Error
+=======
+500 something happend with plis try again later
+```
+
+### **Response Body**
+```
+Successful sample:
+====================
+{
+    access_token:'string'
+}
+```
+<br>
+
+## **POST /login-google**
+This endpoint is to list all Posts available inside of the DB.
+<br>
+
+### **Response Status**
+```
+Success
+=======
+200 OK
+
+Error
+=======
+500 something happend with plis try again later
+```
+
+### **Response Body**
+```
+Successful sample:
+====================
+{
+    access_token:'string'
+}
+```
+<br>
+
+## **POST /login-facebook**
+This endpoint is to list all Posts available inside of the DB.
+<br>
+
+### **Response Status**
+```
+Success
+=======
+200 OK
+
+Error
+=======
+500 something happend with plis try again later
+```
+
+### **Response Body**
+```
+Successful sample:
+====================
+{
+    access_token:'string'
+}
+```
+<br>
+
+## **POST /event/createEvent**
+This endpoint is to list all Posts available inside of the DB.
+<br>
+
+### **Required Request Header**
+```
+{
+    access_token :string
+}
+```
+
+
+### **Required Request Body**
+```
+Sample:
+===========
+{
+    "id": integer,
+    "title": "string",
+    "content": "text",
+    "imageUrl": "string",
+    "UserId":integer,
+    "eventDate":date,
+    "createdAt": "date",
+    "updatedAt": "date"
+}
+```
+
+### **Validation**
+- Title cannot be empty
+- content cannot be empty
+
+
+### **Response Status**
+```
+Success
+=======
+200 OK
+
+Error
+=======
+500 something happend with plis try again later
+```
+
+### **Response Body**
+```
+Successful sample:
+====================
+{
+     message: `your event has been created` 
+}
+```
+<br>
+
+## **GET /event/:eventId**
+This endpoint is to list all Posts available inside of the DB.
+<br>
+
+### **Required Request Header**
+```
+{
+    access_token :string
+}
+```
+
+### **Response Status**
+```
+Success
+=======
+200 OK
+
+Error
+=======
+500 something happend with plis try again later
+```
+
+### **Response Body**
+```
+Successful sample:
+====================
+{
+    "dataDetails": 
+        {
+        "id": integer,
+        "title": "string",
+        "content": "string",
+        "eventDate": "date",
+        "UserId": integer,
+        "imageUrl": "string",
+        "createdAt": "date",
+        "updatedAt": "date"
+        }, ...
+    ]
+}
+```
+<br>
