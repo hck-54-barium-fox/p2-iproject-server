@@ -13,7 +13,7 @@ class MidtransController {
             let parameter = {
                 transaction_details: {
                     order_id: `YOUR-ORDERID-${uniqueOrder}`,
-                    gross_amount: 10000,
+                    gross_amount: 200000,
                 },
                 credit_card: {
                     secure: true,

@@ -24,5 +24,20 @@ let authentication = async (req,res,next)=>{
     }
 }
 
+let authorization = async (req,res,next)=>{
+    try {
+        if(req.user.status === "premium"){
+            throw({status:403,message:"Forbidden access"})
+        }
+        next()
+    } catch (err) {
+        if(err.status){
+            res.status(err.status).json({message:err.message})
+        }else{
+            res.status(500).json({message:"Internal server error"})
+        }
+    }
+}
 
-module.exports = {authentication}
+
+module.exports = {authentication,authorization}
