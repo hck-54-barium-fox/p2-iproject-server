@@ -1,58 +1,72 @@
 [
     {
-    "title": "Tathbiqi",
-    "content": "pelajaran tentang bagaimana caranya kita bisa mengetahui harakat akhir dari setiap kata dalam bahasa arab",
-    "place": "Ponpes Markazul Lughoh Jakarta",
-    "day": "3",
-    "time": "20.00",
-    "CategoryId": "1"
+        "id": 1,
+        "title": "Tathbiqi",
+        "content": "pelajaran tentang bagaimana caranya kita bisa mengetahui harakat akhir dari setiap kata dalam bahasa arab",
+        "day": "Sabtu",
+        "time": "20.00",
+        "place": "Ponpes Markazul Lughoh Jakarta",
+        "imageUrl": "https://cdn.discordapp.com/attachments/1062975881905184830/1072762207617699870/IMG-20211212-WA0001.jpg",
+        "CategoryId": 1
     },
     {
-    "title": "shorof",
-    "content": "pelajaran tentang bagaimana caranya kita bisa mengetahui perubahan bentuk dari setiap kata",
-    "place": "Ponpes Markazul Lughoh Jakarta",
-    "day": "3",
-    "time": "20.00",
-    "CategoryId": "1"
+        "id": 5,
+        "title": "ilmu hadits",
+        "content": "pelajaran tentang bagaimana caranya kita bisa mengetahui perubahan bentuk dari setiap kata",
+        "day": "Senin",
+        "time": "20.00",
+        "place": "Ponpes Markazul Lughoh Jakarta",
+        "imageUrl": "https://cdn.discordapp.com/attachments/1062975881905184830/1072762207022104686/IMG-20190618-WA0022.jpg",
+        "CategoryId": 4
     },
     {
-    "title": "fiqih dasar",
-    "content": "pelajaran tentang bagaimana caranya kita bisa mengetahui hukum2 dasar dalam aturan agam",
-    "place": "Ponpes Markazul Lughoh Jakarta",
-    "day": "2",
-    "time": "20.00",
-    "CategoryId": "2"
+        "id": 9,
+        "title": "MAHYA",
+        "content": "Majelis Hikam dan Ihya, pengajian umum yg diadakan stiap malam rabu untuk seluruh kalangan masyarakat",
+        "day": "Selasa",
+        "time": "20.00",
+        "place": "Ponpes Markazul Lughoh Jakarta",
+        "imageUrl": "https://cdn.discordapp.com/attachments/1062975881905184830/1072761265539264532/IMG-20220823-WA0011.jpg",
+        "CategoryId": 6
     },
     {
-    "title": "tauhid",
-    "content": "pelajaran tentang bagaimana caranya kita bisa mengetahui perubahan bentuk dari setiap kata",
-    "place": "Ponpes Markazul Lughoh Jakarta",
-    "day": "1",
-    "time": "20.00",
-    "CategoryId": "3"
+        "id": 2,
+        "title": "Sunmori",
+        "content": "Kajian Khusus wanita, melingkupi fiqh wanita, adab, dan lainnya",
+        "day": "Minggu",
+        "time": "08.00",
+        "place": "Ponpes Markazul Lughoh Jakarta",
+        "imageUrl": "https://cdn.discordapp.com/attachments/1062975881905184830/1072761265790926878/IMG-20220917-WA0010.jpg",
+        "CategoryId": 6
     },
     {
-    "title": "ilmu hadits",
-    "content": "pelajaran tentang bagaimana caranya kita bisa mengetahui perubahan bentuk dari setiap kata",
-    "place": "Ponpes Markazul Lughoh Jakarta",
-    "day": "2",
-    "time": "20.00",
-    "CategoryId": "4"
+        "id": 3,
+        "title": "fiqih dasar",
+        "content": "pelajaran tentang bagaimana caranya kita bisa mengetahui hukum2 dasar dalam aturan agam",
+        "day": "Minggu",
+        "time": "16.00",
+        "place": "Ponpes Markazul Lughoh Jakarta",
+        "imageUrl": "https://cdn.discordapp.com/attachments/1062975881905184830/1072762207902908456/IMG-20211218-WA0012.jpg",
+        "CategoryId": 2
     },
     {
-    "title": "tafsir quran",
-    "content": "pelajaran tentang bagaimana caranya kita bisa mengetahui perubahan bentuk dari setiap kata",
-    "place": "Ponpes Markazul Lughoh Jakarta",
-    "day": "2",
-    "time": "20.00",
-    "CategoryId": "5"
+        "id": 4,
+        "title": "tauhid",
+        "content": "pelajaran tentang bagaimana caranya kita bisa mengetahui perubahan bentuk dari setiap kata",
+        "day": "Jum'at",
+        "time": "20.00",
+        "place": "Ponpes Markazul Lughoh Jakarta",
+        "imageUrl": "https://cdn.discordapp.com/attachments/1062975881905184830/1072762206380376064/IMG_20230108_163436.jpg",
+        "CategoryId": 3
     },
     {
-    "title": "MAHYA",
-    "content": "Majelis Hikam dan Ihya, pengajian umum yg diadakan stiap malam rabu untuk seluruh kalangan masyarakan",
-    "place": "Ponpes Markazul Lughoh Jakarta",
-    "day": "Selasa",
-    "time": "20.00",
-    "CategoryId": "5"
+        "id": 6,
+        "title": "tafsir quran",
+        "content": "pelajaran tentang bagaimana caranya kita bisa mengetahui perubahan bentuk dari setiap kata",
+        "day": "Jum'at",
+        "time": "20.00",
+        "place": "Ponpes Markazul Lughoh Jakarta",
+        "imageUrl": "",
+        "CategoryId": 5
     }
 ]
