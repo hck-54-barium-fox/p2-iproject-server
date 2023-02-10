@@ -1,0 +1,367 @@
+# Event Maker API Documentation
+## Models :
+
+_User_
+```
+- username : string, required
+- email : string, required, unique
+- password : string, required
+```
+
+_Event_
+```
+- title : string, required
+- content : text, required
+- eventDate : integer, required
+- UserId : required
+- imageUrl : string, required
+```
+
+## Relation :
+
+>### **One-to-Many**
+>- User and Event = **One-to-Many**
+
+## List of available endpoints:
+
+- `POST /register`
+- `POST /login`
+- `POST /login-google`
+- `POST /login-facebook`
+
+## And routes below need authentication
+
+- `GET /event`
+- `POST /event/createEvent`
+- `GET /event/:eventId`
+- `DELETE /event/:eventId`
+
+&nbsp;
+
+## 1. POST /register
+
+Request:
+
+- body:
+
+```json
+{
+  "username":"string",
+  "email": "string",
+  "password": "string"
+}
+```
+
+_Response (201 - Created)_
+
+```json
+{
+  "id": "integer",
+  "email": "string"
+}
+```
+
+_Response (400 - Bad Request)_
+
+```json
+{
+  "message": "email cannot be empty"
+}
+OR
+{
+  "message": "pliss input the right email format"
+}
+OR
+{
+  "message": "email has been used by other user"
+}
+OR
+{
+  "message": "password cannot be empty"
+}
+```
+
+## 2. POST /login
+
+Request:
+
+- body:
+
+```json
+{
+  "email": "string",
+  "password": "string"
+}
+```
+
+_Response (200 - OK)_
+
+```json
+{
+  "access_token": "string"
+}
+```
+
+_Response (400 - Bad Request)_
+
+```json
+{
+  "message": "Email is required"
+}
+OR
+{
+  "message": "Password is required"
+}
+```
+
+_Response (401 - Unauthorized)_
+
+```json
+{
+  "message": "Invalid email/password"
+}
+```
+## 3. POST /login-google
+
+Description: 
+- login user by google
+
+Request:
+
+- body:
+
+```json
+{
+  "google_token":"string"
+}
+```
+
+_Response (200 - OK)_
+
+```json
+{
+  "access_token": "string"
+}
+```
+
+## 4. POST /login-facebook
+
+Description: 
+- login user by facebook
+
+Request:
+
+- body:
+
+```json
+{
+  "response":{
+        "email":"string",
+        "name":"string"
+  }
+}
+```
+_Response (200 - OK)_
+
+```json
+{
+  "access_token": "string"
+}
+```
+## 5. GET /event
+
+Description: 
+- Get all event data
+
+Request:
+
+- headers: 
+
+```json
+{
+  "access_token": "string"
+}
+```
+
+_Response (200 - OK)_
+```json
+[ 
+    {
+        "id": "integer",
+        "title": "string",
+        "content": "string",
+        "eventDate": "date",
+        "UserId": "integer",
+        "imageUrl": "string",
+        "createdAt": "date",
+        "updatedAt": "date"
+    },
+]
+```
+
+_Response (404 - Not-Found)_
+
+```json
+{
+    "message" :"data not found"
+}
+```
+
+## 6. POST /event/createEvent
+
+Description: 
+- To create new Event
+
+Request:
+
+- body: 
+
+```json
+{
+  "title": "string",
+  "content": "text",
+  "eventDate": "date",
+  "UserId": "integer",
+  "imageUrl": "string",
+}
+```
+- headers :
+
+```json
+{
+    "access_token" :"string"
+}
+```
+
+_Response (200 - OK)_
+```json
+{
+    "message": "your event has been created"        
+},
+
+```
+
+_Response (400 - Bad Request)_
+
+```json
+{
+  "message": "title cannot be empty"
+}
+OR
+{
+  "message": "content cannot be empty"
+}
+OR
+{
+  "message": "date cannot be empty"
+}
+OR
+{
+  "message": "image cannot be empty"
+}
+```
+
+
+## 7. GET /event/:eventId
+
+Description: 
+- To get Event detail
+
+Request:
+
+- params: 
+
+```json
+{
+    "eventId": "integer"
+}
+```
+
+- headers :
+
+```json
+{
+    "access_token" :"string"
+}
+```
+
+_Response (200 - OK)_
+```json
+{
+    "dataDetails": {
+        "id": "integer",
+        "title": "string",
+        "content": "string",
+        "eventDate": "date",
+        "UserId": "integer",
+        "imageUrl": "string",
+        "createdAt": "date",
+        "updatedAt": "date"
+        }, 
+}
+```
+
+_Response (404 - Not-Found)_
+
+```json
+{
+    "message" :"data not found"
+}
+```
+
+## 8. DELETE /event/:eventId
+
+Description: 
+- Delete Event 
+
+Request:
+
+- params: 
+
+```json
+{
+    "eventId": "integer"
+}
+```
+
+- headers :
+
+```json
+{
+    "access_token" :"string"
+}
+```
+
+_Response (200 - OK)_
+```json
+{
+    "message": "your event has been deleted"
+}
+```
+
+_Response (404 - Not-Found)_
+
+```json
+{
+    "message" :"data not found"
+}
+```
+
+
+## Global Error
+
+_Response (401 - Unauthorized)_
+
+```json
+{
+  "message": "Invalid token"
+}
+```
+
+_Response (500 - Internal Server Error)_
+
+```json
+{
+  "message": "Internal server error"
+}
+```
