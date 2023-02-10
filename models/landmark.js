@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Landmark.belongsToMany(models.User, {through: models.Bookmark})
+      Landmark.hasMany(models.Bookmark)
     }
   }
   Landmark.init({

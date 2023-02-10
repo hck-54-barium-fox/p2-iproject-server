@@ -7,7 +7,9 @@ const cors = require('cors')
 const { OAuth2Client } = require('google-auth-library')
 
 const { User, Landmark, Bookmark } = require('./models/index')
-const { compareHash, signToken } = require('./helpers')
+const { compareHash, signToken } = require('./helpers');
+const { authentication, adminAuthorization, authorization } = require('./middlewares/auth');
+const upload = require('./middlewares/multer');
 
 const client = new OAuth2Client(process.env.GOOGLE_ID)
 const app = express()
@@ -15,10 +17,11 @@ const port = process.env.PORT || 8000
 
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
+app.use(express.static('public'))
 app.use(cors())
 
 app.post('/register', async (req, res, next) => {
-    const { email, username, password} = req.body
+    const { email, username, password } = req.body
     
     try {
         const registerUser = await User.create({
@@ -27,7 +30,12 @@ app.post('/register', async (req, res, next) => {
             password: password
         })
 
-        res.status(201).json({message: `User successfully registered. Welcome aboard, ${registerUser.username}!`, })
+        const token = signToken({
+            id: registerUser.id,
+            email: registerUser.email
+        })
+
+        res.status(201).json({message: `User successfully registered. Welcome aboard, ${registerUser.username}!`, userData: {token: token, role: registerUser.role}})
     } catch (error) {
         if(error.name === 'SequelizeValidationError' || error.name === 'SequelizeUniqueConstraintError'){
             let errVal = error.errors.map(el => {return el.message})
@@ -146,7 +154,9 @@ app.post('/google-login', async (req, res, next) => {
 })
 
 app.get('/weather', async (req, res, next) => {
-    const { latitude, longitude } = req.body
+    const { latitude, longitude } = req.query
+    let thisWeekData = []
+    // console.log(req);
 
     try {
         const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&models=best_match&daily=weathercode,temperature_2m_max&timezone=auto&past_days=7`)
@@ -160,8 +170,17 @@ app.get('/weather', async (req, res, next) => {
         })
         const weatherCodes = weatherData.daily.weathercode.slice(6, 13)
         const temperature = weatherData.daily.temperature_2m_max.slice(6, 13)
+        
+        for(let i in dates){
+            thisWeekData.push({
+                id: +i+1,
+                day: dates[i],
+                weather: weatherCodes[i],
+                temperature: temperature[i]
+            })
+        }
 
-        res.status(200).json({thisWeek: {day: dates, weather: weatherCodes, temperature: temperature}})
+        res.status(200).json({thisWeek: thisWeekData})
     } catch (error) {
         res.status(500).json({message: "Internal server error"})
     }
@@ -193,68 +212,39 @@ app.get('/landmarks/:id', async (req, res, next) => {
     }
 })
 
-const authentication = async (req, res, next) => {
-    const { access_token } = req.headers;
+app.use(authentication)
+
+app.post('/landmarkImg', upload.single("landmarkImg"), async (req, res, next) => {
+    const { path, filename, originalname } = req.file
     
-    if(access_token){
-        try {
-            const data = decrypt(access_token);
-            
-            const auth = await User.findByPk(data.id)
+    const ImageKit = require('imagekit')
+    const fs = require('fs')
 
-            if(auth){
-                req.user = auth
-                next()
-            } else {
-                res.status(401).json({message: "Invalid token"})
-            }
-        } catch (error) {
-            res.status(401).json({message: "Invalid token"})
-        }
-    } else {
-        res.status(401).json({message: "Invalid token"})
-    }
-}
+    const newImageKit = new ImageKit({
+        publicKey: "public_tkxJwCXrkyFHhvlENALIDlWIj/E=",
+        privateKey: "private_oHvGQM+6m58RveMOecFHnbTvZck=",
+        urlEndpoint: "https://ik.imagekit.io/ikaPFW"
+    })
 
-const authorization = async (req, res, next) => {
-    const bookmarkId = +req.params.landmarkId;
+    const imageFile = fs.readFileSync(`./public/uploads/${filename}`)
+    const fileUpload = await newImageKit.upload({
+        fileName: filename,
+        file: imageFile
+    })
 
     try {
-        const bookmarkExist = await Landmark.findByPk(bookmarkId)
-
-        if(bookmarkExist){
-            if(req.user.role !== 'Admin'){
-                if(req.user.id !== bookmarkExist.UserId ){
-                    res.status(403).json({message: "You are not authorize"})
-                } else {
-                    next()
-                }
-            } else {
-                next()
-            }
-        } else {
-            res.status(404).json({message: `Bookmark with ID ${bookmarkId} is not found`})
-        }
+        res.status(201).json({imgPath: fileUpload.url})
     } catch (error) {
         res.status(500).json({message: "Internal server error"})
     }
-}
-
-const adminAuthorization = async (req, res, next) => {
-    if(req.user.role !== 'Admin'){
-        res.status(403).json({message: "You are not authorize for admin activities"})
-    } else {
-        next()
-    }
-}
-
-app.use(authentication)
+})
 
 app.post('/landmarks', adminAuthorization, async (req, res, next) =>{
     const { latitude, longitude, imageUrl, content } = req.body
+    console.log(req.body);
 
     try {
-        const coordinateExist = Landmark.findOne({
+        const coordinateExist = await Landmark.findOne({
             where: {
                 latitude: latitude,
                 longitude: longitude
@@ -269,7 +259,7 @@ app.post('/landmarks', adminAuthorization, async (req, res, next) =>{
             const landmarkCountry = additionalData.results[0].country
 
             if(landmarkName){
-                const { data } = await Landmark.create({
+                const data = await Landmark.create({
                     latitude: latitude,
                     longitude: longitude,
                     name: landmarkName,
@@ -296,10 +286,10 @@ app.post('/landmarks', adminAuthorization, async (req, res, next) =>{
 
             res.status(400).json({message: errVal[0]})
         } else {
+            console.log(error);
             res.status(500).json({message: "Internal server error"})
         }
     }
-    
 })
 
 app.put('/landmarks/:id', adminAuthorization, async (req, res, next) => {
@@ -310,7 +300,7 @@ app.put('/landmarks/:id', adminAuthorization, async (req, res, next) => {
         const landmarkData = await Landmark.findByPk(landmarkId)
 
         if(landmarkData){
-            const coordinateExist = Landmark.findOne({
+            const coordinateExist = await Landmark.findOne({
                 where: {
                     latitude: latitude,
                     longitude: longitude
@@ -327,16 +317,20 @@ app.put('/landmarks/:id', adminAuthorization, async (req, res, next) => {
                 const landmarkCountry = additionalData.results[0].country
 
                 if(landmarkName){
-                    const { data } = await Landmark.create({
+                    await Landmark.update({
                         latitude: latitude,
                         longitude: longitude,
                         name: landmarkName,
                         country: landmarkCountry,
                         imageUrl: imageUrl,
                         content: content
+                    }, {
+                        where: {
+                            id: landmarkId
+                        }
                     })
             
-                    res.status(201).json({message: `Successfully updated data for landmark ${data.name}`})
+                    res.status(201).json({message: `Successfully updated data for landmark with ID ${landmarkId}`})
                 } else {
                     res.status(400).json({message: "No valid name found for this location"})
                 }
@@ -359,9 +353,37 @@ app.put('/landmarks/:id', adminAuthorization, async (req, res, next) => {
     }
 })
 
-app.get('/bookmarks', async (req, res, next) => {
+app.delete('/landmarks/:id', adminAuthorization, async (req, res, next) => {
+    const landmarkId = req.params.id
+
     try {
-        const BookmarkData = await Bookmark.findAll()
+        const landmarkData = await Landmark.findByPk(landmarkId)
+
+        if(landmarkData){
+            await Landmark.destroy({
+                where: {
+                    id: landmarkId
+                }
+            })
+            res.status(200).json({message: `Bookmark with ID ${landmarkData.id} has been deleted`})
+        } else {
+            res.status(404).json({message: `Bookmark with ID ${landmarkId} is not found`})
+        }
+    } catch (error) {
+        res.status(500).json({message: "Internal server error"})
+    }
+})
+
+app.get('/bookmarks', async (req, res, next) => {
+    const userId = req.user.id
+
+    try {
+        const BookmarkData = await Bookmark.findAll({
+            where: {
+                UserId: userId
+            },
+            include: [User, Landmark]
+        })
 
         res.status(200).json({result: BookmarkData})
     } catch (error) {
@@ -404,25 +426,22 @@ app.post('/bookmarks/:LandmarkId', async (req, res, next) => {
 
 app.delete('/bookmarks/:id', authorization, async (req, res, next) => {
     const bookmarkId = req.params.id
-    let bookmarkStore
 
     try {
         const bookmarkData = await Bookmark.findByPk(bookmarkId)
 
         if(bookmarkData){
-            bookmarkStore = bookmarkData
-
             await Bookmark.destroy({
                 where: {
                     id: bookmarkId
                 }
             })
-            res.status(200).json({message: `Bookmark with ID ${bookData.id} has been deleted`})
+            res.status(200).json({message: `Bookmark with ID ${bookmarkData.id} has been deleted`})
         } else {
             res.status(404).json({message: `Bookmark with ID ${bookmarkId} is not found`})
         }
     } catch (error) {
-        
+        res.status(500).json({message: "Internal server error"})
     }
 })
 
